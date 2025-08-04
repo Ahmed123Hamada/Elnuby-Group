@@ -11,7 +11,7 @@ const AboutSection: React.FC = () => {
   const about = getAbout();
 
   return (
-    <section id="about" className="py-20 bg-white dark:bg-gray-900">
+    <section id="about" className="py-20 max-md:px-5 bg-white dark:bg-gray-900">
       <div className="container-custom">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Content */}

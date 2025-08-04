@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
 export default function HeroCarousel() {
   const { t } = useTranslation();
@@ -122,10 +123,10 @@ export default function HeroCarousel() {
           <div className="relative z-10 max-w-3xl mx-auto text-center">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-black mb-6 text-[#ED8823] dark:text-white">{slide.title}</h1>
             <p className="text-lg sm:text-xl font-light mb-8 text-white">{slide.subtitle}</p>
-            <button className="flex items-center gap-2 px-6 py-2 rounded-full bg-gray-900 text-white hover:bg-black/90 transition">
+            <Link to="/projects" className="flex items-center w-fit gap-2 px-6 py-2 rounded-full bg-gray-900 text-white hover:bg-black/90 transition">
               {t('viewAllProjects')}
               <ArrowRight size={18} />
-            </button>
+            </Link>
           </div>
 
           {/* Next Preview */}

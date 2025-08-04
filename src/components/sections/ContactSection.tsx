@@ -17,7 +17,7 @@ const ContactSection: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gray-50 dark:bg-gray-800">
+    <section id="contact" className="py-20 max-md:px-5 bg-gray-50 dark:bg-gray-800">
       <div className="container-custom">
         {/* Header */}
         <motion.div

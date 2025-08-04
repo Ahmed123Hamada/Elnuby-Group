@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { useTranslatedData } from '../hooks/useTranslatedData';
+import  nubyLogo from '../assast/Images/logo/logo-elnuby-footer.png';
 
 const Footer: React.FC = () => {
   const { t } = useTranslation();
@@ -24,7 +25,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-gray-900 text-white">
       <div className="container-custom py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-md:px-5">
           {/* Company Info */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -34,18 +35,7 @@ const Footer: React.FC = () => {
             className="lg:col-span-2"
           >
             <div className="flex items-center space-x-3 rtl:space-x-reverse mb-6">
-              {websiteInfo.logo.src ? (
-                <img 
-                  src={websiteInfo.logo.src} 
-                  alt={websiteInfo.logo.alt}
-                  className="h-10 w-auto"
-                />
-              ) : (
-                <div className="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-lg">N</span>
-                </div>
-              )}
-              <span className="text-2xl font-bold">{websiteInfo.title}</span>
+              <img src={nubyLogo} alt="Elnuby Logo" className="h-20 w-auto  max-md:mx-auto" />
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
               {about.content.substring(0, 200)}...
