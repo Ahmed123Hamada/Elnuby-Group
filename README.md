@@ -1,46 +1,187 @@
-# Getting Started with Create React App
+# El Nuby Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, responsive website for El Nuby Engineering Company built with React.js, TypeScript, and Tailwind CSS.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- 🌐 **Bilingual Support**: Arabic and English with RTL/LTR layout handling
+- 🎨 **Modern Design**: Clean, professional design inspired by EGICAT layout
+- 📱 **Responsive**: Optimized for all devices and screen sizes
+- 🌙 **Dark Mode**: Toggle between light and dark themes
+- ⚡ **Fast Performance**: Optimized with modern React practices
+- 🎭 **Smooth Animations**: Framer Motion animations throughout
+- 🎯 **SEO Optimized**: Proper meta tags and structure
+- 📧 **Contact Forms**: Functional contact forms with validation
+- 🗺️ **Smooth Navigation**: React Router with scroll-to-section support
 
-### `npm start`
+## Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **React 18** with TypeScript
+- **Tailwind CSS** for styling
+- **Framer Motion** for animations
+- **React Router** for navigation
+- **React i18next** for internationalization
+- **Lucide React** for icons
+- **Vite** for build tooling
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Getting Started
 
-### `npm test`
+### Prerequisites
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Node.js (v16 or higher)
+- npm or yarn
 
-### `npm run build`
+### Installation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd elnuby-website
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. Install dependencies:
+```bash
+npm install
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. Start the development server:
+```bash
+npm start
+```
 
-### `npm run eject`
+4. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Build for Production
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+npm run build
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Project Structure
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```
+src/
+├── components/
+│   ├── sections/          # Page sections (Hero, About, Services, etc.)
+│   ├── Navbar.tsx        # Navigation component
+│   ├── Footer.tsx        # Footer component
+│   └── ScrollToTop.tsx   # Scroll to top button
+├── pages/
+│   ├── Home.tsx          # Home page
+│   ├── About.tsx         # About page
+│   ├── Projects.tsx      # Projects page
+│   └── Contact.tsx       # Contact page
+├── context/
+│   └── LanguageContext.tsx # Language context for i18n
+├── i18n/
+│   └── index.ts          # Internationalization configuration
+├── App.tsx               # Main App component
+└── index.tsx             # Entry point
+```
 
-## Learn More
+## Features Overview
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 🏠 Home Page
+- Hero section with animated content
+- About section with company overview
+- Services showcase
+- Projects gallery
+- Contact section
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 📄 About Page
+- Company history and timeline
+- Mission and vision statements
+- Core values
+- Team statistics
+
+### 🏗️ Projects Page
+- Filterable project gallery
+- Project details modal
+- Category filtering
+- Project statistics
+
+### 📞 Contact Page
+- Contact form with validation
+- Department contact information
+- FAQ section
+- Office location
+
+### 🌐 Internationalization
+- Arabic and English support
+- RTL layout for Arabic
+- Language toggle in navigation
+- Localized content throughout
+
+### 🎨 Design System
+- Custom Tailwind configuration
+- Primary color scheme
+- Responsive breakpoints
+- Dark mode support
+- Custom animations
+
+## Customization
+
+### Colors
+Update the primary color scheme in `tailwind.config.js`:
+
+```javascript
+colors: {
+  primary: {
+    50: '#f0f9ff',
+    100: '#e0f2fe',
+    // ... customize as needed
+  },
+}
+```
+
+### Content
+- Update translations in `src/i18n/index.ts`
+- Modify page content in respective components
+- Update contact information in components
+
+### Styling
+- Custom CSS classes in `src/index.css`
+- Component-specific styles using Tailwind utilities
+- Animation configurations in Tailwind config
+
+## Deployment
+
+### Build the project:
+```bash
+npm run build
+```
+
+### Deploy to various platforms:
+- **Vercel**: Connect your GitHub repository
+- **Netlify**: Drag and drop the build folder
+- **Firebase**: Use Firebase Hosting
+- **AWS S3**: Upload build files to S3 bucket
+
+## Browser Support
+
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Test thoroughly
+5. Submit a pull request
+
+## License
+
+This project is licensed under the MIT License.
+
+## Contact
+
+For questions or support, please contact:
+- Email: info@elnuby.com
+- Phone: +20 123 456 789
+
+---
+
+Built with ❤️ for El Nuby Engineering Company
