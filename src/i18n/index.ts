@@ -342,6 +342,12 @@ const resources = {
       open: 'Open',
       more: 'More',
       less: 'Less',
+      
+      // Partners Section
+      ourPartnersTitle: 'Our Trusted Partners',
+      ourPartnersSubtitle: 'We collaborate with leading organizations to deliver exceptional results and create lasting value',
+      partnershipMessage: 'Building Success Together',
+      partnershipDescription: 'Through strategic partnerships and collaborative relationships, we continue to expand our capabilities and deliver innovative solutions that exceed expectations. Join us in building a better future.',
     }
   },
   ar: {
@@ -684,6 +690,12 @@ const resources = {
       open: 'فتح',
       more: 'المزيد',
       less: 'أقل',
+      
+      // Partners Section
+      ourPartnersTitle: 'شركاؤنا الموثوقون',
+      ourPartnersSubtitle: 'نتعاون مع المؤسسات الرائدة لتقديم نتائج استثنائية وخلق قيمة دائمة',
+      partnershipMessage: 'بناء النجاح معاً',
+      partnershipDescription: 'من خلال الشراكات الاستراتيجية والعلاقات التعاونية، نواصل توسيع قدراتنا وتقديم حلول مبتكرة تفوق التوقعات. انضم إلينا في بناء مستقبل أفضل.',
     }
   }
 };

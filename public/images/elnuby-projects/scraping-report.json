@@ -1,0 +1,881 @@
+{
+  "timestamp": "2025-08-08T15:49:04.294Z",
+  "summary": {
+    "totalProjects": 35,
+    "successfulProjects": 2,
+    "failedProjects": 33,
+    "totalImagesDownloaded": 34
+  },
+  "byCategory": {
+    "hospitals": {
+      "projects": 10,
+      "images": 34
+    },
+    "infrastructure": {
+      "projects": 10,
+      "images": 0
+    },
+    "various": {
+      "projects": 15,
+      "images": 0
+    }
+  },
+  "detailedResults": [
+    {
+      "projectName": "hospital_laveda",
+      "projectUrl": "/hospital-laveda/",
+      "category": "hospitals",
+      "totalFound": 20,
+      "downloaded": 20,
+      "images": [
+        {
+          "original": {
+            "url": "https://elnuby.com/wp-content/uploads/2024/05/lav1.jpg",
+            "alt": "",
+            "title": "lav1",
+            "selector": "img[src*=\".jpg\"]"
+          },
+          "localPath": "public\\images\\elnuby-projects\\hospitals\\hospital_laveda_1_lav1.jpg",
+          "filename": "hospital_laveda_1_lav1.jpg",
+          "category": "hospitals"
+        },
+        {
+          "original": {
+            "url": "https://elnuby.com/wp-content/uploads/2024/05/lav2.jpg",
+            "alt": "",
+            "title": "lav2",
+            "selector": "img[src*=\".jpg\"]"
+          },
+          "localPath": "public\\images\\elnuby-projects\\hospitals\\hospital_laveda_2_lav2.jpg",
+          "filename": "hospital_laveda_2_lav2.jpg",
+          "category": "hospitals"
+        },
+        {
+          "original": {
+            "url": "https://elnuby.com/wp-content/uploads/2024/05/lav3.jpg",
+            "alt": "",
+            "title": "lav3",
+            "selector": "img[src*=\".jpg\"]"
+          },
+          "localPath": "public\\images\\elnuby-projects\\hospitals\\hospital_laveda_3_lav3.jpg",
+          "filename": "hospital_laveda_3_lav3.jpg",
+          "category": "hospitals"
+        },
+        {
+          "original": {
+            "url": "https://elnuby.com/wp-content/uploads/2024/05/lav4.jpg",
+            "alt": "",
+            "title": "lav4",
+            "selector": "img[src*=\".jpg\"]"
+          },
+          "localPath": "public\\images\\elnuby-projects\\hospitals\\hospital_laveda_4_lav4.jpg",
+          "filename": "hospital_laveda_4_lav4.jpg",
+          "category": "hospitals"
+        },
+        {
+          "original": {
+            "url": "https://elnuby.com/wp-content/uploads/2024/05/lav5.jpg",
+            "alt": "",
+            "title": "lav5",
+            "selector": "img[src*=\".jpg\"]"
+          },
+          "localPath": "public\\images\\elnuby-projects\\hospitals\\hospital_laveda_5_lav5.jpg",
+          "filename": "hospital_laveda_5_lav5.jpg",
+          "category": "hospitals"
+        },
+        {
+          "original": {
+            "url": "https://elnuby.com/wp-content/uploads/2024/05/lav6.jpg",
+            "alt": "",
+            "title": "lav6",
+            "selector": "img[src*=\".jpg\"]"
+          },
+          "localPath": "public\\images\\elnuby-projects\\hospitals\\hospital_laveda_6_lav6.jpg",
+          "filename": "hospital_laveda_6_lav6.jpg",
+          "category": "hospitals"
+        },
+        {
+          "original": {
+            "url": "https://elnuby.com/wp-content/uploads/2024/05/lav7.jpg",
+            "alt": "",
+            "title": "lav7",
+            "selector": "img[src*=\".jpg\"]"
+          },
+          "localPath": "public\\images\\elnuby-projects\\hospitals\\hospital_laveda_7_lav7.jpg",
+          "filename": "hospital_laveda_7_lav7.jpg",
+          "category": "hospitals"
+        },
+        {
+          "original": {
+            "url": "https://elnuby.com/wp-content/uploads/2024/05/lav8.jpg",
+            "alt": "",
+            "title": "lav8",
+            "selector": "img[src*=\".jpg\"]"
+          },
+          "localPath": "public\\images\\elnuby-projects\\hospitals\\hospital_laveda_8_lav8.jpg",
+          "filename": "hospital_laveda_8_lav8.jpg",
+          "category": "hospitals"
+        },
+        {
+          "original": {
+            "url": "https://elnuby.com/wp-content/uploads/2024/05/lav9.jpg",
+            "alt": "",
+            "title": "lav9",
+            "selector": "img[src*=\".jpg\"]"
+          },
+          "localPath": "public\\images\\elnuby-projects\\hospitals\\hospital_laveda_9_lav9.jpg",
+          "filename": "hospital_laveda_9_lav9.jpg",
+          "category": "hospitals"
+        },
+        {
+          "original": {
+            "url": "https://elnuby.com/wp-content/uploads/2024/05/lav10.jpg",
+            "alt": "",
+            "title": "lav10",
+            "selector": "img[src*=\".jpg\"]"
+          },
+          "localPath": "public\\images\\elnuby-projects\\hospitals\\hospital_laveda_10_lav10.jpg",
+          "filename": "hospital_laveda_10_lav10.jpg",
+          "category": "hospitals"
+        },
+        {
+          "original": {
+            "url": "https://elnuby.com/wp-content/uploads/2024/05/lav11.jpg",
+            "alt": "",
+            "title": "lav11",
+            "selector": "img[src*=\".jpg\"]"
+          },
+          "localPath": "public\\images\\elnuby-projects\\hospitals\\hospital_laveda_11_lav11.jpg",
+          "filename": "hospital_laveda_11_lav11.jpg",
+          "category": "hospitals"
+        },
+        {
+          "original": {
+            "url": "https://elnuby.com/wp-content/uploads/2024/05/lav12.jpg",
+            "alt": "",
+            "title": "lav12",
+            "selector": "img[src*=\".jpg\"]"
+          },
+          "localPath": "public\\images\\elnuby-projects\\hospitals\\hospital_laveda_12_lav12.jpg",
+          "filename": "hospital_laveda_12_lav12.jpg",
+          "category": "hospitals"
+        },
+        {
+          "original": {
+            "url": "https://elnuby.com/wp-content/uploads/2024/05/lav13.jpg",
+            "alt": "",
+            "title": "lav13",
+            "selector": "img[src*=\".jpg\"]"
+          },
+          "localPath": "public\\images\\elnuby-projects\\hospitals\\hospital_laveda_13_lav13.jpg",
+          "filename": "hospital_laveda_13_lav13.jpg",
+          "category": "hospitals"
+        },
+        {
+          "original": {
+            "url": "https://elnuby.com/wp-content/uploads/2024/05/lav14.jpg",
+            "alt": "",
+            "title": "lav14",
+            "selector": "img[src*=\".jpg\"]"
+          },
+          "localPath": "public\\images\\elnuby-projects\\hospitals\\hospital_laveda_14_lav14.jpg",
+          "filename": "hospital_laveda_14_lav14.jpg",
+          "category": "hospitals"
+        },
+        {
+          "original": {
+            "url": "https://elnuby.com/wp-content/uploads/2024/05/lav15.jpg",
+            "alt": "",
+            "title": "lav15",
+            "selector": "img[src*=\".jpg\"]"
+          },
+          "localPath": "public\\images\\elnuby-projects\\hospitals\\hospital_laveda_15_lav15.jpg",
+          "filename": "hospital_laveda_15_lav15.jpg",
+          "category": "hospitals"
+        },
+        {
+          "original": {
+            "url": "https://elnuby.com/wp-content/uploads/2024/05/lav16.jpg",
+            "alt": "",
+            "title": "lav16",
+            "selector": "img[src*=\".jpg\"]"
+          },
+          "localPath": "public\\images\\elnuby-projects\\hospitals\\hospital_laveda_16_lav16.jpg",
+          "filename": "hospital_laveda_16_lav16.jpg",
+          "category": "hospitals"
+        },
+        {
+          "original": {
+            "url": "https://elnuby.com/wp-content/uploads/2024/05/lav17.jpg",
+            "alt": "",
+            "title": "lav17",
+            "selector": "img[src*=\".jpg\"]"
+          },
+          "localPath": "public\\images\\elnuby-projects\\hospitals\\hospital_laveda_17_lav17.jpg",
+          "filename": "hospital_laveda_17_lav17.jpg",
+          "category": "hospitals"
+        },
+        {
+          "original": {
+            "url": "https://elnuby.com/wp-content/uploads/2024/05/lav18.jpg",
+            "alt": "",
+            "title": "lav18",
+            "selector": "img[src*=\".jpg\"]"
+          },
+          "localPath": "public\\images\\elnuby-projects\\hospitals\\hospital_laveda_18_lav18.jpg",
+          "filename": "hospital_laveda_18_lav18.jpg",
+          "category": "hospitals"
+        },
+        {
+          "original": {
+            "url": "https://elnuby.com/wp-content/uploads/2024/05/lav19.jpg",
+            "alt": "",
+            "title": "lav19",
+            "selector": "img[src*=\".jpg\"]"
+          },
+          "localPath": "public\\images\\elnuby-projects\\hospitals\\hospital_laveda_19_lav19.jpg",
+          "filename": "hospital_laveda_19_lav19.jpg",
+          "category": "hospitals"
+        },
+        {
+          "original": {
+            "url": "https://elnuby.com/wp-content/uploads/2024/05/lav20.jpg",
+            "alt": "",
+            "title": "lav20",
+            "selector": "img[src*=\".jpg\"]"
+          },
+          "localPath": "public\\images\\elnuby-projects\\hospitals\\hospital_laveda_20_lav20.jpg",
+          "filename": "hospital_laveda_20_lav20.jpg",
+          "category": "hospitals"
+        }
+      ]
+    },
+    {
+      "projectName": "hospital_arment",
+      "projectUrl": "/hospital-arment/",
+      "category": "hospitals",
+      "totalFound": 0,
+      "downloaded": 0,
+      "images": [],
+      "error": "Request failed with status code 404"
+    },
+    {
+      "projectName": "hospital_aswan_ophthalmology",
+      "projectUrl": "/hospital-aswan-ophthalmology/",
+      "category": "hospitals",
+      "totalFound": 0,
+      "downloaded": 0,
+      "images": [],
+      "error": "Request failed with status code 404"
+    },
+    {
+      "projectName": "hospital_bedayat",
+      "projectUrl": "/hospital-bedayat/",
+      "category": "hospitals",
+      "totalFound": 14,
+      "downloaded": 14,
+      "images": [
+        {
+          "original": {
+            "url": "https://elnuby.com/wp-content/uploads/2024/05/bed14.jpg",
+            "alt": "",
+            "title": "bed14",
+            "selector": "img[src*=\".jpg\"]"
+          },
+          "localPath": "public\\images\\elnuby-projects\\hospitals\\hospital_bedayat_1_bed14.jpg",
+          "filename": "hospital_bedayat_1_bed14.jpg",
+          "category": "hospitals"
+        },
+        {
+          "original": {
+            "url": "https://elnuby.com/wp-content/uploads/2024/05/bed13.jpg",
+            "alt": "",
+            "title": "bed13",
+            "selector": "img[src*=\".jpg\"]"
+          },
+          "localPath": "public\\images\\elnuby-projects\\hospitals\\hospital_bedayat_2_bed13.jpg",
+          "filename": "hospital_bedayat_2_bed13.jpg",
+          "category": "hospitals"
+        },
+        {
+          "original": {
+            "url": "https://elnuby.com/wp-content/uploads/2024/05/bed12.jpg",
+            "alt": "",
+            "title": "bed12",
+            "selector": "img[src*=\".jpg\"]"
+          },
+          "localPath": "public\\images\\elnuby-projects\\hospitals\\hospital_bedayat_3_bed12.jpg",
+          "filename": "hospital_bedayat_3_bed12.jpg",
+          "category": "hospitals"
+        },
+        {
+          "original": {
+            "url": "https://elnuby.com/wp-content/uploads/2024/05/bed11.jpg",
+            "alt": "",
+            "title": "bed11",
+            "selector": "img[src*=\".jpg\"]"
+          },
+          "localPath": "public\\images\\elnuby-projects\\hospitals\\hospital_bedayat_4_bed11.jpg",
+          "filename": "hospital_bedayat_4_bed11.jpg",
+          "category": "hospitals"
+        },
+        {
+          "original": {
+            "url": "https://elnuby.com/wp-content/uploads/2024/05/bed10.jpg",
+            "alt": "",
+            "title": "bed10",
+            "selector": "img[src*=\".jpg\"]"
+          },
+          "localPath": "public\\images\\elnuby-projects\\hospitals\\hospital_bedayat_5_bed10.jpg",
+          "filename": "hospital_bedayat_5_bed10.jpg",
+          "category": "hospitals"
+        },
+        {
+          "original": {
+            "url": "https://elnuby.com/wp-content/uploads/2024/05/bed9.jpg",
+            "alt": "",
+            "title": "bed9",
+            "selector": "img[src*=\".jpg\"]"
+          },
+          "localPath": "public\\images\\elnuby-projects\\hospitals\\hospital_bedayat_6_bed9.jpg",
+          "filename": "hospital_bedayat_6_bed9.jpg",
+          "category": "hospitals"
+        },
+        {
+          "original": {
+            "url": "https://elnuby.com/wp-content/uploads/2024/05/bed1.jpg",
+            "alt": "",
+            "title": "bed1",
+            "selector": "img[src*=\".jpg\"]"
+          },
+          "localPath": "public\\images\\elnuby-projects\\hospitals\\hospital_bedayat_7_bed1.jpg",
+          "filename": "hospital_bedayat_7_bed1.jpg",
+          "category": "hospitals"
+        },
+        {
+          "original": {
+            "url": "https://elnuby.com/wp-content/uploads/2024/05/bed8.jpg",
+            "alt": "",
+            "title": "bed8",
+            "selector": "img[src*=\".jpg\"]"
+          },
+          "localPath": "public\\images\\elnuby-projects\\hospitals\\hospital_bedayat_8_bed8.jpg",
+          "filename": "hospital_bedayat_8_bed8.jpg",
+          "category": "hospitals"
+        },
+        {
+          "original": {
+            "url": "https://elnuby.com/wp-content/uploads/2024/05/bed7.jpg",
+            "alt": "",
+            "title": "bed7",
+            "selector": "img[src*=\".jpg\"]"
+          },
+          "localPath": "public\\images\\elnuby-projects\\hospitals\\hospital_bedayat_9_bed7.jpg",
+          "filename": "hospital_bedayat_9_bed7.jpg",
+          "category": "hospitals"
+        },
+        {
+          "original": {
+            "url": "https://elnuby.com/wp-content/uploads/2024/05/bed3.jpg",
+            "alt": "",
+            "title": "bed3",
+            "selector": "img[src*=\".jpg\"]"
+          },
+          "localPath": "public\\images\\elnuby-projects\\hospitals\\hospital_bedayat_10_bed3.jpg",
+          "filename": "hospital_bedayat_10_bed3.jpg",
+          "category": "hospitals"
+        },
+        {
+          "original": {
+            "url": "https://elnuby.com/wp-content/uploads/2024/05/bed2.jpg",
+            "alt": "",
+            "title": "bed2",
+            "selector": "img[src*=\".jpg\"]"
+          },
+          "localPath": "public\\images\\elnuby-projects\\hospitals\\hospital_bedayat_11_bed2.jpg",
+          "filename": "hospital_bedayat_11_bed2.jpg",
+          "category": "hospitals"
+        },
+        {
+          "original": {
+            "url": "https://elnuby.com/wp-content/uploads/2024/05/bed4.jpg",
+            "alt": "",
+            "title": "bed4",
+            "selector": "img[src*=\".jpg\"]"
+          },
+          "localPath": "public\\images\\elnuby-projects\\hospitals\\hospital_bedayat_12_bed4.jpg",
+          "filename": "hospital_bedayat_12_bed4.jpg",
+          "category": "hospitals"
+        },
+        {
+          "original": {
+            "url": "https://elnuby.com/wp-content/uploads/2024/05/bed5.jpg",
+            "alt": "",
+            "title": "bed5",
+            "selector": "img[src*=\".jpg\"]"
+          },
+          "localPath": "public\\images\\elnuby-projects\\hospitals\\hospital_bedayat_13_bed5.jpg",
+          "filename": "hospital_bedayat_13_bed5.jpg",
+          "category": "hospitals"
+        },
+        {
+          "original": {
+            "url": "https://elnuby.com/wp-content/uploads/2024/05/bed6.jpg",
+            "alt": "",
+            "title": "bed6",
+            "selector": "img[src*=\".jpg\"]"
+          },
+          "localPath": "public\\images\\elnuby-projects\\hospitals\\hospital_bedayat_14_bed6.jpg",
+          "filename": "hospital_bedayat_14_bed6.jpg",
+          "category": "hospitals"
+        }
+      ]
+    },
+    {
+      "projectName": "hospital_esna_specialized",
+      "projectUrl": "/hospital-esna-specialized/",
+      "category": "hospitals",
+      "totalFound": 0,
+      "downloaded": 0,
+      "images": [],
+      "error": "Request failed with status code 404"
+    },
+    {
+      "projectName": "hospital_galala_university",
+      "projectUrl": "/hospital-galala-university/",
+      "category": "hospitals",
+      "totalFound": 0,
+      "downloaded": 0,
+      "images": [],
+      "error": "Request failed with status code 404"
+    },
+    {
+      "projectName": "hospital_kom_ombo",
+      "projectUrl": "/hospital-kom-ombo/",
+      "category": "hospitals",
+      "totalFound": 0,
+      "downloaded": 0,
+      "images": [],
+      "error": "Request failed with status code 404"
+    },
+    {
+      "projectName": "hospital_mansoura_military",
+      "projectUrl": "/hospital-mansoura-military/",
+      "category": "hospitals",
+      "totalFound": 0,
+      "downloaded": 0,
+      "images": [],
+      "error": "Request failed with status code 404"
+    },
+    {
+      "projectName": "hospital_samalout",
+      "projectUrl": "/hospital-samalout/",
+      "category": "hospitals",
+      "totalFound": 0,
+      "downloaded": 0,
+      "images": [],
+      "error": "Request failed with status code 404"
+    },
+    {
+      "projectName": "hospital_sohag_university",
+      "projectUrl": "/hospital-sohag-university/",
+      "category": "hospitals",
+      "totalFound": 0,
+      "downloaded": 0,
+      "images": [],
+      "error": "Request failed with status code 404"
+    },
+    {
+      "projectName": "project_al_kabaash_road_luxor",
+      "projectUrl": "/project-al-kabaash-road-luxor/",
+      "category": "infrastructure",
+      "totalFound": 0,
+      "downloaded": 0,
+      "images": [],
+      "error": "Request failed with status code 404"
+    },
+    {
+      "projectName": "project_bani_mazar_road",
+      "projectUrl": "/project-bani-mazar-road/",
+      "category": "infrastructure",
+      "totalFound": 0,
+      "downloaded": 0,
+      "images": [],
+      "error": "Request failed with status code 404"
+    },
+    {
+      "projectName": "project_el_dabaa",
+      "projectUrl": "/project-el-dabaa/",
+      "category": "infrastructure",
+      "totalFound": 0,
+      "downloaded": 0,
+      "images": [],
+      "error": "Request failed with status code 404"
+    },
+    {
+      "projectName": "project_electric_train_alamein_matrouh",
+      "projectUrl": "/project-electric-train-alamein-matrouh/",
+      "category": "infrastructure",
+      "totalFound": 0,
+      "downloaded": 0,
+      "images": [],
+      "error": "Request failed with status code 404"
+    },
+    {
+      "projectName": "project_fish_farms_port_said",
+      "projectUrl": "/project-fish-farms-port-said/",
+      "category": "various",
+      "totalFound": 0,
+      "downloaded": 0,
+      "images": [],
+      "error": "Request failed with status code 404"
+    },
+    {
+      "projectName": "project_kalabsha_ballana_road",
+      "projectUrl": "/project-kalabsha-ballana-road/",
+      "category": "infrastructure",
+      "totalFound": 0,
+      "downloaded": 0,
+      "images": [],
+      "error": "Request failed with status code 404"
+    },
+    {
+      "projectName": "project_luxor_airport_road",
+      "projectUrl": "/project-luxor-airport-road/",
+      "category": "infrastructure",
+      "totalFound": 0,
+      "downloaded": 0,
+      "images": [],
+      "error": "Request failed with status code 404"
+    },
+    {
+      "projectName": "project_new_ismailia_roads",
+      "projectUrl": "/project-new-ismailia-roads/",
+      "category": "infrastructure",
+      "totalFound": 0,
+      "downloaded": 0,
+      "images": [],
+      "error": "Request failed with status code 404"
+    },
+    {
+      "projectName": "project_new_suez_canal",
+      "projectUrl": "/project-new-suez-canal/",
+      "category": "infrastructure",
+      "totalFound": 0,
+      "downloaded": 0,
+      "images": [],
+      "error": "Request failed with status code 404"
+    },
+    {
+      "projectName": "project_nile_corniche_luxor",
+      "projectUrl": "/project-nile-corniche-luxor/",
+      "category": "various",
+      "totalFound": 0,
+      "downloaded": 0,
+      "images": [],
+      "error": "Request failed with status code 404"
+    },
+    {
+      "projectName": "project_sadat_road_aswan",
+      "projectUrl": "/project-sadat-road-aswan/",
+      "category": "infrastructure",
+      "totalFound": 0,
+      "downloaded": 0,
+      "images": [],
+      "error": "Request failed with status code 404"
+    },
+    {
+      "projectName": "project_toshka",
+      "projectUrl": "/project-toshka/",
+      "category": "infrastructure",
+      "totalFound": 0,
+      "downloaded": 0,
+      "images": [],
+      "error": "Request failed with status code 404"
+    },
+    {
+      "projectName": "project_al_fayrouz_club",
+      "projectUrl": "/project-al-fayrouz-club/",
+      "category": "various",
+      "totalFound": 0,
+      "downloaded": 0,
+      "images": [],
+      "error": "Request failed with status code 404"
+    },
+    {
+      "projectName": "project_al_tod_school",
+      "projectUrl": "/project-al-tod-school/",
+      "category": "various",
+      "totalFound": 0,
+      "downloaded": 0,
+      "images": [],
+      "error": "Request failed with status code 404"
+    },
+    {
+      "projectName": "project_administrative_prosecution_luxor",
+      "projectUrl": "/project-administrative-prosecution-luxor/",
+      "category": "various",
+      "totalFound": 0,
+      "downloaded": 0,
+      "images": [],
+      "error": "Request failed with status code 404"
+    },
+    {
+      "projectName": "project_aswan_corniche",
+      "projectUrl": "/project-aswan-corniche/",
+      "category": "various",
+      "totalFound": 0,
+      "downloaded": 0,
+      "images": [],
+      "error": "Request failed with status code 404"
+    },
+    {
+      "projectName": "project_aswan_governorate_building",
+      "projectUrl": "/project-aswan-governorate-building/",
+      "category": "various",
+      "totalFound": 0,
+      "downloaded": 0,
+      "images": [],
+      "error": "Request failed with status code 404"
+    },
+    {
+      "projectName": "project_el_tarf_rural_houses",
+      "projectUrl": "/project-el-tarf-rural-houses/",
+      "category": "various",
+      "totalFound": 0,
+      "downloaded": 0,
+      "images": [],
+      "error": "Request failed with status code 404"
+    },
+    {
+      "projectName": "project_faculty_alsun",
+      "projectUrl": "/project-faculty-alsun/",
+      "category": "various",
+      "totalFound": 0,
+      "downloaded": 0,
+      "images": [],
+      "error": "Request failed with status code 404"
+    },
+    {
+      "projectName": "project_karnak_park",
+      "projectUrl": "/project-karnak-park/",
+      "category": "various",
+      "totalFound": 0,
+      "downloaded": 0,
+      "images": [],
+      "error": "Request failed with status code 404"
+    },
+    {
+      "projectName": "project_karnak_temple_square",
+      "projectUrl": "/project-karnak-temple-square/",
+      "category": "various",
+      "totalFound": 0,
+      "downloaded": 0,
+      "images": [],
+      "error": "Request failed with status code 404"
+    },
+    {
+      "projectName": "project_malls_west_shorouk",
+      "projectUrl": "/project-malls-west-shorouk/",
+      "category": "various",
+      "totalFound": 0,
+      "downloaded": 0,
+      "images": [],
+      "error": "Request failed with status code 404"
+    },
+    {
+      "projectName": "project_nuby_headquarters",
+      "projectUrl": "/project-nuby-headquarters/",
+      "category": "various",
+      "totalFound": 0,
+      "downloaded": 0,
+      "images": [],
+      "error": "Request failed with status code 404"
+    },
+    {
+      "projectName": "project_qantara_police",
+      "projectUrl": "/project-qantara-police/",
+      "category": "various",
+      "totalFound": 0,
+      "downloaded": 0,
+      "images": [],
+      "error": "Request failed with status code 404"
+    },
+    {
+      "projectName": "project_tod_youth_hostel",
+      "projectUrl": "/project-tod-youth-hostel/",
+      "category": "various",
+      "totalFound": 0,
+      "downloaded": 0,
+      "images": [],
+      "error": "Request failed with status code 404"
+    }
+  ],
+  "failedProjects": [
+    {
+      "project": "hospital_arment",
+      "url": "/hospital-arment/",
+      "error": "Request failed with status code 404"
+    },
+    {
+      "project": "hospital_aswan_ophthalmology",
+      "url": "/hospital-aswan-ophthalmology/",
+      "error": "Request failed with status code 404"
+    },
+    {
+      "project": "hospital_esna_specialized",
+      "url": "/hospital-esna-specialized/",
+      "error": "Request failed with status code 404"
+    },
+    {
+      "project": "hospital_galala_university",
+      "url": "/hospital-galala-university/",
+      "error": "Request failed with status code 404"
+    },
+    {
+      "project": "hospital_kom_ombo",
+      "url": "/hospital-kom-ombo/",
+      "error": "Request failed with status code 404"
+    },
+    {
+      "project": "hospital_mansoura_military",
+      "url": "/hospital-mansoura-military/",
+      "error": "Request failed with status code 404"
+    },
+    {
+      "project": "hospital_samalout",
+      "url": "/hospital-samalout/",
+      "error": "Request failed with status code 404"
+    },
+    {
+      "project": "hospital_sohag_university",
+      "url": "/hospital-sohag-university/",
+      "error": "Request failed with status code 404"
+    },
+    {
+      "project": "project_al_kabaash_road_luxor",
+      "url": "/project-al-kabaash-road-luxor/",
+      "error": "Request failed with status code 404"
+    },
+    {
+      "project": "project_bani_mazar_road",
+      "url": "/project-bani-mazar-road/",
+      "error": "Request failed with status code 404"
+    },
+    {
+      "project": "project_el_dabaa",
+      "url": "/project-el-dabaa/",
+      "error": "Request failed with status code 404"
+    },
+    {
+      "project": "project_electric_train_alamein_matrouh",
+      "url": "/project-electric-train-alamein-matrouh/",
+      "error": "Request failed with status code 404"
+    },
+    {
+      "project": "project_fish_farms_port_said",
+      "url": "/project-fish-farms-port-said/",
+      "error": "Request failed with status code 404"
+    },
+    {
+      "project": "project_kalabsha_ballana_road",
+      "url": "/project-kalabsha-ballana-road/",
+      "error": "Request failed with status code 404"
+    },
+    {
+      "project": "project_luxor_airport_road",
+      "url": "/project-luxor-airport-road/",
+      "error": "Request failed with status code 404"
+    },
+    {
+      "project": "project_new_ismailia_roads",
+      "url": "/project-new-ismailia-roads/",
+      "error": "Request failed with status code 404"
+    },
+    {
+      "project": "project_new_suez_canal",
+      "url": "/project-new-suez-canal/",
+      "error": "Request failed with status code 404"
+    },
+    {
+      "project": "project_nile_corniche_luxor",
+      "url": "/project-nile-corniche-luxor/",
+      "error": "Request failed with status code 404"
+    },
+    {
+      "project": "project_sadat_road_aswan",
+      "url": "/project-sadat-road-aswan/",
+      "error": "Request failed with status code 404"
+    },
+    {
+      "project": "project_toshka",
+      "url": "/project-toshka/",
+      "error": "Request failed with status code 404"
+    },
+    {
+      "project": "project_al_fayrouz_club",
+      "url": "/project-al-fayrouz-club/",
+      "error": "Request failed with status code 404"
+    },
+    {
+      "project": "project_al_tod_school",
+      "url": "/project-al-tod-school/",
+      "error": "Request failed with status code 404"
+    },
+    {
+      "project": "project_administrative_prosecution_luxor",
+      "url": "/project-administrative-prosecution-luxor/",
+      "error": "Request failed with status code 404"
+    },
+    {
+      "project": "project_aswan_corniche",
+      "url": "/project-aswan-corniche/",
+      "error": "Request failed with status code 404"
+    },
+    {
+      "project": "project_aswan_governorate_building",
+      "url": "/project-aswan-governorate-building/",
+      "error": "Request failed with status code 404"
+    },
+    {
+      "project": "project_el_tarf_rural_houses",
+      "url": "/project-el-tarf-rural-houses/",
+      "error": "Request failed with status code 404"
+    },
+    {
+      "project": "project_faculty_alsun",
+      "url": "/project-faculty-alsun/",
+      "error": "Request failed with status code 404"
+    },
+    {
+      "project": "project_karnak_park",
+      "url": "/project-karnak-park/",
+      "error": "Request failed with status code 404"
+    },
+    {
+      "project": "project_karnak_temple_square",
+      "url": "/project-karnak-temple-square/",
+      "error": "Request failed with status code 404"
+    },
+    {
+      "project": "project_malls_west_shorouk",
+      "url": "/project-malls-west-shorouk/",
+      "error": "Request failed with status code 404"
+    },
+    {
+      "project": "project_nuby_headquarters",
+      "url": "/project-nuby-headquarters/",
+      "error": "Request failed with status code 404"
+    },
+    {
+      "project": "project_qantara_police",
+      "url": "/project-qantara-police/",
+      "error": "Request failed with status code 404"
+    },
+    {
+      "project": "project_tod_youth_hostel",
+      "url": "/project-tod-youth-hostel/",
+      "error": "Request failed with status code 404"
+    }
+  ]
+}

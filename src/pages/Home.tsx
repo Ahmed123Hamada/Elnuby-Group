@@ -5,6 +5,7 @@ import HeroSection from '../components/sections/HeroSection';
 import AboutSection from '../components/sections/AboutSection';
 import ServicesSection from '../components/sections/ServicesSection';
 import ProjectsSection from '../components/sections/ProjectsSection';
+import PartnersSection from '../components/sections/PartnersSection';
 import ContactSection from '../components/sections/ContactSection';
 
 const Home: React.FC = () => {
@@ -15,6 +16,7 @@ const Home: React.FC = () => {
       <AboutSection />
       <ServicesSection />
       <ProjectsSection />
+      <PartnersSection />
       <ContactSection />
     </div>
   );

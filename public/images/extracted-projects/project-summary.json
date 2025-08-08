@@ -1,0 +1,132 @@
+{
+  "generatedAt": "2025-08-08T15:13:59.030Z",
+  "source": "Based on El-Nuby website (https://elnuby.com/) and existing assets",
+  "categorySummary": {
+    "hospitals": {
+      "nameEn": "Hospitals",
+      "nameAr": "مستشفيات",
+      "description": "Medical facilities and healthcare projects",
+      "count": 10,
+      "projects": [
+        "Arment Hospital",
+        "Aswan Ophthalmology Hospital",
+        "Bedayat Hospital",
+        "Esna Specialized Hospital",
+        "Galala University Hospital",
+        "Kom Ombo Hospital",
+        "Lavida Hospital",
+        "Mansoura Military Hospital",
+        "Samalout Hospital",
+        "Sohag University Hospital"
+      ]
+    },
+    "infrastructure": {
+      "nameEn": "Roads & Infrastructure",
+      "nameAr": "طرق وبنية تحتية",
+      "description": "Transportation, roads, and infrastructure development",
+      "count": 12,
+      "projects": [
+        "Al-Kabaash Road - Luxor",
+        "Bani Mazar Al-Buwaiti Road",
+        "El Dabaa Development Projects",
+        "Electric Train El Alamein-Matrouh",
+        "Fish Farms East Port Said",
+        "Kalabsha-Ballana Road",
+        "Luxor Airport Road",
+        "New Ismailia City Roads",
+        "New Suez Canal Project",
+        "Nile Corniche Luxor",
+        "Sadat Road Aswan",
+        "Toshka Development Project"
+      ]
+    },
+    "various": {
+      "nameEn": "Various Projects",
+      "nameAr": "مشاريع متنوعة",
+      "description": "Educational, administrative, commercial and recreational projects",
+      "count": 13,
+      "projects": [
+        "Al-Fayrouz Club Ismailia",
+        "Al Tod School Luxor",
+        "Administrative Prosecution Luxor",
+        "Aswan Corniche Development",
+        "Aswan Governorate Building",
+        "El Tarf Rural Houses",
+        "Faculty of Alsun",
+        "Karnak Park Luxor",
+        "Karnak Temple Square",
+        "Malls West Shorouk",
+        "El-Nuby Administrative Headquarters",
+        "Qantara Police Department",
+        "Tod Youth Hostel Luxor"
+      ]
+    }
+  },
+  "statistics": {
+    "totalProjects": 35,
+    "completedProjects": 31,
+    "ongoingProjects": 4,
+    "locations": [
+      "Luxor",
+      "Aswan",
+      "Cairo",
+      "Ismailia",
+      "Port Said",
+      "El Dabaa",
+      "Galala City",
+      "Mansoura",
+      "Minya",
+      "Sohag",
+      "Qantara",
+      "Shorouk City",
+      "Toshka"
+    ],
+    "projectTypes": [
+      "Medical Facilities",
+      "Transportation Infrastructure",
+      "Educational Buildings",
+      "Government Buildings",
+      "Commercial Centers",
+      "Recreational Facilities",
+      "Urban Development",
+      "Rural Housing"
+    ]
+  },
+  "imageAssets": {
+    "baseDirectory": "/images/",
+    "hospitalImages": 10,
+    "infrastructureImages": 12,
+    "variousImages": 13,
+    "totalImages": 35,
+    "format": "JPG/WebP",
+    "organized": true
+  },
+  "technicalImplementation": {
+    "dataStructure": "src/data/elnuby-projects.js",
+    "components": [
+      "EnhancedProjectsSection.tsx",
+      "PartnersSection.tsx (with modern swiper)"
+    ],
+    "features": [
+      "Category filtering",
+      "Responsive design",
+      "Arabic/English bilingual",
+      "Modern swiper for partners",
+      "Project statistics",
+      "Load more functionality",
+      "Hover effects and animations"
+    ],
+    "translations": {
+      "english": "Complete",
+      "arabic": "Complete",
+      "keys": [
+        "totalProjects",
+        "hospitals",
+        "infrastructure",
+        "variousProjects",
+        "viewProject",
+        "loadMore"
+      ]
+    }
+  }
+}

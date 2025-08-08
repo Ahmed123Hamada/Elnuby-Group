@@ -41,6 +41,48 @@
   .card-hover {
     @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-2;
   }
+  
+  /* Partners Swiper Custom Styles */
+  .partners-swiper .swiper-pagination {
+    bottom: -50px !important;
+  }
+  
+  .partners-swiper .swiper-pagination-bullet {
+    background-color: #f97316 !important;
+    opacity: 0.5;
+  }
+  
+  .partners-swiper .swiper-pagination-bullet-active {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  
+  .partners-swiper .swiper-button-next,
+  .partners-swiper .swiper-button-prev {
+    color: #f97316 !important;
+    font-weight: bold;
+  }
+  
+  .partners-swiper .swiper-button-next:after,
+  .partners-swiper .swiper-button-prev:after {
+    font-size: 20px !important;
+  }
+  
+  .partners-swiper .swiper-button-next,
+  .partners-swiper .swiper-button-prev {
+    margin-top: -22px;
+  }
+  
+  /* RTL Support for Swiper */
+  [dir="rtl"] .partners-swiper .swiper-button-next {
+    left: 10px;
+    right: auto;
+  }
+  
+  [dir="rtl"] .partners-swiper .swiper-button-prev {
+    right: 10px;
+    left: auto;
+  }
 }
 
 @layer utilities {

@@ -68,7 +68,7 @@ const About: React.FC = () => {
   ];
 
   return (
-    <div className="pt-16">
+    <div className="pt-16 overflow-hidden">
       {/* Hero Section */}
       <section 
         className="relative bg-gradient-to-br from-primary-50 via-white to-primary-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 overflow-hidden"
