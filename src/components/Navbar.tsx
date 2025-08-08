@@ -52,7 +52,7 @@ const Navbar: React.FC = () => {
       <motion.nav
         initial={{ y: -80 }}
         animate={{ y: 0 }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 overflow-hidden ${
           isScrolled
             ? "max-w-6xl mx-auto mt-2 rounded-2xl bg-white/30 dark:bg-gray-900/20 backdrop-blur-xxl shadow-lg"
             : "bg-transparent"

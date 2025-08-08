@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Clock, Send, CheckCircle, MessageSquare } from 'lucide-react';
+import Button from '../components/Button';
+import contactBgImage from '../assast/Images/project/Various/AswanGovernorateBuilding.jpg';
 
 const Contact: React.FC = () => {
   const { t } = useTranslation();
@@ -30,78 +32,88 @@ const Contact: React.FC = () => {
     });
   };
 
+
+
   const contactInfo = [
     {
       icon: Mail,
-      title: 'Email',
+      title: t('emailTitle'),
       value: 'info@elnuby.com',
-      description: 'Send us an email anytime',
+      description: t('emailDesc'),
       link: 'mailto:info@elnuby.com',
     },
     {
       icon: Phone,
-      title: 'Phone',
+      title: t('phoneTitle'),
       value: '+20 123 456 789',
-      description: 'Call us during business hours',
+      description: t('phoneDesc'),
       link: 'tel:+20123456789',
     },
     {
       icon: MapPin,
-      title: 'Office',
+      title: t('officeTitle'),
       value: 'Cairo, Egypt',
-      description: 'Visit our main office',
+      description: t('officeDesc'),
       link: '#',
     },
     {
       icon: Clock,
-      title: 'Working Hours',
-      value: 'Mon - Fri: 9AM - 6PM',
-      description: 'We\'re here to help',
+      title: t('workingHoursTitle'),
+      value: t('workingHoursValue'),
+      description: t('workingHoursDesc'),
       link: '#',
     },
   ];
 
   const departments = [
     {
-      name: 'General Inquiries',
+      name: t('generalInquiryDept'),
       email: 'info@elnuby.com',
-      description: 'For general questions and information',
+      description: t('generalInquiryDesc'),
     },
     {
-      name: 'Project Management',
+      name: t('projectMgmtDept'),
       email: 'projects@elnuby.com',
-      description: 'For project-related inquiries',
+      description: t('projectMgmtDesc'),
     },
     {
-      name: 'Technical Support',
+      name: t('techSupportDept'),
       email: 'support@elnuby.com',
-      description: 'For technical questions and support',
+      description: t('techSupportDesc'),
     },
     {
-      name: 'Business Development',
+      name: t('businessDevDept'),
       email: 'business@elnuby.com',
-      description: 'For partnership and business opportunities',
+      description: t('businessDevDesc'),
     },
   ];
 
   return (
-    <div className="pt-16">
+    <div className="pt-16 overflow-hidden">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary-50 via-white to-primary-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
-        <div className="container-custom section-padding">
+      <section 
+        className="relative bg-gradient-to-br from-primary-50 via-white to-primary-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 overflow-hidden"
+        style={{
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${contactBgImage})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
+        <div className="container-custom section-padding relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 drop-shadow-lg">
               {t('contactTitle')}
             </h1>
-            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-white max-w-3xl mx-auto leading-relaxed drop-shadow-md">
               {t('contactSubtitle')}
             </p>
-            <p className="text-gray-600 dark:text-gray-300 mt-4">
+            <p className="text-white mt-4 drop-shadow-md">
               {t('contactDescription')}
             </p>
           </motion.div>
@@ -121,7 +133,7 @@ const Contact: React.FC = () => {
               className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8"
             >
               <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-                Send us a Message
+                {t('sendUsMessage')}
               </h2>
               
               {isSubmitted ? (
@@ -132,10 +144,10 @@ const Contact: React.FC = () => {
                 >
                   <CheckCircle className="text-green-500 mx-auto mb-4" size={48} />
                   <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-                    Message Sent Successfully!
+                    {t('messageSentSuccess')}
                   </h4>
                   <p className="text-gray-600 dark:text-gray-300">
-                    Thank you for contacting us. We'll get back to you within 24 hours.
+                    {t('thankYouMessage')}
                   </p>
                 </motion.div>
               ) : (
@@ -153,7 +165,7 @@ const Contact: React.FC = () => {
                         onChange={handleChange}
                         required
                         className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white transition-colors duration-200"
-                        placeholder="Your name"
+                        placeholder={t('yourNamePlaceholder')}
                       />
                     </div>
                     
@@ -169,7 +181,7 @@ const Contact: React.FC = () => {
                         onChange={handleChange}
                         required
                         className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white transition-colors duration-200"
-                        placeholder="your.email@example.com"
+                        placeholder={t('emailPlaceholder')}
                       />
                     </div>
                   </div>
@@ -177,7 +189,7 @@ const Contact: React.FC = () => {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label htmlFor="phone" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                        Phone
+                        {t('phoneLabel')}
                       </label>
                       <input
                         type="tel"
@@ -186,13 +198,13 @@ const Contact: React.FC = () => {
                         value={formData.phone}
                         onChange={handleChange}
                         className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white transition-colors duration-200"
-                        placeholder="Your phone number"
+                        placeholder={t('phonePlaceholder')}
                       />
                     </div>
                     
                     <div>
                       <label htmlFor="company" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                        Company
+                        {t('companyLabel')}
                       </label>
                       <input
                         type="text"
@@ -201,14 +213,14 @@ const Contact: React.FC = () => {
                         value={formData.company}
                         onChange={handleChange}
                         className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white transition-colors duration-200"
-                        placeholder="Your company"
+                        placeholder={t('companyPlaceholder')}
                       />
                     </div>
                   </div>
 
                   <div>
                     <label htmlFor="subject" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                      Subject *
+                      {t('subjectLabel')} *
                     </label>
                     <select
                       id="subject"
@@ -218,13 +230,13 @@ const Contact: React.FC = () => {
                       required
                       className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white transition-colors duration-200"
                     >
-                      <option value="">Select a subject</option>
-                      <option value="general">General Inquiry</option>
-                      <option value="project">Project Inquiry</option>
-                      <option value="quote">Request Quote</option>
-                      <option value="partnership">Partnership</option>
-                      <option value="support">Technical Support</option>
-                      <option value="other">Other</option>
+                      <option value="">{t('selectSubject')}</option>
+                      <option value="general">{t('generalInquiry')}</option>
+                      <option value="project">{t('projectInquiry')}</option>
+                      <option value="quote">{t('requestQuote')}</option>
+                      <option value="partnership">{t('partnership')}</option>
+                      <option value="support">{t('technicalSupport')}</option>
+                      <option value="other">{t('other')}</option>
                     </select>
                   </div>
                   
@@ -240,17 +252,23 @@ const Contact: React.FC = () => {
                       required
                       rows={5}
                       className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white transition-colors duration-200 resize-none"
-                      placeholder="Tell us about your project or inquiry..."
+                      placeholder={t('messagePlaceholder')}
                     />
                   </div>
                   
-                  <button
+                  <Button
+                    variant="primary"
+                    size="lg"
                     type="submit"
-                    className="btn-primary w-full flex items-center justify-center space-x-2 group"
+                    fullWidth
+                    loading={false}
+                    className="gap-2"
                   >
-                    <span>{t('sendMessage')}</span>
-                    <Send size={20} className="group-hover:translate-x-1 transition-transform duration-200" />
-                  </button>
+                    <div className="flex items-center justify-center space-x-2">
+                      <span>{t('sendMessage')}</span>
+                      <Send size={20} className="group-hover:translate-x-1 transition-transform duration-200" />
+                    </div>
+                  </Button>
                 </form>
               )}
             </motion.div>
@@ -265,11 +283,10 @@ const Contact: React.FC = () => {
             >
               <div>
                 <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-                  Get in Touch
+                  {t('getInTouch')}
                 </h2>
                 <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-8">
-                  Ready to start your next project? We'd love to hear from you. 
-                  Contact us today to discuss your engineering needs and how we can help bring your vision to life.
+                  {t('getInTouchDesc')}
                 </p>
               </div>
 
@@ -310,14 +327,18 @@ const Contact: React.FC = () => {
                 viewport={{ once: true }}
                 className="bg-gradient-to-br from-primary-400 to-primary-600 rounded-2xl p-8 text-white"
               >
-                <h4 className="text-xl font-semibold mb-4">Visit Our Office</h4>
+                <h4 className="text-xl font-semibold mb-4">{t('visitOffice')}</h4>
                 <p className="mb-4 opacity-90">
-                  Located in the heart of Cairo, our office is easily accessible 
-                  and ready to welcome you for a consultation.
+                  {t('visitOfficeDesc')}
                 </p>
-                <button className="btn-secondary border-white text-white hover:bg-white hover:text-primary-600">
-                  Get Directions
-                </button>
+                <Button
+                  variant="outline"
+                  size="md"
+                  icon="arrow-right"
+                  className="border-white text-white hover:bg-white hover:text-primary-600"
+                >
+                  {t('getDirections')}
+                </Button>
               </motion.div>
             </motion.div>
           </div>
@@ -335,10 +356,10 @@ const Contact: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
-              Contact Our Departments
+              {t('contactDepartments')}
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              Get in touch with the right team for your specific needs.
+              {t('contactDepartmentsDesc')}
             </p>
           </motion.div>
 
@@ -384,30 +405,30 @@ const Contact: React.FC = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
-              Frequently Asked Questions
+              {t('faqTitle')}
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              Find answers to common questions about our services and processes.
+              {t('faqDesc')}
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {[
               {
-                question: 'What services does El Nuby provide?',
-                answer: 'We provide comprehensive engineering services including design, construction management, consulting, and maintenance for various types of projects.',
+                question: t('faqQuestion1'),
+                answer: t('faqAnswer1'),
               },
               {
-                question: 'How long does a typical project take?',
-                answer: 'Project duration varies based on complexity and scope. Small projects may take 3-6 months, while large projects can take 1-3 years.',
+                question: t('faqQuestion2'),
+                answer: t('faqAnswer2'),
               },
               {
-                question: 'Do you work internationally?',
-                answer: 'Yes, we have experience working on international projects and can provide services globally.',
+                question: t('faqQuestion3'),
+                answer: t('faqAnswer3'),
               },
               {
-                question: 'What is your project management approach?',
-                answer: 'We use a collaborative approach with regular client communication, detailed planning, and quality control throughout the project lifecycle.',
+                question: t('faqQuestion4'),
+                answer: t('faqAnswer4'),
               },
             ].map((faq, index) => (
               <motion.div

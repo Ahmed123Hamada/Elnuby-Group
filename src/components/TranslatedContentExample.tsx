@@ -23,7 +23,7 @@ const TranslatedContentExample: React.FC = () => {
   const categories = getCategories();
 
   return (
-    <div className="p-8 bg-gray-50 dark:bg-gray-900 min-h-screen">
+    <div className="p-8 bg-gray-50 dark:bg-gray-900 min-h-screen overflow-hidden">
       <div className="max-w-6xl mx-auto">
         {/* Language Toggle */}
         <div className="mb-8 flex justify-between items-center">

@@ -6,7 +6,7 @@ const LanguageSwitcher: React.FC = () => {
   const { language, toggleLanguage, setLanguage, forceLanguage } = useLanguage();
 
   return (
-    <div className="flex flex-col space-y-2 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-lg">
+    <div className="flex flex-col space-y-2 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden">
       <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
         Language Settings
       </h3>

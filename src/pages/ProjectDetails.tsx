@@ -46,7 +46,7 @@ const ProjectDetails: React.FC = () => {
   };
 
   return (
-    <div className="pt-16 min-h-screen bg-gray-50 dark:bg-gray-900">
+    <div className="pt-16 min-h-screen bg-gray-50 dark:bg-gray-900 overflow-hidden">
       {/* Header */}
       <div className="bg-white dark:bg-gray-800 py-8">
         <div className="container-custom">
@@ -247,10 +247,10 @@ const ProjectDetails: React.FC = () => {
                   </div>
                 </div>
                 
-                <button className="w-full mt-6 btn-primary flex items-center justify-center space-x-2 rtl:space-x-reverse">
-                  <span>{t('requestQuote')}</span>
+                <Link to="/contact" className="w-full mt-6 btn-primary flex items-center justify-center space-x-2 rtl:space-x-reverse">
+                  <span>{t('contactUs')}</span>
                   <ExternalLink size={16} />
-                </button>
+                </Link>
               </div>
 
               {/* Related Projects */}

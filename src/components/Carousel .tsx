@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
+import Button from './Button';
 
 export default function HeroCarousel() {
   const { t } = useTranslation();
@@ -74,7 +75,7 @@ export default function HeroCarousel() {
   const hasImageError = imageErrors.has(slide.id);
 
   return (
-    <div className="relative w-full h-[95vh] overflow-hidden bg-white dark:bg-black text-black dark:text-white">
+    <div className="relative w-full h-[95vh] overflow-hidden bg-white dark:bg-black text-black dark:text-white overflow-hidden">
       <AnimatePresence>
         <motion.div
           key={slide.id}
@@ -123,10 +124,15 @@ export default function HeroCarousel() {
           <div className="relative z-10 max-w-3xl mx-auto text-center">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-black mb-6 text-[#ED8823] dark:text-white">{slide.title}</h1>
             <p className="text-lg sm:text-xl font-light mb-8 text-white">{slide.subtitle}</p>
-            <Link to="/projects" className="flex items-center w-fit gap-2 px-6 py-2 rounded-full bg-gray-900 text-white hover:bg-black/90 transition">
+            <Button
+              variant="glass"
+              size="lg"
+              icon="arrow-right"
+              href="/projects"
+              className="uppercase tracking-wider"
+            >
               {t('viewAllProjects')}
-              <ArrowRight size={18} />
-            </Link>
+            </Button>
           </div>
 
           {/* Next Preview */}

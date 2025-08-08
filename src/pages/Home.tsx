@@ -10,7 +10,7 @@ import ContactSection from '../components/sections/ContactSection';
 const Home: React.FC = () => {
 
   return (
-    <div className="pt-16">
+    <div className="pt-16 overflow-hidden">
       <HeroSection />
       <AboutSection />
       <ServicesSection />

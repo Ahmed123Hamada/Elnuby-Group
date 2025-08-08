@@ -41,7 +41,7 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
   };
 
   return (
-    <div className={`relative overflow-hidden ${className}`}>
+    <div className={`relative overflow-hidden ${className}` }>
       {/* Loading Placeholder */}
       {!isLoaded && !hasError && (
         <div className="absolute inset-0 bg-gradient-to-br from-gray-200 to-gray-300 dark:from-gray-700 dark:to-gray-800 animate-pulse" />

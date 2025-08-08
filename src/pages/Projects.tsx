@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, ExternalLink, MapPin, Calendar, Ruler, User, DollarSign, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useTranslatedData } from '../hooks/useTranslatedData';
 import RobustImage from '../components/RobustImage';
+import projectsBgImage from '../assast/Images/project/projectslider2.webp';
 
 const Projects: React.FC = () => {
   const { t } = useTranslation();
@@ -64,10 +65,18 @@ const Projects: React.FC = () => {
   };
 
   return (
-    <div className="pt-16">
+    <div className="pt-16 overflow-hidden">
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary-600 to-primary-800 text-white py-20">
-        <div className="container-custom">
+      <section 
+        className="relative bg-gradient-to-br from-primary-600 to-primary-800 text-white py-20 overflow-hidden"
+        style={{
+          backgroundImage: `linear-gradient(rgba(37, 99, 235, 0.8), rgba(247, 161, 63, 0.6)), url(${projectsBgImage})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
+        <div className="container-custom relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

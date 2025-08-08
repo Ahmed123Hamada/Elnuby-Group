@@ -12,6 +12,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
+import Career from './pages/Career';
 import ProjectDetails from './pages/ProjectDetails';
 
 // Context
@@ -32,7 +33,7 @@ function App() {
               <Route path="/projects" element={<Projects />} />
               <Route path="/project/:projectId" element={<ProjectDetails />} />
               <Route path="/contact" element={<Contact />} />
-              <Route path="/career" element={<About />} />
+              <Route path="/career" element={<Career />} />
             </Routes>
           </main>
           <Footer />
