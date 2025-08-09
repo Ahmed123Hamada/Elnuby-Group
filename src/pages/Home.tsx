@@ -1,12 +1,10 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 
 // Components
 import HeroSection from '../components/sections/HeroSection';
 import AboutSection from '../components/sections/AboutSection';
-import ServicesSection from '../components/sections/ServicesSection';
-import ProjectsSection from '../components/sections/ProjectsSection';
-import PartnersSection from '../components/sections/PartnersSection';
-import ContactSection from '../components/sections/ContactSection';
+import { LazyProjectsSection, LazyPartnersSection, LazyServicesSection, ComponentLoader } from '../components/LazyComponents';
+
 
 const Home: React.FC = () => {
 
@@ -14,10 +12,15 @@ const Home: React.FC = () => {
     <div className="pt-16 overflow-hidden">
       <HeroSection />
       <AboutSection />
-      <ServicesSection />
-      <ProjectsSection />
-      <PartnersSection />
-      <ContactSection />
+      <Suspense fallback={<ComponentLoader />}>
+        <LazyServicesSection />
+      </Suspense>
+      <Suspense fallback={<ComponentLoader />}>
+        <LazyProjectsSection />
+      </Suspense>
+      <Suspense fallback={<ComponentLoader />}>
+        <LazyPartnersSection />
+      </Suspense>
     </div>
   );
 };

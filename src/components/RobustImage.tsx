@@ -67,6 +67,8 @@ const RobustImage: React.FC<RobustImageProps> = ({
         className={`w-full h-full object-cover transition-opacity duration-300 ${
           isLoaded ? 'opacity-100' : 'opacity-0'
         }`}
+        loading="lazy"
+        decoding="async"
         onLoad={handleLoad}
         onError={handleError}
       />

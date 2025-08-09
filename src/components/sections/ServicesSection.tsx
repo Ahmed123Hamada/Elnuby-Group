@@ -4,212 +4,181 @@ import { motion } from 'framer-motion';
 import { 
   Building2, 
   Wrench, 
-  ClipboardList, 
-  Lightbulb, 
-  Car, 
-  Heart, 
-  GraduationCap, 
-  Shield,
-  Users,
-  Award,
-  Clock,
-  CheckCircle
+  Zap, 
+  Droplets,
+  ArrowRight
 } from 'lucide-react';
-import { useTranslatedData } from '../../hooks/useTranslatedData';
-import ServiceCard from '../ServiceCard';
-import Button from '../Button';
+import { Link } from 'react-router-dom';
 
 const ServicesSection: React.FC = () => {
   const { t } = useTranslation();
-  const { getServices } = useTranslatedData();
-  const services = getServices();
 
-  const serviceCards = [
+  const modernServices = [
     {
-      title: t('engineeringDesign'),
-      description: t('engineeringDesignDesc'),
+      title: 'Construction',
+      titleAr: 'الإنشاءات',
+      description: 'Complete construction solutions from foundation to finishing',
+      descriptionAr: '   الإنشاء الكاملة من الأساسات إلى التشطيبات',
       icon: Building2,
-      features: [t('architecturalDesign'), t('structuralDesign'), t('electricalDesign'), t('mechanicalDesign')],
-      number: '01',
-      color: 'from-blue-500 to-blue-600'
+      features: ['Building Construction', 'Infrastructure', 'Roads & Bridges', 'Public Facilities'],
+      featuresAr: ['بناء المباني', 'البنية التحتية', 'الطرق والجسور', 'المرافق العامة'],
+      color: 'from-blue-600 to-blue-700',
+      bgPattern: 'bg-blue-50 dark:bg-blue-900/20'
     },
     {
-      title: t('projectManagement'),
-      description: t('projectManagementDesc'),
-      icon: ClipboardList,
-      features: [t('projectPlanning'), t('qualityManagement'), t('riskManagement'), t('executionFollowUp')],
-      number: '02',
-      color: 'from-green-500 to-green-600'
-    },
-    {
-      title: t('construction'),
-      description: t('constructionDesc'),
+      title: 'Mechanical',
+      titleAr: 'الميكانيكية',
+      description: 'Advanced mechanical systems and HVAC solutions',
+      descriptionAr: 'أنظمة ميكانيكية متقدمة وحلول التكييف والتهوية',
       icon: Wrench,
-      features: [t('buildingConstruction'), t('infrastructure'), t('roadsBridges'), t('publicFacilities')],
-      number: '03',
-      color: 'from-elnuby-orange to-elnuby-darkOrange'
+      features: ['HVAC Systems', 'Plumbing', 'Fire Protection', 'Elevators'],
+      featuresAr: ['أنظمة التكييف', 'السباكة', 'مكافحة الحريق', 'المصاعد'],
+      color: 'from-green-600 to-green-700',
+      bgPattern: 'bg-green-50 dark:bg-green-900/20'
     },
     {
-      title: t('healthcareProjects'),
-      description: t('healthcareProjectsDesc'),
-      icon: Heart,
-      features: [t('generalHospitals'), t('specializedHospitals'), t('medicalCenters'), t('laboratories')],
-      number: '04',
-      color: 'from-red-500 to-red-600'
+      title: 'Electrical',
+      titleAr: 'الكهربائية',
+      description: 'Comprehensive electrical installations and power systems',
+      descriptionAr: 'تركيبات كهربائية شاملة وأنظمة الطاقة',
+      icon: Zap,
+      features: ['Power Distribution', 'Lighting Systems', 'Smart Controls', 'Emergency Systems'],
+      featuresAr: ['توزيع الطاقة', 'أنظمة الإضاءة', 'التحكم الذكي', 'أنظمة الطوارئ'],
+      color: 'from-yellow-600 to-orange-600',
+      bgPattern: 'bg-yellow-50 dark:bg-yellow-900/20'
+    },
+    {
+      title: 'Plumbing',
+      titleAr: 'السباكة',
+      description: 'Professional plumbing and water management systems',
+      descriptionAr: 'أنظمة السباكة المهنية وإدارة المياه',
+      icon: Droplets,
+      features: ['Water Supply', 'Drainage Systems', 'Water Treatment', 'Pumping Stations'],
+      featuresAr: ['إمداد المياه', 'أنظمة الصرف', 'معالجة المياه', 'محطات الضخ'],
+      color: 'from-cyan-600 to-blue-600',
+      bgPattern: 'bg-cyan-50 dark:bg-cyan-900/20'
     }
   ];
 
+  const currentLang = t('language') === 'Language' ? 'en' : 'ar';
+
   return (
-    <section id="services" className="py-20 bg-gradient-to-br from-elnuby-cream to-elnuby-lightOrange/20 dark:from-elnuby-dark/20 dark:to-elnuby-orange/10 overflow-hidden">
-      <div className="container-custom">
-        {/* Header */}
+    <section id="services" className="py-20 bg-white dark:bg-gray-900">
+      <div className="container-custom px-4 sm:px-6 lg:px-8">
+        {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <motion.h2 
-            className="text-4xl md:text-5xl font-bold text-brand-text dark:text-white mb-6"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            {t('servicesTitle')}
-          </motion.h2>
-          <motion.p 
-            className="text-xl text-brand-text-light dark:text-gray-300 max-w-3xl mx-auto"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
-          >
-            {t('servicesSubtitle')}
-          </motion.p>
-        </motion.div>
-
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-          {serviceCards.map((service, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
-            >
-              <ServiceCard
-                title={service.title}
-                description={service.description}
-                icon={service.icon}
-                features={service.features}
-                number={service.number}
-                color={service.color}
-                onClick={() => console.log(`Clicked ${service.title}`)}
-              />
-            </motion.div>
-          ))}
-        </div>
-
-        {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center"
+          className="text-center mb-16"
         >
-          <Button
-            variant="gradient"
-            size="lg"
-            icon="arrow-right"
-            onClick={() => console.log('Explore all services')}
-          >
-            Explore all services
-          </Button>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            {currentLang === 'ar' ? 'خدماتنا المتكاملة' : 'Our Integrated Services'}
+          </h2>
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            {currentLang === 'ar' 
+              ? 'نقدم مجموعة شاملة من الخدمات الهندسية والإنشائية المتخصصة'
+              : 'We provide a comprehensive range of specialized engineering and construction services'
+            }
+          </p>
         </motion.div>
 
-        {/* Why Choose Us Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          viewport={{ once: true }}
-          className="mt-20"
-        >
-          <div className="bg-gradient-to-r from-elnuby-orange to-elnuby-darkOrange rounded-2xl p-8 md:p-12 text-white shadow-2xl">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-              {/* Content */}
-              <div>
-                <motion.h3 
-                  className="text-3xl font-bold mb-6"
-                  initial={{ opacity: 0, x: -30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6 }}
-                  viewport={{ once: true }}
-                >
-                  {t('whyChooseUs')}
-                </motion.h3>
-                <motion.p 
-                  className="text-lg mb-8 leading-relaxed opacity-90"
-                  initial={{ opacity: 0, x: -30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.6, delay: 0.2 }}
-                  viewport={{ once: true }}
-                >
-                  {t('whyChooseUsDesc')}
-                </motion.p>
+        {/* Modern Services Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {modernServices.map((service, index) => {
+            const IconComponent = service.icon;
+            const title = currentLang === 'ar' ? service.titleAr : service.title;
+            const description = currentLang === 'ar' ? service.descriptionAr : service.description;
+            const features = currentLang === 'ar' ? service.featuresAr : service.features;
+            
+            return (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="group relative"
+              >
                 
-                {/* Features */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  {[
-                    { icon: <Users className="w-6 h-6" />, text: t('professionalTeam') },
-                    { icon: <Award className="w-6 h-6" />, text: t('over20Years') },
-                    { icon: <CheckCircle className="w-6 h-6" />, text: t('over150Projects') },
-                    { icon: <Clock className="w-6 h-6" />, text: t('onTimeDelivery') }
-                  ].map((feature, index) => (
-                    <motion.div 
-                      key={index} 
-                      className="flex items-center space-x-3 rtl:space-x-reverse"
+                <div className={`relative h-full bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 dark:border-gray-700 group-hover:border-transparent overflow-hidden`}>
+                  {/* Background Pattern */}
+                  <div className={`absolute inset-0 ${service.bgPattern} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
+                  
+                  {/* Icon */}
+                  <motion.div
+                    initial={{ scale: 0 }}
+                    whileInView={{ scale: 1 }}
+                    transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
+                    viewport={{ once: true }}
+                    className={`relative z-10 w-16 h-16 bg-gradient-to-r ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
+                  >
+                    <IconComponent className="w-8 h-8 text-white" />
+                  </motion.div>
+
+                  {/* Content */}
+                  <div className="relative z-10">
+                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors duration-300">
+                      {title}
+                    </h3>
+                    <p className="text-gray-600 dark:text-gray-300 text-sm mb-6 leading-relaxed">
+                      {description}
+                    </p>
+
+                    {/* Features List */}
+                    <ul className="space-y-2">
+                      {features.map((feature, featureIndex) => (
+                        <motion.li
+                          key={featureIndex}
+                          initial={{ opacity: 0, x: -20 }}
+                          whileInView={{ opacity: 1, x: 0 }}
+                          transition={{ duration: 0.4, delay: 0.4 + index * 0.1 + featureIndex * 0.05 }}
+                          viewport={{ once: true }}
+                          className="flex items-center text-sm text-gray-700 dark:text-gray-300"
+                        >
+                          <div className={`w-2 h-2 bg-gradient-to-r ${service.color} rounded-full mr-3 flex-shrink-0`}></div>
+                          {feature}
+                        </motion.li>
+                      ))}
+                    </ul>
+
+                    {/* Contact Us Button */}
+                    <motion.div
                       initial={{ opacity: 0, y: 20 }}
                       whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.4, delay: 0.4 + index * 0.1 }}
+                      transition={{ duration: 0.4, delay: 0.6 + index * 0.1 }}
                       viewport={{ once: true }}
+                      className="mt-6"
                     >
-                      <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center">
-                        {feature.icon}
-                      </div>
-                      <span className="font-medium">{feature.text}</span>
+   
                     </motion.div>
-                  ))}
+
+                  </div>
+
+                  {/* Hover Effect */}
+                  <div className={`absolute -top-10 -right-10 w-20 h-20 bg-gradient-to-r ${service.color} rounded-full opacity-10 group-hover:opacity-20 group-hover:scale-150 transition-all duration-500`}></div>
                 </div>
-              </div>
-              
-              {/* Stats */}
-              <div className="grid grid-cols-2 gap-6">
-                {[
-                  { number: '150+', label: t('completedProjects') },
-                  { number: '20+', label: t('yearsExperience') },
-                  { number: '50+', label: t('happyClients') },
-                  { number: '100+', label: t('professionalStaff') }
-                ].map((stat, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
-                    viewport={{ once: true }}
-                    className="text-center bg-white/10 rounded-xl p-6 backdrop-blur-sm border border-white/20"
-                  >
-                    <div className="text-3xl font-bold mb-2">{stat.number}</div>
-                    <div className="text-sm opacity-90">{stat.label}</div>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-          </div>
+              </motion.div>
+            );
+          })}
+        </div>
+
+        {/* Bottom CTA */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.8 }}
+          viewport={{ once: true }}
+          className="text-center mt-16"
+        >
+          <p className="text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
+            {currentLang === 'ar' 
+              ? 'نقدم حلولاً متكاملة في جميع التخصصات الهندسية لضمان تنفيذ مشاريعكم بأعلى معايير الجودة والكفاءة'
+              : 'We provide integrated solutions across all engineering disciplines to ensure your projects are executed with the highest standards of quality and efficiency'
+            }
+          </p>
+
         </motion.div>
       </div>
     </section>

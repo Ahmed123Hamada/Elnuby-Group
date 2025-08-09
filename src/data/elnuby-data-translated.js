@@ -1,15 +1,4 @@
-import heroImage from '../assast/Images/project/projectslider.webp';
-import galalaImage from '../assast/galala-1.jpg';
-import lvmaiImage from '../assast/lvmai-scaled.jpg';
-import rdkbshImage from '../assast/rdkbsh-2-1.jpg';
-import btshkImage from '../assast/btshk-7.jpg';
-import GalalaUniversityHospitalImg from '../assast/Images/project/Hospital/GalalaUniversityHospital.jpg';
-import LavidaHospitalImg from '../assast/Images/project/Hospital/LavidaHospital.jpg';
-import MansouraMilitaryHospitalImg from '../assast/Images/project/Hospital/MansouraMilitaryHospital.jpg';
-import ArmentHospitalImg from '../assast/Images/project/Hospital/ArmentHospital.jpg';
-import BedayatHospitalImg from '../assast/Images/project/Hospital/BedayatHospital.jpg';
-import SamaloutHospitalImg from '../assast/Images/project/Hospital/SamaloutHospital.jpg';
-import AswanOphthalmologyHospitalImg from '../assast/Images/project/Hospital/AswanOphthalmologyHospital.jpg';
+// Optimized imports - only import what's actually used
 import KomOmboHospitalImg from '../assast/Images/project/Hospital/KomOmboHospital.jpg';
 import SohagUniversityHospitalImg from '../assast/Images/project/Hospital/SohagUniversityHospital.jpg';
 import EsnaSpecializedHospitalImg from '../assast/Images/project/Hospital/EsnaSpecializedHospital.jpg';
@@ -91,8 +80,8 @@ export const elnubyDataTranslated = {
       en: 'Elnuby Group'
     },
     subtitle: {
-      ar: 'التميز في الهندسة والبناء',
-      en: 'Excellence in Engineering and Construction'
+      ar: 'نسعى دائماً للتميز والإخلاص في خدمة العملاء',
+      en: 'We always strive for excellence and dedication in customer service'
     },
     description: {
       ar: 'نحن مجموعة النوبي، شركة رائدة في مجال الهندسة والبناء، نقدم حلولاً متكاملة ومبتكرة لجميع احتياجاتكم الهندسية.',
@@ -102,16 +91,16 @@ export const elnubyDataTranslated = {
   },
   about: {
     title: {
-      ar: 'عن مجموعة النوبي',
-      en: 'About Elnuby Group'
+      ar: 'عن الشركة',
+      en: 'About the company'
     },
     subtitle: {
-      ar: 'خبرة أكثر من 20 عاماً في مجال الهندسة',
-      en: 'Over 20 Years of Engineering Experience'
+      ar: 'شركة مقاولات مصرية رائدة تأسست عام 2000',
+      en: 'A leading Egyptian contracting company established in 2000'
     },
     content: {
-      ar: 'مجموعة النوبي هي شركة رائدة في مجال الهندسة والبناء، تأسست منذ أكثر من 20 عاماً. نتميز بخبرة واسعة في تصميم وتنفيذ المشاريع الهندسية المختلفة، من المباني السكنية والتجارية إلى المشاريع الصناعية والبنية التحتية.',
-      en: 'Elnuby Group is a leading company in engineering and construction, established for more than 20 years. We have extensive experience in designing and implementing various engineering projects, from residential and commercial buildings to industrial projects and infrastructure.'
+      ar: 'تحت إدارة وإشراف فريق من نخبة المهندسين، الذين يسعون لتقديم خدمات شاملة في مجال البناء والمقاولات. تهدف شركتنا إلى تقديم حلول متكاملة تشمل جميع مراحل البناء، من التخطيط والتصميم إلى التنفيذ والتشطيب، مع الالتزام بأعلى معايير الجودة والكفاءة والسلامة المهنية لتلبية احتياجات العملاء في منطقة الشرق الأوسط وأفريقيا.',
+      en: 'Under the management and supervision of a team of elite engineers, who strive to provide comprehensive services in the field of construction and contracting. Our company aims to offer integrated solutions encompassing all stages of construction, from planning and design to execution and finishing, adhering to the highest standards of quality, efficiency, and occupational safety to meet the needs of customers in the Middle East and Africa region.'
     },
     image: '/images/projects/about-image.jpg'
   },

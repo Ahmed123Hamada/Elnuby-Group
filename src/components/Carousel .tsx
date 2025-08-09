@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';
+
 import Button from './Button';
 
 export default function HeroCarousel() {
@@ -44,16 +44,16 @@ export default function HeroCarousel() {
   const [imagesLoaded, setImagesLoaded] = useState<Set<number>>(new Set());
   const [imageErrors, setImageErrors] = useState<Set<number>>(new Set());
 
-  const nextSlide = () => setCurrent((prev) => (prev + 1) % slides.length);
-  const prevSlide = () => setCurrent((prev) => (prev - 1 + slides.length) % slides.length);
+  const nextSlide = useCallback(() => setCurrent((prev) => (prev + 1) % slides.length), [slides.length]);
+  const prevSlide = useCallback(() => setCurrent((prev) => (prev - 1 + slides.length) % slides.length), [slides.length]);
 
-  useEffect(() => {
+    useEffect(() => {
     const interval = setInterval(() => {
       nextSlide();
     }, 5000);
-
+    
     return () => clearInterval(interval);
-  }, []);
+  }, [nextSlide]);
 
   const handleImageLoad = (slideId: number) => {
     console.log('Image loaded for slide:', slideId);
@@ -75,7 +75,7 @@ export default function HeroCarousel() {
   const hasImageError = imageErrors.has(slide.id);
 
   return (
-    <div className="relative w-full h-[95vh] overflow-hidden bg-white dark:bg-black text-black dark:text-white overflow-hidden">
+    <div className="relative w-full h-[60vh] sm:h-[70vh] md:h-[80vh] lg:h-[90vh] xl:h-[95vh] overflow-hidden bg-white dark:bg-black text-black dark:text-white">
       <AnimatePresence>
         <motion.div
           key={slide.id}
@@ -83,7 +83,7 @@ export default function HeroCarousel() {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -40 }}
           transition={{ duration: 0.6 }}
-          className="absolute inset-0 w-full h-full flex flex-col items-center justify-center text-center px-4 sm:px-6 lg:px-12"
+          className="absolute inset-0 w-full h-full flex flex-col items-center justify-center text-center px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16"
         >
           {/* Background Image */}
           <div className="absolute inset-0 w-full h-full">
@@ -121,33 +121,53 @@ export default function HeroCarousel() {
           <div className="absolute inset-0 bg-black/40" />
 
           {/* Text Content */}
-          <div className="relative z-10 max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-black mb-6 text-[#ED8823] dark:text-white">{slide.title}</h1>
-            <p className="text-lg sm:text-xl font-light mb-8 text-white">{slide.subtitle}</p>
-            <Button
-              variant="glass"
-              size="lg"
-              icon="arrow-right"
-              href="/projects"
-              className="uppercase tracking-wider"
+          <div className="relative z-10 max-w-xs sm:max-w-md md:max-w-2xl lg:max-w-4xl xl:max-w-5xl mx-auto text-center">
+            <motion.h1 
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black mb-4 sm:mb-6 text-[#ED8823] dark:text-white leading-tight"
             >
-              {t('viewAllProjects')}
-            </Button>
+              {slide.title}
+            </motion.h1>
+            <motion.p 
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="text-sm sm:text-base md:text-lg lg:text-xl font-light mb-6 sm:mb-8 text-white/90 leading-relaxed px-2"
+            >
+              {slide.subtitle}
+            </motion.p>
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+            >
+              <Button
+                variant="glass"
+                size="lg"
+                icon="arrow-right"
+                href="/projects"
+                className="uppercase tracking-wider text-xs sm:text-sm md:text-base px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 mb-4  "
+              >
+                {t('viewAllProjects')}
+              </Button>
+            </motion.div>
           </div>
 
-          {/* Next Preview */}
-          <div className="absolute bottom-24 sm:bottom-16 left-1/2 transform -translate-x-1/2 flex items-end gap-4 sm:gap-6 z-10">
+          {/* Next Preview - Hidden on small screens */}
+          <div className="hidden md:flex absolute bottom-16 lg:bottom-20 left-1/2 transform -translate-x-1/2 items-end gap-4 lg:gap-6 z-10">
             <div className="relative">
               {!hasImageError ? (
                 <img
                   src={slide.image}
                   alt="Next project preview"
-                  className="w-20 h-28 sm:w-28 sm:h-44 object-cover rounded-md shadow-lg"
+                  className="w-24 h-32 lg:w-28 lg:h-44 object-cover rounded-lg shadow-lg"
                   onLoad={() => console.log('Preview image loaded:', slide.image)}
                   onError={() => handleImageError(slide.id, slide.image)}
                 />
               ) : (
-                <div className="w-20 h-28 sm:w-28 sm:h-44 bg-gray-200 dark:bg-gray-700 rounded-md shadow-lg flex items-center justify-center">
+                <div className="w-24 h-32 lg:w-28 lg:h-44 bg-gray-200 dark:bg-gray-700 rounded-lg shadow-lg flex items-center justify-center">
                   <div className="text-center text-gray-500 dark:text-gray-400">
                     <div className="w-8 h-8 bg-gray-300 dark:bg-gray-600 rounded-full flex items-center justify-center mb-1 mx-auto">
                       <span className="text-sm">📷</span>
@@ -157,31 +177,48 @@ export default function HeroCarousel() {
                 </div>
               )}
             </div>
-            <div className="text-left text-sm sm:text-base">
-              <p className="uppercase text-gray-300 tracking-widest">{t('nextProject')}</p>
+            <div className="text-left text-sm lg:text-base">
+              <p className="uppercase text-gray-300 tracking-widest text-xs lg:text-sm">{t('nextProject')}</p>
               <p className="font-medium text-white">{slide.nextProject}</p>
             </div>
           </div>
 
           {/* Controls */}
-          <div className="absolute bottom-8 right-6 sm:right-10 flex items-center gap-6 z-10">
-            <button onClick={prevSlide} className="hover:opacity-60 transition text-white">
-              <ArrowLeft />
+          <div className="absolute bottom-4 sm:bottom-6 md:bottom-8 right-4 sm:right-6 lg:right-10 flex items-center gap-3 sm:gap-4 lg:gap-6 z-10">
+            <button 
+              onClick={prevSlide} 
+              className="w-10 h-10 sm:w-12 sm:h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/30 transition-all duration-300 text-white border border-white/30"
+              aria-label="Previous slide"
+            >
+              <ArrowLeft size={16} className="sm:w-5 sm:h-5" />
             </button>
-            <span className="w-20 h-px bg-gray-400" />
-            <button onClick={nextSlide} className="hover:opacity-60 transition text-white">
-              <ArrowRight />
+            <span className="w-8 sm:w-12 lg:w-20 h-px bg-white/40" />
+            <button 
+              onClick={nextSlide} 
+              className="w-10 h-10 sm:w-12 sm:h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white/30 transition-all duration-300 text-white border border-white/30"
+              aria-label="Next slide"
+            >
+              <ArrowRight size={16} className="sm:w-5 sm:h-5" />
             </button>
           </div>
 
-          {/* Slide Indicator */}
-          <div className="absolute right-4 top-1/2 transform -translate-y-1/2 flex flex-col items-center gap-4 text-xs tracking-wider font-medium text-gray-300 z-10">
-            {slides.map((_, idx) => (
-              <span key={idx} className={idx === current ? 'text-white' : 'opacity-50'}>
-                0{idx + 1}
-              </span>
+          {/* Mobile Slide Indicators */}
+          <div className="flex md:hidden absolute bottom-4 left-1/2 transform -translate-x-1/2 gap-2 z-10">
+            {slides.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrent(index)}
+                className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                  index === current 
+                    ? 'bg-white w-6' 
+                    : 'bg-white/50 hover:bg-white/70'
+                }`}
+                aria-label={`Go to slide ${index + 1}`}
+              />
             ))}
           </div>
+
+
         </motion.div>
       </AnimatePresence>
     </div>

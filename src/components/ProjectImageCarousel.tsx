@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, X, Maximize2, Minimize2 } from 'lucide-react';
 
@@ -11,13 +11,13 @@ const ProjectImageCarousel: React.FC<ProjectImageCarouselProps> = ({ images, tit
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isFullscreen, setIsFullscreen] = useState(false);
 
-  const nextSlide = () => {
+  const nextSlide = useCallback(() => {
     setCurrentIndex((prev) => (prev + 1) % images.length);
-  };
+  }, [images.length]);
 
-  const prevSlide = () => {
+  const prevSlide = useCallback(() => {
     setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
-  };
+  }, [images.length]);
 
   const goToSlide = (index: number) => {
     setCurrentIndex(index);
@@ -32,7 +32,7 @@ const ProjectImageCarousel: React.FC<ProjectImageCarouselProps> = ({ images, tit
 
       return () => clearInterval(interval);
     }
-  }, [currentIndex, isFullscreen]);
+  }, [nextSlide, isFullscreen]);
 
   // Keyboard navigation
   useEffect(() => {
@@ -54,7 +54,7 @@ const ProjectImageCarousel: React.FC<ProjectImageCarouselProps> = ({ images, tit
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [isFullscreen]);
+  }, [isFullscreen, nextSlide, prevSlide]);
 
   if (!images || images.length === 0) {
     return null;

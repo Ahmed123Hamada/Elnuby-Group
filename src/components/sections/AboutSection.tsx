@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { CheckCircle, Users, Award, Clock } from 'lucide-react';
 import { useTranslatedData } from '../../hooks/useTranslatedData';
-import nubyInsideImage from '../../assast/Images/About/nubyinside.jpg';
+import mapImage from '../../assast/Images/Map/map.jpg';
 
 const AboutSection: React.FC = () => {
   const { t } = useTranslation();
@@ -115,8 +115,8 @@ const AboutSection: React.FC = () => {
           >
             <div className="relative w-full h-96 lg:h-[500px] bg-gradient-to-br from-primary-400 to-primary-600 rounded-2xl shadow-2xl overflow-hidden">
               <img 
-                src={nubyInsideImage} 
-                alt={t('aboutImageAlt')}
+                src={mapImage} 
+                alt={t('mapImageAlt')}
                 className="w-full h-full object-cover"
               />
               

@@ -114,7 +114,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
             icon="arrow-right"
             onClick={onClick}
           >
-            Explore in detail
+            Contact Us
           </Button>
         </motion.div>
       </div>

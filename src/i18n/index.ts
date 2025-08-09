@@ -13,7 +13,7 @@ const resources = {
       
       // Hero Section
       heroTitle: 'Elnuby Group',
-      heroSubtitle: 'Excellence in Engineering and Construction',
+      heroSubtitle: 'We always strive for excellence and dedication in customer service',
       heroDescription: 'We are Elnuby Group, a leading company in engineering and construction, providing integrated and innovative solutions for all your engineering needs.',
       getStarted: 'Get Started',
       learnMore: 'Learn More',
@@ -26,18 +26,19 @@ const resources = {
       nextProject: 'Next Project',
       
       // About Section
-      aboutTitle: 'About Elnuby Group',
-      aboutSubtitle: 'Over 20 Years of Engineering Experience',
-      aboutDescription: 'Elnuby Group is a leading company in engineering and construction, established for more than 20 years. We have extensive experience in designing and implementing various engineering projects, from residential and commercial buildings to industrial projects and infrastructure.',
+      aboutTitle: 'About the company',
+      aboutSubtitle: 'A leading Egyptian contracting company established in 2000',
+      aboutDescription: 'Under the management and supervision of a team of elite engineers, who strive to provide comprehensive services in the field of construction and contracting. Our company aims to offer integrated solutions encompassing all stages of construction, from planning and design to execution and finishing, adhering to the highest standards of quality, efficiency, and occupational safety to meet the needs of customers in the Middle East and Africa region.',
       professionalStaff: 'Professional Staff',
       professionalStaffDesc: 'Professional team of engineers and experts',
       yearsExperience: 'Years of Experience',
-      yearsExperienceDesc: 'Over 20 years of experience in the field',
+      yearsExperienceDesc: 'Established in 2000 with extensive experience',
       completedProjects: 'Completed Projects',
       completedProjectsDesc: 'Over 150 successfully completed projects',
       onTimeDelivery: 'On-Time Delivery',
       onTimeDeliveryDesc: 'We commit to delivering projects on time',
       aboutImageAlt: 'Elnuby Group - Inside the Company',
+      mapImageAlt: 'Elnuby Group Location Map',
       
       // Services Section
       servicesTitle: 'Our Integrated Services',
@@ -95,6 +96,11 @@ const resources = {
       // Projects Section
       projectsTitle: 'Our Distinguished Projects',
       projectsSubtitle: 'Discover a diverse collection of our distinguished projects in various engineering and construction fields',
+      projectCategories: 'Project Categories',
+      ourProjects: 'Our Projects',
+      exploreBy: 'Explore By',
+      project: 'Project',
+      exploreAllCategories: 'Explore All Categories',
       viewAllProjects: 'View All Projects',
       
       // Contact Section
@@ -114,13 +120,27 @@ const resources = {
       
       // Stats
       happyClients: 'Happy Clients',
+      projectsCompleted: 'Projects Completed',
+      yearsExperienceNum: 'Years of Experience',
+      supportAvailable: 'Support Available',
+      employees: 'Employees',
       
       // Footer
       allRightsReserved: 'All Rights Reserved',
       privacyPolicy: 'Privacy Policy',
       termsOfService: 'Terms of Service',
+      cookiePolicy: 'Cookie Policy',
       sitemap: 'Sitemap',
       quickLinks: 'Quick Links',
+      stayUpdated: 'Stay Updated',
+      newsletterDesc: 'Subscribe to our newsletter for the latest updates and project news.',
+      emailAddress: 'Email Address',
+      subscribe: 'Subscribe',
+      contactInfo: 'Contact Information',
+      workingHours: 'Working Hours',
+      workingHoursDesc: 'Sunday - Thursday: 9:00 AM - 6:00 PM',
+      designedWith: 'Designed with',
+      inEgypt: 'in Egypt',
       
       // Language
       language: 'Language',
@@ -151,6 +171,7 @@ const resources = {
       // Categories
       allProjects: 'All Projects',
       healthcare: 'Healthcare',
+      infrastructure: 'Infrastructure',
       educational: 'Educational',
       administrative: 'Administrative',
       hospitality: 'Hospitality',
@@ -170,22 +191,16 @@ const resources = {
       tryChangingFilters: 'Try changing search criteria or category',
       projects: 'Projects',
       
-      // Contact Form
-      contactUs: 'Contact Us',
-      phoneNumber: 'Phone Number',
-      emailAddress: 'Email Address',
-      fullName: 'Full Name',
-      yourMessage: 'Your Message',
-      submit: 'Submit',
+
       
       // About Page Specific
-      ourMission: 'Our Mission',
-      ourVision: 'Our Vision',
+      ourMission: 'Mission',
+      ourVision: 'Vision',
       ourValues: 'Our Values',
       ourJourney: 'Our Journey',
       ourFounders: 'Our Founders',
-      missionDescription: 'To provide innovative engineering solutions that exceed client expectations while maintaining the highest standards of quality, safety, and sustainability. We are committed to delivering exceptional value through our expertise, creativity, and dedication to excellence.',
-      visionDescription: 'To be the leading engineering company in the region, recognized for our innovative solutions, exceptional service, and commitment to sustainable development. We aspire to shape the future of engineering through technology and creativity.',
+      missionDescription: 'Excellence in providing contracting, building, and construction work in a professional and efficient manner by deeply investigating all market requirements and working closely with our clients.',
+      visionDescription: 'We look forward to being one of the leading companies in Egypt and the Arab world in the field of contracting in terms of commitment to the highest levels of quality and modern technologies to provide innovative solutions for various projects.',
       valuesDescription: 'The principles that guide our work and relationships with clients, partners, and communities.',
       journeyDescription: 'A timeline of our growth and achievements over the years.',
       foundersDescription: 'Meet the visionary leaders who established El Nuby Group and continue to drive our success in the construction industry.',
@@ -214,15 +229,17 @@ const resources = {
       
       // Timeline
       companyFounded: 'Company Founded',
-      companyFoundedDesc: 'El Nuby was established with a vision to provide exceptional engineering services.',
-      firstMajorProject: 'First Major Project',
-      firstMajorProjectDesc: 'Successfully completed our first large-scale engineering project.',
-      teamExpansion: 'Team Expansion',
-      teamExpansionDesc: 'Expanded our team with experienced professionals and specialists.',
+      companyFoundedDesc: 'El Nuby Group for Contracting was established as a leading Egyptian contracting company under the management and supervision of a team of elite engineers.',
+      firstClassClassification: 'First-Class Classification',
+      firstClassClassificationDesc: 'The group has been classified as a (first-class) in the field of integrated works and roads, marking our commitment to excellence.',
+      firstMajorProject: 'Major Infrastructure Projects',
+      firstMajorProjectDesc: 'Successfully expanded into hospitals, roads and infrastructure, and various major projects across Egypt and the region.',
+      teamExpansion: 'Regional Expansion',
+      teamExpansionDesc: 'Expanded our operations to serve customers in the Middle East and Africa region with comprehensive construction solutions.',
       digitalTransformation: 'Digital Transformation',
       digitalTransformationDesc: 'Implemented advanced digital tools and technologies.',
-      industryRecognition: 'Industry Recognition',
-      industryRecognitionDesc: 'Received multiple awards for excellence in engineering services.',
+      industryRecognition: 'Continued Excellence',
+      industryRecognitionDesc: 'El Nuby Group is proud of the exceptional level of customer satisfaction with the quality and completion of all its projects.',
       
       // Founders
       chairmanBoard: 'Chairman of the Board of Directors',
@@ -233,9 +250,7 @@ const resources = {
       leadershipPhilosophyDesc: 'Our founders established El Nuby Group with a clear vision: to build not just structures, but lasting relationships based on trust, quality, and innovation. Their combined expertise in engineering excellence and strategic leadership continues to drive our commitment to delivering world-class construction solutions across Egypt and beyond.',
       
       // Stats
-      projectsCompleted: 'Projects Completed',
-      yearsExperienceNum: 'Years Experience',
-      supportAvailable: 'Support Available',
+
       
       // Contact Page Specific
       messageSentSuccess: 'Message Sent Successfully!',
@@ -266,12 +281,7 @@ const resources = {
       phoneDesc: 'Call us during business hours',
       officeTitle: 'Office',
       officeDesc: 'Visit our main office',
-      workingHoursTitle: 'Working Hours',
-      workingHoursValue: 'Mon - Fri: 9AM - 6PM',
-      workingHoursDesc: 'We\'re here to help',
-      visitOffice: 'Visit Our Office',
-      visitOfficeDesc: 'Located in the heart of Cairo, our office is easily accessible and ready to welcome you for a consultation.',
-      getDirections: 'Get Directions',
+
       contactDepartments: 'Contact Our Departments',
       contactDepartmentsDesc: 'Get in touch with the right team for your specific needs.',
       generalInquiryDept: 'General Inquiries',
@@ -361,7 +371,7 @@ const resources = {
       
       // Hero Section
       heroTitle: 'مجموعة النوبي',
-      heroSubtitle: 'التميز في الهندسة والبناء',
+      heroSubtitle: 'نسعى دائماً للتميز والإخلاص في خدمة العملاء',
       heroDescription: 'نحن مجموعة النوبي، شركة رائدة في مجال الهندسة والبناء، نقدم حلولاً متكاملة ومبتكرة لجميع احتياجاتكم الهندسية.',
       getStarted: 'ابدأ الآن',
       learnMore: 'اعرف المزيد',
@@ -374,18 +384,19 @@ const resources = {
       nextProject: 'المشروع التالي',
       
       // About Section
-      aboutTitle: 'عن مجموعة النوبي',
-      aboutSubtitle: 'خبرة أكثر من 20 عاماً في مجال الهندسة',
-      aboutDescription: 'مجموعة النوبي هي شركة رائدة في مجال الهندسة والبناء، تأسست منذ أكثر من 20 عاماً. نتميز بخبرة واسعة في تصميم وتنفيذ المشاريع الهندسية المختلفة، من المباني السكنية والتجارية إلى المشاريع الصناعية والبنية التحتية.',
+      aboutTitle: 'عن الشركة',
+      aboutSubtitle: 'شركة مقاولات مصرية رائدة تأسست عام 2000',
+      aboutDescription: 'تحت إدارة وإشراف فريق من نخبة المهندسين، الذين يسعون لتقديم خدمات شاملة في مجال البناء والمقاولات. تهدف شركتنا إلى تقديم حلول متكاملة تشمل جميع مراحل البناء، من التخطيط والتصميم إلى التنفيذ والتشطيب، مع الالتزام بأعلى معايير الجودة والكفاءة والسلامة المهنية لتلبية احتياجات العملاء في منطقة الشرق الأوسط وأفريقيا.',
       professionalStaff: 'فريق محترف',
       professionalStaffDesc: 'فريق محترف من المهندسين والخبراء',
       yearsExperience: 'سنوات الخبرة',
-      yearsExperienceDesc: 'خبرة أكثر من 20 عاماً في المجال',
+      yearsExperienceDesc: 'تأسست عام 2000 مع خبرة واسعة',
       completedProjects: 'مشاريع مكتملة',
-      completedProjectsDesc: 'أكثر من 150 مشروع مكتمل بنجاح',
+      completedProjectsDesc: 'أكثر من 250 مشروع مكتمل بنجاح',
       onTimeDelivery: 'التسليم في الوقت المحدد',
       onTimeDeliveryDesc: 'نلتزم بتسليم المشاريع في الوقت المحدد',
       aboutImageAlt: 'مجموعة النوبي - داخل الشركة',
+      mapImageAlt: 'خريطة موقع مجموعة النوبي',
       
       // Services Section
       servicesTitle: 'خدماتنا المتكاملة',
@@ -443,6 +454,11 @@ const resources = {
       // Projects Section
       projectsTitle: 'مشاريعنا المميزة',
       projectsSubtitle: 'اكتشف مجموعة متنوعة من مشاريعنا المتميزة في مختلف المجالات الهندسية والإنشائية',
+      projectCategories: 'فئات المشاريع',
+      ourProjects: 'مشاريعنا',
+      exploreBy: 'استكشف حسب',
+      project: 'مشروع',
+      exploreAllCategories: 'استكشف جميع الفئات',
       viewAllProjects: 'عرض جميع المشاريع',
       
       // Contact Section
@@ -462,13 +478,27 @@ const resources = {
       
       // Stats
       happyClients: 'عميل سعيد',
+      projectsCompleted: 'مشاريع مكتملة',
+      yearsExperienceNum: 'سنوات الخبرة',
+      supportAvailable: 'دعم متاح',
+      employees: 'موظف',
       
       // Footer
       allRightsReserved: 'جميع الحقوق محفوظة',
       privacyPolicy: 'سياسة الخصوصية',
       termsOfService: 'شروط الاستخدام',
+      cookiePolicy: 'سياسة ملفات تعريف الارتباط',
       sitemap: 'خريطة الموقع',
       quickLinks: 'روابط سريعة',
+      stayUpdated: 'ابق على اطلاع',
+      newsletterDesc: 'اشترك في نشرتنا الإخبارية للحصول على أحدث التحديثات وأخبار المشاريع.',
+      emailAddress: 'عنوان البريد الإلكتروني',
+      subscribe: 'اشتراك',
+      contactInfo: 'معلومات الاتصال',
+      workingHours: 'ساعات العمل',
+      workingHoursDesc: 'الأحد - الخميس: 9:00 صباحاً - 6:00 مساءً',
+      designedWith: 'تم التصميم بـ',
+      inEgypt: 'في مصر',
       
       // Language
       language: 'اللغة',
@@ -499,6 +529,7 @@ const resources = {
       // Categories
       allProjects: 'جميع المشاريع',
       healthcare: 'صحي',
+      infrastructure: 'بنية تحتية',
       educational: 'تعليمي',
       administrative: 'إداري',
       hospitality: 'فندقي',
@@ -518,22 +549,16 @@ const resources = {
       tryChangingFilters: 'جرب تغيير معايير البحث أو التصنيف',
       projects: 'المشاريع',
       
-      // Contact Form
-      contactUs: 'تواصل معنا',
-      phoneNumber: 'رقم الهاتف',
-      emailAddress: 'البريد الإلكتروني',
-      fullName: 'الاسم الكامل',
-      yourMessage: 'رسالتك',
-      submit: 'إرسال',
+
       
       // About Page Specific
-      ourMission: 'رسالتنا',
-      ourVision: 'رؤيتنا',
+      ourMission: 'الرسالة',
+      ourVision: 'الرؤية',
       ourValues: 'قيمنا',
       ourJourney: 'رحلتنا',
       ourFounders: 'مؤسسونا',
-      missionDescription: 'تقديم حلول هندسية مبتكرة تتجاوز توقعات العملاء مع الحفاظ على أعلى معايير الجودة والسلامة والاستدامة. نحن ملتزمون بتقديم قيمة استثنائية من خلال خبرتنا وإبداعنا وتفانينا في التميز.',
-      visionDescription: 'أن نكون الشركة الهندسية الرائدة في المنطقة، معترف بها لحلولنا المبتكرة وخدماتنا الاستثنائية والتزامنا بالتنمية المستدامة. نطمح لتشكيل مستقبل الهندسة من خلال التكنولوجيا والإبداع.',
+      missionDescription: 'التميز في تقديم أعمال المقاولات والبناء والتشييد بطريقة مهنية وفعالة من خلال التحقيق العميق في جميع متطلبات السوق والعمل بشكل وثيق مع عملائنا.',
+      visionDescription: 'نتطلع إلى أن نكون إحدى الشركات الرائدة في مصر والعالم العربي في مجال المقاولات من ناحية الالتزام بأعلى مستويات الجودة والتقنيات الحديثة لتقديم حلول مبتكرة لمختلف المشاريع.',
       valuesDescription: 'المبادئ التي توجه عملنا وعلاقاتنا مع العملاء والشركاء والمجتمعات.',
       journeyDescription: 'جدول زمني لنمونا وإنجازاتنا على مر السنين.',
       foundersDescription: 'تعرف على القادة ذوي الرؤية الذين أسسوا مجموعة النوبي ويواصلون قيادة نجاحنا في صناعة البناء.',
@@ -562,15 +587,17 @@ const resources = {
       
       // Timeline
       companyFounded: 'تأسيس الشركة',
-      companyFoundedDesc: 'تم تأسيس النوبي برؤية لتقديم خدمات هندسية استثنائية.',
-      firstMajorProject: 'أول مشروع كبير',
-      firstMajorProjectDesc: 'أنجزنا بنجاح أول مشروع هندسي واسع النطاق.',
-      teamExpansion: 'توسيع الفريق',
-      teamExpansionDesc: 'وسعنا فريقنا بمحترفين وخبراء ذوي خبرة.',
+      companyFoundedDesc: 'تم تأسيس مجموعة النوبي للمقاولات كشركة مقاولات مصرية رائدة تحت إدارة وإشراف فريق من نخبة المهندسين.',
+      firstClassClassification: 'التصنيف من الدرجة الأولى',
+      firstClassClassificationDesc: 'تم تصنيف المجموعة كدرجة أولى في مجال الأعمال المتكاملة والطرق، مما يؤكد التزامنا بالتميز.',
+      firstMajorProject: 'مشاريع البنية التحتية الكبرى',
+      firstMajorProjectDesc: 'توسعنا بنجاح في المستشفيات والطرق والبنية التحتية ومختلف المشاريع الكبرى في مصر والمنطقة.',
+      teamExpansion: 'التوسع الإقليمي',
+      teamExpansionDesc: 'وسعنا عملياتنا لخدمة العملاء في منطقة الشرق الأوسط وأفريقيا بحلول إنشائية شاملة.',
       digitalTransformation: 'التحول الرقمي',
       digitalTransformationDesc: 'نفذنا أدوات وتقنيات رقمية متقدمة.',
-      industryRecognition: 'الاعتراف الصناعي',
-      industryRecognitionDesc: 'حصلنا على جوائز متعددة للتميز في الخدمات الهندسية.',
+      industryRecognition: 'التميز المستمر',
+      industryRecognitionDesc: 'تفتخر مجموعة النوبي بالمستوى الاستثنائي لرضا العملاء عن جودة وإنجاز جميع مشاريعها.',
       
       // Founders
       chairmanBoard: 'رئيس مجلس الإدارة',
@@ -581,9 +608,7 @@ const resources = {
       leadershipPhilosophyDesc: 'أسس مؤسسونا مجموعة النوبي برؤية واضحة: بناء ليس فقط الهياكل، بل علاقات دائمة قائمة على الثقة والجودة والابتكار. خبرتهم المجمعة في التميز الهندسي والقيادة الاستراتيجية تواصل قيادة التزامنا بتقديم حلول بناء عالمية المستوى عبر مصر وما وراءها.',
       
       // Stats
-      projectsCompleted: 'مشاريع مكتملة',
-      yearsExperienceNum: 'سنوات الخبرة',
-      supportAvailable: 'دعم متاح',
+
       
       // Contact Page Specific
       messageSentSuccess: 'تم إرسال الرسالة بنجاح!',
@@ -614,12 +639,7 @@ const resources = {
       phoneDesc: 'اتصل بنا خلال ساعات العمل',
       officeTitle: 'المكتب',
       officeDesc: 'زر مكتبنا الرئيسي',
-      workingHoursTitle: 'ساعات العمل',
-      workingHoursValue: 'الإثنين - الجمعة: 9 صباحاً - 6 مساءً',
-      workingHoursDesc: 'نحن هنا لمساعدتك',
-      visitOffice: 'زيارة مكتبنا',
-      visitOfficeDesc: 'يقع مكتبنا في قلب القاهرة، وهو سهل الوصول ومستعد لاستقبالك للاستشارة.',
-      getDirections: 'احصل على الاتجاهات',
+
       contactDepartments: 'تواصل مع أقسامنا',
       contactDepartmentsDesc: 'تواصل مع الفريق المناسب لاحتياجاتك المحددة.',
       generalInquiryDept: 'الاستفسارات العامة',

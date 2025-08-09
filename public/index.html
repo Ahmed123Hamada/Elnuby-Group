@@ -5,10 +5,26 @@
   <meta charset="utf-8" />
   <link rel="icon" href="%PUBLIC_URL%/favicon.png" style="width: 32px; height: 32px;" />
   <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.png" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#000000" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#EA5A0C" />
   <meta name="description"
-    content="El-Nuby Group  " />
+    content="El Nuby Group for Contracting - A leading Egyptian contracting company established in 2000. Excellence in construction, engineering, and infrastructure projects." />
+  <meta name="keywords" content="construction, contracting, engineering, infrastructure, Egypt, El Nuby Group" />
+  <meta name="author" content="El Nuby Group" />
+
+  <!-- Performance optimizations -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="dns-prefetch" href="//fonts.gstatic.com">
+
+  <!-- Preload critical resources -->
+  <link rel="preload" as="font" type="font/woff2" crossorigin>
+
+  <!-- Security headers -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="X-Frame-Options" content="DENY">
+  <meta http-equiv="X-XSS-Protection" content="1; mode=block">
   <link rel="manifest" href="%PUBLIC_URL%/site.webmanifest">
   <!--
       manifest.json provides metadata used when your web app is installed on a
@@ -41,24 +57,28 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   <script>
-    // This is an example of a service worker registration
-    if ('serviceWorker' in navigator) {
+    // Performance optimization: Service worker registration
+    if ('serviceWorker' in navigator && 'caches' in window) {
       window.addEventListener('load', () => {
-        // Unregister any existing service workers first
-        navigator.serviceWorker.getRegistrations().then(function (registrations) {
-          for (let registration of registrations) {
-            registration.unregister();
-          }
-        });
-
-        // Register new service worker
-        navigator.serviceWorker.register('/sw.js?v=' + Date.now())
+        navigator.serviceWorker.register('/sw.js')
           .then((registration) => {
-            console.log('SW registered: ', registration);
+            console.log('SW registered successfully');
           })
-          .catch((registrationError) => {
-            console.log('SW registration failed: ', registrationError);
+          .catch((error) => {
+            console.log('SW registration failed');
           });
+      });
+    }
+
+    // Performance monitoring
+    if ('performance' in window) {
+      window.addEventListener('load', () => {
+        setTimeout(() => {
+          const perfData = performance.getEntriesByType('navigation')[0];
+          if (perfData) {
+            console.log('Page Load Time:', perfData.loadEventEnd - perfData.fetchStart, 'ms');
+          }
+        }, 0);
       });
     }
   </script>

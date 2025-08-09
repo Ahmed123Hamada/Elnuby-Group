@@ -10,10 +10,10 @@ const About: React.FC = () => {
   const { t } = useTranslation();
 
   const stats = [
-    { number: '150+', label: t('projectsCompleted') },
+    { number: '250+', label: t('projectsCompleted') },
     { number: '50+', label: t('happyClients') },
-    { number: '20+', label: t('yearsExperienceNum') },
-    { number: '24/7', label: t('supportAvailable') },
+    { number: '25+', label: t('yearsExperienceNum') },
+    { number: '1500+', label: t('employees') },
   ];
 
   const values = [
@@ -41,9 +41,14 @@ const About: React.FC = () => {
 
   const timeline = [
     {
-      year: '2014',
+      year: '2000',
       title: t('companyFounded'),
       description: t('companyFoundedDesc'),
+    },
+    {
+      year: '2013',
+      title: t('firstClassClassification'),
+      description: t('firstClassClassificationDesc'),
     },
     {
       year: '2016',
@@ -51,17 +56,12 @@ const About: React.FC = () => {
       description: t('firstMajorProjectDesc'),
     },
     {
-      year: '2018',
+      year: '2020',
       title: t('teamExpansion'),
       description: t('teamExpansionDesc'),
     },
     {
-      year: '2020',
-      title: t('digitalTransformation'),
-      description: t('digitalTransformationDesc'),
-    },
-    {
-      year: '2023',
+      year: '2024',
       title: t('industryRecognition'),
       description: t('industryRecognitionDesc'),
     },

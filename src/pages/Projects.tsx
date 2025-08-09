@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, useSearchParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowRight, ExternalLink, MapPin, Calendar, Ruler, User, DollarSign, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ArrowRight, MapPin, Calendar, Ruler, User, DollarSign, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useTranslatedData } from '../hooks/useTranslatedData';
 import RobustImage from '../components/RobustImage';
 import projectsBgImage from '../assast/Images/project/projectslider2.webp';
@@ -10,6 +10,7 @@ import projectsBgImage from '../assast/Images/project/projectslider2.webp';
 const Projects: React.FC = () => {
   const { t } = useTranslation();
   const { getProjects, getCategories, getStats } = useTranslatedData();
+  const [searchParams, setSearchParams] = useSearchParams();
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [currentPage, setCurrentPage] = useState(1);
   const projectsPerPage = 6;
@@ -17,6 +18,14 @@ const Projects: React.FC = () => {
   const projects = getProjects();
   const categories = getCategories();
   const stats = getStats();
+
+  // Initialize category from URL parameter
+  useEffect(() => {
+    const categoryParam = searchParams.get('category');
+    if (categoryParam) {
+      setSelectedCategory(categoryParam);
+    }
+  }, [searchParams]);
 
   const filteredProjects = selectedCategory === 'all' 
     ? projects 
@@ -58,8 +67,10 @@ const Projects: React.FC = () => {
   const handleCategoryClick = (category: any) => {
     if (category.id === 'all') {
       setSelectedCategory('all');
+      setSearchParams({}); // Clear the category parameter
     } else {
       setSelectedCategory(category.name);
+      setSearchParams({ category: category.name }); // Set the category parameter
     }
     // Scroll to top when category is clicked
   };
