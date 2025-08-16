@@ -13,6 +13,7 @@ const Projects: React.FC = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [currentPage, setCurrentPage] = useState(1);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const projectsPerPage = 6;
 
   const projects = getProjects();
@@ -26,6 +27,16 @@ const Projects: React.FC = () => {
       setSelectedCategory(categoryParam);
     }
   }, [searchParams]);
+
+  // Handle window resize for responsive pagination
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const filteredProjects = selectedCategory === 'all' 
     ? projects 
@@ -271,41 +282,111 @@ const Projects: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
               viewport={{ once: true }}
-              className="flex justify-center items-center space-x-2 rtl:space-x-reverse mt-12"
+              className="mt-12"
             >
-              <button
-                onClick={() => handlePageChange(currentPage - 1)}
-                disabled={currentPage === 1}
-                className="flex items-center space-x-2 rtl:space-x-reverse px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200"
-              >
-                <ChevronLeft size={16} />
-                <span>{t('previous')}</span>
-              </button>
-
-              <div className="flex space-x-1 rtl:space-x-reverse">
-                {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+              {/* Mobile Pagination - Stacked Layout */}
+              <div className="flex flex-col items-center space-y-4 sm:hidden">
+                {/* Page Info */}
+                <div className="text-center text-sm text-gray-600 dark:text-gray-400">
+                  {t('page')} {currentPage} {t('of')} {totalPages}
+                </div>
+                
+                {/* Navigation Buttons */}
+                <div className="flex items-center space-x-3 rtl:space-x-reverse">
                   <button
-                    key={page}
-                    onClick={() => handlePageChange(page)}
-                    className={`px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
-                      currentPage === page
-                        ? 'bg-primary-600 text-white'
-                        : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
-                    }`}
+                    onClick={() => handlePageChange(currentPage - 1)}
+                    disabled={currentPage === 1}
+                    className="flex items-center space-x-2 rtl:space-x-reverse px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 text-sm"
                   >
-                    {page}
+                    <ChevronLeft size={14} />
+                    <span className="hidden min-[480px]:inline">{t('previous')}</span>
                   </button>
-                ))}
+
+                  <button
+                    onClick={() => handlePageChange(currentPage + 1)}
+                    disabled={currentPage === totalPages}
+                    className="flex items-center space-x-2 rtl:space-x-reverse px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 text-sm"
+                  >
+                    <span className="hidden min-[480px]:inline">{t('next')}</span>
+                    <ChevronRight size={14} />
+                  </button>
+                </div>
               </div>
 
-              <button
-                onClick={() => handlePageChange(currentPage + 1)}
-                disabled={currentPage === totalPages}
-                className="flex items-center space-x-2 rtl:space-x-reverse px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200"
-              >
-                <span>{t('next')}</span>
-                <ChevronRight size={16} />
-              </button>
+              {/* Desktop Pagination - Horizontal Layout */}
+              <div className="hidden sm:flex justify-center items-center space-x-2 rtl:space-x-reverse">
+                <button
+                  onClick={() => handlePageChange(currentPage - 1)}
+                  disabled={currentPage === 1}
+                  className="flex items-center space-x-2 rtl:space-x-reverse px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200"
+                >
+                  <ChevronLeft size={16} />
+                  <span>{t('previous')}</span>
+                </button>
+
+                                 {/* Page Numbers - Responsive Display */}
+                 <div className="flex space-x-1 rtl:space-x-reverse">
+                   {(() => {
+                     const pages = [];
+                     const maxVisiblePages = windowWidth < 640 ? 5 : 7; // Show fewer pages on small screens
+                     
+                     if (totalPages <= maxVisiblePages) {
+                       // Show all pages if total is small
+                       for (let i = 1; i <= totalPages; i++) {
+                         pages.push(i);
+                       }
+                     } else {
+                       // Smart pagination for larger numbers
+                       const start = Math.max(1, currentPage - Math.floor(maxVisiblePages / 2));
+                       const end = Math.min(totalPages, start + maxVisiblePages - 1);
+                       
+                       // Always show first page
+                       if (start > 1) {
+                         pages.push(1);
+                         if (start > 2) pages.push('...');
+                       }
+                       
+                       // Show middle pages
+                       for (let i = start; i <= end; i++) {
+                         if (i === 1 || i === totalPages) continue; // Skip if already added
+                         pages.push(i);
+                       }
+                       
+                       // Always show last page
+                       if (end < totalPages) {
+                         if (end < totalPages - 1) pages.push('...');
+                         pages.push(totalPages);
+                       }
+                     }
+                     
+                     return pages.map((page, index) => (
+                       <button
+                         key={index}
+                         onClick={() => typeof page === 'number' ? handlePageChange(page) : null}
+                         disabled={typeof page !== 'number'}
+                         className={`px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+                           typeof page === 'number'
+                             ? currentPage === page
+                               ? 'bg-primary-600 text-white'
+                               : 'bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700'
+                             : 'px-2 text-gray-400 dark:text-gray-500 cursor-default'
+                         }`}
+                       >
+                         {page}
+                       </button>
+                     ));
+                   })()}
+                 </div>
+
+                <button
+                  onClick={() => handlePageChange(currentPage + 1)}
+                  disabled={currentPage === totalPages}
+                  className="flex items-center space-x-2 rtl:space-x-reverse px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200"
+                >
+                  <span>{t('next')}</span>
+                  <ChevronRight size={16} />
+                </button>
+              </div>
             </motion.div>
           )}
 

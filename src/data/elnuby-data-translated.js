@@ -1983,8 +1983,2025 @@ export const elnubyDataTranslated = {
         ar: '300 مليون جنيه',
         en: '300 Million EGP'
       }
-    }
-  ],
+    },
+    // New Projects - مشاريع جديدة
+    // Residential Projects - مشاريع سكنية
+    {
+      title: {
+        ar: 'إنشاء عدد 1 عمارة سكنية بالإسكان المستقبلى للضباط بمدينة الهايكستب - المجاورة الرابعة - القطاع الثاني',
+        en: 'Construction of 1 residential building in Future Housing for Officers in Haikstep City - Fourth Neighborhood - Second Sector'
+      },
+      description: {
+        ar: 'مشروع سكني متكامل للضباط في مدينة الهايكستب، يتميز بتصميم عصري ومرافق متطورة.',
+        en: 'An integrated residential project for officers in Haikstep City, featuring modern design and advanced facilities.'
+      },
+      image: '/images/projects/residential-building.jpg',
+      subImages: ['/images/projects/residential-building.jpg', projectslider2, logoElnuby],
+      category: {
+        ar: 'سكني',
+        en: 'Residential'
+      },
+      location: {
+        ar: 'مدينة الهايكستب، مصر',
+        en: 'Haikstep City, Egypt'
+      },
+      area: {
+        ar: '15,000 متر مربع',
+        en: '15,000 square meters'
+      },
+      year: '2023',
+      status: {
+        ar: 'مكتمل',
+        en: 'Completed'
+      },
+      features: {
+        ar: ['مشروع سكني', 'تصميم عصري', 'مرافق متطورة', 'خدمة شاملة'],
+        en: ['Residential Project', 'Modern Design', 'Advanced Facilities', 'Comprehensive Service']
+      },
+      client: {
+        ar: 'وزارة الإسكان',
+        en: 'Ministry of Housing'
+      },
+      value: {
+        ar: '45 مليون جنيه',
+        en: '45 Million EGP'
+      }
+    },
+    {
+      title: {
+        ar: 'إنشاء عدد 1 عمارة سكنية ، المجاورة الثانية بالاسكان الاجتماعي - محافظة الاقصر',
+        en: 'Construction of 1 residential building in Second Neighborhood Social Housing - Luxor Governorate'
+      },
+      description: {
+        ar: 'مشروع سكني اجتماعي في محافظة الأقصر، يهدف لتوفير سكن مناسب للأسر المحتاجة.',
+        en: 'A social housing project in Luxor Governorate, aiming to provide suitable housing for needy families.'
+      },
+      image: '/images/projects/social-housing.jpg',
+      subImages: ['/images/projects/social-housing.jpg', projectslider2, logoElnuby],
+      category: {
+        ar: 'سكني',
+        en: 'Residential'
+      },
+      location: {
+        ar: 'محافظة الأقصر، مصر',
+        en: 'Luxor Governorate, Egypt'
+      },
+      area: {
+        ar: '12,000 متر مربع',
+        en: '12,000 square meters'
+      },
+      year: '2023',
+      status: {
+        ar: 'مكتمل',
+        en: 'Completed'
+      },
+      features: {
+        ar: ['إسكان اجتماعي', 'تصميم عملي', 'مرافق أساسية', 'خدمة مجتمعية'],
+        en: ['Social Housing', 'Practical Design', 'Basic Facilities', 'Community Service']
+      },
+      client: {
+        ar: 'وزارة الإسكان',
+        en: 'Ministry of Housing'
+      },
+      value: {
+        ar: '35 مليون جنيه',
+        en: '35 Million EGP'
+      }
+    },
+    {
+      title: {
+        ar: 'انشاء عدد (۵) تجمع سكني باجمالي ١٥ عمارة ١٠٠ بدروم بنادي الشمس',
+        en: 'Construction of 5 residential complexes with total of 15 buildings and 100 basements in Sun Club'
+      },
+      description: {
+        ar: 'مشروع سكني ضخم في نادي الشمس، يتضمن تجمعات سكنية متعددة مع مرافق تحت الأرض.',
+        en: 'A massive residential project in Sun Club, including multiple residential complexes with underground facilities.'
+      },
+      image: '/images/projects/sun-club-complex.jpg',
+      subImages: ['/images/projects/sun-club-complex.jpg', projectslider2, logoElnuby],
+      category: {
+        ar: 'سكني',
+        en: 'Residential'
+      },
+      location: {
+        ar: 'نادي الشمس، مصر',
+        en: 'Sun Club, Egypt'
+      },
+      area: {
+        ar: '200,000 متر مربع',
+        en: '200,000 square meters'
+      },
+      year: '2023',
+      status: {
+        ar: 'مكتمل',
+        en: 'Completed'
+      },
+      features: {
+        ar: ['تجمعات سكنية', 'مرافق تحت الأرض', 'تصميم متكامل', 'خدمة شاملة'],
+        en: ['Residential Complexes', 'Underground Facilities', 'Integrated Design', 'Comprehensive Service']
+      },
+      client: {
+        ar: 'نادي الشمس',
+        en: 'Sun Club'
+      },
+      value: {
+        ar: '500 مليون جنيه',
+        en: '500 Million EGP'
+      }
+    },
+    {
+      title: {
+        ar: 'المنازل الريفية بالطارف الأقصر',
+        en: 'Rural Houses in El Tarf, Luxor'
+      },
+      description: {
+        ar: 'مشروع منازل ريفية في منطقة الطارف بمحافظة الأقصر، يجمع بين الأصالة والحداثة.',
+        en: 'A rural housing project in El Tarf area, Luxor Governorate, combining authenticity and modernity.'
+      },
+      image: '/images/projects/rural-houses.jpg',
+      subImages: ['/images/projects/rural-houses.jpg', projectslider2, logoElnuby],
+      category: {
+        ar: 'سكني',
+        en: 'Residential'
+      },
+      location: {
+        ar: 'الطارف، محافظة الأقصر، مصر',
+        en: 'El Tarf, Luxor Governorate, Egypt'
+      },
+      area: {
+        ar: '25,000 متر مربع',
+        en: '25,000 square meters'
+      },
+      year: '2023',
+      status: {
+        ar: 'مكتمل',
+        en: 'Completed'
+      },
+      features: {
+        ar: ['منازل ريفية', 'تصميم تراثي', 'مرافق عصرية', 'خدمة متكاملة'],
+        en: ['Rural Houses', 'Heritage Design', 'Modern Facilities', 'Integrated Service']
+      },
+      client: {
+        ar: 'محافظة الأقصر',
+        en: 'Luxor Governorate'
+      },
+      value: {
+        ar: '80 مليون جنيه',
+        en: '80 Million EGP'
+      }
+    },
+    // Agricultural Reclamation Projects - مشاريع الاستصلاح الزراعي
+    {
+      title: {
+        ar: 'اعمال المرحلة الاولى لاستصلاح وزراعة مساحة ١٥٢ الف فدان بمحور الضبعة',
+        en: 'First Phase Works for Reclamation and Cultivation of 152 Thousand Feddans in El Dabaa Axis'
+      },
+      description: {
+        ar: 'مشروع استصلاح زراعي ضخم في محور الضبعة، يمثل المرحلة الأولى من خطة التنمية الزراعية.',
+        en: 'A massive agricultural reclamation project in El Dabaa axis, representing the first phase of agricultural development plan.'
+      },
+      image: '/images/projects/el-dabaa-reclamation.jpg',
+      subImages: ['/images/projects/el-dabaa-reclamation.jpg', projectslider2, logoElnuby],
+      category: {
+        ar: 'استصلاح زراعي',
+        en: 'Agricultural Reclamation'
+      },
+      location: {
+        ar: 'محور الضبعة، مصر',
+        en: 'El Dabaa Axis, Egypt'
+      },
+      area: {
+        ar: '152,000 فدان',
+        en: '152,000 Feddans'
+      },
+      year: '2023',
+      status: {
+        ar: 'مكتمل',
+        en: 'Completed'
+      },
+      features: {
+        ar: ['استصلاح زراعي', 'زراعة حديثة', 'ري متطور', 'تنمية مستدامة'],
+        en: ['Agricultural Reclamation', 'Modern Agriculture', 'Advanced Irrigation', 'Sustainable Development']
+      },
+      client: {
+        ar: 'وزارة الزراعة',
+        en: 'Ministry of Agriculture'
+      },
+      value: {
+        ar: '2,000 مليون جنيه',
+        en: '2,000 Million EGP'
+      }
+    },
+    {
+      title: {
+        ar: 'اعمال المرحلة الثانية لاستصلاح وزراعة ٢٥٠ الف فدان بمحور الضبعة بمشروع تنمية الدلتا الجديدة',
+        en: 'Second Phase Works for Reclamation and Cultivation of 250 Thousand Feddans in El Dabaa Axis - New Delta Development Project'
+      },
+      description: {
+        ar: 'المرحلة الثانية من مشروع تنمية الدلتا الجديدة، تتضمن استصلاح مساحات زراعية شاسعة.',
+        en: 'The second phase of the New Delta Development Project, including reclamation of vast agricultural areas.'
+      },
+      image: '/images/projects/new-delta-phase2.jpg',
+      subImages: ['/images/projects/new-delta-phase2.jpg', projectslider2, logoElnuby],
+      category: {
+        ar: 'استصلاح زراعي',
+        en: 'Agricultural Reclamation'
+      },
+      location: {
+        ar: 'محور الضبعة، مصر',
+        en: 'El Dabaa Axis, Egypt'
+      },
+      area: {
+        ar: '250,000 فدان',
+        en: '250,000 Feddans'
+      },
+      year: '2023',
+      status: {
+        ar: 'مكتمل',
+        en: 'Completed'
+      },
+      features: {
+        ar: ['استصلاح زراعي', 'تنمية الدلتا', 'زراعة حديثة', 'بنية تحتية'],
+        en: ['Agricultural Reclamation', 'Delta Development', 'Modern Agriculture', 'Infrastructure']
+      },
+      client: {
+        ar: 'وزارة الزراعة',
+        en: 'Ministry of Agriculture'
+      },
+      value: {
+        ar: '3,500 مليون جنيه',
+        en: '3,500 Million EGP'
+      }
+    },
+    {
+      title: {
+        ar: 'الاعمال المتكاملة لاستصلاح المنطقة الجنوبية المرحلة الأولى - مستقبل مصر - محور الضبعة',
+        en: 'Integrated Works for Reclamation of Southern Region Phase One - Egypt\'s Future - El Dabaa Axis'
+      },
+      description: {
+        ar: 'مشروع متكامل لاستصلاح المنطقة الجنوبية ضمن مشروع مستقبل مصر في محور الضبعة.',
+        en: 'An integrated project for reclamation of the southern region within Egypt\'s Future project in El Dabaa axis.'
+      },
+      image: '/images/projects/egypt-future-south.jpg',
+      subImages: ['/images/projects/egypt-future-south.jpg', projectslider2, logoElnuby],
+      category: {
+        ar: 'استصلاح زراعي',
+        en: 'Agricultural Reclamation'
+      },
+      location: {
+        ar: 'محور الضبعة، مصر',
+        en: 'El Dabaa Axis, Egypt'
+      },
+      area: {
+        ar: '180,000 فدان',
+        en: '180,000 Feddans'
+      },
+      year: '2023',
+      status: {
+        ar: 'مكتمل',
+        en: 'Completed'
+      },
+      features: {
+        ar: ['استصلاح متكامل', 'منطقة جنوبية', 'مستقبل مصر', 'تنمية شاملة'],
+        en: ['Integrated Reclamation', 'Southern Region', 'Egypt\'s Future', 'Comprehensive Development']
+      },
+      client: {
+        ar: 'وزارة الزراعة',
+        en: 'Ministry of Agriculture'
+      },
+      value: {
+        ar: '2,800 مليون جنيه',
+        en: '2,800 Million EGP'
+      }
+    },
+    {
+      title: {
+        ar: 'الاعمال المتكاملة لاستصلاح المنطقة الجنوبية المرحلة الثانية - مستقبل مصر - محور الضبعة',
+        en: 'Integrated Works for Reclamation of Southern Region Phase Two - Egypt\'s Future - El Dabaa Axis'
+      },
+      description: {
+        ar: 'المرحلة الثانية من مشروع استصلاح المنطقة الجنوبية في محور الضبعة.',
+        en: 'The second phase of the southern region reclamation project in El Dabaa axis.'
+      },
+      image: '/images/projects/egypt-future-south-phase2.jpg',
+      subImages: ['/images/projects/egypt-future-south-phase2.jpg', projectslider2, logoElnuby],
+      category: {
+        ar: 'استصلاح زراعي',
+        en: 'Agricultural Reclamation'
+      },
+      location: {
+        ar: 'محور الضبعة، مصر',
+        en: 'El Dabaa Axis, Egypt'
+      },
+      area: {
+        ar: '200,000 فدان',
+        en: '200,000 Feddans'
+      },
+      year: '2023',
+      status: {
+        ar: 'مكتمل',
+        en: 'Completed'
+      },
+      features: {
+        ar: ['استصلاح متكامل', 'مرحلة ثانية', 'منطقة جنوبية', 'تنمية مستدامة'],
+        en: ['Integrated Reclamation', 'Second Phase', 'Southern Region', 'Sustainable Development']
+      },
+      client: {
+        ar: 'وزارة الزراعة',
+        en: 'Ministry of Agriculture'
+      },
+      value: {
+        ar: '3,200 مليون جنيه',
+        en: '3,200 Million EGP'
+      }
+    },
+    {
+      title: {
+        ar: 'الاعمال المتكاملة لمشروع الدلتا الجديدة المرحلة الثانية - القطاع الثامن',
+        en: 'Integrated Works for New Delta Project Phase Two - Eighth Sector'
+      },
+      description: {
+        ar: 'مشروع متكامل في القطاع الثامن من المرحلة الثانية لمشروع الدلتا الجديدة.',
+        en: 'An integrated project in the eighth sector of the second phase of the New Delta project.'
+      },
+      image: '/images/projects/new-delta-sector8.jpg',
+      subImages: ['/images/projects/new-delta-sector8.jpg', projectslider2, logoElnuby],
+      category: {
+        ar: 'استصلاح زراعي',
+        en: 'Agricultural Reclamation'
+      },
+      location: {
+        ar: 'الدلتا الجديدة، مصر',
+        en: 'New Delta, Egypt'
+      },
+      area: {
+        ar: '120,000 فدان',
+        en: '120,000 Feddans'
+      },
+      year: '2023',
+      status: {
+        ar: 'مكتمل',
+        en: 'Completed'
+      },
+      features: {
+        ar: ['استصلاح متكامل', 'الدلتا الجديدة', 'قطاع ثامن', 'تنمية زراعية'],
+        en: ['Integrated Reclamation', 'New Delta', 'Eighth Sector', 'Agricultural Development']
+      },
+      client: {
+        ar: 'وزارة الزراعة',
+        en: 'Ministry of Agriculture'
+      },
+              value: {
+          ar: '1,800 مليون جنيه',
+          en: '1,800 Million EGP'
+        }
+      },
+      // Infrastructure Projects - مشاريع البنية التحتية
+      {
+        title: {
+          ar: 'مشروع اعمال البنية الأساسية لمشروع تطوير ترعة الشباب بمنطقة توشكي',
+          en: 'Infrastructure Works Project for Youth Canal Development Project in Toshka Area'
+        },
+        description: {
+          ar: 'مشروع تطوير البنية الأساسية لترعة الشباب في منطقة توشكي، يهدف لتحسين شبكة الري.',
+          en: 'A project to develop the infrastructure of Youth Canal in Toshka area, aiming to improve the irrigation network.'
+        },
+        image: '/images/projects/youth-canal-toshka.jpg',
+        subImages: ['/images/projects/youth-canal-toshka.jpg', projectslider2, logoElnuby],
+        category: {
+          ar: 'بنية تحتية',
+          en: 'Infrastructure'
+        },
+        location: {
+          ar: 'منطقة توشكي، مصر',
+          en: 'Toshka Area, Egypt'
+        },
+        area: {
+          ar: '50,000 متر مربع',
+          en: '50,000 square meters'
+        },
+        year: '2023',
+        status: {
+          ar: 'مكتمل',
+          en: 'Completed'
+        },
+        features: {
+          ar: ['بنية أساسية', 'ترعة الشباب', 'شبكة ري', 'تطوير زراعي'],
+          en: ['Basic Infrastructure', 'Youth Canal', 'Irrigation Network', 'Agricultural Development']
+        },
+        client: {
+          ar: 'وزارة الموارد المائية',
+          en: 'Ministry of Water Resources'
+        },
+        value: {
+          ar: '800 مليون جنيه',
+          en: '800 Million EGP'
+        }
+      },
+      {
+        title: {
+          ar: 'مشروع المرحلة الثالثة لأعمال البنية الأساسية بمشروع تنمية جنوب الوادى بتوشكي القطاع السابع',
+          en: 'Third Phase Infrastructure Works Project for South Valley Development Project in Toshka - Seventh Sector'
+        },
+        description: {
+          ar: 'المرحلة الثالثة من مشروع تنمية جنوب الوادي في توشكي، يتضمن تطوير البنية الأساسية.',
+          en: 'The third phase of the South Valley Development Project in Toshka, including infrastructure development.'
+        },
+        image: '/images/projects/south-valley-toshka-phase3.jpg',
+        subImages: ['/images/projects/south-valley-toshka-phase3.jpg', projectslider2, logoElnuby],
+        category: {
+          ar: 'بنية تحتية',
+          en: 'Infrastructure'
+        },
+        location: {
+          ar: 'توشكي، مصر',
+          en: 'Toshka, Egypt'
+        },
+        area: {
+          ar: '75,000 متر مربع',
+          en: '75,000 square meters'
+        },
+        year: '2023',
+        status: {
+          ar: 'مكتمل',
+          en: 'Completed'
+        },
+        features: {
+          ar: ['مرحلة ثالثة', 'تنمية جنوب الوادي', 'بنية أساسية', 'تطوير مستدام'],
+          en: ['Third Phase', 'South Valley Development', 'Basic Infrastructure', 'Sustainable Development']
+        },
+        client: {
+          ar: 'وزارة التنمية المحلية',
+          en: 'Ministry of Local Development'
+        },
+        value: {
+          ar: '1,200 مليون جنيه',
+          en: '1,200 Million EGP'
+        }
+      },
+      {
+        title: {
+          ar: 'مشروع اعمال انشاء ترع التغذية الرئيسية مشروع تنمية جنوب الوادي',
+          en: 'Main Feeding Canals Construction Works Project - South Valley Development Project'
+        },
+        description: {
+          ar: 'مشروع إنشاء ترع التغذية الرئيسية ضمن مشروع تنمية جنوب الوادي.',
+          en: 'A project to construct main feeding canals within the South Valley Development Project.'
+        },
+        image: '/images/projects/main-feeding-canals.jpg',
+        subImages: ['/images/projects/main-feeding-canals.jpg', projectslider2, logoElnuby],
+        category: {
+          ar: 'بنية تحتية',
+          en: 'Infrastructure'
+        },
+        location: {
+          ar: 'جنوب الوادي، مصر',
+          en: 'South Valley, Egypt'
+        },
+        area: {
+          ar: '100,000 متر مربع',
+          en: '100,000 square meters'
+        },
+        year: '2023',
+        status: {
+          ar: 'مكتمل',
+          en: 'Completed'
+        },
+        features: {
+          ar: ['ترع تغذية', 'شبكة ري', 'تنمية جنوب الوادي', 'بنية أساسية'],
+          en: ['Feeding Canals', 'Irrigation Network', 'South Valley Development', 'Basic Infrastructure']
+        },
+        client: {
+          ar: 'وزارة الموارد المائية',
+          en: 'Ministry of Water Resources'
+        },
+        value: {
+          ar: '1,500 مليون جنيه',
+          en: '1,500 Million EGP'
+        }
+      },
+      {
+        title: {
+          ar: 'مشروع إنشاء ورصف ورفع كفاءة شوارع مدينة الاقصر - الخطة المشتركة (القطاع الاول)',
+          en: 'Construction, Paving and Efficiency Improvement Project for Luxor City Streets - Joint Plan (First Sector)'
+        },
+        description: {
+          ar: 'مشروع تطوير شوارع مدينة الأقصر ضمن الخطة المشتركة للقطاع الأول.',
+          en: 'A project to develop Luxor City streets within the Joint Plan for the First Sector.'
+        },
+        image: '/images/projects/luxor-streets-sector1.jpg',
+        subImages: ['/images/projects/luxor-streets-sector1.jpg', projectslider2, logoElnuby],
+        category: {
+          ar: 'بنية تحتية',
+          en: 'Infrastructure'
+        },
+        location: {
+          ar: 'مدينة الأقصر، مصر',
+          en: 'Luxor City, Egypt'
+        },
+        area: {
+          ar: '30,000 متر مربع',
+          en: '30,000 square meters'
+        },
+        year: '2023',
+        status: {
+          ar: 'مكتمل',
+          en: 'Completed'
+        },
+        features: {
+          ar: ['إنشاء ورصف', 'رفع كفاءة', 'شوارع مدينة', 'خطة مشتركة'],
+          en: ['Construction and Paving', 'Efficiency Improvement', 'City Streets', 'Joint Plan']
+        },
+        client: {
+          ar: 'محافظة الأقصر',
+          en: 'Luxor Governorate'
+        },
+        value: {
+          ar: '400 مليون جنيه',
+          en: '400 Million EGP'
+        }
+      },
+      {
+        title: {
+          ar: 'مشروع إنشاء ورصف ورفع كفاءة شوارع مراكز المحافظة (اسنا - الطود - البياضية - القرنة - الزينية )-محافظة الاقصر',
+          en: 'Construction, Paving and Efficiency Improvement Project for Governorate Centers Streets (Esna - Tod - Bayadiya - Qurna - Ziniya) - Luxor Governorate'
+        },
+        description: {
+          ar: 'مشروع تطوير شوارع مراكز محافظة الأقصر المختلفة لرفع كفاءتها.',
+          en: 'A project to develop streets of different centers in Luxor Governorate to improve their efficiency.'
+        },
+        image: '/images/projects/luxor-centers-streets.jpg',
+        subImages: ['/images/projects/luxor-centers-streets.jpg', projectslider2, logoElnuby],
+        category: {
+          ar: 'بنية تحتية',
+          en: 'Infrastructure'
+        },
+        location: {
+          ar: 'محافظة الأقصر، مصر',
+          en: 'Luxor Governorate, Egypt'
+        },
+        area: {
+          ar: '45,000 متر مربع',
+          en: '45,000 square meters'
+        },
+        year: '2023',
+        status: {
+          ar: 'مكتمل',
+          en: 'Completed'
+        },
+        features: {
+          ar: ['مراكز المحافظة', 'رفع كفاءة', 'شوارع متطورة', 'خدمة شاملة'],
+          en: ['Governorate Centers', 'Efficiency Improvement', 'Advanced Streets', 'Comprehensive Service']
+        },
+        client: {
+          ar: 'محافظة الأقصر',
+          en: 'Luxor Governorate'
+        },
+        value: {
+          ar: '600 مليون جنيه',
+          en: '600 Million EGP'
+        }
+      },
+      {
+        title: {
+          ar: 'انشاء عدد ۲ سد وعدد 1 حاجز توجيه وتأهيل وتدعيم البرابخ القائمة بوادى الجبو بمدينة ١٥ مايو',
+          en: 'Construction of 2 Dams and 1 Guidance Barrier, Rehabilitation and Strengthening of Existing Barrages in Wadi Gabu - 15 May City'
+        },
+        description: {
+          ar: 'مشروع إنشاء سدود وحواجز توجيه في وادي الجبو بمدينة 15 مايو.',
+          en: 'A project to construct dams and guidance barriers in Wadi Gabu - 15 May City.'
+        },
+        image: '/images/projects/wadi-gabu-dams.jpg',
+        subImages: ['/images/projects/wadi-gabu-dams.jpg', projectslider2, logoElnuby],
+        category: {
+          ar: 'بنية تحتية',
+          en: 'Infrastructure'
+        },
+        location: {
+          ar: 'وادي الجبو، مدينة 15 مايو، مصر',
+          en: 'Wadi Gabu, 15 May City, Egypt'
+        },
+        area: {
+          ar: '20,000 متر مربع',
+          en: '20,000 square meters'
+        },
+        year: '2023',
+        status: {
+          ar: 'مكتمل',
+          en: 'Completed'
+        },
+        features: {
+          ar: ['سدود وحواجز', 'وادي الجبو', 'تأهيل وتدعيم', 'بنية تحتية'],
+          en: ['Dams and Barriers', 'Wadi Gabu', 'Rehabilitation and Strengthening', 'Infrastructure']
+        },
+        client: {
+          ar: 'وزارة الموارد المائية',
+          en: 'Ministry of Water Resources'
+        },
+        value: {
+          ar: '300 مليون جنيه',
+          en: '300 Million EGP'
+        }
+      },
+      {
+        title: {
+          ar: 'مشروع أعمال ورصف وتبليط ورفع كفاءة وإنارة بعض المناطق الغير مخصصة بنطاق بعض أحياء محافظة الجيزة',
+          en: 'Paving, Tiling, Efficiency Improvement and Lighting Works Project for Some Undesignated Areas in Some Neighborhoods of Giza Governorate'
+        },
+        description: {
+          ar: 'مشروع تطوير المناطق غير المخصصة في أحياء محافظة الجيزة.',
+          en: 'A project to develop undesignated areas in neighborhoods of Giza Governorate.'
+        },
+        image: '/images/projects/giza-undesignated-areas.jpg',
+        subImages: ['/images/projects/giza-undesignated-areas.jpg', projectslider2, logoElnuby],
+        category: {
+          ar: 'بنية تحتية',
+          en: 'Infrastructure'
+        },
+        location: {
+          ar: 'محافظة الجيزة، مصر',
+          en: 'Giza Governorate, Egypt'
+        },
+        area: {
+          ar: '35,000 متر مربع',
+          en: '35,000 square meters'
+        },
+        year: '2023',
+        status: {
+          ar: 'مكتمل',
+          en: 'Completed'
+        },
+        features: {
+          ar: ['ورصف وتبليط', 'رفع كفاءة', 'إنارة', 'تطوير أحياء'],
+          en: ['Paving and Tiling', 'Efficiency Improvement', 'Lighting', 'Neighborhood Development']
+        },
+        client: {
+          ar: 'محافظة الجيزة',
+          en: 'Giza Governorate'
+        },
+        value: {
+          ar: '450 مليون جنيه',
+          en: '450 Million EGP'
+        }
+      },
+      {
+        title: {
+          ar: 'مشروع إنشاء ورصف ورفع كفاءة شوارع الاقصر - القطاع الرابع',
+          en: 'Construction, Paving and Efficiency Improvement Project for Luxor Streets - Fourth Sector'
+        },
+        description: {
+          ar: 'مشروع تطوير شوارع الأقصر في القطاع الرابع.',
+          en: 'A project to develop Luxor streets in the fourth sector.'
+        },
+        image: '/images/projects/luxor-streets-sector4.jpg',
+        subImages: ['/images/projects/luxor-streets-sector4.jpg', projectslider2, logoElnuby],
+        category: {
+          ar: 'بنية تحتية',
+          en: 'Infrastructure'
+        },
+        location: {
+          ar: 'الأقصر، مصر',
+          en: 'Luxor, Egypt'
+        },
+        area: {
+          ar: '25,000 متر مربع',
+          en: '25,000 square meters'
+        },
+        year: '2023',
+        status: {
+          ar: 'مكتمل',
+          en: 'Completed'
+        },
+        features: {
+          ar: ['قطاع رابع', 'رفع كفاءة', 'شوارع متطورة', 'خدمة شاملة'],
+          en: ['Fourth Sector', 'Efficiency Improvement', 'Advanced Streets', 'Comprehensive Service']
+        },
+        client: {
+          ar: 'محافظة الأقصر',
+          en: 'Luxor Governorate'
+        },
+        value: {
+          ar: '350 مليون جنيه',
+          en: '350 Million EGP'
+        }
+      },
+      {
+        title: {
+          ar: 'مشروع إنشاء ورصف ورفع كفاءة بعض الشوارع والطرق بمحافظة الاقصر - القطاع الثاني',
+          en: 'Construction, Paving and Efficiency Improvement Project for Some Streets and Roads in Luxor Governorate - Second Sector'
+        },
+        description: {
+          ar: 'مشروع تطوير الشوارع والطرق في القطاع الثاني من محافظة الأقصر.',
+          en: 'A project to develop streets and roads in the second sector of Luxor Governorate.'
+        },
+        image: '/images/projects/luxor-streets-sector2.jpg',
+        subImages: ['/images/projects/luxor-streets-sector2.jpg', projectslider2, logoElnuby],
+        category: {
+          ar: 'بنية تحتية',
+          en: 'Infrastructure'
+        },
+        location: {
+          ar: 'محافظة الأقصر، مصر',
+          en: 'Luxor Governorate, Egypt'
+        },
+        area: {
+          ar: '30,000 متر مربع',
+          en: '30,000 square meters'
+        },
+        year: '2023',
+        status: {
+          ar: 'مكتمل',
+          en: 'Completed'
+        },
+        features: {
+          ar: ['قطاع ثاني', 'شوارع وطرق', 'رفع كفاءة', 'تطوير شامل'],
+          en: ['Second Sector', 'Streets and Roads', 'Efficiency Improvement', 'Comprehensive Development']
+        },
+        client: {
+          ar: 'محافظة الأقصر',
+          en: 'Luxor Governorate'
+        },
+        value: {
+          ar: '400 مليون جنيه',
+          en: '400 Million EGP'
+        }
+      },
+      {
+        title: {
+          ar: 'تأهيل ترع وفروع هندسة رى أخميم التابعة للادارة العامة لرى سوهاج محافظة سوهاج ,الاقصر',
+          en: 'Rehabilitation of Canals and Branches of Akhmim Irrigation Engineering - General Administration of Irrigation Sohag - Sohag and Luxor Governorates'
+        },
+        description: {
+          ar: 'مشروع تأهيل ترع وفروع هندسة ري أخميم في محافظتي سوهاج والأقصر.',
+          en: 'A project to rehabilitate canals and branches of Akhmim Irrigation Engineering in Sohag and Luxor Governorates.'
+        },
+        image: '/images/projects/akhmim-irrigation.jpg',
+        subImages: ['/images/projects/akhmim-irrigation.jpg', projectslider2, logoElnuby],
+        category: {
+          ar: 'بنية تحتية',
+          en: 'Infrastructure'
+        },
+        location: {
+          ar: 'محافظتي سوهاج والأقصر، مصر',
+          en: 'Sohag and Luxor Governorates, Egypt'
+        },
+        area: {
+          ar: '40,000 متر مربع',
+          en: '40,000 square meters'
+        },
+        year: '2023',
+        status: {
+          ar: 'مكتمل',
+          en: 'Completed'
+        },
+        features: {
+          ar: ['تأهيل ترع', 'هندسة ري', 'أخميم', 'تطوير شبكة ري'],
+          en: ['Canal Rehabilitation', 'Irrigation Engineering', 'Akhmim', 'Irrigation Network Development']
+        },
+        client: {
+          ar: 'الإدارة العامة لري سوهاج',
+          en: 'General Administration of Irrigation Sohag'
+        },
+        value: {
+          ar: '550 مليون جنيه',
+          en: '550 Million EGP'
+        }
+      },
+      {
+        title: {
+          ar: 'مشروع اعمال انشاء ترع التغذية الرئيسية وما يلزمها من أعمال صناعية وأعمال طرق لصالح مشروع انشاء الترعة الفرعية بمنطقة E',
+          en: 'Main Feeding Canals Construction Works Project and Required Industrial Works and Road Works for Sub-Canal Construction Project in Area E'
+        },
+        description: {
+          ar: 'مشروع إنشاء ترع التغذية الرئيسية مع الأعمال الصناعية والطرق في المنطقة E.',
+          en: 'A project to construct main feeding canals with industrial works and roads in Area E.'
+        },
+        image: '/images/projects/area-e-canals.jpg',
+        subImages: ['/images/projects/area-e-canals.jpg', projectslider2, logoElnuby],
+        category: {
+          ar: 'بنية تحتية',
+          en: 'Infrastructure'
+        },
+        location: {
+          ar: 'المنطقة E، مصر',
+          en: 'Area E, Egypt'
+        },
+        area: {
+          ar: '60,000 متر مربع',
+          en: '60,000 square meters'
+        },
+        year: '2023',
+        status: {
+          ar: 'مكتمل',
+          en: 'Completed'
+        },
+        features: {
+          ar: ['ترع تغذية', 'أعمال صناعية', 'أعمال طرق', 'منطقة E'],
+          en: ['Feeding Canals', 'Industrial Works', 'Road Works', 'Area E']
+        },
+        client: {
+          ar: 'وزارة الموارد المائية',
+          en: 'Ministry of Water Resources'
+        },
+        value: {
+          ar: '900 مليون جنيه',
+          en: '900 Million EGP'
+        }
+      },
+      {
+        title: {
+          ar: 'مشروع اعمال حفر وتبطين خزانات المياه الرئيسية بمشروع استصلاح ۱۳ الف فدان بنظام الصوبات المكثفة قطاع اللاهون',
+          en: 'Excavation and Lining Works Project for Main Water Tanks in 13 Thousand Feddans Reclamation Project with Intensive Greenhouse System - Lahun Sector'
+        },
+        description: {
+          ar: 'مشروع حفر وتبطين خزانات المياه الرئيسية في مشروع استصلاح 13 ألف فدان بنظام الصوبات المكثفة.',
+          en: 'A project to excavate and line main water tanks in 13 thousand feddans reclamation project with intensive greenhouse system.'
+        },
+        image: '/images/projects/lahun-water-tanks.jpg',
+        subImages: ['/images/projects/lahun-water-tanks.jpg', projectslider2, logoElnuby],
+        category: {
+          ar: 'بنية تحتية',
+          en: 'Infrastructure'
+        },
+        location: {
+          ar: 'قطاع اللاهون، مصر',
+          en: 'Lahun Sector, Egypt'
+        },
+        area: {
+          ar: '15,000 متر مربع',
+          en: '15,000 square meters'
+        },
+        year: '2023',
+        status: {
+          ar: 'مكتمل',
+          en: 'Completed'
+        },
+        features: {
+          ar: ['خزانات مياه', 'صوبات مكثفة', 'قطاع اللاهون', 'استصلاح أراضي'],
+          en: ['Water Tanks', 'Intensive Greenhouses', 'Lahun Sector', 'Land Reclamation']
+        },
+        client: {
+          ar: 'وزارة الزراعة',
+          en: 'Ministry of Agriculture'
+        },
+        value: {
+          ar: '250 مليون جنيه',
+          en: '250 Million EGP'
+        }
+      },
+      {
+        title: {
+          ar: 'مشروع اعمال البنية الأساسية لمشروع تطوير ترعة الشباب بمنطقة توشكى - القطاع السابع',
+          en: 'Basic Infrastructure Works Project for Youth Canal Development Project in Toshka Area - Seventh Sector'
+        },
+        description: {
+          ar: 'مشروع تطوير البنية الأساسية لترعة الشباب في القطاع السابع من منطقة توشكي.',
+          en: 'A project to develop the basic infrastructure of Youth Canal in the seventh sector of Toshka area.'
+        },
+        image: '/images/projects/youth-canal-sector7.jpg',
+        subImages: ['/images/projects/youth-canal-sector7.jpg', projectslider2, logoElnuby],
+        category: {
+          ar: 'بنية تحتية',
+          en: 'Infrastructure'
+        },
+        location: {
+          ar: 'منطقة توشكي، مصر',
+          en: 'Toshka Area, Egypt'
+        },
+        area: {
+          ar: '35,000 متر مربع',
+          en: '35,000 square meters'
+        },
+        year: '2023',
+        status: {
+          ar: 'مكتمل',
+          en: 'Completed'
+        },
+        features: {
+          ar: ['بنية أساسية', 'ترعة الشباب', 'قطاع سابع', 'تطوير شامل'],
+          en: ['Basic Infrastructure', 'Youth Canal', 'Seventh Sector', 'Comprehensive Development']
+        },
+        client: {
+          ar: 'وزارة الموارد المائية',
+          en: 'Ministry of Water Resources'
+        },
+        value: {
+          ar: '600 مليون جنيه',
+          en: '600 Million EGP'
+        }
+      },
+      {
+        title: {
+          ar: 'مشروع المرحلة الثالثة لأعمال البنية الأساسية بمشروع تنمية جنوب الوادى بتوشكى القطاع السابع',
+          en: 'Third Phase Basic Infrastructure Works Project for South Valley Development Project in Toshka - Seventh Sector'
+        },
+        description: {
+          ar: 'المرحلة الثالثة من مشروع تنمية جنوب الوادي في توشكي - القطاع السابع.',
+          en: 'The third phase of the South Valley Development Project in Toshka - Seventh Sector.'
+        },
+        image: '/images/projects/south-valley-sector7.jpg',
+        subImages: ['/images/projects/south-valley-sector7.jpg', projectslider2, logoElnuby],
+        category: {
+          ar: 'بنية تحتية',
+          en: 'Infrastructure'
+        },
+        location: {
+          ar: 'توشكي، مصر',
+          en: 'Toshka, Egypt'
+        },
+        area: {
+          ar: '40,000 متر مربع',
+          en: '40,000 square meters'
+        },
+        year: '2023',
+        status: {
+          ar: 'مكتمل',
+          en: 'Completed'
+        },
+        features: {
+          ar: ['مرحلة ثالثة', 'جنوب الوادي', 'قطاع سابع', 'بنية أساسية'],
+          en: ['Third Phase', 'South Valley', 'Seventh Sector', 'Basic Infrastructure']
+        },
+        client: {
+          ar: 'وزارة التنمية المحلية',
+          en: 'Ministry of Local Development'
+        },
+        value: {
+          ar: '700 مليون جنيه',
+          en: '700 Million EGP'
+        }
+      },
+      {
+        title: {
+          ar: 'اعمال الطرق وتنسيق الموقع العام مدينة الاسماعيلية الجديدة',
+          en: 'Road Works and General Site Coordination - New Ismailia City'
+        },
+        description: {
+          ar: 'مشروع تطوير الطرق وتنسيق الموقع العام لمدينة الإسماعيلية الجديدة.',
+          en: 'A project to develop roads and coordinate the general site of New Ismailia City.'
+        },
+        image: '/images/projects/new-ismailia-roads.jpg',
+        subImages: ['/images/projects/new-ismailia-roads.jpg', projectslider2, logoElnuby],
+        category: {
+          ar: 'بنية تحتية',
+          en: 'Infrastructure'
+        },
+        location: {
+          ar: 'مدينة الإسماعيلية الجديدة، مصر',
+          en: 'New Ismailia City, Egypt'
+        },
+        area: {
+          ar: '55,000 متر مربع',
+          en: '55,000 square meters'
+        },
+        year: '2023',
+        status: {
+          ar: 'مكتمل',
+          en: 'Completed'
+        },
+        features: {
+          ar: ['طرق حديثة', 'تنسيق موقع', 'مدينة جديدة', 'بنية تحتية'],
+          en: ['Modern Roads', 'Site Coordination', 'New City', 'Infrastructure']
+        },
+        client: {
+          ar: 'هيئة المجتمعات العمرانية الجديدة',
+          en: 'New Urban Communities Authority'
+        },
+        value: {
+          ar: '750 مليون جنيه',
+          en: '750 Million EGP'
+        }
+      },
+      {
+        title: {
+          ar: 'اعمال الجسر الترابي مشروع القطار السريع ( السخنة - العاصمة الادارية - العلمين - مطروح )',
+          en: 'Earth Bridge Works - High-Speed Train Project (Sokhna - Administrative Capital - El Alamein - Matrouh)'
+        },
+        description: {
+          ar: 'مشروع إنشاء الجسر الترابي لمشروع القطار السريع.',
+          en: 'A project to construct the earth bridge for the high-speed train project.'
+        },
+        image: '/images/projects/high-speed-train-bridge.jpg',
+        subImages: ['/images/projects/high-speed-train-bridge.jpg', projectslider2, logoElnuby],
+        category: {
+          ar: 'بنية تحتية',
+          en: 'Infrastructure'
+        },
+        location: {
+          ar: 'السخنة - العاصمة الإدارية - العلمين - مطروح، مصر',
+          en: 'Sokhna - Administrative Capital - El Alamein - Matrouh, Egypt'
+        },
+        area: {
+          ar: '80,000 متر مربع',
+          en: '80,000 square meters'
+        },
+        year: '2023',
+        status: {
+          ar: 'مكتمل',
+          en: 'Completed'
+        },
+        features: {
+          ar: ['جسر ترابي', 'قطار سريع', 'بنية تحتية', 'ربط مناطق'],
+          en: ['Earth Bridge', 'High-Speed Train', 'Infrastructure', 'Regional Connection']
+        },
+        client: {
+          ar: 'وزارة النقل',
+          en: 'Ministry of Transport'
+        },
+        value: {
+          ar: '1,500 مليون جنيه',
+          en: '1,500 Million EGP'
+        }
+      },
+      {
+        title: {
+          ar: 'مشروع اذدواج طريق اسوان - توشكي',
+          en: 'Aswan-Toshka Road Duplication Project'
+        },
+        description: {
+          ar: 'مشروع إضافة مسار ثاني لطريق أسوان - توشكي.',
+          en: 'A project to add a second lane to Aswan-Toshka road.'
+        },
+        image: '/images/projects/aswan-toshka-duplication.jpg',
+        subImages: ['/images/projects/aswan-toshka-duplication.jpg', projectslider2, logoElnuby],
+        category: {
+          ar: 'بنية تحتية',
+          en: 'Infrastructure'
+        },
+        location: {
+          ar: 'طريق أسوان - توشكي، مصر',
+          en: 'Aswan-Toshka Road, Egypt'
+        },
+        area: {
+          ar: '25,000 متر مربع',
+          en: '25,000 square meters'
+        },
+        year: '2023',
+        status: {
+          ar: 'مكتمل',
+          en: 'Completed'
+        },
+        features: {
+          ar: ['إذدواج طريق', 'أسوان - توشكي', 'بنية تحتية', 'ربط سريع'],
+          en: ['Road Duplication', 'Aswan-Toshki', 'Infrastructure', 'Fast Connection']
+        },
+        client: {
+          ar: 'وزارة النقل',
+          en: 'Ministry of Transport'
+        },
+        value: {
+          ar: '400 مليون جنيه',
+          en: '400 Million EGP'
+        }
+      },
+      {
+        title: {
+          ar: 'مشروع طريق كلابشة بلانة محافظة اسوان',
+          en: 'Kalabsha-Ballana Road Project - Aswan Governorate'
+        },
+        description: {
+          ar: 'مشروع إنشاء طريق كلابشة - بلانة في محافظة أسوان.',
+          en: 'A project to construct Kalabsha-Ballana road in Aswan Governorate.'
+        },
+        image: '/images/projects/kalabsha-ballana-road.jpg',
+        subImages: ['/images/projects/kalabsha-ballana-road.jpg', projectslider2, logoElnuby],
+        category: {
+          ar: 'بنية تحتية',
+          en: 'Infrastructure'
+        },
+        location: {
+          ar: 'محافظة أسوان، مصر',
+          en: 'Aswan Governorate, Egypt'
+        },
+        area: {
+          ar: '20,000 متر مربع',
+          en: '20,000 square meters'
+        },
+        year: '2023',
+        status: {
+          ar: 'مكتمل',
+          en: 'Completed'
+        },
+        features: {
+          ar: ['طريق حديث', 'كلابشة - بلانة', 'بنية تحتية', 'ربط مناطق'],
+          en: ['Modern Road', 'Kalabsha-Ballana', 'Infrastructure', 'Regional Connection']
+        },
+        client: {
+          ar: 'محافظة أسوان',
+          en: 'Aswan Governorate'
+        },
+        value: {
+          ar: '300 مليون جنيه',
+          en: '300 Million EGP'
+        }
+      },
+      {
+        title: {
+          ar: 'مشروع انشاء الطرق الموازية للترع ( زون (1)',
+          en: 'Parallel Roads Construction Project for Canals (Zone 1)'
+        },
+        description: {
+          ar: 'مشروع إنشاء الطرق الموازية للترع في المنطقة الأولى.',
+          en: 'A project to construct parallel roads for canals in Zone 1.'
+        },
+        image: '/images/projects/parallel-canals-roads.jpg',
+        subImages: ['/images/projects/parallel-canals-roads.jpg', projectslider2, logoElnuby],
+        category: {
+          ar: 'بنية تحتية',
+          en: 'Infrastructure'
+        },
+        location: {
+          ar: 'المنطقة الأولى، مصر',
+          en: 'Zone 1, Egypt'
+        },
+        area: {
+          ar: '30,000 متر مربع',
+          en: '30,000 square meters'
+        },
+        year: '2023',
+        status: {
+          ar: 'مكتمل',
+          en: 'Completed'
+        },
+        features: {
+          ar: ['طرق موازية', 'ترع', 'منطقة أولى', 'بنية تحتية'],
+          en: ['Parallel Roads', 'Canals', 'Zone 1', 'Infrastructure']
+        },
+        client: {
+          ar: 'وزارة الموارد المائية',
+          en: 'Ministry of Water Resources'
+        },
+        value: {
+          ar: '450 مليون جنيه',
+          en: '450 Million EGP'
+        }
+      },
+      // Administrative Buildings Projects - مشاريع مباني ادارية
+      {
+        title: {
+          ar: 'محطة القطار السريع السباعية',
+          en: 'Sabaeia High-Speed Train Station'
+        },
+        description: {
+          ar: 'محطة القطار السريع في السباعية، تتميز بتصميم عصري ومرافق متطورة.',
+          en: 'High-speed train station in Sabaeia, featuring modern design and advanced facilities.'
+        },
+        image: '/images/projects/sabaeia-train-station.jpg',
+        subImages: ['/images/projects/sabaeia-train-station.jpg', projectslider2, logoElnuby],
+        category: {
+          ar: 'مباني إدارية',
+          en: 'Administrative Buildings'
+        },
+        location: {
+          ar: 'السباعية، مصر',
+          en: 'Sabaeia, Egypt'
+        },
+        area: {
+          ar: '8,000 متر مربع',
+          en: '8,000 square meters'
+        },
+        year: '2023',
+        status: {
+          ar: 'مكتمل',
+          en: 'Completed'
+        },
+        features: {
+          ar: ['محطة قطار', 'تصميم عصري', 'مرافق متطورة', 'خدمة سريعة'],
+          en: ['Train Station', 'Modern Design', 'Advanced Facilities', 'Fast Service']
+        },
+        client: {
+          ar: 'وزارة النقل',
+          en: 'Ministry of Transport'
+        },
+        value: {
+          ar: '200 مليون جنيه',
+          en: '200 Million EGP'
+        }
+      },
+      {
+        title: {
+          ar: 'محطة القطار السريع كلابشة',
+          en: 'Kalabsha High-Speed Train Station'
+        },
+        description: {
+          ar: 'محطة القطار السريع في كلابشة، تخدم المنطقة السياحية.',
+          en: 'High-speed train station in Kalabsha, serving the tourist area.'
+        },
+        image: '/images/projects/kalabsha-train-station.jpg',
+        subImages: ['/images/projects/kalabsha-train-station.jpg', projectslider2, logoElnuby],
+        category: {
+          ar: 'مباني إدارية',
+          en: 'Administrative Buildings'
+        },
+        location: {
+          ar: 'كلابشة، مصر',
+          en: 'Kalabsha, Egypt'
+        },
+        area: {
+          ar: '6,000 متر مربع',
+          en: '6,000 square meters'
+        },
+        year: '2023',
+        status: {
+          ar: 'مكتمل',
+          en: 'Completed'
+        },
+        features: {
+          ar: ['محطة قطار', 'منطقة سياحية', 'تصميم عصري', 'خدمة شاملة'],
+          en: ['Train Station', 'Tourist Area', 'Modern Design', 'Comprehensive Service']
+        },
+        client: {
+          ar: 'وزارة النقل',
+          en: 'Ministry of Transport'
+        },
+        value: {
+          ar: '150 مليون جنيه',
+          en: '150 Million EGP'
+        }
+      },
+      {
+        title: {
+          ar: 'مشروع أعمال منشآت القطاعات للمرحلة الاولى من مشروع تنمية جنوب الوادى بمنطقة توشكى النطاق الثاني',
+          en: 'Sector Facilities Works Project for First Phase of South Valley Development Project in Toshka Area - Second Scope'
+        },
+        description: {
+          ar: 'مشروع منشآت القطاعات للمرحلة الأولى من مشروع تنمية جنوب الوادي في توشكي.',
+          en: 'Sector facilities project for the first phase of South Valley Development Project in Toshka.'
+        },
+        image: '/images/projects/toshka-sector-facilities.jpg',
+        subImages: ['/images/projects/toshka-sector-facilities.jpg', projectslider2, logoElnuby],
+        category: {
+          ar: 'مباني إدارية',
+          en: 'Administrative Buildings'
+        },
+        location: {
+          ar: 'منطقة توشكي، مصر',
+          en: 'Toshka Area, Egypt'
+        },
+        area: {
+          ar: '25,000 متر مربع',
+          en: '25,000 square meters'
+        },
+        year: '2023',
+        status: {
+          ar: 'مكتمل',
+          en: 'Completed'
+        },
+        features: {
+          ar: ['منشآت قطاعات', 'مرحلة أولى', 'جنوب الوادي', 'تطوير شامل'],
+          en: ['Sector Facilities', 'First Phase', 'South Valley', 'Comprehensive Development']
+        },
+        client: {
+          ar: 'وزارة التنمية المحلية',
+          en: 'Ministry of Local Development'
+        },
+        value: {
+          ar: '400 مليون جنيه',
+          en: '400 Million EGP'
+        }
+      },
+      {
+        title: {
+          ar: 'انشاء موقف سيارت البياضية - محافظة الاقصر',
+          en: 'Bayadiya Car Park Construction - Luxor Governorate'
+        },
+        description: {
+          ar: 'مشروع إنشاء موقف سيارات في البياضية بمحافظة الأقصر.',
+          en: 'A project to construct a car park in Bayadiya, Luxor Governorate.'
+        },
+        image: '/images/projects/bayadiya-car-park.jpg',
+        subImages: ['/images/projects/bayadiya-car-park.jpg', projectslider2, logoElnuby],
+        category: {
+          ar: 'مباني إدارية',
+          en: 'Administrative Buildings'
+        },
+        location: {
+          ar: 'البياضية، محافظة الأقصر، مصر',
+          en: 'Bayadiya, Luxor Governorate, Egypt'
+        },
+        area: {
+          ar: '5,000 متر مربع',
+          en: '5,000 square meters'
+        },
+        year: '2023',
+        status: {
+          ar: 'مكتمل',
+          en: 'Completed'
+        },
+        features: {
+          ar: ['موقف سيارات', 'تصميم عصري', 'مرافق متطورة', 'خدمة مجتمعية'],
+          en: ['Car Park', 'Modern Design', 'Advanced Facilities', 'Community Service']
+        },
+        client: {
+          ar: 'محافظة الأقصر',
+          en: 'Luxor Governorate'
+        },
+        value: {
+          ar: '80 مليون جنيه',
+          en: '80 Million EGP'
+        }
+      },
+      {
+        title: {
+          ar: 'مبنى الرقابة الادارية - محافظة الاقصر',
+          en: 'Administrative Control Building - Luxor Governorate'
+        },
+        description: {
+          ar: 'مشروع إنشاء مبنى الرقابة الإدارية في محافظة الأقصر.',
+          en: 'A project to construct the Administrative Control Building in Luxor Governorate.'
+        },
+        image: '/images/projects/luxor-control-building.jpg',
+        subImages: ['/images/projects/luxor-control-building.jpg', projectslider2, logoElnuby],
+        category: {
+          ar: 'مباني إدارية',
+          en: 'Administrative Buildings'
+        },
+        location: {
+          ar: 'محافظة الأقصر، مصر',
+          en: 'Luxor Governorate, Egypt'
+        },
+        area: {
+          ar: '3,000 متر مربع',
+          en: '3,000 square meters'
+        },
+        year: '2023',
+        status: {
+          ar: 'مكتمل',
+          en: 'Completed'
+        },
+        features: {
+          ar: ['مبنى إداري', 'رقابة إدارية', 'تصميم عصري', 'خدمة حكومية'],
+          en: ['Administrative Building', 'Administrative Control', 'Modern Design', 'Government Service']
+        },
+        client: {
+          ar: 'محافظة الأقصر',
+          en: 'Luxor Governorate'
+        },
+        value: {
+          ar: '60 مليون جنيه',
+          en: '60 Million EGP'
+        }
+      },
+      {
+        title: {
+          ar: 'مدينة الكنوز - أنشاء عدد (۳) بوابة لمتحف الرخام ونقطة الاطفاء',
+          en: 'Treasure City - Construction of 3 Gates for Marble Museum and Fire Station'
+        },
+        description: {
+          ar: 'مشروع إنشاء 3 بوابات لمتحف الرخام ونقطة الإطفاء في مدينة الكنوز.',
+          en: 'A project to construct 3 gates for the Marble Museum and Fire Station in Treasure City.'
+        },
+        image: '/images/projects/treasure-city-gates.jpg',
+        subImages: ['/images/projects/treasure-city-gates.jpg', projectslider2, logoElnuby],
+        category: {
+          ar: 'مباني إدارية',
+          en: 'Administrative Buildings'
+        },
+        location: {
+          ar: 'مدينة الكنوز، مصر',
+          en: 'Treasure City, Egypt'
+        },
+        area: {
+          ar: '2,000 متر مربع',
+          en: '2,000 square meters'
+        },
+        year: '2023',
+        status: {
+          ar: 'مكتمل',
+          en: 'Completed'
+        },
+        features: {
+          ar: ['بوابات متحف', 'نقطة إطفاء', 'مدينة الكنوز', 'تصميم تراثي'],
+          en: ['Museum Gates', 'Fire Station', 'Treasure City', 'Heritage Design']
+        },
+        client: {
+          ar: 'هيئة المجتمعات العمرانية الجديدة',
+          en: 'New Urban Communities Authority'
+        },
+        value: {
+          ar: '40 مليون جنيه',
+          en: '40 Million EGP'
+        }
+      },
+      // Tourism & Entertainment Projects - مشاريع سياحة ترفيهية
+      {
+        title: {
+          ar: 'تطوير و تجميل طريق الكباش',
+          en: 'Development and Beautification of Rams Road'
+        },
+        description: {
+          ar: 'مشروع تطوير وتجميل طريق الكباش في الأقصر.',
+          en: 'A project to develop and beautify Rams Road in Luxor.'
+        },
+        image: '/images/projects/rams-road-development.jpg',
+        subImages: ['/images/projects/rams-road-development.jpg', projectslider2, logoElnuby],
+        category: {
+          ar: 'سياحي',
+          en: 'Tourist'
+        },
+        location: {
+          ar: 'الأقصر، مصر',
+          en: 'Luxor, Egypt'
+        },
+        area: {
+          ar: '15,000 متر مربع',
+          en: '15,000 square meters'
+        },
+        year: '2023',
+        status: {
+          ar: 'مكتمل',
+          en: 'Completed'
+        },
+        features: {
+          ar: ['طريق الكباش', 'تطوير سياحي', 'تجميل', 'وجهة تاريخية'],
+          en: ['Rams Road', 'Tourist Development', 'Beautification', 'Historical Destination']
+        },
+        client: {
+          ar: 'محافظة الأقصر',
+          en: 'Luxor Governorate'
+        },
+        value: {
+          ar: '300 مليون جنيه',
+          en: '300 Million EGP'
+        }
+      },
+      {
+        title: {
+          ar: 'المرسى النيلي بالاقصر',
+          en: 'Nile Marina in Luxor'
+        },
+        description: {
+          ar: 'مشروع المرسى النيلي في الأقصر، وجهة سياحية مميزة.',
+          en: 'The Nile Marina project in Luxor, a distinguished tourist destination.'
+        },
+        image: '/images/projects/luxor-nile-marina.jpg',
+        subImages: ['/images/projects/luxor-nile-marina.jpg', projectslider2, logoElnuby],
+        category: {
+          ar: 'سياحي',
+          en: 'Tourist'
+        },
+        location: {
+          ar: 'الأقصر، مصر',
+          en: 'Luxor, Egypt'
+        },
+        area: {
+          ar: '12,000 متر مربع',
+          en: '12,000 square meters'
+        },
+        year: '2023',
+        status: {
+          ar: 'مكتمل',
+          en: 'Completed'
+        },
+        features: {
+          ar: ['مرسى نيلي', 'وجهة سياحية', 'إطلالة نيلية', 'مرافق متطورة'],
+          en: ['Nile Marina', 'Tourist Destination', 'Nile View', 'Advanced Facilities']
+        },
+        client: {
+          ar: 'هيئة التنمية السياحية',
+          en: 'Tourism Development Authority'
+        },
+        value: {
+          ar: '250 مليون جنيه',
+          en: '250 Million EGP'
+        }
+      },
+      {
+        title: {
+          ar: 'كورنيش البر الغربي بالاقصر',
+          en: 'West Bank Corniche in Luxor'
+        },
+        description: {
+          ar: 'مشروع كورنيش البر الغربي في الأقصر، وجهة سياحية مميزة.',
+          en: 'The West Bank Corniche project in Luxor, a distinguished tourist destination.'
+        },
+        image: '/images/projects/luxor-west-bank-corniche.jpg',
+        subImages: ['/images/projects/luxor-west-bank-corniche.jpg', projectslider2, logoElnuby],
+        category: {
+          ar: 'سياحي',
+          en: 'Tourist'
+        },
+        location: {
+          ar: 'الأقصر، مصر',
+          en: 'Luxor, Egypt'
+        },
+        area: {
+          ar: '18,000 متر مربع',
+          en: '18,000 square meters'
+        },
+        year: '2023',
+        status: {
+          ar: 'مكتمل',
+          en: 'Completed'
+        },
+        features: {
+          ar: ['كورنيش', 'البر الغربي', 'وجهة سياحية', 'مناظر طبيعية'],
+          en: ['Corniche', 'West Bank', 'Tourist Destination', 'Natural Views']
+        },
+        client: {
+          ar: 'هيئة التنمية السياحية',
+          en: 'Tourism Development Authority'
+        },
+        value: {
+          ar: '350 مليون جنيه',
+          en: '350 Million EGP'
+        }
+      },
+      {
+        title: {
+          ar: 'الممشي السياحي بالاقصر',
+          en: 'Tourist Walkway in Luxor'
+        },
+        description: {
+          ar: 'مشروع الممشي السياحي في الأقصر، مسار للمشاة.',
+          en: 'The Tourist Walkway project in Luxor, a pedestrian path.'
+        },
+        image: '/images/projects/luxor-tourist-walkway.jpg',
+        subImages: ['/images/projects/luxor-tourist-walkway.jpg', projectslider2, logoElnuby],
+        category: {
+          ar: 'سياحي',
+          en: 'Tourist'
+        },
+        location: {
+          ar: 'الأقصر، مصر',
+          en: 'Luxor, Egypt'
+        },
+        area: {
+          ar: '8,000 متر مربع',
+          en: '8,000 square meters'
+        },
+        year: '2023',
+        status: {
+          ar: 'مكتمل',
+          en: 'Completed'
+        },
+        features: {
+          ar: ['ممشي سياحي', 'مسار للمشاة', 'وجهة سياحية', 'تصميم عصري'],
+          en: ['Tourist Walkway', 'Pedestrian Path', 'Tourist Destination', 'Modern Design']
+        },
+        client: {
+          ar: 'هيئة التنمية السياحية',
+          en: 'Tourism Development Authority'
+        },
+        value: {
+          ar: '120 مليون جنيه',
+          en: '120 Million EGP'
+        }
+      },
+      {
+        title: {
+          ar: 'تطوير كورنيش النيل القديم بمدينة اسوان',
+          en: 'Development of Old Nile Corniche in Aswan City'
+        },
+        description: {
+          ar: 'مشروع تطوير كورنيش النيل القديم في مدينة أسوان.',
+          en: 'A project to develop the Old Nile Corniche in Aswan City.'
+        },
+        image: '/images/projects/aswan-old-nile-corniche.jpg',
+        subImages: ['/images/projects/aswan-old-nile-corniche.jpg', projectslider2, logoElnuby],
+        category: {
+          ar: 'سياحي',
+          en: 'Tourist'
+        },
+        location: {
+          ar: 'مدينة أسوان، مصر',
+          en: 'Aswan City, Egypt'
+        },
+        area: {
+          ar: '10,000 متر مربع',
+          en: '10,000 square meters'
+        },
+        year: '2023',
+        status: {
+          ar: 'مكتمل',
+          en: 'Completed'
+        },
+        features: {
+          ar: ['كورنيش نيل', 'تطوير سياحي', 'مدينة أسوان', 'وجهة تاريخية'],
+          en: ['Nile Corniche', 'Tourist Development', 'Aswan City', 'Historical Destination']
+        },
+        client: {
+          ar: 'محافظة أسوان',
+          en: 'Aswan Governorate'
+        },
+        value: {
+          ar: '200 مليون جنيه',
+          en: '200 Million EGP'
+        }
+      },
+      {
+        title: {
+          ar: 'تطوير كورنيش النيل مركز اسنا',
+          en: 'Development of Nile Corniche in Esna Center'
+        },
+        description: {
+          ar: 'مشروع تطوير كورنيش النيل في مركز إسنا.',
+          en: 'A project to develop the Nile Corniche in Esna Center.'
+        },
+        image: '/images/projects/esna-nile-corniche.jpg',
+        subImages: ['/images/projects/esna-nile-corniche.jpg', projectslider2, logoElnuby],
+        category: {
+          ar: 'سياحي',
+          en: 'Tourist'
+        },
+        location: {
+          ar: 'مركز إسنا، مصر',
+          en: 'Esna Center, Egypt'
+        },
+        area: {
+          ar: '6,000 متر مربع',
+          en: '6,000 square meters'
+        },
+        year: '2023',
+        status: {
+          ar: 'مكتمل',
+          en: 'Completed'
+        },
+        features: {
+          ar: ['كورنيش نيل', 'مركز إسنا', 'تطوير سياحي', 'وجهة محلية'],
+          en: ['Nile Corniche', 'Esna Center', 'Tourist Development', 'Local Destination']
+        },
+        client: {
+          ar: 'محافظة الأقصر',
+          en: 'Luxor Governorate'
+        },
+        value: {
+          ar: '100 مليون جنيه',
+          en: '100 Million EGP'
+        }
+      },
+      // Educational Projects - مشاريع تعليمية
+      {
+        title: {
+          ar: 'مبنى نزل الشباب بالاقصر',
+          en: 'Youth Hostel Building in Luxor'
+        },
+        description: {
+          ar: 'مشروع مبنى نزل الشباب في الأقصر، مرفق تعليمي وسياحي.',
+          en: 'Youth Hostel Building project in Luxor, an educational and tourist facility.'
+        },
+        image: '/images/projects/luxor-youth-hostel.jpg',
+        subImages: ['/images/projects/luxor-youth-hostel.jpg', projectslider2, logoElnuby],
+        category: {
+          ar: 'تعليمي',
+          en: 'Educational'
+        },
+        location: {
+          ar: 'الأقصر، مصر',
+          en: 'Luxor, Egypt'
+        },
+        area: {
+          ar: '4,000 متر مربع',
+          en: '4,000 square meters'
+        },
+        year: '2023',
+        status: {
+          ar: 'مكتمل',
+          en: 'Completed'
+        },
+        features: {
+          ar: ['نزل شباب', 'مرفق تعليمي', 'سياحة شبابية', 'تصميم عصري'],
+          en: ['Youth Hostel', 'Educational Facility', 'Youth Tourism', 'Modern Design']
+        },
+        client: {
+          ar: 'وزارة الشباب والرياضة',
+          en: 'Ministry of Youth and Sports'
+        },
+        value: {
+          ar: '80 مليون جنيه',
+          en: '80 Million EGP'
+        }
+      },
+      {
+        title: {
+          ar: 'إنشاء مكتبة مصر العامة الاقليمية بأسوان',
+          en: 'Construction of Egypt Public Regional Library in Aswan'
+        },
+        description: {
+          ar: 'مشروع إنشاء مكتبة مصر العامة الإقليمية في أسوان.',
+          en: 'A project to construct Egypt Public Regional Library in Aswan.'
+        },
+        image: '/images/projects/aswan-regional-library.jpg',
+        subImages: ['/images/projects/aswan-regional-library.jpg', projectslider2, logoElnuby],
+        category: {
+          ar: 'تعليمي',
+          en: 'Educational'
+        },
+        location: {
+          ar: 'أسوان، مصر',
+          en: 'Aswan, Egypt'
+        },
+        area: {
+          ar: '3,500 متر مربع',
+          en: '3,500 square meters'
+        },
+        year: '2023',
+        status: {
+          ar: 'مكتمل',
+          en: 'Completed'
+        },
+        features: {
+          ar: ['مكتبة إقليمية', 'خدمات تعليمية', 'مركز ثقافي', 'تصميم عصري'],
+          en: ['Regional Library', 'Educational Services', 'Cultural Center', 'Modern Design']
+        },
+        client: {
+          ar: 'وزارة الثقافة',
+          en: 'Ministry of Culture'
+        },
+        value: {
+          ar: '70 مليون جنيه',
+          en: '70 Million EGP'
+        }
+      },
+      {
+        title: {
+          ar: 'انشاء كلية الالسن - محافظة الاقصر',
+          en: 'Construction of Faculty of Languages - Luxor Governorate'
+        },
+        description: {
+          ar: 'مشروع إنشاء كلية الألسن في محافظة الأقصر.',
+          en: 'A project to construct the Faculty of Languages in Luxor Governorate.'
+        },
+        image: '/images/projects/luxor-faculty-languages.jpg',
+        subImages: ['/images/projects/luxor-faculty-languages.jpg', projectslider2, logoElnuby],
+        category: {
+          ar: 'تعليمي',
+          en: 'Educational'
+        },
+        location: {
+          ar: 'محافظة الأقصر، مصر',
+          en: 'Luxor Governorate, Egypt'
+        },
+        area: {
+          ar: '8,000 متر مربع',
+          en: '8,000 square meters'
+        },
+        year: '2023',
+        status: {
+          ar: 'مكتمل',
+          en: 'Completed'
+        },
+        features: {
+          ar: ['كلية ألسن', 'تعليم جامعي', 'مرافق تعليمية', 'تصميم عصري'],
+          en: ['Faculty of Languages', 'University Education', 'Educational Facilities', 'Modern Design']
+        },
+        client: {
+          ar: 'وزارة التعليم العالي',
+          en: 'Ministry of Higher Education'
+        },
+        value: {
+          ar: '150 مليون جنيه',
+          en: '150 Million EGP'
+        }
+      },
+      {
+        title: {
+          ar: 'أنشاء المدرسة الثانوية الصناعية بالطود محافظة الاقصر',
+          en: 'Construction of Tod Industrial Secondary School - Luxor Governorate'
+        },
+        description: {
+          ar: 'مشروع إنشاء المدرسة الثانوية الصناعية في الطود بمحافظة الأقصر.',
+          en: 'A project to construct Tod Industrial Secondary School in Luxor Governorate.'
+        },
+        image: '/images/projects/tod-industrial-school.jpg',
+        subImages: ['/images/projects/tod-industrial-school.jpg', projectslider2, logoElnuby],
+        category: {
+          ar: 'تعليمي',
+          en: 'Educational'
+        },
+        location: {
+          ar: 'الطود، محافظة الأقصر، مصر',
+          en: 'Tod, Luxor Governorate, Egypt'
+        },
+        area: {
+          ar: '5,000 متر مربع',
+          en: '5,000 square meters'
+        },
+        year: '2023',
+        status: {
+          ar: 'مكتمل',
+          en: 'Completed'
+        },
+        features: {
+          ar: ['مدرسة صناعية', 'تعليم ثانوي', 'مرافق تعليمية', 'تصميم عصري'],
+          en: ['Industrial School', 'Secondary Education', 'Educational Facilities', 'Modern Design']
+        },
+        client: {
+          ar: 'وزارة التربية والتعليم',
+          en: 'Ministry of Education'
+        },
+        value: {
+          ar: '90 مليون جنيه',
+          en: '90 Million EGP'
+        }
+      },
+      {
+        title: {
+          ar: 'أنشاء مركز الابداع محافظة الفيوم',
+          en: 'Construction of Creativity Center - Fayoum Governorate'
+        },
+        description: {
+          ar: 'مشروع إنشاء مركز الإبداع في محافظة الفيوم.',
+          en: 'A project to construct the Creativity Center in Fayoum Governorate.'
+        },
+        image: '/images/projects/fayoum-creativity-center.jpg',
+        subImages: ['/images/projects/fayoum-creativity-center.jpg', projectslider2, logoElnuby],
+        category: {
+          ar: 'تعليمي',
+          en: 'Educational'
+        },
+        location: {
+          ar: 'محافظة الفيوم، مصر',
+          en: 'Fayoum Governorate, Egypt'
+        },
+        area: {
+          ar: '4,500 متر مربع',
+          en: '4,500 square meters'
+        },
+        year: '2023',
+        status: {
+          ar: 'مكتمل',
+          en: 'Completed'
+        },
+        features: {
+          ar: ['مركز إبداع', 'تعليم إبداعي', 'مرافق متطورة', 'تصميم عصري'],
+          en: ['Creativity Center', 'Creative Education', 'Advanced Facilities', 'Modern Design']
+        },
+        client: {
+          ar: 'محافظة الفيوم',
+          en: 'Fayoum Governorate'
+        },
+        value: {
+          ar: '85 مليون جنيه',
+          en: '85 Million EGP'
+        }
+      },
+      {
+        title: {
+          ar: 'مشروع تشطيبات قاعة الاحتفال وكبار الزوار واعمال المصاعد كلية الصيدلة جامعة قناة السويس',
+          en: 'Finishing Works Project for Celebration Hall, VIP Area and Elevators - Faculty of Pharmacy, Suez Canal University'
+        },
+        description: {
+          ar: 'مشروع تشطيبات قاعة الاحتفال وكبار الزوار وأعمال المصاعد في كلية الصيدلة.',
+          en: 'Finishing works project for celebration hall, VIP area and elevators in Faculty of Pharmacy.'
+        },
+        image: '/images/projects/suez-canal-pharmacy-finishing.jpg',
+        subImages: ['/images/projects/suez-canal-pharmacy-finishing.jpg', projectslider2, logoElnuby],
+        category: {
+          ar: 'تعليمي',
+          en: 'Educational'
+        },
+        location: {
+          ar: 'جامعة قناة السويس، مصر',
+          en: 'Suez Canal University, Egypt'
+        },
+        area: {
+          ar: '2,500 متر مربع',
+          en: '2,500 square meters'
+        },
+        year: '2023',
+        status: {
+          ar: 'مكتمل',
+          en: 'Completed'
+        },
+        features: {
+          ar: ['تشطيبات', 'قاعة احتفال', 'كبار زوار', 'مصاعد'],
+          en: ['Finishing Works', 'Celebration Hall', 'VIP Area', 'Elevators']
+        },
+        client: {
+          ar: 'جامعة قناة السويس',
+          en: 'Suez Canal University'
+        },
+        value: {
+          ar: '60 مليون جنيه',
+          en: '60 Million EGP'
+        }
+      },
+      // Commercial & Hotel Projects - مشاريع تجارية وفندقية
+      {
+        title: {
+          ar: 'أنشاء مولات غرب الشروق',
+          en: 'Construction of West Shorouk Malls'
+        },
+        description: {
+          ar: 'مشروع إنشاء مولات غرب الشروق، مراكز تجارية متطورة.',
+          en: 'A project to construct West Shorouk Malls, advanced commercial centers.'
+        },
+        image: '/images/projects/west-shorouk-malls.jpg',
+        subImages: ['/images/projects/west-shorouk-malls.jpg', projectslider2, logoElnuby],
+        category: {
+          ar: 'تجاري',
+          en: 'Commercial'
+        },
+        location: {
+          ar: 'غرب الشروق، مصر',
+          en: 'West Shorouk, Egypt'
+        },
+        area: {
+          ar: '25,000 متر مربع',
+          en: '25,000 square meters'
+        },
+        year: '2023',
+        status: {
+          ar: 'مكتمل',
+          en: 'Completed'
+        },
+        features: {
+          ar: ['مولات تجارية', 'مراكز تسوق', 'مرافق متطورة', 'خدمة شاملة'],
+          en: ['Commercial Malls', 'Shopping Centers', 'Advanced Facilities', 'Comprehensive Service']
+        },
+        client: {
+          ar: 'هيئة المجتمعات العمرانية الجديدة',
+          en: 'New Urban Communities Authority'
+        },
+        value: {
+          ar: '400 مليون جنيه',
+          en: '400 Million EGP'
+        }
+      },
+      {
+        title: {
+          ar: 'فندق دار الضيافة بالكيان العسكري',
+          en: 'Military Entity Guest House Hotel'
+        },
+        description: {
+          ar: 'مشروع فندق دار الضيافة بالكيان العسكري.',
+          en: 'Military Entity Guest House Hotel project.'
+        },
+        image: '/images/projects/military-guest-house.jpg',
+        subImages: ['/images/projects/military-guest-house.jpg', projectslider2, logoElnuby],
+        category: {
+          ar: 'مباني فندقية',
+          en: 'Hotel Buildings'
+        },
+        location: {
+          ar: 'مصر',
+          en: 'Egypt'
+        },
+        area: {
+          ar: '6,000 متر مربع',
+          en: '6,000 square meters'
+        },
+        year: '2023',
+        status: {
+          ar: 'مكتمل',
+          en: 'Completed'
+        },
+        features: {
+          ar: ['فندق', 'دار ضيافة', 'كيان عسكري', 'مرافق متطورة'],
+          en: ['Hotel', 'Guest House', 'Military Entity', 'Advanced Facilities']
+        },
+        client: {
+          ar: 'وزارة الدفاع',
+          en: 'Ministry of Defense'
+        },
+        value: {
+          ar: '120 مليون جنيه',
+          en: '120 Million EGP'
+        }
+      },
+      {
+        title: {
+          ar: 'فندق جامعة عين شمس الاهلية',
+          en: 'Ain Shams University Private Hotel'
+        },
+        description: {
+          ar: 'مشروع فندق جامعة عين شمس الأهلية.',
+          en: 'Ain Shams University Private Hotel project.'
+        },
+        image: '/images/projects/ain-shams-university-hotel.jpg',
+        subImages: ['/images/projects/ain-shams-university-hotel.jpg', projectslider2, logoElnuby],
+        category: {
+          ar: 'مباني فندقية',
+          en: 'Hotel Buildings'
+        },
+        location: {
+          ar: 'جامعة عين شمس، مصر',
+          en: 'Ain Shams University, Egypt'
+        },
+        area: {
+          ar: '8,000 متر مربع',
+          en: '8,000 square meters'
+        },
+        year: '2023',
+        status: {
+          ar: 'مكتمل',
+          en: 'Completed'
+        },
+        features: {
+          ar: ['فندق جامعي', 'جامعة عين شمس', 'مرافق متطورة', 'خدمة تعليمية'],
+          en: ['University Hotel', 'Ain Shams University', 'Advanced Facilities', 'Educational Service']
+        },
+        client: {
+          ar: 'جامعة عين شمس',
+          en: 'Ain Shams University'
+        },
+        value: {
+          ar: '180 مليون جنيه',
+          en: '180 Million EGP'
+        }
+      }
+    ],
   contact: {
     address: {
       ar: 'القاهرة، مصر',
@@ -2047,19 +4064,19 @@ export const elnubyDataTranslated = {
   ],
   stats: [
     { 
-      number: '200+', 
+      number: '300+', 
       label: { ar: 'مشروع مكتمل', en: 'Completed Projects' } 
     },
     { 
-      number: '80+', 
+      number: '100+', 
       label: { ar: 'عميل سعيد', en: 'Happy Clients' } 
     },
     { 
-      number: '20+', 
+      number: '25+', 
       label: { ar: 'عام خبرة', en: 'Years Experience' } 
     },
     { 
-      number: '150+', 
+      number: '200+', 
       label: { ar: 'موظف محترف', en: 'Professional Staff' } 
     }
   ]
