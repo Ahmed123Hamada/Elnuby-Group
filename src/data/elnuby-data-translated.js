@@ -66,6 +66,10 @@ export const elnubyDataTranslated = {
       href: '/projects' 
     },
     { 
+      text: { ar: 'الخدمات', en: 'Services' }, 
+      href: '/services' 
+    },
+    { 
       text: { ar: 'توظيف', en: 'Career' }, 
       href: '/career' 
     },
@@ -164,8 +168,8 @@ export const elnubyDataTranslated = {
       image: '/images/GalalaUniversityHospital.jpg',
       subImages: ['/images/GalalaUniversityHospital.jpg', '/images/projects/projectslider2.webp', '/images/logo/haram.png', '/images/logo/logo-elnuby.png'],
       category: {
-        ar: 'صحي',
-        en: 'Healthcare'
+        ar: 'مستشفيات',
+        en: 'Hospitals'
       },
       location: {
         ar: 'مدينة الجلالة، مصر',
@@ -205,8 +209,8 @@ export const elnubyDataTranslated = {
       image: '/images/LavidaHospital.jpg',
       subImages: ['/images/LavidaHospital.jpg', '/images/projects/projectslider2.webp', '/images/logo/haram.png'],
       category: {
-        ar: 'صحي',
-        en: 'Healthcare'
+        ar: 'مستشفيات',
+        en: 'Hospitals'
       },
       location: {
         ar: 'القاهرة، مصر',
@@ -246,8 +250,8 @@ export const elnubyDataTranslated = {
       image: '/images/MansouraMilitaryHospital.jpg',
       subImages: ['/images/MansouraMilitaryHospital.jpg', '/images/projects/projectslider2.webp', '/images/logo/logo-elnuby-footer.png'],
       category: {
-        ar: 'صحي',
-        en: 'Healthcare'
+        ar: 'مستشفيات',
+        en: 'Hospitals'
       },
       location: {
         ar: 'المنصورة، مصر',
@@ -287,8 +291,8 @@ export const elnubyDataTranslated = {
       image: '/images/ArmentHospital.jpg',
       subImages: ['/images/ArmentHospital.jpg', '/images/projects/projectslider2.webp', '/images/logo/haram.png'],
       category: {
-        ar: 'صحي',
-        en: 'Healthcare'
+        ar: 'مستشفيات',
+        en: 'Hospitals'
       },
       location: {
         ar: 'أرمونت، مصر',
@@ -328,8 +332,8 @@ export const elnubyDataTranslated = {
       image: '/images/BedayatHospital.jpg',
       subImages: ['/images/BedayatHospital.jpg', '/images/projects/projectslider2.webp', '/images/logo/logo-elnuby.png'],
       category: {
-        ar: 'صحي',
-        en: 'Healthcare'
+        ar: 'مستشفيات',
+        en: 'Hospitals'
       },
       location: {
         ar: 'القاهرة، مصر',
@@ -369,8 +373,8 @@ export const elnubyDataTranslated = {
       image: '/images/SamaloutHospital.jpg',
       subImages: ['/images/SamaloutHospital.jpg', '/images/projects/projectslider2.webp', '/images/logo/haram.png'],
       category: {
-        ar: 'صحي',
-        en: 'Healthcare'
+        ar: 'مستشفيات',
+        en: 'Hospitals'
       },
       location: {
         ar: 'سمالوط، المنيا',
@@ -410,8 +414,8 @@ export const elnubyDataTranslated = {
       image: '/images/AswanOphthalmologyHospital.jpg',
       subImages: ['/images/AswanOphthalmologyHospital.jpg', '/images/projects/projectslider2.webp', '/images/logo/logo-elnuby-footer.png'],
       category: {
-        ar: 'صحي',
-        en: 'Healthcare'
+        ar: 'مستشفيات',
+        en: 'Hospitals'
       },
       location: {
         ar: 'أسوان، مصر',
@@ -451,8 +455,8 @@ export const elnubyDataTranslated = {
       image: KomOmboHospitalImg,
       subImages: [KomOmboHospitalImg, projectslider2, haramImage],
       category: {
-        ar: 'صحي',
-        en: 'Healthcare'
+        ar: 'مستشفيات',
+        en: 'Hospitals'
       },
       location: {
         ar: 'كوم أمبو، أسوان',
@@ -492,8 +496,8 @@ export const elnubyDataTranslated = {
       image: SohagUniversityHospitalImg,
       subImages: [SohagUniversityHospitalImg, projectslider2, logoElnuby],
       category: {
-        ar: 'صحي',
-        en: 'Healthcare'
+        ar: 'مستشفيات',
+        en: 'Hospitals'
       },
       location: {
         ar: 'سوهاج، مصر',
@@ -533,8 +537,8 @@ export const elnubyDataTranslated = {
       image: EsnaSpecializedHospitalImg,
       subImages: [EsnaSpecializedHospitalImg, projectslider2, haramImage],
       category: {
-        ar: 'صحي',
-        en: 'Healthcare'
+        ar: 'مستشفيات',
+        en: 'Hospitals'
       },
       location: {
         ar: 'إسنا، الأقصر',
@@ -576,8 +580,8 @@ export const elnubyDataTranslated = {
       image: NileCornichLuxorImg,
       subImages: [NileCornichLuxorImg, projectslider2, haramImage, logoElnuby],
       category: {
-        ar: 'بنية تحتية',
-        en: 'Infrastructure'
+        ar: 'سياحي',
+        en: 'Tourist'
       },
       location: {
         ar: 'الأقصر، مصر',
@@ -1154,8 +1158,8 @@ export const elnubyDataTranslated = {
       image: AdministrativeProsecutionLuxorImg,
       subImages: [AdministrativeProsecutionLuxorImg, projectslider2, logoElnubyFooter],
       category: {
-        ar: 'إداري',
-        en: 'Administrative'
+        ar: 'مباني إدارية',
+        en: 'Administrative Buildings'
       },
       location: {
         ar: 'الأقصر، مصر',
@@ -1195,8 +1199,8 @@ export const elnubyDataTranslated = {
       image: noubyAdministrativeheadquarterImg,
       subImages: [noubyAdministrativeheadquarterImg, projectslider2, haramImage],
       category: {
-        ar: 'إداري',
-        en: 'Administrative'
+        ar: 'مباني إدارية',
+        en: 'Administrative Buildings'
       },
       location: {
         ar: 'القاهرة، مصر',
@@ -1236,8 +1240,8 @@ export const elnubyDataTranslated = {
       image: QantaraPoliceDepartmentImg,
       subImages: [QantaraPoliceDepartmentImg, projectslider2, logoElnuby],
       category: {
-        ar: 'إداري',
-        en: 'Administrative'
+        ar: 'مباني إدارية',
+        en: 'Administrative Buildings'
       },
       location: {
         ar: 'القنطرة، الإسماعيلية',
@@ -1279,8 +1283,8 @@ export const elnubyDataTranslated = {
       image: KarnakTempleSquareImg,
       subImages: [KarnakTempleSquareImg, projectslider2, haramImage],
       category: {
-        ar: 'فندقي',
-        en: 'Hospitality'
+        ar: 'مباني فندقية',
+        en: 'Hotel Buildings'
       },
       location: {
         ar: 'الأقصر، مصر',
@@ -1320,8 +1324,8 @@ export const elnubyDataTranslated = {
       image: AswanCornicheImg,
       subImages: [AswanCornicheImg, projectslider2, logoElnubyFooter],
       category: {
-        ar: 'فندقي',
-        en: 'Hospitality'
+        ar: 'سياحي',
+        en: 'Tourist'
       },
       location: {
         ar: 'أسوان، مصر',
@@ -1361,8 +1365,8 @@ export const elnubyDataTranslated = {
       image: KarnakParkLuxorImg,
       subImages: [KarnakParkLuxorImg, projectslider2, haramImage],
       category: {
-        ar: 'فندقي',
-        en: 'Hospitality'
+        ar: 'مباني فندقية',
+        en: 'Hotel Buildings'
       },
       location: {
         ar: 'الكرنك، الأقصر',
@@ -1402,8 +1406,8 @@ export const elnubyDataTranslated = {
       image: AswanGovernorateBuildingImg,
       subImages: [AswanGovernorateBuildingImg, projectslider2, logoElnuby],
       category: {
-        ar: 'إداري',
-        en: 'Administrative'
+        ar: 'مباني إدارية',
+        en: 'Administrative Buildings'
       },
       location: {
         ar: 'أسوان، مصر',
@@ -1566,8 +1570,8 @@ export const elnubyDataTranslated = {
       image: TodYouthHostelLuxorImg,
       subImages: [TodYouthHostelLuxorImg, projectslider2, logoElnuby],
       category: {
-        ar: 'فندقي',
-        en: 'Hospitality'
+        ar: 'مباني فندقية',
+        en: 'Hotel Buildings'
       },
       location: {
         ar: 'التود، الأقصر',
@@ -1607,8 +1611,8 @@ export const elnubyDataTranslated = {
       image: AlFayrouzClubIsmailiaImg,
       subImages: [AlFayrouzClubIsmailiaImg, projectslider2, haramImage],
       category: {
-        ar: 'رياضي',
-        en: 'Sports'
+        ar: 'ترفيهي',
+        en: 'Entertainment'
       },
       location: {
         ar: 'الإسماعيلية، مصر',
@@ -1635,6 +1639,350 @@ export const elnubyDataTranslated = {
         ar: '70 مليون جنيه',
         en: '70 Million EGP'
       }
+    },
+
+
+
+    // Agricultural Projects - مشاريع زراعية
+    {
+      title: {
+        ar: 'مشروع استصلاح أراضي توشكا الزراعي',
+        en: 'Toshka Agricultural Land Reclamation Project'
+      },
+      description: {
+        ar: 'مشروع ضخم لاستصلاح الأراضي الزراعية في منطقة توشكا لزيادة الرقعة الزراعية.',
+        en: 'A massive project for agricultural land reclamation in the Toshka area to increase agricultural land.'
+      },
+      image: ToshkaImg,
+      subImages: [ToshkaImg, projectslider2, haramImage],
+      category: {
+        ar: 'استصلاح زراعي',
+        en: 'Agricultural Reclamation'
+      },
+      location: {
+        ar: 'توشكا، أسوان',
+        en: 'Toshka, Aswan'
+      },
+      area: {
+        ar: '2,000,000 متر مربع',
+        en: '2,000,000 square meters'
+      },
+      year: '2024',
+      status: {
+        ar: 'قيد التنفيذ',
+        en: 'Under Construction'
+      },
+      features: {
+        ar: ['استصلاح أراضي', 'زراعة حديثة', 'أمن غذائي', 'تنمية مستدامة'],
+        en: ['Land Reclamation', 'Modern Agriculture', 'Food Security', 'Sustainable Development']
+      },
+      client: {
+        ar: 'وزارة الزراعة واستصلاح الأراضي',
+        en: 'Ministry of Agriculture and Land Reclamation'
+      },
+      value: {
+        ar: '3 مليار جنيه',
+        en: '3 Billion EGP'
+      }
+    },
+
+    // Hotel Buildings Projects - مشاريع المباني الفندقية
+    {
+      title: {
+        ar: 'فندق الجلالة الدولي',
+        en: 'Galala International Hotel'
+      },
+      description: {
+        ar: 'فندق فاخر بمدينة الجلالة يتميز بإطلالات بحرية رائعة ومرافق متكاملة لخدمة السياحة.',
+        en: 'A luxury hotel in Galala City featuring stunning sea views and integrated facilities for tourism services.'
+      },
+      image: '/images/projects/luxury-hotel.svg',
+      subImages: ['/images/projects/luxury-hotel.svg', projectslider2, logoElnuby],
+      category: {
+        ar: 'مباني فندقية',
+        en: 'Hotel Buildings'
+      },
+      location: {
+        ar: 'مدينة الجلالة، مصر',
+        en: 'Galala City, Egypt'
+      },
+      area: {
+        ar: '35,000 متر مربع',
+        en: '35,000 square meters'
+      },
+      year: '2024',
+      status: {
+        ar: 'قيد التنفيذ',
+        en: 'Under Construction'
+      },
+      features: {
+        ar: ['فندق فاخر', 'إطلالات بحرية', 'مرافق متكاملة', 'خدمة سياحية'],
+        en: ['Luxury Hotel', 'Sea Views', 'Integrated Facilities', 'Tourism Service']
+      },
+      client: {
+        ar: 'هيئة التنمية السياحية',
+        en: 'Tourism Development Authority'
+      },
+      value: {
+        ar: '500 مليون جنيه',
+        en: '500 Million EGP'
+      }
+    },
+
+    // More Residential Projects - المزيد من المشاريع السكنية
+    {
+      title: {
+        ar: 'أعمال البنية الأساسية لمشروع تطوير ترعة الشباب بمنطقة توشكى',
+        en: 'Infrastructure Works for Youth Canal Development Project in Toshka'
+      },
+      description: {
+        ar: 'مشروع تطوير البنية الأساسية لمنطقة سكنية متكاملة بتوشكى لخدمة المجتمعات الجديدة.',
+        en: 'Infrastructure development project for an integrated residential area in Toshka to serve new communities.'
+      },
+      image: null,
+      subImages: [projectslider2, logoElnuby],
+      category: {
+        ar: 'سكني',
+        en: 'Residential'
+      },
+      location: {
+        ar: 'توشكى، أسوان',
+        en: 'Toshka, Aswan'
+      },
+      area: {
+        ar: '100,000 متر مربع',
+        en: '100,000 square meters'
+      },
+      year: '2023',
+      status: {
+        ar: 'مكتمل',
+        en: 'Completed'
+      },
+      features: {
+        ar: ['بنية أساسية', 'مجتمع سكني', 'ترعة الشباب', 'تنمية عمرانية'],
+        en: ['Infrastructure', 'Residential Community', 'Youth Canal', 'Urban Development']
+      },
+      client: {
+        ar: 'هيئة تنمية الصعيد',
+        en: 'Upper Egypt Development Authority'
+      },
+      value: {
+        ar: '200 مليون جنيه',
+        en: '200 Million EGP'
+      }
+    },
+
+    // More Educational Projects - المزيد من المشاريع التعليمية
+    {
+      title: {
+        ar: 'إنشاء مكتبة مصر العامة الإقليمية بسوهاج',
+        en: 'Construction of Egypt Regional Public Library in Sohag'
+      },
+      description: {
+        ar: 'مكتبة عامة إقليمية حديثة تخدم المجتمع التعليمي والثقافي في سوهاج.',
+        en: 'A modern regional public library serving the educational and cultural community in Sohag.'
+      },
+      image: null,
+      subImages: [projectslider2, haramImage],
+      category: {
+        ar: 'تعليمي',
+        en: 'Educational'
+      },
+      location: {
+        ar: 'سوهاج، مصر',
+        en: 'Sohag, Egypt'
+      },
+      area: {
+        ar: '8,000 متر مربع',
+        en: '8,000 square meters'
+      },
+      year: '2023',
+      status: {
+        ar: 'مكتمل',
+        en: 'Completed'
+      },
+      features: {
+        ar: ['مكتبة إقليمية', 'خدمات تعليمية', 'مركز ثقافي', 'تقنيات حديثة'],
+        en: ['Regional Library', 'Educational Services', 'Cultural Center', 'Modern Technologies']
+      },
+      client: {
+        ar: 'وزارة الثقافة',
+        en: 'Ministry of Culture'
+      },
+      value: {
+        ar: '40 مليون جنيه',
+        en: '40 Million EGP'
+      }
+    },
+    {
+      title: {
+        ar: 'إنشاء المدرسة التكنولوجية الصناعية بالوادي الجديد',
+        en: 'Construction of Industrial Technology School in New Valley'
+      },
+      description: {
+        ar: 'مدرسة تكنولوجية متطورة لتدريب الطلاب على أحدث التقنيات الصناعية.',
+        en: 'An advanced technology school for training students in the latest industrial technologies.'
+      },
+      image: null,
+      subImages: [projectslider2, logoElnubyFooter],
+      category: {
+        ar: 'تعليمي',
+        en: 'Educational'
+      },
+      location: {
+        ar: 'الوادي الجديد، مصر',
+        en: 'New Valley, Egypt'
+      },
+      area: {
+        ar: '12,000 متر مربع',
+        en: '12,000 square meters'
+      },
+      year: '2024',
+      status: {
+        ar: 'قيد التنفيذ',
+        en: 'Under Construction'
+      },
+      features: {
+        ar: ['تعليم تكنولوجي', 'تدريب صناعي', 'تقنيات حديثة', 'مختبرات متطورة'],
+        en: ['Technology Education', 'Industrial Training', 'Modern Technologies', 'Advanced Laboratories']
+      },
+      client: {
+        ar: 'وزارة التربية والتعليم',
+        en: 'Ministry of Education'
+      },
+      value: {
+        ar: '60 مليون جنيه',
+        en: '60 Million EGP'
+      }
+    },
+
+    // More Entertainment Projects - المزيد من المشاريع الترفيهية
+    {
+      title: {
+        ar: 'مدينة الكويت - أنشاء عدد (2) بوابة للتحكم الآلي وتطعير المدخل',
+        en: 'Kuwait City - Construction of 2 Automatic Control Gates and Entrance Development'
+      },
+      description: {
+        ar: 'تطوير المداخل الرئيسية مع بوابات تحكم آلي حديثة لتحسين تدفق الزوار.',
+        en: 'Development of main entrances with modern automatic control gates to improve visitor flow.'
+      },
+      image: null,
+      subImages: [projectslider2, haramImage],
+      category: {
+        ar: 'ترفيهي',
+        en: 'Entertainment'
+      },
+      location: {
+        ar: 'الكويت',
+        en: 'Kuwait'
+      },
+      area: {
+        ar: '5,000 متر مربع',
+        en: '5,000 square meters'
+      },
+      year: '2023',
+      status: {
+        ar: 'مكتمل',
+        en: 'Completed'
+      },
+      features: {
+        ar: ['بوابات آلية', 'تحكم إلكتروني', 'تطوير مداخل', 'أنظمة أمان'],
+        en: ['Automatic Gates', 'Electronic Control', 'Entrance Development', 'Security Systems']
+      },
+      client: {
+        ar: 'دولة الكويت',
+        en: 'State of Kuwait'
+      },
+      value: {
+        ar: '25 مليون جنيه',
+        en: '25 Million EGP'
+      }
+    },
+
+    // More Commercial Projects - المزيد من المشاريع التجارية
+    {
+      title: {
+        ar: 'إنشاء مولات غرب الشروق - المرحلة الثالثة',
+        en: 'Construction of West Shorouk Malls - Phase Three'
+      },
+      description: {
+        ar: 'توسعة مجمع المولات التجارية لتشمل مرافق تجارية وترفيهية إضافية.',
+        en: 'Expansion of the commercial mall complex to include additional commercial and entertainment facilities.'
+      },
+      image: null,
+      subImages: ['/images/MallsWestShorouk1.jpg', projectslider2, logoElnubyFooter],
+      category: {
+        ar: 'تجاري',
+        en: 'Commercial'
+      },
+      location: {
+        ar: 'غرب الشروق، القاهرة',
+        en: 'West Shorouk, Cairo'
+      },
+      area: {
+        ar: '60,000 متر مربع',
+        en: '60,000 square meters'
+      },
+      year: '2024',
+      status: {
+        ar: 'قيد التنفيذ',
+        en: 'Under Construction'
+      },
+      features: {
+        ar: ['مول تجاري', 'مرافق ترفيهية', 'مطاعم ومقاهي', 'مواقف سيارات'],
+        en: ['Shopping Mall', 'Entertainment Facilities', 'Restaurants and Cafes', 'Parking Lots']
+      },
+      client: {
+        ar: 'القطاع الخاص',
+        en: 'Private Sector'
+      },
+      value: {
+        ar: '180 مليون جنيه',
+        en: '180 Million EGP'
+      }
+    },
+
+    // Additional Hotel Projects - مشاريع فنادق إضافية
+    {
+      title: {
+        ar: 'فندق جميرا - مشروع تطوير وترميم',
+        en: 'Jumeirah Hotel - Development and Renovation Project'
+      },
+      description: {
+        ar: 'تطوير وترميم فندق جميرا ليصبح منتجع سياحي متكامل يلبي المعايير الدولية.',
+        en: 'Development and renovation of Jumeirah Hotel to become an integrated tourist resort meeting international standards.'
+      },
+      image: null,
+      subImages: [projectslider2, haramImage],
+      category: {
+        ar: 'مباني فندقية',
+        en: 'Hotel Buildings'
+      },
+      location: {
+        ar: 'البحر الأحمر، مصر',
+        en: 'Red Sea, Egypt'
+      },
+      area: {
+        ar: '25,000 متر مربع',
+        en: '25,000 square meters'
+      },
+      year: '2023',
+      status: {
+        ar: 'مكتمل',
+        en: 'Completed'
+      },
+      features: {
+        ar: ['فندق منتجع', 'معايير دولية', 'مرافق سياحية', 'إطلالة بحرية'],
+        en: ['Resort Hotel', 'International Standards', 'Tourism Facilities', 'Sea View']
+      },
+      client: {
+        ar: 'هيئة التنمية السياحية',
+        en: 'Tourism Development Authority'
+      },
+      value: {
+        ar: '300 مليون جنيه',
+        en: '300 Million EGP'
+      }
     }
   ],
   contact: {
@@ -1657,45 +2005,53 @@ export const elnubyDataTranslated = {
       name: { ar: 'جميع المشاريع', en: 'All Projects' } 
     },
     { 
-      id: 'صحي', 
-      name: { ar: 'صحي', en: 'Healthcare' } 
+      id: 'سكني', 
+      name: { ar: 'سكني', en: 'Residential' } 
+    },
+    { 
+      id: 'مستشفيات', 
+      name: { ar: 'مستشفيات', en: 'Hospitals' } 
+    },
+    { 
+      id: 'استصلاح زراعي', 
+      name: { ar: 'استصلاح زراعي', en: 'Agricultural Reclamation' } 
     },
     { 
       id: 'بنية تحتية', 
       name: { ar: 'بنية تحتية', en: 'Infrastructure' } 
     },
     { 
+      id: 'مباني إدارية', 
+      name: { ar: 'مباني إدارية', en: 'Administrative Buildings' } 
+    },
+    { 
+      id: 'سياحي', 
+      name: { ar: 'سياحي', en: 'Tourist' } 
+    },
+    { 
+      id: 'ترفيهي', 
+      name: { ar: 'ترفيهي', en: 'Entertainment' } 
+    },
+    { 
       id: 'تعليمي', 
       name: { ar: 'تعليمي', en: 'Educational' } 
-    },
-    { 
-      id: 'إداري', 
-      name: { ar: 'إداري', en: 'Administrative' } 
-    },
-    { 
-      id: 'فندقي', 
-      name: { ar: 'فندقي', en: 'Hospitality' } 
-    },
-    { 
-      id: 'سكني', 
-      name: { ar: 'سكني', en: 'Residential' } 
     },
     { 
       id: 'تجاري', 
       name: { ar: 'تجاري', en: 'Commercial' } 
     },
     { 
-      id: 'رياضي', 
-      name: { ar: 'رياضي', en: 'Sports' } 
+      id: 'مباني فندقية', 
+      name: { ar: 'مباني فندقية', en: 'Hotel Buildings' } 
     }
   ],
   stats: [
     { 
-      number: '150+', 
+      number: '200+', 
       label: { ar: 'مشروع مكتمل', en: 'Completed Projects' } 
     },
     { 
-      number: '50+', 
+      number: '80+', 
       label: { ar: 'عميل سعيد', en: 'Happy Clients' } 
     },
     { 
@@ -1703,7 +2059,7 @@ export const elnubyDataTranslated = {
       label: { ar: 'عام خبرة', en: 'Years Experience' } 
     },
     { 
-      number: '100+', 
+      number: '150+', 
       label: { ar: 'موظف محترف', en: 'Professional Staff' } 
     }
   ]

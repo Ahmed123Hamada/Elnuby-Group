@@ -58,6 +58,7 @@ export const elnubyData = {
     { text: 'الرئيسية', href: '/', en: 'Home' },
     { text: 'عن الشركة', href: '/about', en: 'About Us' },
     { text: 'المشاريع', href: '/projects', en: 'Projects' },
+    { text: 'الخدمات', href: '/services', en: 'Services' },
     { text: 'توظيف', href: '/career', en: 'Career' },
     { text: 'تواصل معنا', href: '/contact', en: 'Contact Us' }
   ],
@@ -96,13 +97,13 @@ export const elnubyData = {
     }
   ],
   projects: [
-    // المشاريع الصحية - Healthcare Projects
+    // مشاريع المستشفيات - Hospitals Projects
     {
       title: 'مستشفى جامعة الجلالة',
       description: 'مستشفى جامعي متكامل ضمن مشروع مدينة الجلالة، يتميز بتقنيات طبية حديثة ومرافق متطورة لخدمة المرضى.',
       image: GalalaUniversityHospitalImg,
       subImages: [GalalaUniversityHospitalImg, projectslider2, haramImage, logoElnuby],
-      category: 'صحي',
+      category: 'مستشفيات',
       location: 'مدينة الجلالة، مصر',
       area: '45,000 متر مربع',
       year: '2023',
@@ -116,7 +117,7 @@ export const elnubyData = {
       description: 'مستشفى متخصص بتقنيات طبية حديثة، يضم أقسام متعددة ومرافق طبية متطورة لخدمة المجتمع.',
       image: LavidaHospitalImg,
       subImages: [LavidaHospitalImg, projectslider2, haramImage],
-      category: 'صحي',
+      category: 'مستشفيات',
       location: 'القاهرة، مصر',
       area: '40,000 متر مربع',
       year: '2023',
@@ -130,7 +131,7 @@ export const elnubyData = {
       description: 'مستشفى عسكري متطور يخدم القوات المسلحة والمدنيين، يتميز بمرافق طبية متقدمة.',
       image: MansouraMilitaryHospitalImg,
       subImages: [MansouraMilitaryHospitalImg, projectslider2, logoElnubyFooter],
-      category: 'صحي',
+      category: 'مستشفيات',
       location: 'المنصورة، مصر',
       area: '35,000 متر مربع',
       year: '2022',
@@ -144,7 +145,7 @@ export const elnubyData = {
       description: 'مستشفى متخصص في الرعاية الصحية الأولية، يخدم المجتمع المحلي بمرافق طبية متكاملة.',
       image: ArmentHospitalImg,
       subImages: [ArmentHospitalImg, projectslider2, haramImage],
-      category: 'صحي',
+      category: 'مستشفيات',
       location: 'أرمونت، مصر',
       area: '25,000 متر مربع',
       year: '2022',
@@ -158,7 +159,7 @@ export const elnubyData = {
       description: 'مستشفى متخصص في رعاية الأطفال والنساء، يتميز بمرافق طبية متخصصة.',
       image: BedayatHospitalImg,
       subImages: [BedayatHospitalImg, projectslider2, logoElnuby],
-      category: 'صحي',
+      category: 'مستشفيات',
       location: 'القاهرة، مصر',
       area: '30,000 متر مربع',
       year: '2023',
@@ -172,7 +173,7 @@ export const elnubyData = {
       description: 'مستشفى عام يخدم محافظة المنيا، يتميز بمرافق طبية متكاملة وخدمة مجتمعية.',
       image: SamaloutHospitalImg,
       subImages: [SamaloutHospitalImg, projectslider2, haramImage],
-      category: 'صحي',
+      category: 'مستشفيات',
       location: 'سمالوط، المنيا',
       area: '28,000 متر مربع',
       year: '2022',
@@ -186,7 +187,7 @@ export const elnubyData = {
       description: 'مستشفى متخصص في طب العيون، يقدم خدمات طبية متقدمة في مجال طب العيون.',
       image: AswanOphthalmologyHospitalImg,
       subImages: [AswanOphthalmologyHospitalImg, projectslider2, logoElnubyFooter],
-      category: 'صحي',
+      category: 'مستشفيات',
       location: 'أسوان، مصر',
       area: '20,000 متر مربع',
       year: '2023',
@@ -200,7 +201,7 @@ export const elnubyData = {
       description: 'مستشفى عام يخدم منطقة كوم أمبو، يتميز بمرافق طبية متكاملة.',
       image: KomOmboHospitalImg,
       subImages: [KomOmboHospitalImg, projectslider2, haramImage],
-      category: 'صحي',
+      category: 'مستشفيات',
       location: 'كوم أمبو، أسوان',
       area: '22,000 متر مربع',
       year: '2022',
@@ -214,7 +215,7 @@ export const elnubyData = {
       description: 'مستشفى جامعي متكامل يخدم محافظة سوهاج، يتميز بمرافق طبية متطورة.',
       image: SohagUniversityHospitalImg,
       subImages: [SohagUniversityHospitalImg, projectslider2, logoElnuby],
-      category: 'صحي',
+      category: 'مستشفيات',
       location: 'سوهاج، مصر',
       area: '38,000 متر مربع',
       year: '2023',
@@ -228,7 +229,7 @@ export const elnubyData = {
       description: 'مستشفى متخصص يخدم منطقة إسنا، يتميز بمرافق طبية متقدمة.',
       image: EsnaSpecializedHospitalImg,
       subImages: [EsnaSpecializedHospitalImg, projectslider2, haramImage],
-      category: 'صحي',
+      category: 'مستشفيات',
       location: 'إسنا، الأقصر',
       area: '24,000 متر مربع',
       year: '2022',
@@ -244,7 +245,7 @@ export const elnubyData = {
       description: 'تطوير كورنيش النيل في الأقصر ليصبح وجهة سياحية مميزة ومساراً للمشاة والدراجات.',
       image: NileCornichLuxorImg,
       subImages: [NileCornichLuxorImg, projectslider2, haramImage, logoElnuby],
-      category: 'بنية تحتية',
+      category: 'سياحي',
       location: 'الأقصر، مصر',
       area: '15,000 متر مربع',
       year: '2023',
@@ -444,7 +445,7 @@ export const elnubyData = {
       description: 'مبنى إداري حكومي ضمن مشروعات التطوير، يتميز بتصميم عصري ومرافق إدارية متكاملة.',
       image: AdministrativeProsecutionLuxorImg,
       subImages: [AdministrativeProsecutionLuxorImg, projectslider2, logoElnubyFooter],
-      category: 'إداري',
+      category: 'مباني إدارية',
       location: 'الأقصر، مصر',
       area: '20,000 متر مربع',
       year: '2023',
@@ -458,7 +459,7 @@ export const elnubyData = {
       description: 'المقر الإداري الرئيسي لمجموعة النوبي، يتميز بتصميم عصري ومرافق إدارية متطورة.',
       image: noubyAdministrativeheadquarterImg,
       subImages: [noubyAdministrativeheadquarterImg, projectslider2, haramImage],
-      category: 'إداري',
+      category: 'مباني إدارية',
       location: 'القاهرة، مصر',
       area: '30,000 متر مربع',
       year: '2023',
@@ -472,7 +473,7 @@ export const elnubyData = {
       description: 'مبنى إداري للشرطة في القنطرة، يتميز بتصميم عصري ومرافق أمنية متطورة.',
       image: QantaraPoliceDepartmentImg,
       subImages: [QantaraPoliceDepartmentImg, projectslider2, logoElnuby],
-      category: 'إداري',
+      category: 'مباني إدارية',
       location: 'القنطرة، الإسماعيلية',
       area: '15,000 متر مربع',
       year: '2023',
@@ -488,7 +489,7 @@ export const elnubyData = {
       description: 'تطوير ميدان معبد الكرنك ليصبح وجهة سياحية مميزة، يتميز بتصميم يحافظ على الطابع التاريخي.',
       image: KarnakTempleSquareImg,
       subImages: [KarnakTempleSquareImg, projectslider2, haramImage],
-      category: 'فندقي',
+      category: 'مباني فندقية',
       location: 'الأقصر، مصر',
       area: '25,000 متر مربع',
       year: '2023',
@@ -502,7 +503,7 @@ export const elnubyData = {
       description: 'تطوير كورنيش أسوان ليصبح وجهة سياحية مميزة، يتميز بمناظر طبيعية خلابة.',
       image: AswanCornicheImg,
       subImages: [AswanCornicheImg, projectslider2, logoElnubyFooter],
-      category: 'فندقي',
+      category: 'سياحي',
       location: 'أسوان، مصر',
       area: '30,000 متر مربع',
       year: '2023',
@@ -516,7 +517,7 @@ export const elnubyData = {
       description: 'حديقة عامة في الكرنك، يتميز بتصميم عصري ومرافق ترفيهية متكاملة.',
       image: KarnakParkLuxorImg,
       subImages: [KarnakParkLuxorImg, projectslider2, haramImage],
-      category: 'فندقي',
+      category: 'مباني فندقية',
       location: 'الكرنك، الأقصر',
       area: '20,000 متر مربع',
       year: '2023',
@@ -530,7 +531,7 @@ export const elnubyData = {
       description: 'مبنى إداري لمحافظة أسوان، يتميز بتصميم عصري ومرافق إدارية متطورة.',
       image: AswanGovernorateBuildingImg,
       subImages: [AswanGovernorateBuildingImg, projectslider2, logoElnuby],
-      category: 'إداري',
+      category: 'مباني إدارية',
       location: 'أسوان، مصر',
       area: '25,000 متر مربع',
       year: '2023',
@@ -586,7 +587,7 @@ export const elnubyData = {
       description: 'نزل شباب في التود، يتميز بتصميم عصري ومرافق سياحية متكاملة.',
       image: TodYouthHostelLuxorImg,
       subImages: [TodYouthHostelLuxorImg, projectslider2, logoElnuby],
-      category: 'فندقي',
+      category: 'مباني فندقية',
       location: 'التود، الأقصر',
       area: '15,000 متر مربع',
       year: '2023',
@@ -600,7 +601,7 @@ export const elnubyData = {
       description: 'نادي رياضي في الإسماعيلية، يتميز بمرافق رياضية متطورة وخدمة شاملة.',
       image: AlFayrouzClubIsmailiaImg,
       subImages: [AlFayrouzClubIsmailiaImg, projectslider2, haramImage],
-      category: 'رياضي',
+      category: 'ترفيهي',
       location: 'الإسماعيلية، مصر',
       area: '25,000 متر مربع',
       year: '2023',
@@ -608,18 +609,164 @@ export const elnubyData = {
       features: ['نادي رياضي', 'مرافق رياضية', 'تصميم عصري', 'خدمة شاملة'],
       client: 'محافظة الإسماعيلية',
       value: '70 مليون جنيه'
+    },
+
+
+
+    // مشاريع الاستصلاح الزراعي - Agricultural Reclamation Projects
+    {
+      title: 'مشروع استصلاح أراضي توشكا الزراعي',
+      description: 'مشروع ضخم لاستصلاح الأراضي الزراعية في منطقة توشكا لزيادة الرقعة الزراعية.',
+      image: ToshkaImg,
+      subImages: [ToshkaImg, projectslider2, haramImage],
+      category: 'استصلاح زراعي',
+      location: 'توشكا، أسوان',
+      area: '2,000,000 متر مربع',
+      year: '2024',
+      status: 'قيد التنفيذ',
+      features: ['استصلاح أراضي', 'زراعة حديثة', 'أمن غذائي', 'تنمية مستدامة'],
+      client: 'وزارة الزراعة واستصلاح الأراضي',
+      value: '3 مليار جنيه'
+    },
+
+    // مشاريع المباني الفندقية - Hotel Buildings
+    {
+      title: 'فندق الجلالة الدولي',
+      description: 'فندق فاخر بمدينة الجلالة يتميز بإطلالات بحرية رائعة ومرافق متكاملة لخدمة السياحة.',
+      image: '/images/projects/luxury-hotel.svg',
+      subImages: ['/images/projects/luxury-hotel.svg', projectslider2, logoElnuby],
+      category: 'مباني فندقية',
+      location: 'مدينة الجلالة، مصر',
+      area: '35,000 متر مربع',
+      year: '2024',
+      status: 'قيد التنفيذ',
+      features: ['فندق فاخر', 'إطلالات بحرية', 'مرافق متكاملة', 'خدمة سياحية'],
+      client: 'هيئة التنمية السياحية',
+      value: '500 مليون جنيه'
+    },
+
+    // المزيد من المشاريع السكنية - More Residential Projects
+    {
+      title: 'أعمال البنية الأساسية لمشروع تطوير ترعة الشباب بمنطقة توشكى',
+      description: 'مشروع تطوير البنية الأساسية لمنطقة سكنية متكاملة بتوشكى لخدمة المجتمعات الجديدة.',
+      image: null,
+      subImages: [projectslider2, logoElnuby],
+      category: 'سكني',
+      location: 'توشكى، أسوان',
+      area: '100,000 متر مربع',
+      year: '2023',
+      status: 'مكتمل',
+      features: ['بنية أساسية', 'مجتمع سكني', 'ترعة الشباب', 'تنمية عمرانية'],
+      client: 'هيئة تنمية الصعيد',
+      value: '200 مليون جنيه'
+    },
+
+    // المزيد من المشاريع التعليمية - More Educational Projects  
+    {
+      title: 'إنشاء مكتبة مصر العامة الإقليمية بسوهاج',
+      description: 'مكتبة عامة إقليمية حديثة تخدم المجتمع التعليمي والثقافي في سوهاج.',
+      image: null,
+      subImages: [projectslider2, haramImage],
+      category: 'تعليمي',
+      location: 'سوهاج، مصر',
+      area: '8,000 متر مربع',
+      year: '2023',
+      status: 'مكتمل',
+      features: ['مكتبة إقليمية', 'خدمات تعليمية', 'مركز ثقافي', 'تقنيات حديثة'],
+      client: 'وزارة الثقافة',
+      value: '40 مليون جنيه'
+    },
+    {
+      title: 'إنشاء المدرسة التكنولوجية الصناعية بالوادي الجديد',
+      description: 'مدرسة تكنولوجية متطورة لتدريب الطلاب على أحدث التقنيات الصناعية.',
+      image: null,
+      subImages: [projectslider2, logoElnubyFooter],
+      category: 'تعليمي',
+      location: 'الوادي الجديد، مصر',
+      area: '12,000 متر مربع',
+      year: '2024',
+      status: 'قيد التنفيذ',
+      features: ['تعليم تكنولوجي', 'تدريب صناعي', 'تقنيات حديثة', 'مختبرات متطورة'],
+      client: 'وزارة التربية والتعليم',
+      value: '60 مليون جنيه'
+    },
+
+    // المزيد من المشاريع الترفيهية - More Entertainment Projects
+    {
+      title: 'مدينة الكويت - أنشاء عدد (2) بوابة للتحكم الآلي وتطعير المدخل',
+      description: 'تطوير المداخل الرئيسية مع بوابات تحكم آلي حديثة لتحسين تدفق الزوار.',
+      image: null,
+      subImages: [projectslider2, haramImage],
+      category: 'ترفيهي',
+      location: 'الكويت',
+      area: '5,000 متر مربع',
+      year: '2023',
+      status: 'مكتمل',
+      features: ['بوابات آلية', 'تحكم إلكتروني', 'تطوير مداخل', 'أنظمة أمان'],
+      client: 'دولة الكويت',
+      value: '25 مليون جنيه'
+    },
+    {
+      title: 'مشروع تطوير مسجد الشيخ فريد - أسوان',
+      description: 'تطوير وتوسعة مسجد تاريخي ليصبح مركز ديني وثقافي متكامل.',
+      image: null,
+      subImages: [projectslider2, logoElnuby],
+      category: 'ترفيهي',
+      location: 'أسوان، مصر',
+      area: '6,000 متر مربع',
+      year: '2023',
+      status: 'مكتمل',
+      features: ['تطوير ديني', 'مركز ثقافي', 'تراث إسلامي', 'خدمة مجتمعية'],
+      client: 'وزارة الأوقاف',
+      value: '30 مليون جنيه'
+    },
+
+    // المزيد من المشاريع التجارية - More Commercial Projects
+    {
+      title: 'إنشاء مولات غرب الشروق - المرحلة الثالثة',
+      description: 'توسعة مجمع المولات التجارية لتشمل مرافق تجارية وترفيهية إضافية.',
+      image: null,
+      subImages: [MallsWestShorouk1Img, projectslider2, logoElnubyFooter],
+      category: 'تجاري',
+      location: 'غرب الشروق، القاهرة',
+      area: '60,000 متر مربع',
+      year: '2024',
+      status: 'قيد التنفيذ',
+      features: ['مول تجاري', 'مرافق ترفيهية', 'مطاعم ومقاهي', 'مواقف سيارات'],
+      client: 'القطاع الخاص',
+      value: '180 مليون جنيه'
+    },
+
+    // مشاريع فنادق إضافية - Additional Hotel Projects
+    {
+      title: 'فندق جميرا - مشروع تطوير وترميم',
+      description: 'تطوير وترميم فندق جميرا ليصبح منتجع سياحي متكامل يلبي المعايير الدولية.',
+      image: null,
+      subImages: [projectslider2, haramImage],
+      category: 'مباني فندقية',
+      location: 'البحر الأحمر، مصر',
+      area: '25,000 متر مربع',
+      year: '2023',
+      status: 'مكتمل',
+      features: ['فندق منتجع', 'معايير دولية', 'مرافق سياحية', 'إطلالة بحرية'],
+      client: 'هيئة التنمية السياحية',
+      value: '300 مليون جنيه'
     }
+
+
   ],
   projectCategories: [
     { id: 'all', name: 'جميع المشاريع', en: 'All Projects' },
-    { id: 'صحي', name: 'صحي', en: 'Healthcare' },
-    { id: 'بنية تحتية', name: 'بنية تحتية', en: 'Infrastructure' },
-    { id: 'تعليمي', name: 'تعليمي', en: 'Educational' },
-    { id: 'إداري', name: 'إداري', en: 'Administrative' },
-    { id: 'فندقي', name: 'فندقي', en: 'Hospitality' },
     { id: 'سكني', name: 'سكني', en: 'Residential' },
+    { id: 'مستشفيات', name: 'مستشفيات', en: 'Hospitals' },
+    { id: 'استصلاح زراعي', name: 'استصلاح زراعي', en: 'Agricultural Reclamation' },
+    { id: 'بنية تحتية', name: 'بنية تحتية', en: 'Infrastructure' },
+    { id: 'مباني إدارية', name: 'مباني إدارية', en: 'Administrative Buildings' },
+    { id: 'سياحي', name: 'سياحي', en: 'Tourist' },
+    { id: 'ترفيهي', name: 'ترفيهي', en: 'Entertainment' },
+    { id: 'تعليمي', name: 'تعليمي', en: 'Educational' },
     { id: 'تجاري', name: 'تجاري', en: 'Commercial' },
-    { id: 'رياضي', name: 'رياضي', en: 'Sports' }
+    { id: 'مباني فندقية', name: 'مباني فندقية', en: 'Hotel Buildings' }
   ],
   contact: {
     address: 'القاهرة، مصر',
@@ -641,10 +788,10 @@ export const elnubyData = {
     ]
   },
   stats: [
-    { number: '150+', label: 'مشروع مكتمل', en: 'Completed Projects' },
-    { number: '50+', label: 'عميل سعيد', en: 'Happy Clients' },
+    { number: '200+', label: 'مشروع مكتمل', en: 'Completed Projects' },
+    { number: '80+', label: 'عميل سعيد', en: 'Happy Clients' },
     { number: '20+', label: 'عام خبرة', en: 'Years Experience' },
-    { number: '100+', label: 'موظف محترف', en: 'Professional Staff' }
+    { number: '150+', label: 'موظف محترف', en: 'Professional Staff' }
   ],
   images: [
     { src: '/images/projects/elnuby-logo.svg', alt: 'Elnuby Logo' },

@@ -105,4 +105,18 @@
   .border-custom-orange {
     border-color: #EC8823;
   }
+
+  /* Animation delay utilities */
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+
+  /* Modern shadow utilities */
+  .shadow-3xl {
+    box-shadow: 0 35px 60px -12px rgba(0, 0, 0, 0.25);
+  }
 }

@@ -8,10 +8,11 @@ import {
   Droplets,
   ArrowRight
 } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const ServicesSection: React.FC = () => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
 
   const modernServices = [
     {
@@ -23,7 +24,8 @@ const ServicesSection: React.FC = () => {
       features: ['Building Construction', 'Infrastructure', 'Roads & Bridges', 'Public Facilities'],
       featuresAr: ['بناء المباني', 'البنية التحتية', 'الطرق والجسور', 'المرافق العامة'],
       color: 'from-blue-600 to-blue-700',
-      bgPattern: 'bg-blue-50 dark:bg-blue-900/20'
+      bgPattern: 'bg-blue-50 dark:bg-blue-900/20',
+      serviceIndex: 0
     },
     {
       title: 'Mechanical',
@@ -34,7 +36,8 @@ const ServicesSection: React.FC = () => {
       features: ['HVAC Systems', 'Plumbing', 'Fire Protection', 'Elevators'],
       featuresAr: ['أنظمة التكييف', 'السباكة', 'مكافحة الحريق', 'المصاعد'],
       color: 'from-green-600 to-green-700',
-      bgPattern: 'bg-green-50 dark:bg-green-900/20'
+      bgPattern: 'bg-green-50 dark:bg-green-900/20',
+      serviceIndex: 1
     },
     {
       title: 'Electrical',
@@ -45,7 +48,8 @@ const ServicesSection: React.FC = () => {
       features: ['Power Distribution', 'Lighting Systems', 'Smart Controls', 'Emergency Systems'],
       featuresAr: ['توزيع الطاقة', 'أنظمة الإضاءة', 'التحكم الذكي', 'أنظمة الطوارئ'],
       color: 'from-yellow-600 to-orange-600',
-      bgPattern: 'bg-yellow-50 dark:bg-yellow-900/20'
+      bgPattern: 'bg-yellow-50 dark:bg-yellow-900/20',
+      serviceIndex: 2
     },
     {
       title: 'Plumbing',
@@ -56,9 +60,30 @@ const ServicesSection: React.FC = () => {
       features: ['Water Supply', 'Drainage Systems', 'Water Treatment', 'Pumping Stations'],
       featuresAr: ['إمداد المياه', 'أنظمة الصرف', 'معالجة المياه', 'محطات الضخ'],
       color: 'from-cyan-600 to-blue-600',
-      bgPattern: 'bg-cyan-50 dark:bg-cyan-900/20'
+      bgPattern: 'bg-cyan-50 dark:bg-cyan-900/20',
+      serviceIndex: 3
     }
   ];
+
+  // Function to handle service navigation
+  const handleServiceClick = (serviceIndex: number) => {
+    // Scroll to top
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    
+    // Navigate to services page with specific service
+    navigate('/services', { 
+      state: { activeService: serviceIndex } 
+    });
+  };
+
+  // Function to handle general services navigation  
+  const handleAllServicesClick = () => {
+    // Scroll to top
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    
+    // Navigate to services page
+    navigate('/services');
+  };
 
   const currentLang = t('language') === 'Language' ? 'en' : 'ar';
 
@@ -143,7 +168,7 @@ const ServicesSection: React.FC = () => {
                       ))}
                     </ul>
 
-                    {/* Contact Us Button */}
+                    {/* More Details Button */}
                     <motion.div
                       initial={{ opacity: 0, y: 20 }}
                       whileInView={{ opacity: 1, y: 0 }}
@@ -151,7 +176,13 @@ const ServicesSection: React.FC = () => {
                       viewport={{ once: true }}
                       className="mt-6"
                     >
-   
+                      <button
+                        onClick={() => handleServiceClick(service.serviceIndex)}
+                        className={`inline-flex items-center px-4 py-2 bg-gradient-to-r ${service.color} text-white text-sm font-medium rounded-lg hover:shadow-lg transform hover:scale-105 transition-all duration-300 group/btn`}
+                      >
+                        {currentLang === 'ar' ? 'المزيد من التفاصيل' : 'More Details'}
+                        <ArrowRight className="ml-2 w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
+                      </button>
                     </motion.div>
 
                   </div>
@@ -178,7 +209,14 @@ const ServicesSection: React.FC = () => {
               : 'We provide integrated solutions across all engineering disciplines to ensure your projects are executed with the highest standards of quality and efficiency'
             }
           </p>
-
+          
+          <button
+            onClick={handleAllServicesClick}
+            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-primary-600 to-primary-700 text-white font-semibold rounded-full hover:from-primary-700 hover:to-primary-800 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl group"
+          >
+            {currentLang === 'ar' ? 'عرض جميع الخدمات' : 'View All Services'}
+            <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+          </button>
         </motion.div>
       </div>
     </section>

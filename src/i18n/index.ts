@@ -40,6 +40,27 @@ const resources = {
       aboutImageAlt: 'Elnuby Group - Inside the Company',
       mapImageAlt: 'Elnuby Group Location Map',
       
+      // Mission & Vision Section
+      missionVisionTitle: 'Our Mission & Vision',
+      missionVisionSubtitle: 'Guiding principles that drive our commitment to excellence and innovation in engineering and construction',
+      missionTitle: 'Our Mission',
+      missionStatement: 'To deliver exceptional engineering and construction solutions that exceed client expectations while contributing to sustainable development and community growth.',
+      missionPoint1: 'Provide innovative and high-quality construction services',
+      missionPoint2: 'Maintain the highest standards of safety and efficiency',
+      missionPoint3: 'Build lasting relationships with clients and communities',
+      visionTitle: 'Our Vision',
+      visionStatement: 'To be the leading engineering and construction company in the Middle East and North Africa, recognized for our excellence, innovation, and sustainable practices.',
+      visionPoint1: 'Expand our presence across regional markets',
+      visionPoint2: 'Pioneer sustainable construction technologies',
+      visionPoint3: 'Set industry standards for quality and innovation',
+      coreValuesTitle: 'Our Core Values',
+      valueQuality: 'Quality',
+      valueQualityDesc: 'Commitment to delivering the highest standards in every project',
+      valueInnovation: 'Innovation',
+      valueInnovationDesc: 'Embracing cutting-edge technologies and creative solutions',
+      valueIntegrity: 'Integrity',
+      valueIntegrityDesc: 'Building trust through transparency and ethical practices',
+      
       // Services Section
       servicesTitle: 'Our Integrated Services',
       servicesSubtitle: 'Comprehensive engineering and construction services to meet all your needs',
@@ -132,6 +153,15 @@ const resources = {
       cookiePolicy: 'Cookie Policy',
       sitemap: 'Sitemap',
       quickLinks: 'Quick Links',
+      companyBranches: 'Company Branches',
+      branchLibya: 'Libya Branch',
+      branchIraq: 'Iraq Branch',
+      branchEgypt: 'Egypt Branch',
+      branchSaudiArabia: 'Saudi Arabia Branch',
+      libya: 'Libya',
+      iraq: 'Iraq',
+      egypt: 'Egypt',
+      saudiArabia: 'Saudi Arabia',
       stayUpdated: 'Stay Updated',
       newsletterDesc: 'Subscribe to our newsletter for the latest updates and project news.',
       emailAddress: 'Email Address',
@@ -242,12 +272,17 @@ const resources = {
       industryRecognitionDesc: 'El Nuby Group is proud of the exceptional level of customer satisfaction with the quality and completion of all its projects.',
       
       // Founders
+      leadership: 'Leadership',
       chairmanBoard: 'Chairman of the Board of Directors',
       viceChairmanBoard: 'Vice Chairman of the Board of Directors',
       salehElNobiDesc: 'Visionary founder and leader who established El Nuby Group in 2000. With over two decades of experience in construction and contracting, Mr. El Nobi has guided the company to become a leading force in Egypt\'s construction industry, overseeing major infrastructure and development projects across the Middle East and Africa.',
       alaaElMadboulyDesc: 'Distinguished military leader and strategic advisor who brings invaluable expertise in large-scale project management and government relations. His extensive experience in national infrastructure projects has been instrumental in El Nuby Group\'s participation in Egypt\'s major development initiatives and state projects.',
       leadershipPhilosophy: 'Leadership Philosophy',
       leadershipPhilosophyDesc: 'Our founders established El Nuby Group with a clear vision: to build not just structures, but lasting relationships based on trust, quality, and innovation. Their combined expertise in engineering excellence and strategic leadership continues to drive our commitment to delivering world-class construction solutions across Egypt and beyond.',
+      founded: 'Founded',
+      yearsExp: 'Years Experience',
+      strategicLeader: 'Strategic Leader',
+      militaryExpert: 'Military Expert',
       
       // Stats
 
@@ -398,6 +433,27 @@ const resources = {
       aboutImageAlt: 'مجموعة النوبي - داخل الشركة',
       mapImageAlt: 'خريطة موقع مجموعة النوبي',
       
+      // Mission & Vision Section
+      missionVisionTitle: 'رؤيتنا ورسالتنا',
+      missionVisionSubtitle: 'المبادئ التوجيهية التي تقود التزامنا بالتميز والابتكار في الهندسة والبناء',
+      missionTitle: 'رسالتنا',
+      missionStatement: 'تقديم حلول هندسية وإنشائية استثنائية تفوق توقعات العملاء مع المساهمة في التنمية المستدامة ونمو المجتمع.',
+      missionPoint1: 'تقديم خدمات بناء مبتكرة وعالية الجودة',
+      missionPoint2: 'الحفاظ على أعلى معايير السلامة والكفاءة',
+      missionPoint3: 'بناء علاقات دائمة مع العملاء والمجتمعات',
+      visionTitle: 'رؤيتنا',
+      visionStatement: 'أن نكون شركة الهندسة والبناء الرائدة في الشرق الأوسط وشمال أفريقيا، معترف بها لتميزنا وابتكارنا وممارساتنا المستدامة.',
+      visionPoint1: 'توسيع حضورنا عبر الأسواق الإقليمية',
+      visionPoint2: 'ريادة تقنيات البناء المستدام',
+      visionPoint3: 'وضع معايير الصناعة للجودة والابتكار',
+      coreValuesTitle: 'قيمنا الأساسية',
+      valueQuality: 'الجودة',
+      valueQualityDesc: 'الالتزام بتحقيق أعلى المعايير في كل مشروع',
+      valueInnovation: 'الابتكار',
+      valueInnovationDesc: 'تبني التقنيات المتطورة والحلول الإبداعية',
+      valueIntegrity: 'النزاهة',
+      valueIntegrityDesc: 'بناء الثقة من خلال الشفافية والممارسات الأخلاقية',
+      
       // Services Section
       servicesTitle: 'خدماتنا المتكاملة',
       servicesSubtitle: 'نقدم مجموعة شاملة من الخدمات الهندسية والإنشائية لتلبية جميع احتياجاتكم',
@@ -490,6 +546,15 @@ const resources = {
       cookiePolicy: 'سياسة ملفات تعريف الارتباط',
       sitemap: 'خريطة الموقع',
       quickLinks: 'روابط سريعة',
+      companyBranches: 'فروع الشركة',
+      branchLibya: 'فرع ليبيا',
+      branchIraq: 'فرع العراق',
+      branchEgypt: 'فرع مصر',
+      branchSaudiArabia: 'فرع السعودية',
+      libya: 'ليبيا',
+      iraq: 'العراق',
+      egypt: 'مصر',
+      saudiArabia: 'السعودية',
       stayUpdated: 'ابق على اطلاع',
       newsletterDesc: 'اشترك في نشرتنا الإخبارية للحصول على أحدث التحديثات وأخبار المشاريع.',
       emailAddress: 'عنوان البريد الإلكتروني',
@@ -600,12 +665,17 @@ const resources = {
       industryRecognitionDesc: 'تفتخر مجموعة النوبي بالمستوى الاستثنائي لرضا العملاء عن جودة وإنجاز جميع مشاريعها.',
       
       // Founders
+      leadership: 'القيادة',
       chairmanBoard: 'رئيس مجلس الإدارة',
       viceChairmanBoard: 'نائب رئيس مجلس الإدارة',
       salehElNobiDesc: 'المؤسس والقائد ذو الرؤية الذي أسس مجموعة النوبي في عام 2000. مع أكثر من عقدين من الخبرة في البناء والمقاولات، قاد السيد النوبي الشركة لتصبح قوة رائدة في صناعة البناء المصرية، مشرفاً على مشاريع البنية التحتية والتطوير الكبرى عبر الشرق الأوسط وأفريقيا.',
       alaaElMadboulyDesc: 'قائد عسكري متميز ومستشار استراتيجي يجلب خبرة لا تقدر بثمن في إدارة المشاريع واسعة النطاق والعلاقات الحكومية. خبرته الواسعة في مشاريع البنية التحتية الوطنية كانت أساسية في مشاركة مجموعة النوبي في مبادرات التطوير الكبرى والمشاريع الحكومية في مصر.',
       leadershipPhilosophy: 'فلسفة القيادة',
       leadershipPhilosophyDesc: 'أسس مؤسسونا مجموعة النوبي برؤية واضحة: بناء ليس فقط الهياكل، بل علاقات دائمة قائمة على الثقة والجودة والابتكار. خبرتهم المجمعة في التميز الهندسي والقيادة الاستراتيجية تواصل قيادة التزامنا بتقديم حلول بناء عالمية المستوى عبر مصر وما وراءها.',
+      founded: 'تأسست',
+      yearsExp: 'سنوات الخبرة',
+      strategicLeader: 'قائد استراتيجي',
+      militaryExpert: 'خبير عسكري',
       
       // Stats
 

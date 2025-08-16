@@ -339,105 +339,162 @@ const About: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mb-12 md:mb-16"
+            className="text-center mb-16"
           >
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4 md:mb-6">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
               {t('ourFounders')}
             </h2>
-            <p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto px-4">
+            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
               {t('foundersDescription')}
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
-            {/* Mr. Saleh El Nobi */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 max-w-6xl mx-auto mb-16">
+            {/* Mr. Saleh El Nobi Card */}
             <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 md:p-8 text-center hover:shadow-xl transition-shadow duration-300"
+              className="group bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-gray-700"
             >
-              <div className="mb-6">
-                <img
-                  src={engSalehImage}
-                  alt="Mr. Saleh El Nobi"
-                  className=" mx-auto object-cover border-4 border-primary-200 dark:border-primary-800 shadow-lg"
-                  onError={(e) => {
-                    e.currentTarget.style.display = 'none';
-                    e.currentTarget.nextElementSibling?.classList.remove('hidden');
-                  }}
-                />
-                <div className="hidden w-32 h-32 md:w-40 md:h-40 rounded-full mx-auto bg-primary-100 dark:bg-primary-900 flex items-center justify-center border-4 border-primary-200 dark:border-primary-800">
-                  <span className="text-4xl md:text-5xl text-primary-600 dark:text-primary-400">👨‍💼</span>
+              <div className="relative mb-6">
+                {/* Image Container */}
+                <div className="relative w-full h-80 mx-auto overflow-hidden rounded-xl">
+                  <img
+                    src={engSalehImage}
+                    alt="Mr. Saleh El Nobi"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    onError={(e) => {
+                      e.currentTarget.style.display = 'none';
+                      e.currentTarget.nextElementSibling?.classList.remove('hidden');
+                    }}
+                  />
+                  <div className="hidden w-full h-full bg-primary-100 dark:bg-primary-900 flex items-center justify-center">
+                    <span className="text-8xl">👨‍💼</span>
+                  </div>
+                  
+                  {/* Hover Overlay with Details */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center p-6">
+                    <div className="text-center text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                      <div className="flex items-center justify-center space-x-4 mb-4">
+                        <div className="flex items-center px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full">
+                          <CheckCircle className="w-4 h-4 mr-2" />
+                          <span className="text-sm font-medium">{t('founded')} 2000</span>
+                        </div>
+                        <div className="flex items-center px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full">
+                          <Target className="w-4 h-4 mr-2" />
+                          <span className="text-sm font-medium">25+ {t('yearsExp')}</span>
+                        </div>
+                      </div>
+                      <p className="text-sm leading-relaxed opacity-90">
+                        {t('salehElNobiDesc').substring(0, 120)}...
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
               
-              <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-2">
-                Mr. Saleh El Nobi
-              </h3>
-              
-              <p className="text-primary-600 dark:text-primary-400 font-semibold mb-4 text-lg">
-                {t('chairmanBoard')}
-              </p>
-              
-              <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                {t('salehElNobiDesc')}
-              </p>
+              {/* Card Content */}
+              <div className="text-center">
+                <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-2">
+                  Mr. Saleh El Nobi
+                </h3>
+                
+                <p className="text-primary-600 dark:text-primary-400 font-semibold mb-4">
+                  {t('chairmanBoard')}
+                </p>
+                
+                <div className="flex justify-center space-x-3">
+                  <div className="w-2 h-2 bg-primary-500 rounded-full"></div>
+                  <div className="w-2 h-2 bg-primary-300 rounded-full"></div>
+                  <div className="w-2 h-2 bg-primary-200 rounded-full"></div>
+                </div>
+              </div>
             </motion.div>
 
-            {/* General Alaa Mohamed El-Madbouly */}
+            {/* General Alaa Mohamed El-Madbouly Card */}
             <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true }}
-              className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 md:p-8 text-center hover:shadow-xl transition-shadow duration-300"
+              className="group bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-gray-700"
             >
-              <div className="mb-6">
-                <img
-                  src={genAlaaImage}
-                  alt="General H.E. Mr. Alaa Mohamed El-Madbouly"
-                  className="  mx-auto object-cover border-4 border-primary-200 dark:border-primary-800 shadow-lg"
-                  onError={(e) => {
-                    e.currentTarget.style.display = 'none';
-                    e.currentTarget.nextElementSibling?.classList.remove('hidden');
-                  }}
-                />
-                <div className="hidden w-32 h-32 md:w-40 md:h-40 rounded-full mx-auto bg-primary-100 dark:bg-primary-900 flex items-center justify-center border-4 border-primary-200 dark:border-primary-800">
-                  <span className="text-4xl md:text-5xl text-primary-600 dark:text-primary-400">🎖️</span>
+              <div className="relative mb-6">
+                {/* Image Container */}
+                <div className="relative w-full h-80 mx-auto overflow-hidden rounded-xl">
+                  <img
+                    src={genAlaaImage}
+                    alt="General H.E. Mr. Alaa Mohamed El-Madbouly"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    onError={(e) => {
+                      e.currentTarget.style.display = 'none';
+                      e.currentTarget.nextElementSibling?.classList.remove('hidden');
+                    }}
+                  />
+                  <div className="hidden w-full h-full bg-blue-100 dark:bg-blue-900 flex items-center justify-center">
+                    <span className="text-8xl">🎖️</span>
+                  </div>
+                  
+                  {/* Hover Overlay with Details */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center p-6">
+                    <div className="text-center text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                      <div className="flex items-center justify-center space-x-4 mb-4">
+                        <div className="flex items-center px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full">
+                          <CheckCircle className="w-4 h-4 mr-2" />
+                          <span className="text-sm font-medium">{t('strategicLeader')}</span>
+                        </div>
+                        <div className="flex items-center px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full">
+                          <Target className="w-4 h-4 mr-2" />
+                          <span className="text-sm font-medium">{t('militaryExpert')}</span>
+                        </div>
+                      </div>
+                      <p className="text-sm leading-relaxed opacity-90">
+                        {t('alaaElMadboulyDesc').substring(0, 120)}...
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
               
-              <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-2">
-                General H.E. Mr. Alaa Mohamed El-Madbouly
-              </h3>
-              
-              <p className="text-primary-600 dark:text-primary-400 font-semibold mb-4 text-lg">
-                {t('viceChairmanBoard')}
-              </p>
-              
-              <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                {t('alaaElMadboulyDesc')}
-              </p>
+              {/* Card Content */}
+              <div className="text-center">
+                <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-2">
+                  General H.E. Mr. Alaa Mohamed El-Madbouly
+                </h3>
+                
+                <p className="text-blue-600 dark:text-blue-400 font-semibold mb-4">
+                  {t('viceChairmanBoard')}
+                </p>
+                
+                <div className="flex justify-center space-x-3">
+                  <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                  <div className="w-2 h-2 bg-blue-300 rounded-full"></div>
+                  <div className="w-2 h-2 bg-blue-200 rounded-full"></div>
+                </div>
+              </div>
             </motion.div>
           </div>
 
-          {/* Company Leadership Values */}
+          {/* Leadership Philosophy */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="mt-12 md:mt-16 text-center"
+            className="text-center"
           >
-            <div className="bg-gradient-to-r from-primary-50 to-primary-100 dark:from-primary-900/20 dark:to-primary-800/20 rounded-2xl p-6 md:p-8 max-w-4xl mx-auto">
-              <h4 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-4">
-                {t('leadershipPhilosophy')}
-              </h4>
-              <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-lg">
+            <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 md:p-12 max-w-4xl mx-auto">
+              <div className="flex items-center justify-center mb-6">
+                <Heart className="w-6 h-6 text-primary-600 dark:text-primary-400 mr-3" />
+                <h4 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white">
+                  {t('leadershipPhilosophy')}
+                </h4>
+              </div>
+              <blockquote className="text-lg md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed italic">
                 "{t('leadershipPhilosophyDesc')}"
-              </p>
+              </blockquote>
             </div>
           </motion.div>
         </div>
