@@ -1,13 +1,16 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { Users, Zap, CheckCircle, Target, Heart } from 'lucide-react';
+import { Users, Zap, CheckCircle, Target, Heart, MapPin, Phone, Building2 } from 'lucide-react';
 import engSalehImage from '../assast/Images/About/engsaleh.jpg';
 import genAlaaImage from '../assast/Images/About/genalaa.jpg';
 import aboutBgImage from '../assast/Images/About/nubyinside2.jpg';
+import branchesHero from '../assast/Images/About/nubyinside.jpg';
+import mapImage from '../assast/Images/Map/map.jpg';
 
 const About: React.FC = () => {
   const { t } = useTranslation();
+  const currentLang = t('language') === 'Language' ? 'en' : 'ar';
 
   const stats = [
     { number: '250+', label: t('projectsCompleted') },
@@ -497,6 +500,90 @@ const About: React.FC = () => {
               </blockquote>
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Branches Section */}
+      <section className="section-padding bg-gradient-to-br from-white via-primary-50/30 to-white dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+        <div className="container-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+            {/* Content */}
+            <motion.div
+              initial={{ opacity: 0, x: -40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.7 }}
+              viewport={{ once: true }}
+            >
+              <div className="inline-flex items-center px-3 py-1 rounded-full bg-primary-100 text-primary-700 dark:bg-primary-900/40 dark:text-primary-300 text-sm mb-4 shadow-sm">
+                <Building2 className="w-4 h-4 mr-2" />
+                {t('ourBranches')}
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-3">
+                {t('language') === 'Language' ? 'Our Branches ' : 'فروعنا'}
+              </h2>
+              <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 max-w-xl">
+                {t('ourBranchesDesc')}
+              </p>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                {[ 
+                  { city: 'Libya Branch', cityAr: 'فرع ليبيا', address: 'Tripoli, Libya', addressAr: 'طرابلس، ليبيا', phone: '+218 21 000 0000', code: 'LY' },
+                  { city: 'Iraq Branch', cityAr: 'فرع العراق', address: 'Baghdad, Iraq', addressAr: 'بغداد، العراق', phone: '+964 1 000 0000', code: 'IQ' },
+                  { city: 'Egypt Branch', cityAr: 'فرع مصر', address: 'Nasr City, Cairo, Egypt', addressAr: 'مدينة نصر، القاهرة، مصر', phone: '+20 100 000 0000', code: 'EG' },
+                  { city: 'Saudi Arabia Branch', cityAr: 'فرع السعودية', address: 'Riyadh, Saudi Arabia', addressAr: 'الرياض، المملكة العربية السعودية', phone: '+966 11 000 0000', code: 'SA' },
+                ].map((b, idx) => (
+                  <motion.div
+                    key={idx}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.4, delay: idx * 0.05 }}
+                    viewport={{ once: true }}
+                    className="group relative p-[1px] rounded-2xl bg-gradient-to-br from-primary-200/60 via-primary-100/30 to-transparent dark:from-primary-500/30 dark:via-primary-400/10 hover:from-primary-300/70 dark:hover:from-primary-500/50 transition-colors"
+                  >
+                    <div className="rounded-[14px] bg-white dark:bg-gray-900/60 backdrop-blur-md border border-gray-200 dark:border-white/10 shadow-sm hover:shadow-md transition-all p-5">
+                      <div className="flex items-start">
+                        <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-gray-50 to-white dark:from-gray-800 dark:to-gray-900 flex items-center justify-center mr-4 ring-1 ring-black/5 dark:ring-white/10">
+                          <span className="text-sm font-bold text-gray-700 dark:text-gray-200 tracking-widest">{b.code}</span>
+                        </div>
+                        <div className="flex-1">
+                          <div className="flex items-center justify-between">
+                            <h3 className="text-[15px] md:text-lg font-semibold text-gray-900 dark:text-white">
+                              {t('language') === 'Language' ? b.city : b.cityAr}
+                            </h3>
+                            <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-gray-50 dark:bg-gray-800 text-gray-400 dark:text-gray-500 ring-1 ring-gray-200 dark:ring-0">
+                              <MapPin className="w-4 h-4" />
+                            </span>
+                          </div>
+                          <div className="mt-1 text-gray-600 dark:text-gray-300 text-sm md:text-[15px]">
+                            {t('language') === 'Language' ? b.address : b.addressAr}
+                          </div>
+                          <div className="mt-3 inline-flex items-center text-primary-700 dark:text-primary-400 text-sm font-medium">
+                            <Phone className="w-4 h-4 mr-2" /> {b.phone}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+
+            {/* Image Collage */}
+            <motion.div
+              initial={{ opacity: 0, x: 40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.7 }}
+              viewport={{ once: true }}
+              className="relative"
+            >
+              <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl">
+                <img src={branchesHero} alt="Elnuby offices" className="absolute inset-0 w-full h-full object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-tr from-black/40 via-black/10 to-transparent" />
+              </div>
+
+
+            </motion.div>
+          </div>
         </div>
       </section>
     </div>

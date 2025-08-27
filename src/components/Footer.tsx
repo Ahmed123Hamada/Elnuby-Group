@@ -111,7 +111,7 @@ const Footer: React.FC = () => {
               <Building2 className="w-5 h-5 mr-2 text-primary-500" />
               {t('companyBranches')}
             </h3>
-            <div className="grid grid-cols-2 gap-3 max-w-md mx-auto lg:mx-0">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-md md:max-w-lg mx-auto lg:mx-0 w-full">
               {branches.map((branch, index) => {
                 const FlagComponent = branch.flag;
                 return (
@@ -123,21 +123,21 @@ const Footer: React.FC = () => {
                       window.scrollTo({ top: 0, behavior: 'smooth' });
                       handleBranchClick();
                     }}
-                    className={`group w-full e p-3 rounded-xl border backdrop-blur-sm cursor-pointer transition-all duration-300 transform hover:scale-105 ${branch.color} ${branch.hoverColor}`}
+                    className={`group relative w-full p-2 sm:p-3 rounded-xl border backdrop-blur-sm cursor-pointer transition-all duration-300 hover:shadow-md ${branch.color} ${branch.hoverColor}`}
                   >
-                    <div className="flex flex items-center text-center space-y-1">
+                    <div className="flex items-center gap-3">
                       <div className="flex-shrink-0">
-                        <div className="p-2 rounded-lg bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors duration-300">
+                        <div className="p-1.5 sm:p-2 rounded-lg bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors duration-300">
                           <FlagComponent />
                         </div>
                       </div>
-                      <div className="flex-1 min-w-0">
-                        <p className="text-xs font-medium text-white group-hover:text-white transition-colors duration-300 leading-tight">
+                      <div className="flex-1 min-w-0 text-left">
+                        <p className="text-[11px] sm:text-xs font-medium text-white group-hover:text-white transition-colors duration-300 leading-tight truncate">
                           {branch.label}
                         </p>
 
                       </div>
-                      <div className="absolute top-2 right-2">
+                      <div className="absolute top-1.5 right-1.5 sm:top-2 sm:right-2">
                         <div className="w-4 h-4 rounded-full bg-white/5 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 transform scale-75 group-hover:scale-100">
                           <MapPin className="w-2 h-2 text-white" />
                         </div>
@@ -145,7 +145,7 @@ const Footer: React.FC = () => {
                     </div>
                     
                     {/* Hover effect overlay */}
-                    <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-transparent via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div className="pointer-events-none absolute inset-0 rounded-xl bg-gradient-to-r from-transparent via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </div>
                 );
               })}
@@ -194,7 +194,7 @@ const Footer: React.FC = () => {
               <Instagram className="w-10 h-5 mr-2 text-primary-500" />
               {t('followUs')}
             </h3>
-            <div className="flex justify-center lg:justify-start space-x-3">
+            <div className="flex flex-wrap justify-center lg:justify-start gap-2 sm:gap-3">
               {socialLinks.map((social, index) => {
                 const IconComponent = social.icon;
                 return (
@@ -203,7 +203,7 @@ const Footer: React.FC = () => {
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-5  bg-gray-800 rounded-xl flex items-center justify-center text-gray-300 hover:bg-primary-600 hover:text-white transition-all duration-300 transform hover:scale-110 hover:shadow-lg"
+                    className="p-3 sm:p-4 md:p-5 bg-gray-800 rounded-xl flex items-center justify-center text-gray-300 hover:bg-primary-600 hover:text-white transition-all duration-300 hover:shadow-lg"
                     aria-label={social.label}
                   >
                     <IconComponent size={18} />
@@ -212,22 +212,7 @@ const Footer: React.FC = () => {
               })}
             </div>
             
-            {/* Newsletter Signup */}
-            <div className="mt-6">
-              <p className="text-gray-400 text-sm mb-3 leading-relaxed">
-                {t('stayUpdated')}
-              </p>
-              <div className="flex flex-col sm:flex-row gap-2 max-w-sm mx-auto lg:mx-0">
-                <input 
-                  type="email" 
-                  placeholder={t('emailAddress')}
-                  className="flex-1 px-3 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-primary-500 transition-colors duration-300 text-sm"
-                />
-                <button className="px-3 py-2 bg-primary-600 hover:bg-primary-700 text-white rounded-lg transition-colors duration-300 font-medium text-sm">
-                  {t('subscribe')}
-                </button>
-              </div>
-            </div>
+            {/* Newsletter Signup removed as requested */}
           </div>
         </div>
 
@@ -238,7 +223,7 @@ const Footer: React.FC = () => {
               © 2024 {websiteInfo.title}. {t('allRightsReserved')}
             </p>
             
-            <div className="flex flex-wrap justify-center lg:justify-end space-x-6 text-sm">
+            <div className="flex flex-wrap justify-center lg:justify-end gap-x-6 gap-y-2 text-sm">
               <a href="#" className="text-gray-400 hover:text-primary-500 transition-colors duration-300">
                 {t('privacyPolicy')}
               </a>

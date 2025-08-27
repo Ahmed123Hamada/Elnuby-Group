@@ -621,22 +621,22 @@ const Services: React.FC = () => {
           </motion.div>
 
           {/* Service Navigation Tabs */}
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
+          <div className="flex md:flex-wrap flex-nowrap overflow-x-auto whitespace-nowrap justify-start md:justify-center gap-3 md:gap-4 mb-12 px-2 pr-4 -mx-2 scroll-smooth snap-x snap-mandatory">
             {services.map((service, index) => {
               const IconComponent = service.icon;
               return (
                 <motion.button
                   key={index}
                   onClick={() => setActiveService(index)}
-                  className={`flex items-center px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
+                  className={`shrink-0 snap-start flex items-center px-4 md:px-6 py-2 md:py-3 rounded-xl font-medium text-sm md:text-base transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-400 ${
                     activeService === index
                       ? `bg-gradient-to-r ${service.color} text-white shadow-lg`
-                      : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700'
+                      : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 border border-black/5 dark:border-white/10'
                   }`}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  <IconComponent className="w-5 h-5 mr-3" />
+                  <IconComponent className="w-4 h-4 md:w-5 md:h-5 mr-2 md:mr-3" />
                   {currentLang === 'ar' ? service.titleAr : service.title}
                 </motion.button>
               );
@@ -695,15 +695,17 @@ const Services: React.FC = () => {
                   </div>
 
                   {/* Tab Navigation for Service Details */}
-                  <div className="flex space-x-1 bg-gray-100 dark:bg-gray-700 p-1 rounded-xl mb-6">
+                  <div className="flex space-x-1 bg-gray-100 dark:bg-gray-700 p-1 rounded-xl mb-6" role="tablist" aria-label="Service detail tabs">
                     {['overview', 'categories', 'process'].map((tab) => (
                       <button
                         key={tab}
                         onClick={() => setActiveTab(tab)}
-                        className={`flex-1 py-2 px-4 rounded-lg font-medium transition-all duration-200 ${
+                        role="tab"
+                        aria-selected={activeTab === tab}
+                        className={`flex-1 py-2 md:py-3 px-4 md:px-6 rounded-lg font-medium text-sm md:text-base transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-400 ${
                           activeTab === tab
-                            ? 'bg-white dark:bg-gray-600 text-primary-600 dark:text-primary-400 shadow-sm'
-                            : 'text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white'
+                            ? 'bg-primary-600 dark:bg-primary-500 text-white shadow'
+                            : 'text-gray-700 dark:text-gray-300 hover:bg-white/60 dark:hover:bg-gray-600/60'
                         }`}
                       >
                         {tab === 'overview' && (currentLang === 'ar' ? 'نظرة عامة' : 'Overview')}

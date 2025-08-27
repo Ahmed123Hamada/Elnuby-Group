@@ -155,33 +155,7 @@ export default function HeroCarousel() {
             </motion.div>
           </div>
 
-          {/* Next Preview - Hidden on small screens */}
-          <div className="hidden md:flex absolute bottom-16 lg:bottom-20 left-1/2 transform -translate-x-1/2 items-end gap-4 lg:gap-6 z-10">
-            <div className="relative">
-              {!hasImageError ? (
-                <img
-                  src={slide.image}
-                  alt="Next project preview"
-                  className="w-24 h-32 lg:w-28 lg:h-44 object-cover rounded-lg shadow-lg"
-                  onLoad={() => console.log('Preview image loaded:', slide.image)}
-                  onError={() => handleImageError(slide.id, slide.image)}
-                />
-              ) : (
-                <div className="w-24 h-32 lg:w-28 lg:h-44 bg-gray-200 dark:bg-gray-700 rounded-lg shadow-lg flex items-center justify-center">
-                  <div className="text-center text-gray-500 dark:text-gray-400">
-                    <div className="w-8 h-8 bg-gray-300 dark:bg-gray-600 rounded-full flex items-center justify-center mb-1 mx-auto">
-                      <span className="text-sm">📷</span>
-                    </div>
-                    <span className="text-xs">Preview</span>
-                  </div>
-                </div>
-              )}
-            </div>
-            <div className="text-left text-sm lg:text-base">
-              <p className="uppercase text-gray-300 tracking-widest text-xs lg:text-sm">{t('nextProject')}</p>
-              <p className="font-medium text-white">{slide.nextProject}</p>
-            </div>
-          </div>
+          {/* Next Preview removed as requested */}
 
           {/* Controls */}
           <div className="absolute bottom-4 sm:bottom-6 md:bottom-8 right-4 sm:right-6 lg:right-10 flex items-center gap-3 sm:gap-4 lg:gap-6 z-10">

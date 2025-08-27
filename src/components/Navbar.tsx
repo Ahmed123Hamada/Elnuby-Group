@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { Globe } from "lucide-react";
+import { Globe, Moon, Sun } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext";
 import { useTranslatedData } from "../hooks/useTranslatedData";
 import logoee from "../logo192.png";
@@ -12,6 +12,7 @@ const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
+  const [isDark, setIsDark] = useState<boolean>(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,6 +21,22 @@ const Navbar: React.FC = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Initialize theme from localStorage/system and keep <html> class in sync
+  useEffect(() => {
+    const storedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const shouldUseDark = storedTheme ? storedTheme === 'dark' : prefersDark;
+    setIsDark(shouldUseDark);
+    document.documentElement.classList.toggle('dark', shouldUseDark);
+  }, []);
+
+  const toggleTheme = () => {
+    const next = !isDark;
+    setIsDark(next);
+    document.documentElement.classList.toggle('dark', next);
+    localStorage.setItem('theme', next ? 'dark' : 'light');
+  };
 
   // Close mobile menu when clicking outside
   useEffect(() => {
@@ -91,8 +108,17 @@ const Navbar: React.FC = () => {
                 ))}
               </div>
 
-              {/* Language Toggle & Mobile Menu Button */}
+              {/* Language/Theme Toggle & Mobile Menu Button */}
               <div className="flex items-center space-x-4 rtl:space-x-reverse">
+                {/* Theme Toggle */}
+                <button
+                  onClick={toggleTheme}
+                  className="hidden sm:flex items-center justify-center h-9 w-9 rounded-full text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                  aria-label="Toggle theme"
+                  title={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
+                >
+                  {isDark ? <Sun size={18} /> : <Moon size={18} />}
+                </button>
                 <button
                   onClick={toggleLanguage}
                   className="hidden sm:flex items-center space-x-2 rtl:space-x-reverse text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200"
@@ -216,6 +242,16 @@ const Navbar: React.FC = () => {
                     </motion.div>
                   ))}
                 </nav>
+                {/* Theme toggle in mobile menu */}
+                <div className="px-6 pt-4">
+                  <button
+                    onClick={toggleTheme}
+                    className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+                  >
+                    {isDark ? <Sun size={18} /> : <Moon size={18} />}
+                    <span>{isDark ? 'Light mode' : 'Dark mode'}</span>
+                  </button>
+                </div>
               </div>
 
               {/* Mobile Menu Footer */}
