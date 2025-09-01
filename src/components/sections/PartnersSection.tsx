@@ -41,8 +41,8 @@ const PartnersSection: React.FC = () => {
   ];
 
   return (
-    <section className="py-20 bg-gray-50 dark:bg-gray-800 overflow-hidden">
-      <div className="container-custom">
+    <section className="py-20 bg-gray-50 dark:bg-gray-800 overflow-hidden md:px-10">
+      <div className="container mx-auto">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -94,24 +94,24 @@ const PartnersSection: React.FC = () => {
             }}
             navigation={true}
             loop={true}
-            breakpoints={{
-              640: {
-                slidesPerView: 3,
-                spaceBetween: 20,
-              },
-              768: {
-                slidesPerView: 4,
-                spaceBetween: 30,
-              },
-              1024: {
-                slidesPerView: 5,
-                spaceBetween: 40,
-              },
-              1280: {
-                slidesPerView: 6,
-                spaceBetween: 50,
-              },
-            }}
+                         breakpoints={{
+               640: {
+                 slidesPerView: 1,
+                 spaceBetween: 40,
+               },
+               768: {
+                 slidesPerView: 2,
+                 spaceBetween: 50,
+               },
+               1024: {
+                 slidesPerView: 3,
+                 spaceBetween: 60,
+               },
+               1280: {
+                 slidesPerView: 4,
+                 spaceBetween: 80,
+               },
+             }}
             className="partners-swiper"
           >
             {partnerLogos.map((partner) => (
@@ -123,14 +123,14 @@ const PartnersSection: React.FC = () => {
                   }}
                   className="group cursor-pointer"
                 >
-                  <div className="bg-white dark:bg-gray-700 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-600 h-32 flex items-center justify-center">
-                    <img
-                      src={partner.src}
-                      alt={partner.alt}
-                      className="max-w-full max-h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
-                      loading="lazy"
-                    />
-                  </div>
+                                     <div className="bg-white dark:bg-gray-700 rounded-xl p-4 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-600 h-48 flex items-center justify-center">
+                     <img
+                       src={partner.src}
+                       alt={partner.alt}
+                       className="max-w-full max-h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300 group-hover:scale-110"
+                       loading="lazy"
+                     />
+                   </div>
                 </motion.div>
               </SwiperSlide>
             ))}

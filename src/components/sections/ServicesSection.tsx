@@ -9,6 +9,11 @@ import {
   ArrowRight
 } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
+// Background images for service cards - using better quality images
+const constructionImage = '/images/services/mechanical.webp';
+const mechanicalImage = '/images/services/hvacsystem.webp';
+const electricalImage = '/images/services/lighting.webp';
+const plumbingImage = '/images/services/plumbing.webp';
 
 const ServicesSection: React.FC = () => {
   const { t } = useTranslation();
@@ -21,11 +26,11 @@ const ServicesSection: React.FC = () => {
       description: 'Complete construction solutions from foundation to finishing',
       descriptionAr: '   الإنشاء الكاملة من الأساسات إلى التشطيبات',
       icon: Building2,
-      features: ['Building Construction', 'Infrastructure', 'Roads & Bridges', 'Public Facilities'],
-      featuresAr: ['بناء المباني', 'البنية التحتية', 'الطرق والجسور', 'المرافق العامة'],
+      image: constructionImage,
+
       color: 'from-blue-600 to-blue-700',
       bgPattern: 'bg-blue-50 dark:bg-blue-900/20',
-      serviceIndex: 0
+      serviceIndex: 0,
     },
     {
       title: 'Mechanical',
@@ -33,8 +38,7 @@ const ServicesSection: React.FC = () => {
       description: 'Advanced mechanical systems and HVAC solutions',
       descriptionAr: 'أنظمة ميكانيكية متقدمة وحلول التكييف والتهوية',
       icon: Wrench,
-      features: ['HVAC Systems', 'Plumbing', 'Fire Protection', 'Elevators'],
-      featuresAr: ['أنظمة التكييف', 'السباكة', 'مكافحة الحريق', 'المصاعد'],
+      image: mechanicalImage,
       color: 'from-green-600 to-green-700',
       bgPattern: 'bg-green-50 dark:bg-green-900/20',
       serviceIndex: 1
@@ -45,8 +49,7 @@ const ServicesSection: React.FC = () => {
       description: 'Comprehensive electrical installations and power systems',
       descriptionAr: 'تركيبات كهربائية شاملة وأنظمة الطاقة',
       icon: Zap,
-      features: ['Power Distribution', 'Lighting Systems', 'Smart Controls', 'Emergency Systems'],
-      featuresAr: ['توزيع الطاقة', 'أنظمة الإضاءة', 'التحكم الذكي', 'أنظمة الطوارئ'],
+      image: electricalImage,
       color: 'from-yellow-600 to-orange-600',
       bgPattern: 'bg-yellow-50 dark:bg-yellow-900/20',
       serviceIndex: 2
@@ -57,8 +60,7 @@ const ServicesSection: React.FC = () => {
       description: 'Professional plumbing and water management systems',
       descriptionAr: 'أنظمة السباكة المهنية وإدارة المياه',
       icon: Droplets,
-      features: ['Water Supply', 'Drainage Systems', 'Water Treatment', 'Pumping Stations'],
-      featuresAr: ['إمداد المياه', 'أنظمة الصرف', 'معالجة المياه', 'محطات الضخ'],
+      image: plumbingImage,
       color: 'from-cyan-600 to-blue-600',
       bgPattern: 'bg-cyan-50 dark:bg-cyan-900/20',
       serviceIndex: 3
@@ -115,7 +117,6 @@ const ServicesSection: React.FC = () => {
             const IconComponent = service.icon;
             const title = currentLang === 'ar' ? service.titleAr : service.title;
             const description = currentLang === 'ar' ? service.descriptionAr : service.description;
-            const features = currentLang === 'ar' ? service.featuresAr : service.features;
             
             return (
               <motion.div
@@ -128,6 +129,17 @@ const ServicesSection: React.FC = () => {
               >
                 
                 <div className={`relative h-full bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 dark:border-gray-700 group-hover:border-transparent overflow-hidden`}>
+                  {/* Background Image */}
+                  <div 
+                    className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-15 dark:opacity-8 group-hover:opacity-25 dark:group-hover:opacity-15 transition-all duration-500"
+                    style={{
+                      backgroundImage: `url(${service.image})`,
+                      backgroundPosition: 'center center',
+                      filter: 'blur(0.5px)'
+                    }}
+                  ></div>
+                  {/* Gradient overlay for better text readability */}
+                  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/20 dark:to-black/30"></div>
                   {/* Background Pattern */}
                   <div className={`absolute inset-0 ${service.bgPattern} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
                   
@@ -151,22 +163,7 @@ const ServicesSection: React.FC = () => {
                       {description}
                     </p>
 
-                    {/* Features List */}
-                    <ul className="space-y-2">
-                      {features.map((feature, featureIndex) => (
-                        <motion.li
-                          key={featureIndex}
-                          initial={{ opacity: 0, x: -20 }}
-                          whileInView={{ opacity: 1, x: 0 }}
-                          transition={{ duration: 0.4, delay: 0.4 + index * 0.1 + featureIndex * 0.05 }}
-                          viewport={{ once: true }}
-                          className="flex items-center text-sm text-gray-700 dark:text-gray-300"
-                        >
-                          <div className={`w-2 h-2 bg-gradient-to-r ${service.color} rounded-full mr-3 flex-shrink-0`}></div>
-                          {feature}
-                        </motion.li>
-                      ))}
-                    </ul>
+
 
                     {/* More Details Button */}
                     <motion.div

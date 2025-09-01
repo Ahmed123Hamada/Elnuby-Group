@@ -624,20 +624,54 @@ const Services: React.FC = () => {
           <div className="flex md:flex-wrap flex-nowrap overflow-x-auto whitespace-nowrap justify-start md:justify-center gap-3 md:gap-4 mb-12 px-2 pr-4 -mx-2 scroll-smooth snap-x snap-mandatory">
             {services.map((service, index) => {
               const IconComponent = service.icon;
+              // Get background image based on service type using public folder path
+              const getBackgroundImage = (serviceId: string) => {
+                switch (serviceId) {
+                  case 'construction':
+                    return '/images/services/mechanical.webp';
+                  case 'mechanical':
+                    return '/images/services/mechanical.webp';
+                  case 'electrical':
+                    return '/images/services/electrical.webp';
+                  case 'water':
+                    return '/images/services/plumbing.webp';
+                  default:
+                    return '/images/services/mechanical.webp';
+                }
+              };
+              
+              const backgroundImage = getBackgroundImage(service.id);
+              
               return (
                 <motion.button
                   key={index}
                   onClick={() => setActiveService(index)}
-                  className={`shrink-0 snap-start flex items-center px-4 md:px-6 py-2 md:py-3 rounded-xl font-medium text-sm md:text-base transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-400 ${
+                  className={`shrink-0 snap-start flex items-center px-4 md:px-6 py-2 md:py-3 rounded-xl font-medium text-sm md:text-base transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-400 relative overflow-hidden border border-white/20 ${
                     activeService === index
-                      ? `bg-gradient-to-r ${service.color} text-white shadow-lg`
-                      : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 border border-black/5 dark:border-white/10'
+                      ? 'text-white shadow-lg ring-2 ring-primary-400 ring-opacity-50'
+                      : 'text-white hover:scale-105 hover:shadow-xl'
                   }`}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
+                  style={{
+                    backgroundImage: `url(${backgroundImage})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    backgroundRepeat: 'no-repeat'
+                  }}
                 >
-                  <IconComponent className="w-4 h-4 md:w-5 md:h-5 mr-2 md:mr-3" />
-                  {currentLang === 'ar' ? service.titleAr : service.title}
+                  {/* Dark overlay for better text readability */}
+                  <div className={`absolute inset-0 transition-all duration-300 ${
+                    activeService === index
+                      ? 'bg-black/40'
+                      : 'bg-black/60 hover:bg-black/50'
+                  }`} />
+                  
+                  {/* Content with relative positioning */}
+                  <div className="relative z-10 flex items-center">
+                    <IconComponent className="w-4 h-4 md:w-5 md:h-5 mr-2 md:mr-3" />
+                    {currentLang === 'ar' ? service.titleAr : service.title}
+                  </div>
                 </motion.button>
               );
             })}
