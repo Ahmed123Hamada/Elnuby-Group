@@ -1,4 +1,5 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useRef } from 'react';
+import { PerformanceMonitor } from '../utils/performance-monitor';
 
 interface OptimizedImageProps {
   src: string;
@@ -23,6 +24,8 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
+  const loadStartTime = useRef<number>(0);
+  const performanceMonitor = PerformanceMonitor.getInstance();
 
   // Generate WebP version if possible
   const getWebPSrc = (originalSrc: string) => {
@@ -34,8 +37,11 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
 
   const handleLoad = useCallback(() => {
     setIsLoaded(true);
+    if (loadStartTime.current > 0) {
+      performanceMonitor.trackImageLoad(src, loadStartTime.current);
+    }
     onLoad?.();
-  }, [onLoad]);
+  }, [onLoad, src, performanceMonitor]);
 
   const handleError = useCallback(() => {
     setHasError(true);
@@ -43,6 +49,11 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   }, [onError]);
 
   const webpSrc = getWebPSrc(src);
+
+  // Start timing when component mounts
+  React.useEffect(() => {
+    loadStartTime.current = performance.now();
+  }, [src]);
 
   return (
     <div className="relative">

@@ -22,6 +22,8 @@ import {
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Button from '../components/Button';
+import OptimizedImage from '../components/OptimizedImage';
+import ImagePreloader from '../components/ImagePreloader';
 import servicesBgImage from '../assast/Images/project/projectslider2.webp';
 
 const Services: React.FC = () => {
@@ -330,8 +332,57 @@ const Services: React.FC = () => {
 
   const currentService = services[activeService];
 
+  // Preload critical images for the current service
+  const currentServiceImages = currentService.categories.map(category => {
+    const getCategoryImage = (name: string, serviceType: string) => {
+      const getResponsiveUnsplashUrl = (imageId: string) => {
+        return `https://images.unsplash.com/${imageId}?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=75`;
+      };
+
+      if (serviceType === 'construction') {
+        if (name.toLowerCase().includes('residential')) return getResponsiveUnsplashUrl('photo-1560518883-ce09059eeffa');
+        if (name.toLowerCase().includes('commercial')) return getResponsiveUnsplashUrl('photo-1486406146926-c627a92ad1ab');
+        if (name.toLowerCase().includes('industrial')) return getResponsiveUnsplashUrl('photo-1565008447742-97f6f38c985c');
+        if (name.toLowerCase().includes('educational')) return getResponsiveUnsplashUrl('photo-1562774053-701939374585');
+        if (name.toLowerCase().includes('healthcare')) return getResponsiveUnsplashUrl('photo-1586773860418-d37222d8fce3');
+        if (name.toLowerCase().includes('infrastructure')) return getResponsiveUnsplashUrl('photo-1541888946425-d81bb19240f5');
+        return getResponsiveUnsplashUrl('photo-1504307651254-35680f356dfd');
+      }
+      
+      if (serviceType === 'electrical') {
+        if (name.toLowerCase().includes('power')) return getResponsiveUnsplashUrl('photo-1473341304170-971dccb5ac1e');
+        if (name.toLowerCase().includes('lighting')) return getResponsiveUnsplashUrl('photo-1558618666-fcd25c85cd64');
+        if (name.toLowerCase().includes('smart') || name.toLowerCase().includes('control')) return getResponsiveUnsplashUrl('photo-1558002038-1055907df827');
+        if (name.toLowerCase().includes('security')) return getResponsiveUnsplashUrl('photo-1557804506-669a67965ba0');
+        if (name.toLowerCase().includes('communication')) return getResponsiveUnsplashUrl('photo-1544197150-b99a580bb7a8');
+        if (name.toLowerCase().includes('renewable') || name.toLowerCase().includes('solar')) return getResponsiveUnsplashUrl('photo-1509391366360-2e959784a276');
+        return getResponsiveUnsplashUrl('photo-1621905252507-b35492cc74b4');
+      }
+      
+      if (serviceType === 'water') {
+        if (name.toLowerCase().includes('treatment')) return getResponsiveUnsplashUrl('photo-1581090700227-1e37b190418e');
+        if (name.toLowerCase().includes('pumping')) return getResponsiveUnsplashUrl('photo-1581092160562-40aa08e78837');
+        if (name.toLowerCase().includes('sewage')) return getResponsiveUnsplashUrl('photo-1581092160607-ee22621dd758');
+        if (name.toLowerCase().includes('distribution')) return getResponsiveUnsplashUrl('photo-1581092334651-ddf26d9a09d0');
+        if (name.toLowerCase().includes('storage')) return getResponsiveUnsplashUrl('photo-1581092160562-40aa08e78837');
+        if (name.toLowerCase().includes('environmental')) return getResponsiveUnsplashUrl('photo-1581090464777-f3220bbe1b8b');
+        return getResponsiveUnsplashUrl('photo-1581090700227-1e37b190418e');
+      }
+      
+      // Local images for mechanical service
+      if (name.toLowerCase().includes('hvac')) return '/images/services/hvacsystem.webp';
+      if (name.toLowerCase().includes('energy')) return '/images/services/electrical.webp';
+      if (name.toLowerCase().includes('elevator')) return '/images/services/mechanical.webp';
+      if (name.toLowerCase().includes('fire')) return '/images/services/mechanical.webp';
+      if (name.toLowerCase().includes('medical')) return '/images/services/mechanical.webp';
+      return '/images/services/mechanical.webp';
+    };
+    return getCategoryImage(category.name, currentService.id);
+  });
+
   return (
     <div className="pt-16 overflow-hidden">
+      <ImagePreloader images={currentServiceImages} priority={false} />
       {/* Modern Hero Section with Image Background */}
       <motion.section 
         className="relative min-h-[50vh] flex items-center justify-center overflow-hidden"
@@ -346,10 +397,12 @@ const Services: React.FC = () => {
           animate={{ scale: 1 }}
           transition={{ duration: 1.5, ease: "easeOut" }}
         >
-          <img 
+          <OptimizedImage 
             src={servicesBgImage} 
             alt="Services Background"
             className="w-full h-full object-cover scale-105"
+            loading="eager"
+            sizes="100vw"
           />
           {/* Dark overlay for better text readability */}
           <div className="absolute inset-0 bg-gradient-to-br from-black/75 via-black/65 to-primary-900/70"></div>
@@ -357,72 +410,13 @@ const Services: React.FC = () => {
           <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iNCIvPjwvZz48L2c+PC9zdmc+')] opacity-30"></div>
         </motion.div>
 
-        {/* Animated Floating Elements */}
-        <div className="absolute inset-0 overflow-hidden">
-          <motion.div
-            className="absolute top-16 left-8 w-16 h-16 border-2 border-white/15 rounded-full"
-            animate={{ 
-              y: [0, -15, 0],
-              rotate: [0, 180, 360]
-            }}
-            transition={{ 
-              duration: 8,
-              repeat: Infinity,
-              ease: "easeInOut"
-            }}
-          />
-          <motion.div
-            className="absolute top-20 right-16 w-12 h-12 border-2 border-primary-300/20 rotate-45"
-            animate={{ 
-              y: [0, 20, 0],
-              rotate: [45, 225, 405]
-            }}
-            transition={{ 
-              duration: 10,
-              repeat: Infinity,
-              ease: "easeInOut"
-            }}
-          />
-          <motion.div
-            className="absolute bottom-16 left-1/5 w-10 h-10 bg-white/8 rounded-full backdrop-blur-sm"
-            animate={{ 
-              scale: [1, 1.3, 1],
-              opacity: [0.3, 0.5, 0.3]
-            }}
-            transition={{ 
-              duration: 6,
-              repeat: Infinity,
-              ease: "easeInOut"
-            }}
-          />
-          
-          {/* Additional decorative elements */}
-          <motion.div
-            className="absolute top-1/2 right-1/5 w-6 h-6 border border-white/20 rounded-full"
-            animate={{ 
-              scale: [0.8, 1.1, 0.8],
-              opacity: [0.3, 0.6, 0.3]
-            }}
-            transition={{ 
-              duration: 4,
-              repeat: Infinity,
-              ease: "easeInOut",
-              delay: 1
-            }}
-          />
-          <motion.div
-            className="absolute bottom-20 right-1/4 w-8 h-8 bg-primary-400/20 rounded-full"
-            animate={{ 
-              y: [0, -10, 0],
-              opacity: [0.2, 0.5, 0.2]
-            }}
-            transition={{ 
-              duration: 5,
-              repeat: Infinity,
-              ease: "easeInOut",
-              delay: 2
-            }}
-          />
+        {/* Simplified decorative elements for mobile performance */}
+        <div className="absolute inset-0 overflow-hidden opacity-60 md:opacity-100">
+          <div className="absolute top-16 left-8 w-12 h-12 border border-white/20 rounded-full"></div>
+          <div className="absolute top-20 right-16 w-8 h-8 border border-primary-300/30 rotate-45"></div>
+          <div className="absolute bottom-16 left-1/5 w-6 h-6 bg-white/10 rounded-full"></div>
+          <div className="absolute top-1/2 right-1/5 w-4 h-4 border border-white/25 rounded-full"></div>
+          <div className="absolute bottom-20 right-1/4 w-6 h-6 bg-primary-400/30 rounded-full"></div>
         </div>
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -587,38 +581,45 @@ const Services: React.FC = () => {
                   {currentService.categories.map((category, index) => {
                     const CategoryIcon = category.icon;
                     const getCategoryImage = (name: string, serviceType: string) => {
-                      // Service-specific images
+                      // Mobile-optimized responsive images with proper sizes for different breakpoints
+                      const getResponsiveUnsplashUrl = (imageId: string, baseWidth: number = 600) => {
+                        // Use smaller images for mobile performance
+                        const mobileWidth = Math.min(baseWidth, 400);
+                        return `https://images.unsplash.com/${imageId}?ixlib=rb-4.0.3&auto=format&fit=crop&w=${mobileWidth}&q=75`;
+                      };
+
+                      // Service-specific images with mobile optimization
                       if (serviceType === 'construction') {
-                        if (name.toLowerCase().includes('residential')) return 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1073&q=80';
-                        if (name.toLowerCase().includes('commercial')) return 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80';
-                        if (name.toLowerCase().includes('industrial')) return 'https://images.unsplash.com/photo-1565008447742-97f6f38c985c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80';
-                        if (name.toLowerCase().includes('educational')) return 'https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1186&q=80';
-                        if (name.toLowerCase().includes('healthcare')) return 'https://images.unsplash.com/photo-1586773860418-d37222d8fce3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1173&q=80';
-                        if (name.toLowerCase().includes('infrastructure')) return 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80';
-                        return 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1176&q=80';
+                        if (name.toLowerCase().includes('residential')) return getResponsiveUnsplashUrl('photo-1560518883-ce09059eeffa', 400);
+                        if (name.toLowerCase().includes('commercial')) return getResponsiveUnsplashUrl('photo-1486406146926-c627a92ad1ab', 400);
+                        if (name.toLowerCase().includes('industrial')) return getResponsiveUnsplashUrl('photo-1565008447742-97f6f38c985c', 400);
+                        if (name.toLowerCase().includes('educational')) return getResponsiveUnsplashUrl('photo-1562774053-701939374585', 400);
+                        if (name.toLowerCase().includes('healthcare')) return getResponsiveUnsplashUrl('photo-1586773860418-d37222d8fce3', 400);
+                        if (name.toLowerCase().includes('infrastructure')) return getResponsiveUnsplashUrl('photo-1541888946425-d81bb19240f5', 400);
+                        return getResponsiveUnsplashUrl('photo-1504307651254-35680f356dfd', 400);
                       }
                       
                       if (serviceType === 'electrical') {
-                        if (name.toLowerCase().includes('power')) return 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80';
-                        if (name.toLowerCase().includes('lighting')) return 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80';
-                        if (name.toLowerCase().includes('smart') || name.toLowerCase().includes('control')) return 'https://images.unsplash.com/photo-1558002038-1055907df827?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80';
-                        if (name.toLowerCase().includes('security')) return 'https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80';
-                        if (name.toLowerCase().includes('communication')) return 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80';
-                        if (name.toLowerCase().includes('renewable') || name.toLowerCase().includes('solar')) return 'https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1172&q=80';
-                        return 'https://images.unsplash.com/photo-1621905252507-b35492cc74b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80';
+                        if (name.toLowerCase().includes('power')) return getResponsiveUnsplashUrl('photo-1473341304170-971dccb5ac1e', 400);
+                        if (name.toLowerCase().includes('lighting')) return getResponsiveUnsplashUrl('photo-1558618666-fcd25c85cd64', 400);
+                        if (name.toLowerCase().includes('smart') || name.toLowerCase().includes('control')) return getResponsiveUnsplashUrl('photo-1558002038-1055907df827', 400);
+                        if (name.toLowerCase().includes('security')) return getResponsiveUnsplashUrl('photo-1557804506-669a67965ba0', 400);
+                        if (name.toLowerCase().includes('communication')) return getResponsiveUnsplashUrl('photo-1544197150-b99a580bb7a8', 400);
+                        if (name.toLowerCase().includes('renewable') || name.toLowerCase().includes('solar')) return getResponsiveUnsplashUrl('photo-1509391366360-2e959784a276', 400);
+                        return getResponsiveUnsplashUrl('photo-1621905252507-b35492cc74b4', 400);
                       }
                       
                       if (serviceType === 'water') {
-                        if (name.toLowerCase().includes('treatment')) return 'https://images.unsplash.com/photo-1581090700227-1e37b190418e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80';
-                        if (name.toLowerCase().includes('pumping')) return 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80';
-                        if (name.toLowerCase().includes('sewage')) return 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80';
-                        if (name.toLowerCase().includes('distribution')) return 'https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80';
-                        if (name.toLowerCase().includes('storage')) return 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80';
-                        if (name.toLowerCase().includes('environmental')) return 'https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80';
-                        return 'https://images.unsplash.com/photo-1581090700227-1e37b190418e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80';
+                        if (name.toLowerCase().includes('treatment')) return getResponsiveUnsplashUrl('photo-1581090700227-1e37b190418e', 400);
+                        if (name.toLowerCase().includes('pumping')) return getResponsiveUnsplashUrl('photo-1581092160562-40aa08e78837', 400);
+                        if (name.toLowerCase().includes('sewage')) return getResponsiveUnsplashUrl('photo-1581092160607-ee22621dd758', 400);
+                        if (name.toLowerCase().includes('distribution')) return getResponsiveUnsplashUrl('photo-1581092334651-ddf26d9a09d0', 400);
+                        if (name.toLowerCase().includes('storage')) return getResponsiveUnsplashUrl('photo-1581092160562-40aa08e78837', 400);
+                        if (name.toLowerCase().includes('environmental')) return getResponsiveUnsplashUrl('photo-1581090464777-f3220bbe1b8b', 400);
+                        return getResponsiveUnsplashUrl('photo-1581090700227-1e37b190418e', 400);
                       }
                       
-                      // Mechanical service images (keeping existing logic)
+                      // Mechanical service images (keeping existing optimized local images)
                       if (name.toLowerCase().includes('hvac')) return '/images/services/hvacsystem.webp';
                       if (name.toLowerCase().includes('energy')) return '/images/services/electrical.webp';
                       if (name.toLowerCase().includes('elevator')) return '/images/services/mechanical.webp';
@@ -632,21 +633,23 @@ const Services: React.FC = () => {
                     return (
                       <motion.div
                         key={index}
-                        className="group relative bg-gradient-to-br from-white via-white to-gray-50/50 dark:from-gray-800 dark:via-gray-800 dark:to-gray-900/50 rounded-3xl overflow-hidden border border-gray-200/60 dark:border-gray-700/60 hover:border-orange-200 dark:hover:border-orange-800/50 transition-all duration-500 hover:shadow-2xl hover:shadow-orange-500/10"
-                        initial={{ opacity: 0, y: 30 }}
+                        className="group relative bg-gradient-to-br from-white via-white to-gray-50/50 dark:from-gray-800 dark:via-gray-800 dark:to-gray-900/50 rounded-3xl overflow-hidden border border-gray-200/60 dark:border-gray-700/60 hover:border-orange-200 dark:hover:border-orange-800/50 transition-all duration-300 hover:shadow-xl hover:shadow-orange-500/5 will-change-transform"
+                        initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: index * 0.1, duration: 0.6 }}
-                        whileHover={{ y: -8, scale: 1.02 }}
+                        transition={{ delay: Math.min(index * 0.05, 0.3), duration: 0.4 }}
+                        whileHover={{ y: -4 }}
                       >
                         {/* Modern Gradient Background */}
                         <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 via-transparent to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                         
                         {/* Background Image with Modern Overlay */}
                         <div className="relative h-48 overflow-hidden">
-                          <img
+                          <OptimizedImage
                             src={bannerImage}
                             alt={currentLang === 'ar' ? category.nameAr : category.name}
-                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 will-change-transform"
+                            loading="lazy"
+                            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/40 to-transparent"></div>
                           <div className="absolute inset-0 bg-gradient-to-br from-orange-600/20 via-transparent to-blue-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>

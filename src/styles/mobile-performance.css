@@ -1,0 +1,56 @@
+/* Mobile Performance Optimizations */
+
+/* Reduce animations on mobile devices for better performance */
+@media (max-width: 768px) {
+  /* Disable complex animations on mobile */
+  .motion-reduce-mobile {
+    animation: none !important;
+    transition: none !important;
+  }
+  
+  /* Simplify hover effects on mobile */
+  .hover-simplify-mobile:hover {
+    transform: none !important;
+    scale: none !important;
+  }
+  
+  /* Optimize will-change for mobile */
+  .will-change-mobile {
+    will-change: transform, opacity;
+  }
+  
+  /* Remove will-change when not needed */
+  .will-change-mobile:not(:hover):not(:focus) {
+    will-change: auto;
+  }
+}
+
+/* Prefer reduced motion for accessibility and performance */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* GPU acceleration for smooth animations */
+.gpu-accelerate {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Optimize image rendering */
+.optimize-image {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+/* Container queries for better responsive behavior */
+@container (max-width: 640px) {
+  .container-responsive {
+    padding: 0.5rem;
+  }
+}
