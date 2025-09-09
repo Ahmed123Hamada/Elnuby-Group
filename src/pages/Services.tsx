@@ -7,38 +7,18 @@ import {
   Wrench, 
   Zap, 
   Droplets,
-  ArrowRight,
-  CheckCircle,
-  Phone,
-  Mail,
-  MapPin,
-  Star,
-  Users,
-  Clock,
-  Award,
   Shield,
-  Target,
   Lightbulb,
   TrendingUp,
   Globe,
   Settings,
-  FileText,
-  Calendar,
-  DollarSign,
-  ThumbsUp,
-  ChevronRight,
-
-
   Briefcase,
-  Palette,
-  Cog,
   Truck,
   Home,
   Factory,
   School,
   Heart,
-  TreePine,
-  Waves
+  TreePine
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Button from '../components/Button';
@@ -48,7 +28,7 @@ const Services: React.FC = () => {
   const { t } = useTranslation();
   const location = useLocation();
   const [activeService, setActiveService] = useState(0);
-  const [activeTab, setActiveTab] = useState('overview');
+  const [activeTab, setActiveTab] = useState('categories');
 
   // Handle navigation from ServicesSection
   useEffect(() => {
@@ -117,22 +97,7 @@ const Services: React.FC = () => {
           description: 'Roads, bridges, and public infrastructure',
           descriptionAr: 'طرق وجسور وبنية تحتية عامة'
         }
-      ],
-      features: [
-        { name: 'Advanced BIM Technology', nameAr: 'تقنية BIM المتقدمة' },
-        { name: 'Sustainable Building Practices', nameAr: 'ممارسات البناء المستدامة' },
-        { name: 'Quality Assurance Systems', nameAr: 'أنظمة ضمان الجودة' },
-        { name: 'Project Management Excellence', nameAr: 'تميز إدارة المشاريع' },
-        { name: 'Safety & Compliance', nameAr: 'السلامة والامتثال' },
-        { name: 'Innovative Design Solutions', nameAr: 'حلول تصميم مبتكرة' }
-      ],
-      process: [
-        { step: 1, name: 'Consultation & Planning', nameAr: 'الاستشارة والتخطيط', duration: '2-4 weeks' },
-        { step: 2, name: 'Design & Engineering', nameAr: 'التصميم والهندسة', duration: '4-8 weeks' },
-        { step: 3, name: 'Permits & Approvals', nameAr: 'التصاريح والموافقات', duration: '2-6 weeks' },
-        { step: 4, name: 'Construction Execution', nameAr: 'تنفيذ البناء', duration: '6-24 months' },
-        { step: 5, name: 'Quality Testing & Delivery', nameAr: 'اختبار الجودة والتسليم', duration: '2-4 weeks' }
-      ]
+        ]
     },
     {
       id: 'mechanical',
@@ -151,63 +116,66 @@ const Services: React.FC = () => {
       team: '80+ Specialists',
       categories: [
         {
-          name: 'HVAC Systems',
+          name: 'HVAC',
           nameAr: 'أنظمة التكييف والتهوية',
           icon: Settings,
           description: 'Central air conditioning, ventilation, and climate control',
-          descriptionAr: 'تكييف مركزي وتهوية وتحكم في المناخ'
+          descriptionAr: 'تكييف مركزي وتهوية وتحكم في المناخ',
+          subcategories: [
+            { name: 'Chilled Water Systems', nameAr: 'أنظمة الماء المبرد' },
+            { name: 'VRF/VRV Systems', nameAr: 'أنظمة VRF/VRV' },
+            { name: 'Ventilation & Exhaust', nameAr: 'التهوية والعادم' }
+          ]
         },
         {
-          name: 'Plumbing Systems',
-          nameAr: 'أنظمة السباكة',
-          icon: Waves,
-          description: 'Water supply, drainage, and sanitary systems',
-          descriptionAr: 'إمداد المياه والصرف والأنظمة الصحية'
+          name: 'Medical Gas',
+          nameAr: 'الغازات الطبية',
+          icon: Heart,
+          description: 'Medical gas pipeline systems and equipment',
+          descriptionAr: 'أنظمة خطوط الغازات الطبية ومعداتها',
+          subcategories: [
+            { name: 'Oxygen Systems', nameAr: 'أنظمة الأكسجين' },
+            { name: 'Medical Air & Vacuum', nameAr: 'هواء وفراغ طبي' },
+            { name: 'Nitrous Oxide & Others', nameAr: 'أكسيد النيتروز وغيرها' }
+          ]
         },
         {
-          name: 'Fire Protection',
+          name: 'FIRE',
           nameAr: 'مكافحة الحريق',
           icon: Shield,
           description: 'Fire suppression, detection, and safety systems',
-          descriptionAr: 'أنظمة إطفاء الحريق والكشف والسلامة'
+          descriptionAr: 'أنظمة إطفاء الحريق والكشف والسلامة',
+          subcategories: [
+            { name: 'Sprinkler Systems', nameAr: 'أنظمة الرش' },
+            { name: 'Fire Alarm & Detection', nameAr: 'إنذار وكشف الحريق' },
+            { name: 'FM200/Clean Agent', nameAr: 'عامل نظيف FM200' }
+          ]
         },
         {
           name: 'Elevators & Escalators',
           nameAr: 'المصاعد والسلالم المتحركة',
           icon: TrendingUp,
           description: 'Vertical transportation solutions',
-          descriptionAr: 'حلول النقل العمودي'
+          descriptionAr: 'حلول النقل العمودي',
+          subcategories: [
+            { name: 'Passenger Elevators', nameAr: 'مصاعد الركاب' },
+            { name: 'Freight Elevators', nameAr: 'مصاعد البضائع' },
+            { name: 'Escalators & Moving Walks', nameAr: 'سلالم متحركة ومشايات' }
+          ]
         },
         {
-          name: 'Industrial Equipment',
-          nameAr: 'المعدات الصناعية',
-          icon: Cog,
-          description: 'Manufacturing and processing equipment',
-          descriptionAr: 'معدات التصنيع والمعالجة'
-        },
-        {
-          name: 'Energy Systems',
-          nameAr: 'أنظمة الطاقة',
+          name: 'Energy System',
+          nameAr: 'نظام الطاقة',
           icon: Zap,
           description: 'Energy-efficient mechanical solutions',
-          descriptionAr: 'حلول ميكانيكية موفرة للطاقة'
+          descriptionAr: 'حلول ميكانيكية موفرة للطاقة',
+          subcategories: [
+            { name: 'Energy Management', nameAr: 'إدارة الطاقة' },
+            { name: 'Heat Recovery', nameAr: 'استعادة الحرارة' },
+            { name: 'Renewables Integration', nameAr: 'تكامل مصادر متجددة' }
+          ]
         }
-      ],
-      features: [
-        { name: 'Energy-Efficient Solutions', nameAr: 'حلول موفرة للطاقة' },
-        { name: 'Smart Building Integration', nameAr: 'تكامل المباني الذكية' },
-        { name: 'Predictive Maintenance', nameAr: 'الصيانة التنبؤية' },
-        { name: 'Environmental Control', nameAr: 'التحكم البيئي' },
-        { name: 'Code Compliance', nameAr: 'الامتثال للمعايير' },
-        { name: '24/7 Support Services', nameAr: 'خدمات الدعم 24/7' }
-      ],
-      process: [
-        { step: 1, name: 'System Assessment', nameAr: 'تقييم النظام', duration: '1-2 weeks' },
-        { step: 2, name: 'Design & Calculations', nameAr: 'التصميم والحسابات', duration: '2-4 weeks' },
-        { step: 3, name: 'Equipment Procurement', nameAr: 'شراء المعدات', duration: '4-8 weeks' },
-        { step: 4, name: 'Installation & Testing', nameAr: 'التركيب والاختبار', duration: '3-8 weeks' },
-        { step: 5, name: 'Commissioning & Training', nameAr: 'التشغيل والتدريب', duration: '1-2 weeks' }
-      ]
+        ]
     },
     {
       id: 'electrical',
@@ -267,22 +235,7 @@ const Services: React.FC = () => {
           description: 'Solar panels and sustainable energy solutions',
           descriptionAr: 'الألواح الشمسية وحلول الطاقة المستدامة'
         }
-      ],
-      features: [
-        { name: 'Smart Home Integration', nameAr: 'تكامل المنزل الذكي' },
-        { name: 'Energy Management Systems', nameAr: 'أنظمة إدارة الطاقة' },
-        { name: 'Safety & Protection', nameAr: 'السلامة والحماية' },
-        { name: 'Future-Ready Infrastructure', nameAr: 'بنية تحتية جاهزة للمستقبل' },
-        { name: 'Remote Monitoring', nameAr: 'المراقبة عن بُعد' },
-        { name: 'Emergency Backup Systems', nameAr: 'أنظمة النسخ الاحتياطي للطوارئ' }
-      ],
-      process: [
-        { step: 1, name: 'Electrical Survey', nameAr: 'المسح الكهربائي', duration: '1 week' },
-        { step: 2, name: 'System Design', nameAr: 'تصميم النظام', duration: '2-3 weeks' },
-        { step: 3, name: 'Material Procurement', nameAr: 'شراء المواد', duration: '2-4 weeks' },
-        { step: 4, name: 'Installation & Wiring', nameAr: 'التركيب والأسلاك', duration: '2-6 weeks' },
-        { step: 5, name: 'Testing & Certification', nameAr: 'الاختبار والشهادات', duration: '1 week' }
-      ]
+        ]
     },
     {
       id: 'water',
@@ -342,74 +295,10 @@ const Services: React.FC = () => {
           description: 'Eco-friendly water management',
           descriptionAr: 'إدارة المياه الصديقة للبيئة'
         }
-      ],
-      features: [
-        { name: 'Advanced Filtration Systems', nameAr: 'أنظمة ترشيح متقدمة' },
-        { name: 'Smart Water Management', nameAr: 'إدارة المياه الذكية' },
-        { name: 'Environmental Compliance', nameAr: 'الامتثال البيئي' },
-        { name: 'Cost-Effective Solutions', nameAr: 'حلول فعالة من حيث التكلفة' },
-        { name: 'Water Quality Monitoring', nameAr: 'مراقبة جودة المياه' },
-        { name: 'Preventive Maintenance', nameAr: 'الصيانة الوقائية' }
-      ],
-      process: [
-        { step: 1, name: 'Site Analysis', nameAr: 'تحليل الموقع', duration: '1-2 weeks' },
-        { step: 2, name: 'System Design', nameAr: 'تصميم النظام', duration: '3-4 weeks' },
-        { step: 3, name: 'Infrastructure Installation', nameAr: 'تركيب البنية التحتية', duration: '8-16 weeks' },
-        { step: 4, name: 'System Integration', nameAr: 'تكامل النظام', duration: '2-4 weeks' },
-        { step: 5, name: 'Testing & Optimization', nameAr: 'الاختبار والتحسين', duration: '2-3 weeks' }
-      ]
+        ]
     }
   ];
 
-  // Additional data for enhanced sections
-
-  const processSteps = [
-    {
-      step: 1,
-      title: 'Initial Consultation',
-      titleAr: 'الاستشارة الأولية',
-      description: 'Understanding your requirements and project scope',
-      descriptionAr: 'فهم متطلباتكم ونطاق المشروع',
-      icon: Users,
-      duration: '1-2 days'
-    },
-    {
-      step: 2,
-      title: 'Site Assessment',
-      titleAr: 'تقييم الموقع',
-      description: 'Detailed site analysis and feasibility study',
-      descriptionAr: 'تحليل مفصل للموقع ودراسة الجدوى',
-      icon: MapPin,
-      duration: '3-5 days'
-    },
-    {
-      step: 3,
-      title: 'Design & Planning',
-      titleAr: 'التصميم والتخطيط',
-      description: 'Creating detailed designs and project timeline',
-      descriptionAr: 'إنشاء تصاميم مفصلة وجدول زمني للمشروع',
-      icon: FileText,
-      duration: '2-4 weeks'
-    },
-    {
-      step: 4,
-      title: 'Project Execution',
-      titleAr: 'تنفيذ المشروع',
-      description: 'Professional implementation with quality control',
-      descriptionAr: 'تنفيذ مهني مع مراقبة الجودة',
-      icon: Settings,
-      duration: 'As per timeline'
-    },
-    {
-      step: 5,
-      title: 'Quality Assurance',
-      titleAr: 'ضمان الجودة',
-      description: 'Testing, certification and project handover',
-      descriptionAr: 'الاختبار والشهادات وتسليم المشروع',
-      icon: Award,
-      duration: '1-2 weeks'
-    }
-  ];
 
   const currentLang = t('language') === 'Language' ? 'en' : 'ar';
 
@@ -687,256 +576,161 @@ const Services: React.FC = () => {
               transition={{ duration: 0.5 }}
               className="bg-white dark:bg-gray-800 rounded-3xl shadow-2xl overflow-hidden"
             >
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 p-8 lg:p-12">
-                {/* Service Info */}
-                <div>
-                  <div className="flex items-center mb-6">
-                    <div className={`w-16 h-16 bg-gradient-to-r ${currentService.color} rounded-2xl flex items-center justify-center mr-4`}>
-                      <currentService.icon className="w-8 h-8 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="text-3xl font-bold text-gray-900 dark:text-white">
-                        {currentLang === 'ar' ? currentService.titleAr : currentService.title}
-                      </h3>
-                      <p className="text-lg text-gray-600 dark:text-gray-300">
-                        {currentLang === 'ar' ? currentService.subtitleAr : currentService.subtitle}
-                      </p>
-                    </div>
-                  </div>
-
-                  <p className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed mb-8">
-                    {currentLang === 'ar' ? currentService.descriptionAr : currentService.description}
-                  </p>
-
-                  {/* Service Stats */}
-                  <div className="grid grid-cols-2 gap-6 mb-8">
-                    <div className="text-center p-4 bg-gray-50 dark:bg-gray-700 rounded-xl">
-                      <div className="text-2xl font-bold text-primary-600 dark:text-primary-400">
-                        {currentService.projects}
-                      </div>
-                      <div className="text-sm text-gray-600 dark:text-gray-300">
-                        {currentLang === 'ar' ? 'مشروع' : 'Projects'}
-                      </div>
-                    </div>
-                    <div className="text-center p-4 bg-gray-50 dark:bg-gray-700 rounded-xl">
-                      <div className="text-2xl font-bold text-primary-600 dark:text-primary-400">
-                        {currentService.satisfaction}
-                      </div>
-                      <div className="text-sm text-gray-600 dark:text-gray-300">
-                        {currentLang === 'ar' ? 'رضا العملاء' : 'Satisfaction'}
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Tab Navigation for Service Details */}
-                  <div className="flex space-x-1 bg-gray-100 dark:bg-gray-700 p-1 rounded-xl mb-6" role="tablist" aria-label="Service detail tabs">
-                    {['overview', 'categories', 'process'].map((tab) => (
-                      <button
-                        key={tab}
-                        onClick={() => setActiveTab(tab)}
-                        role="tab"
-                        aria-selected={activeTab === tab}
-                        className={`flex-1 py-2 md:py-3 px-4 md:px-6 rounded-lg font-medium text-sm md:text-base transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-400 ${
-                          activeTab === tab
-                            ? 'bg-primary-600 dark:bg-primary-500 text-white shadow'
-                            : 'text-gray-700 dark:text-gray-300 hover:bg-white/60 dark:hover:bg-gray-600/60'
-                        }`}
-                      >
-                        {tab === 'overview' && (currentLang === 'ar' ? 'نظرة عامة' : 'Overview')}
-                        {tab === 'categories' && (currentLang === 'ar' ? 'التصنيفات' : 'Categories')}
-                        {tab === 'process' && (currentLang === 'ar' ? 'العملية' : 'Process')}
-                      </button>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Service Content */}
-                <div>
-                  <AnimatePresence mode="wait">
-                    {activeTab === 'overview' && (
+              <div className="p-8 lg:p-12">
+                {/* Categories Grid - Full Width */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5 }}
+                  className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+                >
+                  {currentService.categories.map((category, index) => {
+                    const CategoryIcon = category.icon;
+                    const getCategoryImage = (name: string, serviceType: string) => {
+                      // Service-specific images
+                      if (serviceType === 'construction') {
+                        if (name.toLowerCase().includes('residential')) return 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1073&q=80';
+                        if (name.toLowerCase().includes('commercial')) return 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80';
+                        if (name.toLowerCase().includes('industrial')) return 'https://images.unsplash.com/photo-1565008447742-97f6f38c985c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80';
+                        if (name.toLowerCase().includes('educational')) return 'https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1186&q=80';
+                        if (name.toLowerCase().includes('healthcare')) return 'https://images.unsplash.com/photo-1586773860418-d37222d8fce3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1173&q=80';
+                        if (name.toLowerCase().includes('infrastructure')) return 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80';
+                        return 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1176&q=80';
+                      }
+                      
+                      if (serviceType === 'electrical') {
+                        if (name.toLowerCase().includes('power')) return 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80';
+                        if (name.toLowerCase().includes('lighting')) return 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80';
+                        if (name.toLowerCase().includes('smart') || name.toLowerCase().includes('control')) return 'https://images.unsplash.com/photo-1558002038-1055907df827?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80';
+                        if (name.toLowerCase().includes('security')) return 'https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80';
+                        if (name.toLowerCase().includes('communication')) return 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80';
+                        if (name.toLowerCase().includes('renewable') || name.toLowerCase().includes('solar')) return 'https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1172&q=80';
+                        return 'https://images.unsplash.com/photo-1621905252507-b35492cc74b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80';
+                      }
+                      
+                      if (serviceType === 'water') {
+                        if (name.toLowerCase().includes('treatment')) return 'https://images.unsplash.com/photo-1581090700227-1e37b190418e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80';
+                        if (name.toLowerCase().includes('pumping')) return 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80';
+                        if (name.toLowerCase().includes('sewage')) return 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80';
+                        if (name.toLowerCase().includes('distribution')) return 'https://images.unsplash.com/photo-1581092334651-ddf26d9a09d0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80';
+                        if (name.toLowerCase().includes('storage')) return 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80';
+                        if (name.toLowerCase().includes('environmental')) return 'https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80';
+                        return 'https://images.unsplash.com/photo-1581090700227-1e37b190418e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80';
+                      }
+                      
+                      // Mechanical service images (keeping existing logic)
+                      if (name.toLowerCase().includes('hvac')) return '/images/services/hvacsystem.webp';
+                      if (name.toLowerCase().includes('energy')) return '/images/services/electrical.webp';
+                      if (name.toLowerCase().includes('elevator')) return '/images/services/mechanical.webp';
+                      if (name.toLowerCase().includes('fire')) return '/images/services/mechanical.webp';
+                      if (name.toLowerCase().includes('medical')) return '/images/services/mechanical.webp';
+                      return '/images/services/mechanical.webp';
+                    };
+                    const bannerImage = getCategoryImage(category.name, currentService.id);
+                    const subCount = Array.isArray((category as any).subcategories) ? (category as any).subcategories.length : 0;
+                    
+                    return (
                       <motion.div
-                        key="overview"
-                        initial={{ opacity: 0, x: 20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        exit={{ opacity: 0, x: -20 }}
-                        transition={{ duration: 0.3 }}
+                        key={index}
+                        className="group relative bg-gradient-to-br from-white via-white to-gray-50/50 dark:from-gray-800 dark:via-gray-800 dark:to-gray-900/50 rounded-3xl overflow-hidden border border-gray-200/60 dark:border-gray-700/60 hover:border-orange-200 dark:hover:border-orange-800/50 transition-all duration-500 hover:shadow-2xl hover:shadow-orange-500/10"
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: index * 0.1, duration: 0.6 }}
+                        whileHover={{ y: -8, scale: 1.02 }}
                       >
-                        <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-6">
-                          {currentLang === 'ar' ? 'الميزات الرئيسية' : 'Key Features'}
-                        </h4>
-                        <div className="space-y-4">
-                          {currentService.features.map((feature, index) => (
-                            <motion.div
-                              key={index}
-                              className="flex items-center p-4 bg-gray-50 dark:bg-gray-700 rounded-xl"
-                              initial={{ opacity: 0, x: 20 }}
-                              animate={{ opacity: 1, x: 0 }}
-                              transition={{ delay: index * 0.1 }}
-                            >
-                              <CheckCircle className="w-6 h-6 text-primary-500 mr-4 flex-shrink-0" />
-                              <span className="text-gray-700 dark:text-gray-300 font-medium">
-                                {currentLang === 'ar' ? feature.nameAr : feature.name}
-                              </span>
-                            </motion.div>
-                          ))}
+                        {/* Modern Gradient Background */}
+                        <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 via-transparent to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        
+                        {/* Background Image with Modern Overlay */}
+                        <div className="relative h-48 overflow-hidden">
+                          <img
+                            src={bannerImage}
+                            alt={currentLang === 'ar' ? category.nameAr : category.name}
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/40 to-transparent"></div>
+                          <div className="absolute inset-0 bg-gradient-to-br from-orange-600/20 via-transparent to-blue-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                          
+                          {/* Modern Category Badge */}
+                          <div className="absolute top-5 right-5">
+                            <div className="bg-white/95 backdrop-blur-md text-gray-800 px-4 py-2 rounded-2xl text-xs font-bold shadow-lg border border-white/20 group-hover:bg-orange-50 group-hover:text-orange-800 transition-all duration-300">
+                              {currentLang === 'ar' ? category.nameAr : category.name}
+                            </div>
+                          </div>
+                          
+
+
+                          {/* Modern Icon Container */}
+                          <div className="absolute bottom-5 left-5">
+                            <div className="w-14 h-14 bg-white/15 backdrop-blur-md rounded-2xl flex items-center justify-center border border-white/30 group-hover:bg-orange-500/20 group-hover:border-orange-300/50 transition-all duration-300">
+                              <CategoryIcon className="w-7 h-7 text-white group-hover:text-orange-100 transition-colors duration-300" />
+                            </div>
+                          </div>
+
+                          {/* Modern Decorative Elements */}
+                          <div className="absolute top-1/2 right-8 w-20 h-20 bg-gradient-to-br from-orange-400/20 to-blue-400/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                         </div>
-                      </motion.div>
-                    )}
 
-                    {activeTab === 'categories' && (
-                      <motion.div
-                        key="categories"
-                        initial={{ opacity: 0, x: 20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        exit={{ opacity: 0, x: -20 }}
-                        transition={{ duration: 0.3 }}
-                      >
-                        <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-6">
-                          {currentLang === 'ar' ? 'تصنيفات الخدمة' : 'Service Categories'}
-                        </h4>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                          {currentService.categories.map((category, index) => {
-                            const CategoryIcon = category.icon;
-                            return (
-                              <motion.div
-                                key={index}
-                                className="p-4 bg-gray-50 dark:bg-gray-700 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors duration-200"
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ delay: index * 0.1 }}
-                              >
-                                <CategoryIcon className="w-8 h-8 text-primary-500 mb-3" />
-                                <h5 className="font-semibold text-gray-900 dark:text-white mb-2">
-                                  {currentLang === 'ar' ? category.nameAr : category.name}
-                                </h5>
-                                <p className="text-sm text-gray-600 dark:text-gray-300">
-                                  {currentLang === 'ar' ? category.descriptionAr : category.description}
-                                </p>
-                              </motion.div>
-                            );
-                          })}
-                        </div>
-                      </motion.div>
-                    )}
+                        {/* Modern Content Section */}
+                        <div className="relative p-7 space-y-5">
+                          {/* Title and Description */}
+                          <div className="space-y-3">
+                            <h4 className="text-xl font-bold text-gray-800 dark:text-white group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors duration-300 leading-tight">
+                              {currentLang === 'ar' ? category.nameAr : category.name}
+                            </h4>
+                            <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed line-clamp-2">
+                              {currentLang === 'ar' ? category.descriptionAr : category.description}
+                            </p>
+                          </div>
 
-                    {activeTab === 'process' && (
-                      <motion.div
-                        key="process"
-                        initial={{ opacity: 0, x: 20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        exit={{ opacity: 0, x: -20 }}
-                        transition={{ duration: 0.3 }}
-                      >
-                        <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-6">
-                          {currentLang === 'ar' ? 'عملية العمل' : 'Work Process'}
-                        </h4>
-                        <div className="space-y-4">
-                          {currentService.process.map((step, index) => (
-                            <motion.div
-                              key={index}
-                              className="flex items-start p-4 bg-gray-50 dark:bg-gray-700 rounded-xl"
-                              initial={{ opacity: 0, x: 20 }}
-                              animate={{ opacity: 1, x: 0 }}
-                              transition={{ delay: index * 0.1 }}
-                            >
-                              <div className="w-8 h-8 bg-primary-500 text-white rounded-full flex items-center justify-center mr-4 flex-shrink-0 font-bold text-sm">
-                                {step.step}
+                          {/* Modern Specializations Section */}
+                          {Array.isArray((category as any).subcategories) && (category as any).subcategories.length > 0 && (
+                            <div className="space-y-4 pt-2">
+                              {/* Modern Divider */}
+                              <div className="h-px bg-gradient-to-r from-transparent via-orange-200 dark:via-orange-800/50 to-transparent"></div>
+                              
+                              <div className="space-y-3">
+                                <div className="flex items-center gap-2">
+                                  <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
+                                  <p className="text-xs font-bold text-orange-600 dark:text-orange-400 uppercase tracking-wider">
+                                    {currentLang === 'ar' ? 'التخصصات المتاحة' : 'Available Specializations'}
+                                  </p>
+                                </div>
+                                
+                                <div className="flex flex-wrap gap-2">
+                                  {(category as any).subcategories.slice(0, 2).map((sub: any, subIndex: number) => (
+                                    <span
+                                      key={subIndex}
+                                      className="inline-flex items-center px-3 py-1.5 rounded-xl text-xs font-medium bg-gradient-to-r from-orange-50 to-orange-100 dark:from-orange-900/30 dark:to-orange-800/30 text-orange-700 dark:text-orange-300 border border-orange-200/50 dark:border-orange-700/50 hover:from-orange-100 hover:to-orange-200 dark:hover:from-orange-800/40 dark:hover:to-orange-700/40 transition-all duration-300"
+                                    >
+                                      {currentLang === 'ar' ? sub.nameAr : sub.name}
+                                    </span>
+                                  ))}
+
+                                </div>
                               </div>
-                              <div>
-                                <h5 className="font-semibold text-gray-900 dark:text-white mb-1">
-                                  {currentLang === 'ar' ? step.nameAr : step.name}
-                                </h5>
-                                <p className="text-sm text-gray-600 dark:text-gray-300 mb-2">
-                                  {step.duration}
-                                </p>
-                              </div>
-                            </motion.div>
-                          ))}
+                            </div>
+                          )}
+
+                          {/* Modern Action Indicator */}
+
                         </div>
+
+                        {/* Modern Hover Effect */}
+                        <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-orange-500/10 via-transparent to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+                        
+                        {/* Modern Border Effect */}
+                        <div className="absolute inset-0 rounded-3xl border-2 border-transparent group-hover:border-gradient-to-r group-hover:from-orange-300/50 group-hover:to-blue-300/50 transition-all duration-500 pointer-events-none"></div>
                       </motion.div>
-                    )}
-                  </AnimatePresence>
-                </div>
+                    );
+                  })}
+                </motion.div>
               </div>
             </motion.div>
           </AnimatePresence>
         </div>
       </motion.section>
 
-      {/* Work Process Section */}
-      <motion.section 
-        className="py-24 bg-white dark:bg-gray-900"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
-      >
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-              {currentLang === 'ar' ? 'كيف نعمل' : 'How We Work'}
-            </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              {currentLang === 'ar' 
-                ? 'عملية عمل مدروسة ومنظمة لضمان تنفيذ مشاريعكم بأعلى مستوى من الجودة والكفاءة'
-                : 'A well-studied and organized work process to ensure your projects are executed with the highest level of quality and efficiency'
-              }
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
-            {processSteps.map((step, index) => {
-              const StepIcon = step.icon;
-              return (
-                <motion.div
-                  key={index}
-                  className="relative group"
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                >
-                  <div className="text-center">
-                    {/* Step Number */}
-                    <div className="relative mb-6">
-                      <div className="w-20 h-20 bg-gradient-to-r from-primary-500 to-primary-600 rounded-full flex items-center justify-center mx-auto shadow-lg group-hover:scale-110 transition-transform duration-300">
-                        <StepIcon className="w-10 h-10 text-white" />
-                      </div>
-                      <div className="absolute -top-2 -right-2 w-8 h-8 bg-primary-200 dark:bg-primary-800 rounded-full flex items-center justify-center">
-                        <span className="text-primary-800 dark:text-primary-200 font-bold text-sm">
-                          {step.step}
-                        </span>
-                      </div>
-                    </div>
-
-                    {/* Step Content */}
-                    <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-3">
-                      {currentLang === 'ar' ? step.titleAr : step.title}
-                    </h3>
-                    <p className="text-gray-600 dark:text-gray-300 text-sm mb-3">
-                      {currentLang === 'ar' ? step.descriptionAr : step.description}
-                    </p>
-                    <span className="inline-block px-3 py-1 bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 rounded-full text-xs font-medium">
-                      {step.duration}
-                    </span>
-                  </div>
-
-                  {/* Connector Line (except last item) */}
-                  {index < processSteps.length - 1 && (
-                    <div className="hidden lg:block absolute top-10 left-full w-full h-0.5 bg-gradient-to-r from-primary-300 to-primary-500 z-0"></div>
-                  )}
-                </motion.div>
-              );
-            })}
-          </div>
-        </div>
-      </motion.section>
     </div>
   );
 };
