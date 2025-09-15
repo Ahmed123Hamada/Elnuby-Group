@@ -3,7 +3,7 @@ import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin, Globe, Bui
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import { useTranslatedData } from '../hooks/useTranslatedData';
-import  nubyLogo from '../assast/Images/logo/logo-elnuby-footer.png';
+import  nubyLogo from '../assast/Images/logo/nubylogo.png';
 
 const Footer: React.FC = () => {
   const { t } = useTranslation();
@@ -99,7 +99,7 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
           {/* Company Info */}
           <div className="lg:col-span-3 text-center lg:text-left">
-            <img src={nubyLogo} alt="Elnuby Logo" className="h-12 w-auto mb-4 mx-auto lg:mx-0" />
+            <img src={nubyLogo} alt="Elnuby Logo" className=" w-auto  mb-4 mx-auto lg:mx-0"  style={{ height: '120px' }} />
             <p className="text-gray-400 text-sm leading-relaxed max-w-xs mx-auto lg:mx-0">
               {t('heroSubtitle')}
             </p>

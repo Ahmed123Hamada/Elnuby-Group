@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Globe, Moon, Sun } from "lucide-react";
 import { useLanguage } from "../context/LanguageContext";
 import { useTranslatedData } from "../hooks/useTranslatedData";
-import logoee from "../logo192.png";
+import logoee from "../nubylogo1.webp";
 
 const Navbar: React.FC = () => {
   const { language, toggleLanguage } = useLanguage();
@@ -83,7 +83,7 @@ const Navbar: React.FC = () => {
                 <img
                   src={logoee}
                   alt="Elnuby Logo"
-                  className="h-full lg:h-14 max-md:h-10 w-auto"
+                  className="h-full  lg:h-[80px] max-md:h-14 w-auto "
                 />
               </Link>
 
