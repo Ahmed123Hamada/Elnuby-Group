@@ -43,6 +43,16 @@
     @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-2;
   }
   
+  /* Hide scrollbar for modern service buttons */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  
   /* Partners Swiper Custom Styles */
   .partners-swiper .swiper-pagination {
     bottom: -50px !important;

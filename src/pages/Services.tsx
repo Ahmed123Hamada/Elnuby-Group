@@ -62,42 +62,72 @@ const Services: React.FC = () => {
           nameAr: 'البناء السكني',
           icon: Home,
           description: 'Luxury villas, apartments, and housing complexes',
-          descriptionAr: 'فيلات فاخرة وشقق ومجمعات سكنية'
+          descriptionAr: 'فيلات فاخرة وشقق ومجمعات سكنية',
+          subcategories: [
+            { name: 'Luxury Villas', nameAr: 'فيلات فاخرة' },
+            { name: 'Apartment Complexes', nameAr: 'مجمعات سكنية' },
+            { name: 'Townhouses', nameAr: 'بيوت متصلة' }
+          ]
         },
         {
           name: 'Commercial Buildings',
           nameAr: 'المباني التجارية',
           icon: Briefcase,
           description: 'Office buildings, shopping centers, and business complexes',
-          descriptionAr: 'مباني مكاتب ومراكز تسوق ومجمعات تجارية'
+          descriptionAr: 'مباني مكاتب ومراكز تسوق ومجمعات تجارية',
+          subcategories: [
+            { name: 'Office Towers', nameAr: 'أبراج مكتبية' },
+            { name: 'Shopping Malls', nameAr: 'مراكز تسوق' },
+            { name: 'Business Centers', nameAr: 'مراكز أعمال' }
+          ]
         },
         {
           name: 'Industrial Facilities',
           nameAr: 'المنشآت الصناعية',
           icon: Factory,
           description: 'Manufacturing plants, warehouses, and industrial complexes',
-          descriptionAr: 'مصانع ومستودعات ومجمعات صناعية'
+          descriptionAr: 'مصانع ومستودعات ومجمعات صناعية',
+          subcategories: [
+            { name: 'Manufacturing Plants', nameAr: 'مصانع التصنيع' },
+            { name: 'Warehouses', nameAr: 'مستودعات' },
+            { name: 'Industrial Complexes', nameAr: 'مجمعات صناعية' }
+          ]
         },
         {
           name: 'Educational Buildings',
           nameAr: 'المباني التعليمية',
           icon: School,
           description: 'Schools, universities, and educational facilities',
-          descriptionAr: 'مدارس وجامعات ومرافق تعليمية'
+          descriptionAr: 'مدارس وجامعات ومرافق تعليمية',
+          subcategories: [
+            { name: 'Primary Schools', nameAr: 'مدارس ابتدائية' },
+            { name: 'Universities', nameAr: 'جامعات' },
+            { name: 'Training Centers', nameAr: 'مراكز تدريب' }
+          ]
         },
         {
           name: 'Healthcare Facilities',
           nameAr: 'المرافق الصحية',
           icon: Heart,
           description: 'Hospitals, clinics, and medical centers',
-          descriptionAr: 'مستشفيات وعيادات ومراكز طبية'
+          descriptionAr: 'مستشفيات وعيادات ومراكز طبية',
+          subcategories: [
+            { name: 'General Hospitals', nameAr: 'مستشفيات عامة' },
+            { name: 'Specialized Clinics', nameAr: 'عيادات متخصصة' },
+            { name: 'Medical Centers', nameAr: 'مراكز طبية' }
+          ]
         },
         {
           name: 'Infrastructure',
           nameAr: 'البنية التحتية',
           icon: Globe,
           description: 'Roads, bridges, and public infrastructure',
-          descriptionAr: 'طرق وجسور وبنية تحتية عامة'
+          descriptionAr: 'طرق وجسور وبنية تحتية عامة',
+          subcategories: [
+            { name: 'Road Construction', nameAr: 'إنشاء الطرق' },
+            { name: 'Bridge Engineering', nameAr: 'هندسة الجسور' },
+            { name: 'Public Utilities', nameAr: 'المرافق العامة' }
+          ]
         }
         ]
     },
@@ -200,53 +230,83 @@ const Services: React.FC = () => {
           nameAr: 'توزيع الطاقة',
           icon: Zap,
           description: 'Electrical panels, transformers, and power systems',
-          descriptionAr: 'لوحات كهربائية ومحولات وأنظمة طاقة'
+          descriptionAr: 'لوحات كهربائية ومحولات وأنظمة طاقة',
+          subcategories: [
+            { name: 'Main Distribution Panels', nameAr: 'لوحات توزيع رئيسية' },
+            { name: 'Transformers', nameAr: 'محولات كهربائية' },
+            { name: 'Power Monitoring', nameAr: 'مراقبة الطاقة' }
+          ]
         },
         {
           name: 'Lighting Design',
           nameAr: 'تصميم الإضاءة',
           icon: Lightbulb,
           description: 'Interior and exterior lighting solutions',
-          descriptionAr: 'حلول الإضاءة الداخلية والخارجية'
+          descriptionAr: 'حلول الإضاءة الداخلية والخارجية',
+          subcategories: [
+            { name: 'LED Systems', nameAr: 'أنظمة LED' },
+            { name: 'Architectural Lighting', nameAr: 'إضاءة معمارية' },
+            { name: 'Emergency Lighting', nameAr: 'إضاءة طوارئ' }
+          ]
         },
         {
           name: 'Smart Controls',
           nameAr: 'التحكم الذكي',
           icon: Settings,
           description: 'Building automation and smart systems',
-          descriptionAr: 'أتمتة المباني والأنظمة الذكية'
+          descriptionAr: 'أتمتة المباني والأنظمة الذكية',
+          subcategories: [
+            { name: 'BMS Systems', nameAr: 'أنظمة إدارة المباني' },
+            { name: 'Home Automation', nameAr: 'أتمتة منزلية' },
+            { name: 'IoT Integration', nameAr: 'تكامل إنترنت الأشياء' }
+          ]
         },
         {
           name: 'Security Systems',
           nameAr: 'أنظمة الأمان',
           icon: Shield,
           description: 'CCTV, access control, and alarm systems',
-          descriptionAr: 'كاميرات مراقبة وتحكم بالدخول وأنظمة إنذار'
+          descriptionAr: 'كاميرات مراقبة وتحكم بالدخول وأنظمة إنذار',
+          subcategories: [
+            { name: 'CCTV Surveillance', nameAr: 'مراقبة بالفيديو' },
+            { name: 'Access Control', nameAr: 'تحكم بالدخول' },
+            { name: 'Intrusion Alarms', nameAr: 'إنذار اقتحام' }
+          ]
         },
         {
           name: 'Communication Networks',
           nameAr: 'شبكات الاتصالات',
           icon: Globe,
           description: 'Data networks, telecommunications, and IT infrastructure',
-          descriptionAr: 'شبكات البيانات والاتصالات والبنية التحتية لتقنية المعلومات'
+          descriptionAr: 'شبكات البيانات والاتصالات والبنية التحتية لتقنية المعلومات',
+          subcategories: [
+            { name: 'Structured Cabling', nameAr: 'الأسلاك المنظمة' },
+            { name: 'Network Infrastructure', nameAr: 'بنية الشبكة' },
+            { name: 'Wireless Systems', nameAr: 'أنظمة لاسلكية' }
+          ]
         },
         {
           name: 'Renewable Energy',
           nameAr: 'الطاقة المتجددة',
           icon: TreePine,
           description: 'Solar panels and sustainable energy solutions',
-          descriptionAr: 'الألواح الشمسية وحلول الطاقة المستدامة'
+          descriptionAr: 'الألواح الشمسية وحلول الطاقة المستدامة',
+          subcategories: [
+            { name: 'Solar Panels', nameAr: 'ألواح شمسية' },
+            { name: 'Wind Energy', nameAr: 'طاقة الرياح' },
+            { name: 'Energy Storage', nameAr: 'تخزين الطاقة' }
+          ]
         }
         ]
     },
     {
       id: 'water',
-      title: 'Water & Sanitation',
-      titleAr: 'المياه والصرف الصحي',
-      subtitle: 'Sustainable Water Solutions',
-      subtitleAr: 'حلول مياه مستدامة',
-      description: 'Comprehensive water supply, treatment, and sanitation infrastructure solutions designed for efficiency, sustainability, and public health',
-      descriptionAr: 'حلول شاملة لإمداد المياه ومعالجتها وبنية الصرف الصحي مصممة للكفاءة والاستدامة والصحة العامة',
+      title: 'Plumbing',
+      titleAr: 'السباكة',
+      subtitle: 'Professional Plumbing Solutions',
+      subtitleAr: 'حلول سباكة احترافية',
+      description: 'Complete plumbing systems and water infrastructure solutions designed for efficiency, reliability, and long-term performance',
+      descriptionAr: 'أنظمة سباكة متكاملة وحلول البنية التحتية للمياه مصممة للكفاءة والموثوقية والأداء طويل الأمد',
       icon: Droplets,
       color: 'from-cyan-500 to-blue-600',
       accentColor: 'cyan-500',
@@ -260,42 +320,72 @@ const Services: React.FC = () => {
           nameAr: 'معالجة المياه',
           icon: Droplets,
           description: 'Water purification and treatment systems',
-          descriptionAr: 'أنظمة تنقية ومعالجة المياه'
+          descriptionAr: 'أنظمة تنقية ومعالجة المياه',
+          subcategories: [
+            { name: 'Filtration Systems', nameAr: 'أنظمة الترشيح' },
+            { name: 'Reverse Osmosis', nameAr: 'التناضح العكسي' },
+            { name: 'Disinfection', nameAr: 'التعقيم' }
+          ]
         },
         {
           name: 'Pumping Stations',
           nameAr: 'محطات الضخ',
           icon: Settings,
           description: 'Water pumping and distribution systems',
-          descriptionAr: 'أنظمة ضخ وتوزيع المياه'
+          descriptionAr: 'أنظمة ضخ وتوزيع المياه',
+          subcategories: [
+            { name: 'Centrifugal Pumps', nameAr: 'مضخات طاردة مركزية' },
+            { name: 'Booster Stations', nameAr: 'محطات التعزيز' },
+            { name: 'Control Systems', nameAr: 'أنظمة التحكم' }
+          ]
         },
         {
           name: 'Sewage Systems',
           nameAr: 'أنظمة الصرف الصحي',
           icon: Truck,
           description: 'Wastewater collection and treatment',
-          descriptionAr: 'جمع ومعالجة مياه الصرف الصحي'
+          descriptionAr: 'جمع ومعالجة مياه الصرف الصحي',
+          subcategories: [
+            { name: 'Collection Networks', nameAr: 'شبكات التجميع' },
+            { name: 'Treatment Plants', nameAr: 'محطات المعالجة' },
+            { name: 'Sludge Management', nameAr: 'إدارة الرواسب' }
+          ]
         },
         {
           name: 'Distribution Networks',
           nameAr: 'شبكات التوزيع',
           icon: Globe,
           description: 'Water supply pipeline systems',
-          descriptionAr: 'أنظمة أنابيب إمداد المياه'
+          descriptionAr: 'أنظمة أنابيب إمداد المياه',
+          subcategories: [
+            { name: 'Main Pipelines', nameAr: 'الأنابيب الرئيسية' },
+            { name: 'Service Connections', nameAr: 'وصلات الخدمة' },
+            { name: 'Pressure Management', nameAr: 'إدارة الضغط' }
+          ]
         },
         {
           name: 'Storage Solutions',
           nameAr: 'حلول التخزين',
           icon: Briefcase,
           description: 'Water tanks and reservoir systems',
-          descriptionAr: 'خزانات المياه وأنظمة الخزانات'
+          descriptionAr: 'خزانات المياه وأنظمة الخزانات',
+          subcategories: [
+            { name: 'Ground Tanks', nameAr: 'خزانات أرضية' },
+            { name: 'Elevated Tanks', nameAr: 'خزانات مرتفعة' },
+            { name: 'Reservoirs', nameAr: 'خزانات مياه' }
+          ]
         },
         {
           name: 'Environmental Solutions',
           nameAr: 'الحلول البيئية',
           icon: TreePine,
           description: 'Eco-friendly water management',
-          descriptionAr: 'إدارة المياه الصديقة للبيئة'
+          descriptionAr: 'إدارة المياه الصديقة للبيئة',
+          subcategories: [
+            { name: 'Water Recycling', nameAr: 'إعادة تدوير المياه' },
+            { name: 'Rainwater Harvesting', nameAr: 'تجميع مياه الأمطار' },
+            { name: 'Greywater Systems', nameAr: 'أنظمة المياه الرمادية' }
+          ]
         }
         ]
     }
@@ -503,8 +593,18 @@ const Services: React.FC = () => {
             </p>
           </motion.div>
 
-          {/* Service Navigation Tabs */}
-          <div className="flex md:flex-wrap flex-nowrap overflow-x-auto whitespace-nowrap justify-start md:justify-center gap-3 md:gap-4 mb-12 px-2 pr-4 -mx-2 scroll-smooth snap-x snap-mandatory">
+          {/* Modern Service Navigation Buttons */}
+          <div className="relative mb-16">
+            {/* Mobile scroll indicator */}
+            <div className="md:hidden absolute top-0 right-0 z-10 bg-gradient-to-l from-gray-50 dark:from-gray-800 to-transparent w-8 h-full pointer-events-none"></div>
+            <div className="md:hidden absolute top-0 left-0 z-10 bg-gradient-to-r from-gray-50 dark:from-gray-800 to-transparent w-8 h-full pointer-events-none"></div>
+            
+            <div className="flex md:flex-wrap flex-nowrap overflow-x-auto justify-start md:justify-center gap-4 md:gap-6 px-2 pr-4 -mx-2 scroll-smooth snap-x snap-mandatory scrollbar-hide"
+                 style={{
+                   scrollbarWidth: 'none',
+                   msOverflowStyle: 'none',
+                   WebkitOverflowScrolling: 'touch'
+                 }}>
             {services.map((service, index) => {
               const IconComponent = service.icon;
               // Get background image based on service type using public folder path
@@ -529,13 +629,13 @@ const Services: React.FC = () => {
                 <motion.button
                   key={index}
                   onClick={() => setActiveService(index)}
-                  className={`shrink-0 snap-start flex items-center px-4 md:px-6 py-2 md:py-3 rounded-xl font-medium text-sm md:text-base transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-400 relative overflow-hidden border border-white/20 ${
+                  className={`group shrink-0 snap-start relative overflow-hidden rounded-2xl md:rounded-3xl font-semibold text-sm md:text-base transition-all duration-500 focus:outline-none focus-visible:ring-4 focus-visible:ring-primary-400/50 min-w-[160px] md:min-w-[220px] h-24 md:h-32 ${
                     activeService === index
-                      ? 'text-white shadow-lg ring-2 ring-primary-400 ring-opacity-50'
-                      : 'text-white hover:scale-105 hover:shadow-xl'
+                      ? 'shadow-2xl shadow-primary-500/30 ring-4 ring-primary-400/50 scale-105'
+                      : 'shadow-lg hover:shadow-2xl hover:shadow-primary-500/20 hover:scale-105'
                   }`}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={{ y: -4 }}
+                  whileTap={{ scale: 0.98 }}
                   style={{
                     backgroundImage: `url(${backgroundImage})`,
                     backgroundSize: 'cover',
@@ -543,21 +643,67 @@ const Services: React.FC = () => {
                     backgroundRepeat: 'no-repeat'
                   }}
                 >
-                  {/* Dark overlay for better text readability */}
-                  <div className={`absolute inset-0 transition-all duration-300 ${
+                  {/* Modern gradient overlay */}
+                  <div className={`absolute inset-0 transition-all duration-500 ${
                     activeService === index
-                      ? 'bg-black/40'
-                      : 'bg-black/60 hover:bg-black/50'
+                      ? 'bg-gradient-to-br from-primary-600/85 via-primary-700/80 to-primary-800/85'
+                      : 'bg-gradient-to-br from-gray-900/75 via-gray-800/70 to-gray-900/80 group-hover:from-primary-600/75 group-hover:via-primary-700/70 group-hover:to-primary-800/75'
                   }`} />
                   
-                  {/* Content with relative positioning */}
-                  <div className="relative z-10 flex items-center">
-                    <IconComponent className="w-4 h-4 md:w-5 md:h-5 mr-2 md:mr-3" />
-                    {currentLang === 'ar' ? service.titleAr : service.title}
+                  {/* Modern pattern overlay */}
+                  <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4xIj48Y2lyY2xlIGN4PSIzMCIgY3k9IjMwIiByPSIyIi8+PC9nPjwvZz48L3N2Zz4=')] opacity-30"></div>
+                  
+                  {/* Animated accent line */}
+                  <div className={`absolute bottom-0 left-0 h-1 bg-gradient-to-r from-primary-300 to-primary-500 transition-all duration-500 ${
+                    activeService === index ? 'w-full' : 'w-0 group-hover:w-full'
+                  }`} />
+                  
+                  {/* Content container */}
+                  <div className="relative z-10 flex flex-col items-center justify-center h-full p-4 text-white">
+                    {/* Modern icon container */}
+                    <div className={`mb-2 md:mb-3 p-2 md:p-3 rounded-xl backdrop-blur-sm transition-all duration-300 ${
+                      activeService === index
+                        ? 'bg-white/20 border border-white/30'
+                        : 'bg-white/10 border border-white/20 group-hover:bg-white/20 group-hover:border-white/30'
+                    }`}>
+                      <IconComponent className="w-5 h-5 md:w-6 md:h-6" />
+                    </div>
+                    
+                    {/* Service title */}
+                    <span className="text-center leading-tight font-bold">
+                      {currentLang === 'ar' ? service.titleAr : service.title}
+                    </span>
+                    
+                    {/* Modern active indicator */}
+                    {activeService === index && (
+                      <motion.div
+                        initial={{ scale: 0, opacity: 0 }}
+                        animate={{ scale: 1, opacity: 1 }}
+                        className="absolute top-3 right-3 w-3 h-3 bg-primary-300 rounded-full shadow-lg"
+                      />
+                    )}
                   </div>
+                  
+                  {/* Modern border glow effect */}
+                  <div className={`absolute inset-0 rounded-2xl md:rounded-3xl border-2 transition-all duration-500 pointer-events-none ${
+                    activeService === index
+                      ? 'border-primary-300/60'
+                      : 'border-transparent group-hover:border-primary-400/40'
+                  }`} />
                 </motion.button>
               );
             })}
+            </div>
+            
+            {/* Mobile scroll hint */}
+            <div className="md:hidden flex justify-center mt-4">
+              <div className="flex items-center gap-2 px-4 py-2 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-full text-sm text-gray-600 dark:text-gray-300 border border-gray-200 dark:border-gray-700">
+                <span>{currentLang === 'ar' ? 'اسحب لرؤية المزيد' : 'Swipe to see more'}</span>
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </div>
+            </div>
           </div>
 
           {/* Active Service Details */}
@@ -571,12 +717,12 @@ const Services: React.FC = () => {
               className="bg-white dark:bg-gray-800 rounded-3xl shadow-2xl overflow-hidden"
             >
               <div className="p-8 lg:p-12">
-                {/* Categories Grid - Full Width */}
+                {/* Modern Categories Grid */}
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5 }}
-                  className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+                  className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"
                 >
                   {currentService.categories.map((category, index) => {
                     const CategoryIcon = category.icon;
@@ -633,97 +779,88 @@ const Services: React.FC = () => {
                     return (
                       <motion.div
                         key={index}
-                        className="group relative bg-gradient-to-br from-white via-white to-gray-50/50 dark:from-gray-800 dark:via-gray-800 dark:to-gray-900/50 rounded-3xl overflow-hidden border border-gray-200/60 dark:border-gray-700/60 hover:border-orange-200 dark:hover:border-orange-800/50 transition-all duration-300 hover:shadow-xl hover:shadow-orange-500/5 will-change-transform"
+                        className="group relative bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl rounded-3xl overflow-hidden border border-white/20 dark:border-gray-700/20 shadow-xl hover:shadow-2xl transition-all duration-500 will-change-transform"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: Math.min(index * 0.05, 0.3), duration: 0.4 }}
-                        whileHover={{ y: -4 }}
+                        transition={{ delay: Math.min(index * 0.08, 0.4), duration: 0.6 }}
+                        whileHover={{ y: -8, scale: 1.02 }}
                       >
-                        {/* Modern Gradient Background */}
-                        <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 via-transparent to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        {/* Glassmorphism Background */}
+                        <div className="absolute inset-0 bg-gradient-to-br from-primary-500/5 via-transparent to-primary-600/10 opacity-60 group-hover:opacity-100 transition-opacity duration-500"></div>
                         
-                        {/* Background Image with Modern Overlay */}
-                        <div className="relative h-48 overflow-hidden">
+                        {/* Modern Background Image with Enhanced Overlay */}
+                        <div className="relative h-56 overflow-hidden">
                           <OptimizedImage
                             src={bannerImage}
                             alt={currentLang === 'ar' ? category.nameAr : category.name}
-                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300 will-change-transform"
+                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 will-change-transform"
                             loading="lazy"
                             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                           />
-                          <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/40 to-transparent"></div>
-                          <div className="absolute inset-0 bg-gradient-to-br from-orange-600/20 via-transparent to-blue-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                          {/* Modern Gradient Overlay */}
+                          <div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/50 to-transparent"></div>
+                          <div className="absolute inset-0 bg-gradient-to-br from-primary-600/30 via-transparent to-primary-800/40 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                           
-                          {/* Modern Category Badge */}
-                          <div className="absolute top-5 right-5">
-                            <div className="bg-white/95 backdrop-blur-md text-gray-800 px-4 py-2 rounded-2xl text-xs font-bold shadow-lg border border-white/20 group-hover:bg-orange-50 group-hover:text-orange-800 transition-all duration-300">
-                              {currentLang === 'ar' ? category.nameAr : category.name}
-                            </div>
-                          </div>
+
                           
 
 
-                          {/* Modern Icon Container */}
-                          <div className="absolute bottom-5 left-5">
-                            <div className="w-14 h-14 bg-white/15 backdrop-blur-md rounded-2xl flex items-center justify-center border border-white/30 group-hover:bg-orange-500/20 group-hover:border-orange-300/50 transition-all duration-300">
-                              <CategoryIcon className="w-7 h-7 text-white group-hover:text-orange-100 transition-colors duration-300" />
+                          {/* Floating Icon with Glassmorphism */}
+                          <div className="absolute top-6 right-6">
+                            <div className="w-16 h-16 bg-white/20 backdrop-blur-xl rounded-2xl flex items-center justify-center border border-white/30 shadow-2xl group-hover:bg-primary-500/30 group-hover:border-primary-300/50 group-hover:scale-110 transition-all duration-500">
+                              <CategoryIcon className="w-8 h-8 text-white group-hover:text-primary-100 transition-colors duration-300" />
                             </div>
                           </div>
 
-                          {/* Modern Decorative Elements */}
-                          <div className="absolute top-1/2 right-8 w-20 h-20 bg-gradient-to-br from-orange-400/20 to-blue-400/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                        </div>
-
-                        {/* Modern Content Section */}
-                        <div className="relative p-7 space-y-5">
-                          {/* Title and Description */}
-                          <div className="space-y-3">
-                            <h4 className="text-xl font-bold text-gray-800 dark:text-white group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors duration-300 leading-tight">
+                          {/* Modern Title Overlay */}
+                          <div className="absolute bottom-6 left-6 right-6">
+                            <h4 className="text-2xl font-bold text-white mb-2 leading-tight drop-shadow-lg">
                               {currentLang === 'ar' ? category.nameAr : category.name}
                             </h4>
-                            <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed line-clamp-2">
+                            <p className="text-sm text-gray-200 leading-relaxed line-clamp-2 drop-shadow-md">
                               {currentLang === 'ar' ? category.descriptionAr : category.description}
                             </p>
                           </div>
 
+                          {/* Modern Decorative Elements */}
+                          <div className="absolute top-1/3 left-8 w-24 h-24 bg-gradient-to-br from-primary-400/20 to-primary-600/30 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                          <div className="absolute bottom-1/3 right-8 w-16 h-16 bg-gradient-to-br from-white/10 to-primary-300/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                        </div>
+
+                        {/* Modern Content Section with Glassmorphism */}
+                        <div className="relative p-6 space-y-4 bg-gradient-to-b from-white/60 to-white/80 dark:from-gray-800/60 dark:to-gray-800/80 backdrop-blur-sm">
                           {/* Modern Specializations Section */}
                           {Array.isArray((category as any).subcategories) && (category as any).subcategories.length > 0 && (
-                            <div className="space-y-4 pt-2">
-                              {/* Modern Divider */}
-                              <div className="h-px bg-gradient-to-r from-transparent via-orange-200 dark:via-orange-800/50 to-transparent"></div>
+                            <div className="space-y-4">
+                              <div className="flex items-center gap-3">
+                                <div className="w-1 h-6 bg-gradient-to-b from-primary-500 to-primary-600 rounded-full"></div>
+                                <p className="text-sm font-bold text-primary-700 dark:text-primary-400 uppercase tracking-wider">
+                                  {currentLang === 'ar' ? 'التخصصات المتاحة' : 'Specializations'}
+                                </p>
+                              </div>
                               
-                              <div className="space-y-3">
-                                <div className="flex items-center gap-2">
-                                  <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
-                                  <p className="text-xs font-bold text-orange-600 dark:text-orange-400 uppercase tracking-wider">
-                                    {currentLang === 'ar' ? 'التخصصات المتاحة' : 'Available Specializations'}
-                                  </p>
-                                </div>
-                                
-                                <div className="flex flex-wrap gap-2">
-                                  {(category as any).subcategories.slice(0, 2).map((sub: any, subIndex: number) => (
-                                    <span
-                                      key={subIndex}
-                                      className="inline-flex items-center px-3 py-1.5 rounded-xl text-xs font-medium bg-gradient-to-r from-orange-50 to-orange-100 dark:from-orange-900/30 dark:to-orange-800/30 text-orange-700 dark:text-orange-300 border border-orange-200/50 dark:border-orange-700/50 hover:from-orange-100 hover:to-orange-200 dark:hover:from-orange-800/40 dark:hover:to-orange-700/40 transition-all duration-300"
-                                    >
-                                      {currentLang === 'ar' ? sub.nameAr : sub.name}
-                                    </span>
-                                  ))}
-
-                                </div>
+                              <div className="flex flex-wrap gap-2">
+                                {(category as any).subcategories.map((sub: any, subIndex: number) => (
+                                  <motion.span
+                                    key={subIndex}
+                                    className="inline-flex items-center px-4 py-2 rounded-2xl text-xs font-semibold bg-gradient-to-r from-primary-50 to-primary-100 dark:from-primary-900/40 dark:to-primary-800/40 text-primary-700 dark:text-primary-300 border border-primary-200/60 dark:border-primary-700/60 hover:from-primary-100 hover:to-primary-200 dark:hover:from-primary-800/60 dark:hover:to-primary-700/60 transition-all duration-300 shadow-sm hover:shadow-md backdrop-blur-sm"
+                                    whileHover={{ scale: 1.05 }}
+                                    whileTap={{ scale: 0.95 }}
+                                  >
+                                    {currentLang === 'ar' ? sub.nameAr : sub.name}
+                                  </motion.span>
+                                ))}
                               </div>
                             </div>
                           )}
 
-                          {/* Modern Action Indicator */}
-
                         </div>
 
-                        {/* Modern Hover Effect */}
-                        <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-orange-500/10 via-transparent to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+                        {/* Modern Border Glow Effect */}
+                        <div className="absolute inset-0 rounded-3xl border-2 border-transparent group-hover:border-primary-300/50 dark:group-hover:border-primary-600/50 transition-all duration-500 pointer-events-none"></div>
                         
-                        {/* Modern Border Effect */}
-                        <div className="absolute inset-0 rounded-3xl border-2 border-transparent group-hover:border-gradient-to-r group-hover:from-orange-300/50 group-hover:to-blue-300/50 transition-all duration-500 pointer-events-none"></div>
+                        {/* Modern Shine Effect */}
+                        <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none transform -skew-x-12 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
                       </motion.div>
                     );
                   })}
@@ -739,3 +876,4 @@ const Services: React.FC = () => {
 };
 
 export default Services;
+
