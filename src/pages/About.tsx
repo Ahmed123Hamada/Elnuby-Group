@@ -72,51 +72,75 @@ const About: React.FC = () => {
 
   return (
     <div className="pt-16 overflow-hidden">
-      {/* Hero Section */}
+      {/* Modern Hero Section */}
       <section 
-        className="relative bg-gradient-to-br from-primary-50 via-white to-primary-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 overflow-hidden"
+        className="relative min-h-[70vh] flex items-center justify-center overflow-hidden"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${aboutBgImage})`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url(${aboutBgImage})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat'
         }}
       >
-        <div className="container-custom section-padding relative z-10">
+        {/* Modern decorative elements */}
+        <div className="absolute inset-0 overflow-hidden opacity-60">
+          <div className="absolute top-20 left-8 w-32 h-32 bg-primary-400/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-8 w-40 h-40 bg-primary-600/10 rounded-full blur-3xl"></div>
+          <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-primary-500/10 rounded-full blur-2xl"></div>
+        </div>
+        
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center"
+            className="text-center max-w-4xl mx-auto py-20"
           >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 drop-shadow-lg">
-              {t('aboutTitle')}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="mb-6"
+            >
+              <span className="inline-block px-6 py-3 bg-white/10 backdrop-blur-sm text-white rounded-full text-sm font-medium border border-white/20">
+                {currentLang === 'ar' ? 'من نحن' : 'About Us'}
+              </span>
+            </motion.div>
+            
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+              <span className="bg-gradient-to-r from-white to-primary-200 bg-clip-text text-transparent">
+                {t('aboutTitle')}
+              </span>
             </h1>
-            <p className="text-xl text-white max-w-3xl mx-auto leading-relaxed drop-shadow-md">
+            <p className="text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed">
               {t('aboutDescription')}
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="section-padding bg-white dark:bg-gray-900">
-        <div className="container-custom">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+      {/* Modern Stats Section */}
+      <section className="py-20 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {stats.map((stat, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="text-center"
+                className="group relative bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl rounded-3xl p-6 text-center border border-white/20 dark:border-gray-700/20 shadow-lg hover:shadow-2xl transition-all duration-500"
+                whileHover={{ y: -4 }}
               >
-                <div className="text-3xl md:text-4xl font-bold text-primary-600 dark:text-primary-400 mb-2">
-                  {stat.number}
-                </div>
-                <div className="text-gray-600 dark:text-gray-300 text-sm">
-                  {stat.label}
+                <div className="absolute inset-0 bg-gradient-to-br from-primary-500/5 via-transparent to-primary-600/10 opacity-60 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl"></div>
+                <div className="relative z-10">
+                  <div className="text-3xl md:text-4xl font-bold text-primary-600 dark:text-primary-400 mb-2">
+                    {stat.number}
+                  </div>
+                  <div className="text-gray-600 dark:text-gray-300 text-sm font-medium">
+                    {stat.label}
+                  </div>
                 </div>
               </motion.div>
             ))}
@@ -124,16 +148,20 @@ const About: React.FC = () => {
         </div>
       </section>
 
-      {/* Mission & Vision */}
-      <section className="section-padding bg-gray-50 dark:bg-gray-800">
-        <div className="container-custom">
+      {/* Modern Mission & Vision */}
+      <section className="py-24 bg-white dark:bg-gray-900">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <motion.div
-              initial={{ opacity: 0, x: -50 }}
+              initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.6 }}
               viewport={{ once: true }}
+              className="group relative bg-gradient-to-br from-primary-50/50 to-white dark:from-primary-900/20 dark:to-gray-800 rounded-3xl p-8 border border-primary-100/50 dark:border-primary-800/50"
             >
+              <div className="absolute top-6 right-6 w-16 h-16 bg-primary-500/10 rounded-2xl flex items-center justify-center">
+                <Target className="w-8 h-8 text-primary-600 dark:text-primary-400" />
+              </div>
               <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
                 {t('ourMission')}
               </h2>
@@ -147,20 +175,33 @@ const About: React.FC = () => {
                   t('ensureClientSatisfaction'),
                   t('promoteSustainablePractices'),
                 ].map((item, index) => (
-                  <div key={index} className="flex items-center space-x-3">
-                    <CheckCircle className="text-primary-600 dark:text-primary-400 flex-shrink-0" size={20} />
-                    <span className="text-gray-700 dark:text-gray-300">{item}</span>
-                  </div>
+                  <motion.div 
+                    key={index} 
+                    className="flex items-center space-x-3 group/item"
+                    initial={{ opacity: 0, x: -10 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.4, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                  >
+                    <div className="w-6 h-6 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center group-hover/item:bg-primary-200 dark:group-hover/item:bg-primary-800 transition-colors">
+                      <CheckCircle className="text-primary-600 dark:text-primary-400" size={16} />
+                    </div>
+                    <span className="text-gray-700 dark:text-gray-300 group-hover/item:text-gray-900 dark:group-hover/item:text-white transition-colors">{item}</span>
+                  </motion.div>
                 ))}
               </div>
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, x: 50 }}
+              initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.6 }}
               viewport={{ once: true }}
+              className="group relative bg-gradient-to-br from-blue-50/50 to-white dark:from-blue-900/20 dark:to-gray-800 rounded-3xl p-8 border border-blue-100/50 dark:border-blue-800/50"
             >
+              <div className="absolute top-6 right-6 w-16 h-16 bg-blue-500/10 rounded-2xl flex items-center justify-center">
+                <Heart className="w-8 h-8 text-blue-600 dark:text-blue-400" />
+              </div>
               <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
                 {t('ourVision')}
               </h2>
@@ -174,10 +215,19 @@ const About: React.FC = () => {
                   t('sustainableDevelopmentCommitment'),
                   t('exceptionalServiceDelivery'),
                 ].map((item, index) => (
-                  <div key={index} className="flex items-center space-x-3">
-                    <CheckCircle className="text-primary-600 dark:text-primary-400 flex-shrink-0" size={20} />
-                    <span className="text-gray-700 dark:text-gray-300">{item}</span>
-                  </div>
+                  <motion.div 
+                    key={index} 
+                    className="flex items-center space-x-3 group/item"
+                    initial={{ opacity: 0, x: -10 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.4, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                  >
+                    <div className="w-6 h-6 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center group-hover/item:bg-blue-200 dark:group-hover/item:bg-blue-800 transition-colors">
+                      <CheckCircle className="text-blue-600 dark:text-blue-400" size={16} />
+                    </div>
+                    <span className="text-gray-700 dark:text-gray-300 group-hover/item:text-gray-900 dark:group-hover/item:text-white transition-colors">{item}</span>
+                  </motion.div>
                 ))}
               </div>
             </motion.div>
@@ -185,17 +235,17 @@ const About: React.FC = () => {
         </div>
       </section>
 
-      {/* Values Section */}
-      <section className="section-padding bg-white dark:bg-gray-900">
-        <div className="container-custom">
+      {/* Modern Values Section */}
+      <section className="py-24 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
               {t('ourValues')}
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
@@ -211,17 +261,21 @@ const About: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="text-center p-6 rounded-xl bg-gray-50 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-300 card-hover"
+                className="group relative bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl rounded-3xl p-8 text-center border border-white/20 dark:border-gray-700/20 shadow-lg hover:shadow-2xl transition-all duration-500"
+                whileHover={{ y: -8 }}
               >
-                <div className="w-16 h-16 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <value.icon className="text-primary-600 dark:text-primary-400" size={32} />
+                <div className="absolute inset-0 bg-gradient-to-br from-primary-500/5 via-transparent to-primary-600/10 opacity-60 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl"></div>
+                <div className="relative z-10">
+                  <div className="w-20 h-20 bg-gradient-to-br from-primary-100 to-primary-200 dark:from-primary-900 dark:to-primary-800 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <value.icon className="text-primary-600 dark:text-primary-400" size={36} />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
+                    {value.title}
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                    {value.description}
+                  </p>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
-                  {value.title}
-                </h3>
-                <p className="text-gray-600 dark:text-gray-300">
-                  {value.description}
-                </p>
               </motion.div>
             ))}
           </div>
@@ -334,20 +388,131 @@ const About: React.FC = () => {
         </div>
       </section>
 
-      {/* Founders Section */}
-      <section className="section-padding bg-white dark:bg-gray-900">
-        <div className="container-custom">
+      {/* Modern Branches Section */}
+      <section className="py-24 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Content */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+            >
+              <div className="mb-6">
+                <span className="inline-block px-6 py-3 bg-primary-100 dark:bg-primary-900/40 text-primary-700 dark:text-primary-300 rounded-full text-sm font-semibold border border-primary-200/50 dark:border-primary-700/50">
+                  <Building2 className="w-4 h-4 mr-2 inline" />
+                  {t('ourBranches')}
+                </span>
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+                {t('language') === 'Language' ? 'Our Branches' : 'فروعنا'}
+              </h2>
+              <p className="text-xl text-gray-600 dark:text-gray-300 mb-10 max-w-xl leading-relaxed">
+                {t('ourBranchesDesc')}
+              </p>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                {[ 
+                  { city: 'Libya Branch', cityAr: 'فرع ليبيا', address: 'Tripoli, Libya', addressAr: 'طرابلس، ليبيا', phone: '+218 21 000 0000', code: 'LY', color: 'from-green-500 to-green-600' },
+                  { city: 'Iraq Branch', cityAr: 'فرع العراق', address: 'Baghdad, Iraq', addressAr: 'بغداد، العراق', phone: '+964 1 000 0000', code: 'IQ', color: 'from-red-500 to-red-600' },
+                  { city: 'Egypt Branch', cityAr: 'فرع مصر', address: 'Nasr City, Cairo, Egypt', addressAr: 'مدينة نصر، القاهرة، مصر', phone: '+20 100 000 0000', code: 'EG', color: 'from-primary-500 to-primary-600' },
+                  { city: 'Saudi Arabia Branch', cityAr: 'فرع السعودية', address: 'Riyadh, Saudi Arabia', addressAr: 'الرياض، المملكة العربية السعودية', phone: '+966 11 000 0000', code: 'SA', color: 'from-yellow-500 to-yellow-600' },
+                ].map((b, idx) => (
+                  <motion.div
+                    key={idx}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: idx * 0.1 }}
+                    viewport={{ once: true }}
+                    className="group relative bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl rounded-3xl p-6 border border-white/20 dark:border-gray-700/20 shadow-lg hover:shadow-2xl transition-all duration-500"
+                    whileHover={{ y: -4 }}
+                  >
+                    <div className="absolute inset-0 bg-gradient-to-br from-primary-500/5 via-transparent to-primary-600/10 opacity-60 group-hover:opacity-100 transition-opacity duration-500 rounded-3xl"></div>
+                    <div className="relative z-10">
+                      <div className="flex items-start mb-4">
+                        <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${b.color} flex items-center justify-center mr-4 shadow-lg`}>
+                          <span className="text-sm font-bold text-white tracking-widest">{b.code}</span>
+                        </div>
+                        <div className="flex-1">
+                          <div className="flex items-center justify-between mb-2">
+                            <h3 className="text-lg font-bold text-gray-900 dark:text-white">
+                              {t('language') === 'Language' ? b.city : b.cityAr}
+                            </h3>
+                            <div className="w-8 h-8 rounded-full bg-gray-100 dark:bg-gray-700 flex items-center justify-center">
+                              <MapPin className="w-4 h-4 text-gray-600 dark:text-gray-400" />
+                            </div>
+                          </div>
+                          <p className="text-gray-600 dark:text-gray-300 text-sm mb-3">
+                            {t('language') === 'Language' ? b.address : b.addressAr}
+                          </p>
+                          <div className="flex items-center text-primary-600 dark:text-primary-400 text-sm font-medium">
+                            <Phone className="w-4 h-4 mr-2" /> {b.phone}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+
+            {/* Modern Image Section */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="relative"
+            >
+              <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl group">
+                <img 
+                  src={branchesHero} 
+                  alt="Elnuby offices" 
+                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" 
+                />
+                <div className="absolute inset-0 bg-gradient-to-tr from-black/50 via-black/20 to-transparent" />
+                
+                {/* Floating elements */}
+                <div className="absolute top-6 right-6">
+                  <div className="w-16 h-16 bg-white/20 backdrop-blur-xl rounded-2xl flex items-center justify-center border border-white/30 shadow-2xl">
+                    <Building2 className="w-8 h-8 text-white" />
+                  </div>
+                </div>
+                
+                <div className="absolute bottom-6 left-6 right-6">
+                  <h3 className="text-2xl font-bold text-white mb-2 drop-shadow-lg">
+                    {currentLang === 'ar' ? 'فروعنا حول العالم' : 'Our Global Presence'}
+                  </h3>
+                  <p className="text-gray-200 text-sm drop-shadow-md">
+                    {currentLang === 'ar' ? 'خدمة عملائنا في جميع أنحاء المنطقة' : 'Serving clients across the region'}
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Modern Founders Section */}
+      <section className="py-24 bg-white dark:bg-gray-900">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center mb-20"
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+            <div className="mb-6">
+              <span className="inline-block px-6 py-3 bg-primary-100 dark:bg-primary-900/40 text-primary-700 dark:text-primary-300 rounded-full text-sm font-semibold border border-primary-200/50 dark:border-primary-700/50">
+                {currentLang === 'ar' ? 'قيادة متميزة' : 'Leadership Excellence'}
+              </span>
+            </div>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6">
               {t('ourFounders')}
             </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
               {t('foundersDescription')}
             </p>
           </motion.div>
@@ -355,19 +520,21 @@ const About: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 max-w-6xl mx-auto mb-16">
             {/* Mr. Saleh El Nobi Card */}
             <motion.div
-              initial={{ opacity: 0, y: 50 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="group bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-gray-700"
+              className="group relative bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-white/20 dark:border-gray-700/20 overflow-hidden"
+              whileHover={{ y: -8 }}
             >
-              <div className="relative mb-6">
+              <div className="absolute inset-0 bg-gradient-to-br from-primary-500/5 via-transparent to-primary-600/10 opacity-60 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="relative z-10 mb-8">
                 {/* Image Container */}
-                <div className="relative w-full h-80 mx-auto overflow-hidden rounded-xl">
+                <div className="relative w-full h-80 mx-auto overflow-hidden rounded-2xl">
                   <img
                     src={engSalehImage}
                     alt="Mr. Saleh El Nobi"
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     onError={(e) => {
                       e.currentTarget.style.display = 'none';
                       e.currentTarget.nextElementSibling?.classList.remove('hidden');
@@ -377,38 +544,46 @@ const About: React.FC = () => {
                     <span className="text-8xl">👨‍💼</span>
                   </div>
                   
-                  {/* Hover Overlay with Details */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center p-6">
-                    <div className="text-center text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                      <div className="flex items-center justify-center space-x-4 mb-4">
-                        <div className="flex items-center px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full">
-                          <CheckCircle className="w-4 h-4 mr-2" />
-                          <span className="text-sm font-medium">{t('founded')} 2000</span>
-                        </div>
-                        <div className="flex items-center px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full">
-                          <Target className="w-4 h-4 mr-2" />
-                          <span className="text-sm font-medium">25+ {t('yearsExp')}</span>
-                        </div>
-                      </div>
-                      <p className="text-sm leading-relaxed opacity-90">
-                        {t('salehElNobiDesc').substring(0, 120)}...
-                      </p>
+                  {/* Modern Gradient Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/50 to-transparent"></div>
+                  
+                  {/* Floating Badge */}
+                  <div className="absolute top-4 right-4">
+                    <div className="w-12 h-12 bg-white/20 backdrop-blur-xl rounded-2xl flex items-center justify-center border border-white/30 shadow-2xl">
+                      <CheckCircle className="w-6 h-6 text-white" />
                     </div>
+                  </div>
+                  
+                  {/* Modern Title Overlay */}
+                  <div className="absolute bottom-6 left-6 right-6">
+                    <h3 className="text-2xl font-bold text-white mb-2 leading-tight drop-shadow-lg">
+                      Mr. Saleh El Nobi
+                    </h3>
+                    <p className="text-sm text-gray-200 leading-relaxed drop-shadow-md">
+                      {t('chairmanBoard')}
+                    </p>
                   </div>
                 </div>
               </div>
               
-              {/* Card Content */}
-              <div className="text-center">
-                <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-2">
-                  Mr. Saleh El Nobi
-                </h3>
+              {/* Modern Card Content */}
+              <div className="relative z-10 text-center space-y-4">
+                <div className="flex items-center justify-center space-x-4 mb-4">
+                  <div className="flex items-center px-4 py-2 bg-primary-100 dark:bg-primary-900/40 rounded-full">
+                    <CheckCircle className="w-4 h-4 mr-2 text-primary-600 dark:text-primary-400" />
+                    <span className="text-sm font-medium text-primary-700 dark:text-primary-300">{t('founded')} 2000</span>
+                  </div>
+                  <div className="flex items-center px-4 py-2 bg-primary-100 dark:bg-primary-900/40 rounded-full">
+                    <Target className="w-4 h-4 mr-2 text-primary-600 dark:text-primary-400" />
+                    <span className="text-sm font-medium text-primary-700 dark:text-primary-300">25+ {t('yearsExp')}</span>
+                  </div>
+                </div>
                 
-                <p className="text-primary-600 dark:text-primary-400 font-semibold mb-4">
-                  {t('chairmanBoard')}
+                <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-sm">
+                  {t('salehElNobiDesc').substring(0, 150)}...
                 </p>
                 
-                <div className="flex justify-center space-x-3">
+                <div className="flex justify-center space-x-2">
                   <div className="w-2 h-2 bg-primary-500 rounded-full"></div>
                   <div className="w-2 h-2 bg-primary-300 rounded-full"></div>
                   <div className="w-2 h-2 bg-primary-200 rounded-full"></div>
@@ -418,19 +593,21 @@ const About: React.FC = () => {
 
             {/* General Alaa Mohamed El-Madbouly Card */}
             <motion.div
-              initial={{ opacity: 0, y: 50 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
-              className="group bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-gray-700"
+              className="group relative bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 border border-white/20 dark:border-gray-700/20 overflow-hidden"
+              whileHover={{ y: -8 }}
             >
-              <div className="relative mb-6">
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-blue-600/10 opacity-60 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="relative z-10 mb-8">
                 {/* Image Container */}
-                <div className="relative w-full h-80 mx-auto overflow-hidden rounded-xl">
+                <div className="relative w-full h-80 mx-auto overflow-hidden rounded-2xl">
                   <img
                     src={genAlaaImage}
                     alt="General H.E. Mr. Alaa Mohamed El-Madbouly"
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     onError={(e) => {
                       e.currentTarget.style.display = 'none';
                       e.currentTarget.nextElementSibling?.classList.remove('hidden');
@@ -440,38 +617,46 @@ const About: React.FC = () => {
                     <span className="text-8xl">🎖️</span>
                   </div>
                   
-                  {/* Hover Overlay with Details */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center p-6">
-                    <div className="text-center text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                      <div className="flex items-center justify-center space-x-4 mb-4">
-                        <div className="flex items-center px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full">
-                          <CheckCircle className="w-4 h-4 mr-2" />
-                          <span className="text-sm font-medium">{t('strategicLeader')}</span>
-                        </div>
-                        <div className="flex items-center px-3 py-1 bg-white/20 backdrop-blur-sm rounded-full">
-                          <Target className="w-4 h-4 mr-2" />
-                          <span className="text-sm font-medium">{t('militaryExpert')}</span>
-                        </div>
-                      </div>
-                      <p className="text-sm leading-relaxed opacity-90">
-                        {t('alaaElMadboulyDesc').substring(0, 120)}...
-                      </p>
+                  {/* Modern Gradient Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/50 to-transparent"></div>
+                  
+                  {/* Floating Badge */}
+                  <div className="absolute top-4 right-4">
+                    <div className="w-12 h-12 bg-white/20 backdrop-blur-xl rounded-2xl flex items-center justify-center border border-white/30 shadow-2xl">
+                      <Heart className="w-6 h-6 text-white" />
                     </div>
+                  </div>
+                  
+                  {/* Modern Title Overlay */}
+                  <div className="absolute bottom-6 left-6 right-6">
+                    <h3 className="text-2xl font-bold text-white mb-2 leading-tight drop-shadow-lg">
+                      General H.E. Mr. Alaa Mohamed El-Madbouly
+                    </h3>
+                    <p className="text-sm text-gray-200 leading-relaxed drop-shadow-md">
+                      {t('viceChairmanBoard')}
+                    </p>
                   </div>
                 </div>
               </div>
               
-              {/* Card Content */}
-              <div className="text-center">
-                <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-2">
-                  General H.E. Mr. Alaa Mohamed El-Madbouly
-                </h3>
+              {/* Modern Card Content */}
+              <div className="relative z-10 text-center space-y-4">
+                <div className="flex items-center justify-center space-x-4 mb-4">
+                  <div className="flex items-center px-4 py-2 bg-blue-100 dark:bg-blue-900/40 rounded-full">
+                    <CheckCircle className="w-4 h-4 mr-2 text-blue-600 dark:text-blue-400" />
+                    <span className="text-sm font-medium text-blue-700 dark:text-blue-300">{t('strategicLeader')}</span>
+                  </div>
+                  <div className="flex items-center px-4 py-2 bg-blue-100 dark:bg-blue-900/40 rounded-full">
+                    <Target className="w-4 h-4 mr-2 text-blue-600 dark:text-blue-400" />
+                    <span className="text-sm font-medium text-blue-700 dark:text-blue-300">{t('militaryExpert')}</span>
+                  </div>
+                </div>
                 
-                <p className="text-blue-600 dark:text-blue-400 font-semibold mb-4">
-                  {t('viceChairmanBoard')}
+                <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-sm">
+                  {t('alaaElMadboulyDesc').substring(0, 150)}...
                 </p>
                 
-                <div className="flex justify-center space-x-3">
+                <div className="flex justify-center space-x-2">
                   <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
                   <div className="w-2 h-2 bg-blue-300 rounded-full"></div>
                   <div className="w-2 h-2 bg-blue-200 rounded-full"></div>
@@ -503,89 +688,7 @@ const About: React.FC = () => {
         </div>
       </section>
 
-      {/* Branches Section */}
-      <section className="section-padding bg-gradient-to-br from-white via-primary-50/30 to-white dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
-        <div className="container-custom">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-            {/* Content */}
-            <motion.div
-              initial={{ opacity: 0, x: -40 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.7 }}
-              viewport={{ once: true }}
-            >
-              <div className="inline-flex items-center px-3 py-1 rounded-full bg-primary-100 text-primary-700 dark:bg-primary-900/40 dark:text-primary-300 text-sm mb-4 shadow-sm">
-                <Building2 className="w-4 h-4 mr-2" />
-                {t('ourBranches')}
-              </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-3">
-                {t('language') === 'Language' ? 'Our Branches ' : 'فروعنا'}
-              </h2>
-              <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 max-w-xl">
-                {t('ourBranchesDesc')}
-              </p>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                {[ 
-                  { city: 'Libya Branch', cityAr: 'فرع ليبيا', address: 'Tripoli, Libya', addressAr: 'طرابلس، ليبيا', phone: '+218 21 000 0000', code: 'LY' },
-                  { city: 'Iraq Branch', cityAr: 'فرع العراق', address: 'Baghdad, Iraq', addressAr: 'بغداد، العراق', phone: '+964 1 000 0000', code: 'IQ' },
-                  { city: 'Egypt Branch', cityAr: 'فرع مصر', address: 'Nasr City, Cairo, Egypt', addressAr: 'مدينة نصر، القاهرة، مصر', phone: '+20 100 000 0000', code: 'EG' },
-                  { city: 'Saudi Arabia Branch', cityAr: 'فرع السعودية', address: 'Riyadh, Saudi Arabia', addressAr: 'الرياض، المملكة العربية السعودية', phone: '+966 11 000 0000', code: 'SA' },
-                ].map((b, idx) => (
-                  <motion.div
-                    key={idx}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.4, delay: idx * 0.05 }}
-                    viewport={{ once: true }}
-                    className="group relative p-[1px] rounded-2xl bg-gradient-to-br from-primary-200/60 via-primary-100/30 to-transparent dark:from-primary-500/30 dark:via-primary-400/10 hover:from-primary-300/70 dark:hover:from-primary-500/50 transition-colors"
-                  >
-                    <div className="rounded-[14px] bg-white dark:bg-gray-900/60 backdrop-blur-md border border-gray-200 dark:border-white/10 shadow-sm hover:shadow-md transition-all p-5">
-                      <div className="flex items-start">
-                        <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-gray-50 to-white dark:from-gray-800 dark:to-gray-900 flex items-center justify-center mr-4 ring-1 ring-black/5 dark:ring-white/10">
-                          <span className="text-sm font-bold text-gray-700 dark:text-gray-200 tracking-widest">{b.code}</span>
-                        </div>
-                        <div className="flex-1">
-                          <div className="flex items-center justify-between">
-                            <h3 className="text-[15px] md:text-lg font-semibold text-gray-900 dark:text-white">
-                              {t('language') === 'Language' ? b.city : b.cityAr}
-                            </h3>
-                            <span className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-gray-50 dark:bg-gray-800 text-gray-400 dark:text-gray-500 ring-1 ring-gray-200 dark:ring-0">
-                              <MapPin className="w-4 h-4" />
-                            </span>
-                          </div>
-                          <div className="mt-1 text-gray-600 dark:text-gray-300 text-sm md:text-[15px]">
-                            {t('language') === 'Language' ? b.address : b.addressAr}
-                          </div>
-                          <div className="mt-3 inline-flex items-center text-primary-700 dark:text-primary-400 text-sm font-medium">
-                            <Phone className="w-4 h-4 mr-2" /> {b.phone}
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-
-            {/* Image Collage */}
-            <motion.div
-              initial={{ opacity: 0, x: 40 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.7 }}
-              viewport={{ once: true }}
-              className="relative"
-            >
-              <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl">
-                <img src={branchesHero} alt="Elnuby offices" className="absolute inset-0 w-full h-full object-cover" />
-                <div className="absolute inset-0 bg-gradient-to-tr from-black/40 via-black/10 to-transparent" />
-              </div>
-
-
-            </motion.div>
-          </div>
-        </div>
-      </section>
+      {/* End of page */}
     </div>
   );
 };

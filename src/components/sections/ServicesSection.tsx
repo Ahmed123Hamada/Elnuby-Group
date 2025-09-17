@@ -99,15 +99,15 @@ const ServicesSection: React.FC = () => {
       viewport={{ once: true }}
     >
       {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-30">
+      <div className="absolute inset-0 opacity-15">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iNCIvPjwvZz48L2c+PC9zdmc+')] opacity-30"></div>
       </div>
 
       {/* Decorative elements */}
-      <div className="absolute inset-0 overflow-hidden opacity-60 md:opacity-100">
-        <div className="absolute top-20 left-8 w-32 h-32 bg-primary-400/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-8 w-40 h-40 bg-primary-600/10 rounded-full blur-3xl"></div>
-        <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-primary-500/10 rounded-full blur-2xl"></div>
+      <div className="absolute inset-0 overflow-hidden opacity-35 md:opacity-70">
+        <div className="absolute top-20 left-8 w-32 h-32 bg-primary-400/10 rounded-full blur-2xl"></div>
+        <div className="absolute bottom-20 right-8 w-40 h-40 bg-primary-600/10 rounded-full blur-2xl"></div>
+        <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-primary-500/10 rounded-full blur-xl"></div>
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -152,14 +152,17 @@ const ServicesSection: React.FC = () => {
             const description = currentLang === 'ar' ? service.descriptionAr : service.description;
             
             return (
-              <motion.div
+              <motion.button
                 key={index}
+                type="button"
+                onClick={() => handleServiceClick(service.serviceIndex)}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="group relative"
+                className="group relative text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-gray-900 rounded-3xl"
                 whileHover={{ y: -8 }}
+                aria-label={`${title} - ${currentLang === 'ar' ? 'المزيد من التفاصيل' : 'More Details'}`}
               >
                 <div className="relative h-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl rounded-3xl overflow-hidden border border-white/20 dark:border-gray-700/20 shadow-xl hover:shadow-2xl transition-all duration-500">
                   {/* Glassmorphism Background */}
@@ -168,14 +171,14 @@ const ServicesSection: React.FC = () => {
                   {/* Background Image with Modern Overlay */}
                   <div className="relative h-48 overflow-hidden">
                     <div 
-                      className="absolute inset-0 bg-cover bg-center bg-no-repeat group-hover:scale-110 transition-transform duration-700"
+                      className="absolute inset-0 bg-cover bg-center bg-no-repeat group-hover:scale-105 transition-transform duration-500"
                       style={{
                         backgroundImage: `url(${service.image})`,
                         backgroundPosition: 'center center'
                       }}
                     ></div>
                     {/* Modern Gradient Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/50 to-transparent"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/60 to-transparent"></div>
                     <div className="absolute inset-0 bg-gradient-to-br from-primary-600/30 via-transparent to-primary-800/40 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                     
                     {/* Floating Icon with Glassmorphism */}
@@ -190,7 +193,7 @@ const ServicesSection: React.FC = () => {
                       <h3 className="text-2xl font-bold text-white mb-2 leading-tight drop-shadow-lg">
                         {title}
                       </h3>
-                      <p className="text-sm text-gray-200 leading-relaxed line-clamp-2 drop-shadow-md">
+                      <p className="text-[15px] text-gray-200 leading-relaxed line-clamp-2 drop-shadow-md">
                         {description}
                       </p>
                     </div>
@@ -201,13 +204,10 @@ const ServicesSection: React.FC = () => {
                   </div>
 
                   {/* Modern Content Section with Glassmorphism */}
-                  <div className="relative p-6 space-y-4 bg-gradient-to-b from-white/60 to-white/80 dark:from-gray-800/60 dark:to-gray-800/80 backdrop-blur-sm">
+                  <div className="relative p-6 space-y-4 bg-gradient-to-b from-white/70 to-white/85 dark:from-gray-800/70 dark:to-gray-800/85">
                     {/* Always Visible More Details Button */}
-                    <motion.button
-                      onClick={() => handleServiceClick(service.serviceIndex)}
-                      className="w-full py-3 px-4 bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white font-semibold rounded-2xl transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center gap-2 group/btn"
-                      whileHover={{ scale: 1.02 }}
-                      whileTap={{ scale: 0.98 }}
+                    <div
+                      className="w-full py-3 px-4 bg-gradient-to-r from-primary-500 to-primary-600 group-hover:from-primary-600 group-hover:to-primary-700 text-white font-semibold rounded-2xl transition-all duration-300 shadow-lg group-hover:shadow-xl flex items-center justify-center gap-2 group/btn"
                     >
                       <span className="relative z-10">
                         {currentLang === 'ar' ? 'المزيد من التفاصيل' : 'More Details'}
@@ -216,7 +216,7 @@ const ServicesSection: React.FC = () => {
                       
                       {/* Button shine effect */}
                       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300 transform -skew-x-12 translate-x-[-100%] group-hover/btn:translate-x-[100%] transition-transform duration-500 rounded-2xl"></div>
-                    </motion.button>
+                    </div>
                   </div>
 
                   {/* Modern Border Glow Effect */}
@@ -225,7 +225,7 @@ const ServicesSection: React.FC = () => {
                   {/* Modern Shine Effect */}
                   <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none transform -skew-x-12 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"></div>
                 </div>
-              </motion.div>
+              </motion.button>
             );
           })}
         </div>

@@ -11,10 +11,18 @@
   
   body {
     font-family: 'Inter', sans-serif;
+    background-color: #E0E1DD;
+    color: #111827;
+    transition: background-color 200ms ease, color 200ms ease;
   }
   
   [dir="rtl"] body {
     font-family: 'Cairo', sans-serif;
+  }
+
+  .dark body {
+    background-color: #222222;
+    color: #F3F4F6;
   }
 }
 
@@ -97,6 +105,23 @@
 }
 
 @layer utilities {
+  /* Accessible focus styles */
+  .focus-visible\:ring-2:focus-visible {
+    box-shadow: 0 0 0 2px theme('colors.primary.500');
+  }
+  .focus-visible\:ring-offset-2:focus-visible {
+    outline-offset: 2px;
+  }
+
+  /* Reduced motion support */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
   .rtl {
     direction: rtl;
   }

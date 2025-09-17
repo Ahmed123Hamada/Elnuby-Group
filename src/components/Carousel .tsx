@@ -144,11 +144,11 @@ export default function HeroCarousel() {
               transition={{ duration: 0.8, delay: 0.6 }}
             >
               <Button
-                variant="glass"
+                variant="gradient"
                 size="lg"
                 icon="arrow-right"
                 href="/projects"
-                className="uppercase tracking-wider text-xs sm:text-sm md:text-base px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4 mb-4  "
+                className="uppercase tracking-wider text-xs sm:text-sm md:text-base px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 mb-4 rounded-full shadow-2xl hover:shadow-elnuby-orange/25 transform hover:scale-105 transition-all duration-300 bg-gradient-to-r from-elnuby-orange via-elnuby-lightOrange to-elnuby-darkOrange hover:from-elnuby-darkOrange hover:via-elnuby-orange hover:to-elnuby-lightOrange border-0"
               >
                 {t('viewAllProjects')}
               </Button>

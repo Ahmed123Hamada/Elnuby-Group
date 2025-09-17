@@ -496,12 +496,12 @@ const Services: React.FC = () => {
           />
           {/* Dark overlay for better text readability */}
           <div className="absolute inset-0 bg-gradient-to-br from-black/75 via-black/65 to-primary-900/70"></div>
-          {/* Pattern overlay */}
-          <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iNCIvPjwvZz48L2c+PC9zdmc+')] opacity-30"></div>
+          {/* Pattern overlay (reduced opacity) */}
+          <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iNCIvPjwvZz48L2c+PC9zdmc+')] opacity-15"></div>
         </motion.div>
 
-        {/* Simplified decorative elements for mobile performance */}
-        <div className="absolute inset-0 overflow-hidden opacity-60 md:opacity-100">
+        {/* Simplified decorative elements for mobile performance (reduced opacity) */}
+        <div className="absolute inset-0 overflow-hidden opacity-40 md:opacity-70">
           <div className="absolute top-16 left-8 w-12 h-12 border border-white/20 rounded-full"></div>
           <div className="absolute top-20 right-16 w-8 h-8 border border-primary-300/30 rotate-45"></div>
           <div className="absolute bottom-16 left-1/5 w-6 h-6 bg-white/10 rounded-full"></div>
@@ -629,13 +629,23 @@ const Services: React.FC = () => {
                 <motion.button
                   key={index}
                   onClick={() => setActiveService(index)}
-                  className={`group shrink-0 snap-start relative overflow-hidden rounded-2xl md:rounded-3xl font-semibold text-sm md:text-base transition-all duration-500 focus:outline-none focus-visible:ring-4 focus-visible:ring-primary-400/50 min-w-[160px] md:min-w-[220px] h-24 md:h-32 ${
+                  className={`group shrink-0 snap-start relative overflow-hidden rounded-2xl md:rounded-3xl font-semibold text-sm md:text-base transition-all duration-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-400/70 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-gray-800 min-w-[160px] md:min-w-[220px] h-24 md:h-32 ${
                     activeService === index
                       ? 'shadow-2xl shadow-primary-500/30 ring-4 ring-primary-400/50 scale-105'
                       : 'shadow-lg hover:shadow-2xl hover:shadow-primary-500/20 hover:scale-105'
                   }`}
-                  whileHover={{ y: -4 }}
-                  whileTap={{ scale: 0.98 }}
+                        whileHover={{ y: -2 }}
+                        whileTap={{ scale: 0.99 }}
+                  aria-label={`${currentLang === 'ar' ? service.titleAr : service.title} - ${currentLang === 'ar' ? 'خدمة' : 'Service'}`}
+                  aria-pressed={activeService === index}
+                  role="tab"
+                  tabIndex={0}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      setActiveService(index);
+                    }
+                  }}
                   style={{
                     backgroundImage: `url(${backgroundImage})`,
                     backgroundSize: 'cover',
@@ -650,8 +660,8 @@ const Services: React.FC = () => {
                       : 'bg-gradient-to-br from-gray-900/75 via-gray-800/70 to-gray-900/80 group-hover:from-primary-600/75 group-hover:via-primary-700/70 group-hover:to-primary-800/75'
                   }`} />
                   
-                  {/* Modern pattern overlay */}
-                  <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4xIj48Y2lyY2xlIGN4PSIzMCIgY3k9IjMwIiByPSIyIi8+PC9nPjwvZz48L3N2Zz4=')] opacity-30"></div>
+                  {/* Modern pattern overlay (reduced opacity) */}
+                  <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4xIj48Y2lyY2xlIGN4PSIzMCIgY3k9IjMwIiByPSIyIi8+PC9nPjwvZz48L3N2Zz4=')] opacity-15"></div>
                   
                   {/* Animated accent line */}
                   <div className={`absolute bottom-0 left-0 h-1 bg-gradient-to-r from-primary-300 to-primary-500 transition-all duration-500 ${
@@ -780,10 +790,10 @@ const Services: React.FC = () => {
                       <motion.div
                         key={index}
                         className="group relative bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl rounded-3xl overflow-hidden border border-white/20 dark:border-gray-700/20 shadow-xl hover:shadow-2xl transition-all duration-500 will-change-transform"
-                        initial={{ opacity: 0, y: 20 }}
+                        initial={{ opacity: 0, y: 15 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: Math.min(index * 0.08, 0.4), duration: 0.6 }}
-                        whileHover={{ y: -8, scale: 1.02 }}
+                        transition={{ delay: Math.min(index * 0.05, 0.3), duration: 0.4 }}
+                        whileHover={{ y: -4, scale: 1.01 }}
                       >
                         {/* Glassmorphism Background */}
                         <div className="absolute inset-0 bg-gradient-to-br from-primary-500/5 via-transparent to-primary-600/10 opacity-60 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -793,12 +803,12 @@ const Services: React.FC = () => {
                           <OptimizedImage
                             src={bannerImage}
                             alt={currentLang === 'ar' ? category.nameAr : category.name}
-                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 will-change-transform"
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 will-change-transform"
                             loading="lazy"
                             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                           />
                           {/* Modern Gradient Overlay */}
-                          <div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/50 to-transparent"></div>
+                          <div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 via-gray-900/60 to-transparent"></div>
                           <div className="absolute inset-0 bg-gradient-to-br from-primary-600/30 via-transparent to-primary-800/40 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                           
 
@@ -828,7 +838,7 @@ const Services: React.FC = () => {
                         </div>
 
                         {/* Modern Content Section with Glassmorphism */}
-                        <div className="relative p-6 space-y-4 bg-gradient-to-b from-white/60 to-white/80 dark:from-gray-800/60 dark:to-gray-800/80 backdrop-blur-sm">
+                        <div className="relative p-6 space-y-4 bg-gradient-to-b from-white/70 to-white/85 dark:from-gray-800/70 dark:to-gray-800/85">
                           {/* Modern Specializations Section */}
                           {Array.isArray((category as any).subcategories) && (category as any).subcategories.length > 0 && (
                             <div className="space-y-4">

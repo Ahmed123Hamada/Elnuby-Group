@@ -71,12 +71,12 @@ const Navbar: React.FC = () => {
         animate={{ y: 0 }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 overflow-hidden ${
           isScrolled
-            ? "w-full mx-auto   bg-white/30 dark:bg-gray-900/20 backdrop-blur-xxl shadow-lg  "
+            ? "w-full mx-auto bg-white/50 dark:bg-gray-900/40 backdrop-blur-md shadow-lg"
             : "bg-transparent"
         }`}
       >
         <div className="">
-          <div className="bg-white/30 dark:bg-gray-900/70 backdrop-blur-xl shadow-lg px-4 md:px-10   ">
+          <div className="bg-white/60 dark:bg-gray-900/60 backdrop-blur-md shadow-lg px-4 md:px-10">
             <div className="container mx-auto flex items-center justify-between h-24 py-6">
               {/* Logo */}
               <Link to="/" className="flex items-center" onClick={closeMenu}>
