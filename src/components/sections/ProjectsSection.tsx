@@ -117,7 +117,6 @@ const ProjectsSection: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {categories.slice(1).map((category, index) => {
             const categoryProjects = allProjects.filter(project => project.category === category.name);
-            const projectCount = categoryProjects.length;
             const representativeProject = categoryProjects[0];
             const IconComponent = getCategoryIcon(category.name);
             
@@ -155,17 +154,12 @@ const ProjectsSection: React.FC = () => {
                     
                     {/* Floating Icon with Glassmorphism */}
                     <div className="absolute top-6 right-6">
-                      <div className="w-16 h-16 bg-white/20 backdrop-blur-xl rounded-2xl flex items-center justify-center border border-white/30 shadow-2xl group-hover:bg-primary-500/30 group-hover:border-primary-300/50 group-hover:scale-110 transition-all duration-500">
-                        <IconComponent className="w-8 h-8 text-white group-hover:text-primary-100 transition-colors duration-300" />
+                      <div className="w-12 h-12 bg-white/20 backdrop-blur-xl rounded-2xl flex items-center justify-center border border-white/30 shadow-2xl group-hover:bg-primary-500/30 group-hover:border-primary-300/50 group-hover:scale-110 transition-all duration-500">
+                        <IconComponent className="w-6 h-6 text-white group-hover:text-primary-100 transition-colors duration-300" />
                       </div>
                     </div>
 
-                    {/* Project Count Badge */}
-                    <div className="absolute top-6 left-6">
-                      <span className="inline-flex items-center px-3 py-1 bg-white/20 backdrop-blur-xl rounded-full text-xs font-semibold text-white border border-white/30 shadow-lg">
-                        {projectCount} {currentLang === 'ar' ? 'مشروع' : 'Projects'}
-                      </span>
-                    </div>
+                    
 
                     {/* Modern Title Overlay */}
                     <div className="absolute bottom-6 left-6 right-6">

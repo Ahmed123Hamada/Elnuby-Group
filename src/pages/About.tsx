@@ -358,8 +358,8 @@ const About: React.FC = () => {
                   <div className={`
                     w-0 h-0 border-solid
                     ${index % 2 === 0 
-                      ? 'border-l-8 border-l-primary-300 dark:border-l-primary-600 border-y-4 border-y-transparent border-r-0 translate-x-2' 
-                      : 'border-r-8 border-r-primary-300 dark:border-r-primary-600 border-y-4 border-y-transparent border-l-0 -translate-x-2'
+                      ? 'border-r-8 border-r-primary-300 dark:border-r-primary-600 border-y-4 border-y-transparent border-l-0 -translate-x-2' 
+                      : 'border-l-8 border-l-primary-300 dark:border-l-primary-600 border-y-4 border-y-transparent border-r-0 translate-x-2'
                     }
                   `}></div>
                 </div>
