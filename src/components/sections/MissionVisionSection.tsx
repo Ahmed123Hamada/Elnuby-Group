@@ -72,7 +72,7 @@ const MissionVisionSection: React.FC = () => {
   };
 
   return (
-    <section className="relative z-10 py-16 lg:py-24 bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+    <section className="relative  py-16 lg:py-24 bg-gradient-to-br from-gray-50 via-white to-gray-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
       {/* Enhanced Background */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Subtle geometric patterns */}

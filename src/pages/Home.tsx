@@ -44,7 +44,7 @@ const SectionDivider: React.FC<{ variant?: 'default' | 'gradient' | 'minimal' }>
   const styles = getStyles();
 
   return (
-    <div className="relative w-full flex justify-center items-center py-4 sm:py-6">
+    <div className="relative z-10 w-full flex justify-center items-center py-4 sm:py-6">
       {/* Main Line Container */}
       <div className="relative  w-full max-w-2xl sm:max-w-3xl md:max-w-4xl lg:max-w-5xl h-px">
         {/* Background Line */}
