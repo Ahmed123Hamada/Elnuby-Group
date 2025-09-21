@@ -1,15 +1,16 @@
-import React, { Suspense } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 
-// Components
-import HeroSection from '../components/sections/HeroSection';
-import AboutSection from '../components/sections/AboutSection';
-import MissionVisionSection from '../components/sections/MissionVisionSection';
-import { LazyProjectsSection, LazyPartnersSection, LazyServicesSection, ComponentLoader } from '../components/LazyComponents';
+interface SectionDividerProps {
+  className?: string;
+  variant?: 'default' | 'gradient' | 'minimal';
+}
 
-// Inline Section Divider Component
-const SectionDivider: React.FC<{ variant?: 'default' | 'gradient' | 'minimal' }> = ({ variant = 'default' }) => {
-  const getStyles = () => {
+const SectionDivider: React.FC<SectionDividerProps> = ({ 
+  className = '', 
+  variant = 'default' 
+}) => {
+  const getVariantStyles = () => {
     switch (variant) {
       case 'gradient':
         return {
@@ -41,12 +42,12 @@ const SectionDivider: React.FC<{ variant?: 'default' | 'gradient' | 'minimal' }>
     }
   };
 
-  const styles = getStyles();
+  const styles = getVariantStyles();
 
   return (
-    <div className="relative w-full flex justify-center items-center py-4 sm:py-6">
+    <div className={`relative w-full flex justify-center items-center py-4 sm:py-6 ${className}`}>
       {/* Main Line Container */}
-      <div className="relative  w-full max-w-2xl sm:max-w-3xl md:max-w-4xl lg:max-w-5xl h-px">
+      <div className="relative w-full max-w-2xl sm:max-w-3xl md:max-w-4xl lg:max-w-5xl h-px">
         {/* Background Line */}
         <div className={`absolute inset-0 ${styles.line}`} />
         
@@ -63,16 +64,16 @@ const SectionDivider: React.FC<{ variant?: 'default' | 'gradient' | 'minimal' }>
           }}
         />
 
-        {/* Center Point - Perfectly Centered on Line */}
+        {/* Center Point with Enhanced Animation */}
         <motion.div
-          className="absolute left-1/2 -top-1 transform -translate-x-1/2 -translate-y-1/2 flex items-center justify-center"
+          className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center justify-center"
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           {/* Main Center Point */}
           <motion.div
-            className={`w-2 h-2 sm:w-3  sm:h-2 ${styles.centerPoint} rounded-full shadow-lg relative z-10`}
+            className={`w-2 h-2 sm:w-3 sm:h-3 ${styles.centerPoint} rounded-full shadow-lg relative z-10`}
             animate={{
               scale: [1, 1.2, 1],
               opacity: [0.8, 1, 0.8],
@@ -101,7 +102,7 @@ const SectionDivider: React.FC<{ variant?: 'default' | 'gradient' | 'minimal' }>
           
           {/* Middle Ring */}
           <motion.div
-            className={`absolute  w-6 h-6 sm:w-8 sm:h-8 border ${styles.centerPointBorder} rounded-full`}
+            className={`absolute w-6 h-6 sm:w-8 sm:h-8 border ${styles.centerPointBorder} rounded-full`}
             animate={{
               scale: [1, 1.5, 1],
               opacity: [0.4, 0, 0.4],
@@ -130,9 +131,9 @@ const SectionDivider: React.FC<{ variant?: 'default' | 'gradient' | 'minimal' }>
           />
         </motion.div>
 
-        {/* Side Points */}
+        {/* Side Points with Staggered Animation */}
         <motion.div
-          className={`absolute left-1/3 -top-1 transform -translate-x-1/2 -translate-y-1/2 w-1.5 h-1.5 sm:w-2 sm:h-2 ${styles.sidePoints} rounded-full`}
+          className={`absolute left-1/3 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-1.5 h-1.5 sm:w-2 sm:h-2 ${styles.sidePoints} rounded-full`}
           animate={{
             scale: [1, 1.3, 1],
             opacity: [0.6, 1, 0.6],
@@ -146,7 +147,7 @@ const SectionDivider: React.FC<{ variant?: 'default' | 'gradient' | 'minimal' }>
         />
         
         <motion.div
-          className={`absolute right-1/3 -top-1 transform -translate-x-1/2 -translate-y-1/2 w-1.5 h-1.5 sm:w-2 sm:h-2 ${styles.sidePoints} rounded-full`}
+          className={`absolute right-1/3 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-1.5 h-1.5 sm:w-2 sm:h-2 ${styles.sidePoints} rounded-full`}
           animate={{
             scale: [1, 1.3, 1],
             opacity: [0.6, 1, 0.6],
@@ -159,11 +160,23 @@ const SectionDivider: React.FC<{ variant?: 'default' | 'gradient' | 'minimal' }>
           }}
         />
 
-        {/* Decorative Points */}
-
+        {/* Additional Decorative Points */}
+        <motion.div
+          className={`absolute left-1/5 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-1 h-1 sm:w-1.5 sm:h-1.5 ${styles.decorativePoints} rounded-full`}
+          animate={{
+            scale: [1, 1.4, 1],
+            opacity: [0.4, 0.8, 0.4],
+          }}
+          transition={{
+            duration: 2.2,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 0.1
+          }}
+        />
         
         <motion.div
-          className={`absolute right-1/5 -top-1 transform -translate-x-1/2 -translate-y-1/2 w-1 h-1 sm:w-1.5 sm:h-1.5 ${styles.decorativePoints} rounded-full`}
+          className={`absolute right-1/5 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-1 h-1 sm:w-1.5 sm:h-1.5 ${styles.decorativePoints} rounded-full`}
           animate={{
             scale: [1, 1.4, 1],
             opacity: [0.4, 0.8, 0.4],
@@ -177,37 +190,36 @@ const SectionDivider: React.FC<{ variant?: 'default' | 'gradient' | 'minimal' }>
         />
 
         {/* Edge Points */}
-
-      
+        <motion.div
+          className={`absolute left-1/8 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-0.5 h-0.5 sm:w-1 sm:h-1 ${styles.edgePoints} rounded-full`}
+          animate={{
+            scale: [1, 1.8, 1],
+            opacity: [0.3, 0.7, 0.3],
+          }}
+          transition={{
+            duration: 2.8,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 0.6
+          }}
+        />
+        
+        <motion.div
+          className={`absolute right-1/8 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-0.5 h-0.5 sm:w-1 sm:h-1 ${styles.edgePoints} rounded-full`}
+          animate={{
+            scale: [1, 1.8, 1],
+            opacity: [0.3, 0.7, 0.3],
+          }}
+          transition={{
+            duration: 2.8,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 1.6
+          }}
+        />
       </div>
     </div>
   );
 };
 
-
-const Home: React.FC = () => {
-
-  return (
-    <div className="pt-16 overflow-hidden">
-      <HeroSection />
-      <SectionDivider variant="gradient" />
-      <AboutSection />
-      <SectionDivider variant="default" />
-      <MissionVisionSection />
-      <SectionDivider variant="gradient" />
-      <Suspense fallback={<ComponentLoader />}>
-        <LazyServicesSection />
-      </Suspense>
-      <SectionDivider variant="default" />
-      <Suspense fallback={<ComponentLoader />}>
-        <LazyProjectsSection />
-      </Suspense>
-      <SectionDivider variant="gradient" />
-      <Suspense fallback={<ComponentLoader />}>
-        <LazyPartnersSection />
-      </Suspense>
-    </div>
-  );
-};
-
-export default Home; 
+export default SectionDivider;
